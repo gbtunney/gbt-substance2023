@@ -39,7 +39,7 @@
         "postinstall": "ln -s '/Applications/Substance\\ Automation\\ Toolkit'",
         "prepare": "husky install",
         "\n========== TEST >> ==========": "",
-        "test": "tsc --build"
+        "test": "pnpm exec python3 src/build.py"
     },
     "devDependencies": {
         "@changesets/cli": "^2.25.2",
