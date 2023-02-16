@@ -75,6 +75,10 @@ def main(initial_path):
     samples_path = {_dir: os.path.join(base_samples_path, _dir) for _dir in sample_dir_names}
     output_path = {_dir: os.path.join(base_output_path, _dir) for _dir in sample_dir_names}
 
+    # Set graph attributes and icon
+    #aGraph.setAttribute(aAttributeIdentifier = sbsenum.AttributesEnum.Author, aAttributeValue = 'Substance Designer API')
+    #aGraph.setIcon(aIconAbsPath = sbsDoc.buildAbsPathFromRelToMePath('Bitmaps/graphIcon.jpg'))
+
     # create the output folders
     if not os.path.exists(base_docs_path):
         raise OSError('User directory {} not found'.format(base_docs_path))
@@ -83,6 +87,13 @@ def main(initial_path):
         ensure_directory_creation(value)
 
     batchtools.cook_sbsar_files(exe_path['sbscooker'], base_resources_path, samples_path['Sbs'], output_path['Sbs'])
+
+
+     # Generate bitmaps from sbsar detected at specified location
+     #batchtools.render_sbsar_files(exe_path['sbsrender'], samples_path['Sbsar'], '11', '11', output_path['Sbsar'])
+
+    # Export sbs files detected at specified location with dependencies
+    #batchtools.export_sbs_files_with_dep(exe_path['sbsmutator'], base_resources_path, samples_path['Sbs'], output_path['Sbs'])
 
 
 if __name__ == '__main__':
