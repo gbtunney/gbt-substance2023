@@ -23,7 +23,7 @@
         "build": "pnpm -r build",
         "build:self": "tsc --build",
         "\n========== CODE STYLE >> ==========": "",
-        "prettier": "prettier {$npm_package_config_prettier_path}.{$npm_package_config_prettier_extensions} --write  --ignore-path .gitignore",
+        "prettier": "prettier $npm_package_config_prettier_path.{$npm_package_config_prettier_extensions} --write  --ignore-path .gitignore",
         "\n========== FIX >> ==========": "",
         "fix": "pnpm fix:self",
         "fix:self": "pnpm prettier --write",
@@ -60,7 +60,7 @@
     "config": {
         "prettier": {
             "extensions": "ts,js,cjs,mjs,cts,json,yaml,yml,graphql,md",
-            "path": "*,**/*"
+            "path": "*"
         },
         "commitizen": {
             "path": "@commitlint/cz-commitlint"

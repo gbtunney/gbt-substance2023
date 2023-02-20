@@ -21,6 +21,9 @@
 			<workspaces>
 				<size>0</size>
 			</workspaces>
+			<settingsInfo>
+				<version>2</version>
+			</settingsInfo>
 		</versionControl>
 		<scripting>
 			<interpreters>
@@ -94,15 +97,21 @@
 		</mdl>
 		<library>
 			<watchedPaths>
-				<size>1</size>
+				<size>2</size>
+				<_2 prefix="_">
+					<url>file:///Users/gilliantunney/snailicide_helix/substance/Substance_Automation_Toolkit/resources/packages</url>
+					<isRecursive>true</isRecursive>
+					<isEnabled>true</isEnabled>
+				</_2>
 				<_1 prefix="_">
 					<url>file:///Users/gilliantunney/snailicide_helix/substance/nodes/sbsar</url>
 					<isRecursive>false</isRecursive>
 					<isEnabled>true</isEnabled>
-					<excludePattern></excludePattern>
-					<excludeFilter></excludeFilter>
 				</_1>
 			</watchedPaths>
+			<settingsInfo>
+				<version>2</version>
+			</settingsInfo>
 		</library>
 		<general>
 			<normal_map_format>directx</normal_map_format>
