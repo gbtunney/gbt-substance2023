@@ -25,7 +25,7 @@
         "\n========== CODE STYLE >> ==========": "",
         "prettier": "prettier $npm_package_config_prettier_path.{$npm_package_config_prettier_extensions} --write  --ignore-path .gitignore",
         "\n========== FIX >> ==========": "",
-        "fix": "pnpm fix:self",
+        "fix": "pnpm -r fix && pnpm fix:self",
         "fix:self": "pnpm prettier --write",
         "\n========== CLEAN >> ==========": "",
         "clean": "pnpm -r clean",

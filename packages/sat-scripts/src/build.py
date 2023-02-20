@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 import os
 import sys
 import batchtools_utilities as batchtools
@@ -33,7 +33,7 @@ def get_batchtools_path():
         # and checking the app name is in the current path so the var will be:
         # batchtools_path = os.path.join(os.path.abspath(os.curdir), '../../')
     elif "darwin" in sys.platform:
-        batchtools_path = "/Applications/Substance Automation Toolkit/"
+        batchtools_path = "/Users/gilliantunney/Substance\ 12/Adobe\ Substance\ 3D\ Designer.app/Contents/MacOS/"
     elif "linux" in sys.platform:
         # Path relative to the sample scripts assuming the directory from
         # the zip is untouched
@@ -63,12 +63,15 @@ def ensure_directory_creation(directory):
 
 
 def main(initial_path):
-    batchtools_path = os.path.normpath(get_batchtools_path())
-
+    batchtools_path = os.path.normpath(
+        "/Users/gilliantunney/Substance\ 12/Adobe\ Substance\ 3D\ Designer.app/Contents/MacOS"
+    )
     tool_names = ["sbsbaker", "sbscooker", "sbsmutator", "sbsrender"]
     sample_dir_names = ["Sbs", "Sbsar", "Meshes"]
+    # print("Number of arguments:", len(sys.argv), "arguments.")
+    # print("Argument List:", str(sys.argv))
 
-    base_resources_path = os.path.join(batchtools_path, "resources", "packages")
+    base_resources_path = os.path.join("/Users/gilliantunney/Substance\ 12/packages")
     base_docs_path = get_sample_base_path()
     base_samples_path = base_docs_path  # os.path.join(base_docs_path, 'samples')
     base_output_path = os.path.join(base_docs_path, "./../dist")
@@ -80,7 +83,8 @@ def main(initial_path):
     output_path = {
         _dir: os.path.join(base_output_path, _dir) for _dir in sample_dir_names
     }
-
+    print("gillllian")
+    print(batchtools_path)
     # Set graph attributes and icon
     # aGraph.setAttribute(aAttributeIdentifier = sbsenum.AttributesEnum.Author, aAttributeValue = 'Substance Designer API')
     # aGraph.setIcon(aIconAbsPath = sbsDoc.buildAbsPathFromRelToMePath('Bitmaps/graphIcon.jpg'))
