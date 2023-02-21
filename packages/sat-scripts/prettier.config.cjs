@@ -11,6 +11,7 @@ module.exports = merge(Prettier.config, {
             options: {
                 parser: 'xml',
                 tabWidth: 2,
+                xmlWhitespaceSensitivity: 'ignore',
             },
         },
     ],

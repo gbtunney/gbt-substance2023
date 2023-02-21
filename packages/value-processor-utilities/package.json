@@ -1,8 +1,8 @@
 {
     "name": "@gbt/value-processor-utilities",
     "description": "Value Processor Utilities",
-    "version": "0.0.0",
-    "private": true,
+    "version": "0.0.1",
+    "private": false,
     "type": "module",
     "files": [
         "dist",

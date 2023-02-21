@@ -1,11 +1,10 @@
 {
     "name": "@gbt/sat-scripts",
     "description": "Substance Automation Toolkit Scripts",
+    "version": "0.0.0",
     "private": true,
     "type": "module",
     "files": [
-        "docs",
-        "types",
         "dist",
         "CHANGELOG.md",
         "exampleNodeScript.ts"
@@ -37,13 +36,12 @@
     ],
     "scripts": {
         "\n========== BUILD >> ==========": "",
-        "build": "pnpm build:ts && pnpm build:rollup",
-        "build:rollup": "rollup --config ./rollup.config.js",
+        "build": "pnpm build:ts",
         "build:ts": "tsc --build",
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
-        "test": "pnpm exec python3 src/build.py",
+        "test:temp": "pnpm exec python3 src/build.py",
         "test:example": "ts-node --esm ./exampleNodeScript.ts --path ./src/Sbs --name shopify-dawn",
         "test:write": "ts-node --esm ./readSBS.ts --path ./src/Sbs --name shopify-dawn",
         "test2": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/Sbs/plastic_leather_pattern/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages  --quiet --size-limit 13 --output-path ./dist",
@@ -51,7 +49,7 @@
         "release": "pnpm prerelease && pnpm publish --access public --report-summary --no-git-checks",
         "prerelease": "pnpm clean && pnpm build && pnpm run docs && pnpm fix && pnpm check && pnpm test",
         "\n========== CLEAN >> ==========": "",
-        "clean": "pnpm clean:ts && pnpm clean:sat",
+        "temp:clean": "pnpm clean:ts && pnpm clean:sat",
         "clean:ts": "tsc --build --clean",
         "clean:sat": " rm -f sat",
         "clean:build": "rm -R -f dist && rm -R -f types && rm -R -f docs",

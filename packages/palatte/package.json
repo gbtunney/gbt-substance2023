@@ -2,7 +2,7 @@
     "name": "@gbt/palatte",
     "description": "Palatte",
     "version": "0.0.0",
-    "private": true,
+    "private": false,
     "type": "module",
     "files": [
         "dist",
@@ -52,7 +52,7 @@
         "email": "gbtunney@mac.com"
     },
     "devDependencies": {
-        "@gbt/value-processor-utilities": "workspace:^0.0.0",
+        "@gbt/value-processor-utilities": "workspace:^0.0.1",
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.1.3",
