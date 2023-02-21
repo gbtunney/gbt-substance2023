@@ -5,6 +5,12 @@
   <updaterVersion v="1.1.0.202202" />
   <fileUID v="{0c83c3eb-c6ab-41aa-bce4-65912b47ad29}" />
   <versionUID v="0" />
+  <metadata>
+    <treestr>
+      <name v="version" />
+      <value v="0.0.0" />
+    </treestr>
+  </metadata>
   <dependencies>
     <dependency>
       <filename v="sbs://functions.sbs" />

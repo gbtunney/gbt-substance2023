@@ -1,6 +1,7 @@
 {
     "name": "@gbt/value-processor-utilities",
     "description": "Value Processor Utilities",
+    "version": "0.0.0",
     "private": true,
     "type": "module",
     "files": [
@@ -9,22 +10,10 @@
     ],
     "exports": {
         ".": [
-            {
-                "import": "./dist/index.mjs",
-                "types": "./types/index.d.ts",
-                "require": "./dist/index.cjs",
-                "default": "./dist/index.js"
-            },
-            "./dist/index.js"
+            "./dist/GBT_Value_Processor_Utilities.sbsar"
         ]
     },
-    "main": "dist/index.js",
-    "types": "types/index.d.ts",
-    "umd:main": "dist/index.umd.js",
-    "jsdelivr": "dist/index.umd.js",
-    "unpkg": "dist/index.umd.js",
-    "module": "dist/index.esm.js",
-    "cdn": "dist/index.umd.js",
+    "main": "dist/GBT_Value_Processor_Utilities.sbsar",
     "keywords": [
         "typescript",
         "python",
@@ -34,8 +23,8 @@
     ],
     "scripts": {
         "\n========== BUILD >> ==========": "",
-        "build": "pnpm build:ts",
-        "build:sbs": "mkdir -p dist && /Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages --quiet --size-limit 13 --output-path ./dist",
+        "build": "mkdir -p dist && pnpm build:sbs",
+        "build:sbs": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages --quiet --size-limit 13 --output-path ./dist",
         "build:ts": "tsc --build",
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
@@ -47,10 +36,9 @@
         "\n========== CLEAN >> ==========": "",
         "clean": "pnpm clean:ts && pnpm clean:sat",
         "clean:ts": "tsc --build --clean",
-        "clean:sat": " rm -f sat",
-        "clean:build": "rm -R -f dist && rm -R -f types && rm -R -f docs",
+        "clean:build": "rm -R -f dist",
         "\n========== CODE STYLE >> ==========": "",
-        "prettier": "cross-var prettier {$npm_package_config_prettier_path}.{$npm_package_config_prettier_extensions} --write",
+        "prettier": "cross-var prettier {$npm_package_config_prettier_path}.{$npm_package_config_prettier_extensions} --write --ignore-path .gitignore",
         "\n========== CHECK >> ==========": "",
         "check": "pnpm build:ts && pnpm clean:ts",
         "\n========== FIX >> ==========": "",
