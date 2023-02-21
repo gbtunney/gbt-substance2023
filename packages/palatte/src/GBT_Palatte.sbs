@@ -254,6 +254,9 @@
             <name v="" />
             <options />
           </defaultWidget>
+          <visibleIf
+            v="( input[&quot;color_1_toggle_position_color&quot;] || input[&quot;color_2_toggle_position_color&quot;] || input[&quot;color_3_toggle_position_color&quot;] || input[&quot;color_4_toggle_position_color&quot;] || input[&quot;color_5_toggle_position_color&quot;] || input[&quot;color_5_toggle_position_color&quot;] || input[&quot;color_7_toggle_position_color&quot;] || input[&quot;color_8_toggle_position_color&quot;] )"
+          />
         </paraminput>
         <paraminput>
           <identifier v="color_1_toggle_position_color" />
@@ -366,7 +369,7 @@
           />
         </paraminput>
         <paraminput>
-          <identifier v="color_2toggle_position_color" />
+          <identifier v="color_2_toggle_position_color" />
           <uid v="1414823276" />
           <attributes>
             <label v="Input mode" />
@@ -432,7 +435,7 @@
           </defaultWidget>
           <group v="Color 2" />
           <visibleIf
-            v="input[&quot;color_2toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 2"
+            v="input[&quot;color_2_toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 2"
           />
         </paraminput>
         <paraminput>
@@ -472,7 +475,7 @@
           </defaultWidget>
           <group v="Color 2" />
           <visibleIf
-            v="!input[&quot;color_2toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 2"
+            v="!input[&quot;color_2_toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 2"
           />
         </paraminput>
         <paraminput>
@@ -586,7 +589,7 @@
           />
         </paraminput>
         <paraminput>
-          <identifier v="Color_4toggle_position_color" />
+          <identifier v="color_4_toggle_position_color" />
           <uid v="1414824119" />
           <attributes>
             <label v="Input mode" />
@@ -652,7 +655,7 @@
           </defaultWidget>
           <group v="Color 4" />
           <visibleIf
-            v="input[&quot;Color_4toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 4"
+            v="input[&quot;color_4_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 4"
           />
         </paraminput>
         <paraminput>
@@ -692,11 +695,11 @@
           </defaultWidget>
           <group v="Color 4" />
           <visibleIf
-            v="!input[&quot;Color_4toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 4"
+            v="!input[&quot;color_4_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 4"
           />
         </paraminput>
         <paraminput>
-          <identifier v="Color_5_toggle_position_color" />
+          <identifier v="color_5_toggle_position_color" />
           <uid v="1414824232" />
           <attributes>
             <label v="Input mode" />
@@ -730,7 +733,7 @@
           <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 5" />
         </paraminput>
         <paraminput>
-          <identifier v="Color_5_input_sampler_position" />
+          <identifier v="color_5_input_sampler_position" />
           <uid v="1414824234" />
           <attributes>
             <label v="Sample (Position)" />
@@ -762,11 +765,11 @@
           </defaultWidget>
           <group v="Color 5" />
           <visibleIf
-            v="input[&quot;Color_5_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 5"
+            v="input[&quot;color_5_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 5"
           />
         </paraminput>
         <paraminput>
-          <identifier v="Color_5_input_color_value" />
+          <identifier v="color_5_input_color_value" />
           <uid v="1414824236" />
           <attributes>
             <label v="Color" />
@@ -802,11 +805,11 @@
           </defaultWidget>
           <group v="Color 5" />
           <visibleIf
-            v="!input[&quot;Color_5_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 5"
+            v="!input[&quot;color_5_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 5"
           />
         </paraminput>
         <paraminput>
-          <identifier v="Color_6_toggle_position_color" />
+          <identifier v="color_6_toggle_position_color" />
           <uid v="1414824270" />
           <attributes>
             <label v="Input mode" />
@@ -872,7 +875,7 @@
           </defaultWidget>
           <group v="Color 6" />
           <visibleIf
-            v="input[&quot;Color_6_toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 6"
+            v="input[&quot;color_6_toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 6"
           />
         </paraminput>
         <paraminput>
@@ -912,11 +915,11 @@
           </defaultWidget>
           <group v="Color 6" />
           <visibleIf
-            v="!input[&quot;Color_6_toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 6"
+            v="!input[&quot;color_6_toggle_position_color&quot;] &amp;&amp; input[&quot;number_of_points&quot;] &gt;= 6"
           />
         </paraminput>
         <paraminput>
-          <identifier v="Color_7_toggle_position_color" />
+          <identifier v="color_7_toggle_position_color" />
           <uid v="1414824341" />
           <attributes>
             <label v="Input mode" />
@@ -982,7 +985,7 @@
           </defaultWidget>
           <group v="Color 7" />
           <visibleIf
-            v="input[&quot;Color_7_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 7"
+            v="input[&quot;color_7_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 7"
           />
         </paraminput>
         <paraminput>
@@ -1022,11 +1025,11 @@
           </defaultWidget>
           <group v="Color 7" />
           <visibleIf
-            v="!input[&quot;Color_7_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 7"
+            v="!input[&quot;color_7_toggle_position_color&quot;]&amp;&amp; input[&quot;number_of_points&quot;] &gt;= 7"
           />
         </paraminput>
         <paraminput>
-          <identifier v="Color_8_toggle_position_color" />
+          <identifier v="color_8_toggle_position_color" />
           <uid v="1414824380" />
           <attributes>
             <label v="Input mode" />
@@ -1092,7 +1095,7 @@
           </defaultWidget>
           <group v="Color 8" />
           <visibleIf
-            v="input[&quot;Color_8_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 8"
+            v="input[&quot;color_8_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 8"
           />
         </paraminput>
         <paraminput>
@@ -1132,7 +1135,7 @@
           </defaultWidget>
           <group v="Color 8" />
           <visibleIf
-            v="!input[&quot;Color_8_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 8"
+            v="!input[&quot;color_8_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 8"
           />
         </paraminput>
       </paraminputs>
@@ -1397,7 +1400,7 @@
         <compNode>
           <uid v="1405736753" />
           <GUILayout>
-            <gpos v="-1360 -16 0" />
+            <gpos v="-1744 -34.4884262 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1421,7 +1424,7 @@
         <compNode>
           <uid v="1405750554" />
           <GUILayout>
-            <gpos v="-1584 -16 0" />
+            <gpos v="-1968 -34.4884262 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1491,7 +1494,7 @@
         <compNode>
           <uid v="1414773622" />
           <GUILayout>
-            <gpos v="752 432 0" />
+            <gpos v="752 400 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -1509,7 +1512,7 @@
         <compNode>
           <uid v="1414775721" />
           <GUILayout>
-            <gpos v="-1136 -464 0" />
+            <gpos v="-1136 -336 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1627,7 +1630,7 @@
         <compNode>
           <uid v="1414775810" />
           <GUILayout>
-            <gpos v="-1136 -240 0" />
+            <gpos v="-1136 -112 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1666,7 +1669,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="color_2toggle_position_color"
+                                  v="color_2_toggle_position_color"
                                 />
                               </constantValue>
                             </funcData>
@@ -1769,7 +1772,7 @@
         <compNode>
           <uid v="1414775867" />
           <GUILayout>
-            <gpos v="-1136 -16 0" />
+            <gpos v="-1136 112 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1911,7 +1914,7 @@
         <compNode>
           <uid v="1414775891" />
           <GUILayout>
-            <gpos v="-1136 432 0" />
+            <gpos v="-1136 560 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1950,7 +1953,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_5_toggle_position_color"
+                                  v="color_5_toggle_position_color"
                                 />
                               </constantValue>
                             </funcData>
@@ -1976,7 +1979,7 @@
                               <name v="get_float2" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_5_input_sampler_position"
+                                  v="color_5_input_sampler_position"
                                 />
                               </constantValue>
                             </funcData>
@@ -2002,7 +2005,7 @@
                               <name v="get_float4" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_5_input_color_value"
+                                  v="color_5_input_color_value"
                                 />
                               </constantValue>
                             </funcData>
@@ -2053,7 +2056,7 @@
         <compNode>
           <uid v="1414775893" />
           <GUILayout>
-            <gpos v="-1136 656 0" />
+            <gpos v="-1136 848 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2092,7 +2095,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_6_toggle_position_color"
+                                  v="color_6_toggle_position_color"
                                 />
                               </constantValue>
                             </funcData>
@@ -2195,7 +2198,7 @@
         <compNode>
           <uid v="1414776484" />
           <GUILayout>
-            <gpos v="-1136 208 0" />
+            <gpos v="-1136 336 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2234,7 +2237,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_4toggle_position_color"
+                                  v="color_4_toggle_position_color"
                                 />
                               </constantValue>
                             </funcData>
@@ -2337,7 +2340,7 @@
         <compNode>
           <uid v="1414776619" />
           <GUILayout>
-            <gpos v="-805.333313 -464 0" />
+            <gpos v="-809.066833 -400 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2355,7 +2358,7 @@
         <compNode>
           <uid v="1414776623" />
           <GUILayout>
-            <gpos v="-544.91571 -432 0" />
+            <gpos v="-453.333313 -447.511353 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2373,7 +2376,7 @@
         <compNode>
           <uid v="1414776855" />
           <GUILayout>
-            <gpos v="-816 -272 0" />
+            <gpos v="-809.066833 -176 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2391,7 +2394,7 @@
         <compNode>
           <uid v="1414776859" />
           <GUILayout>
-            <gpos v="-541.0896 -240 0" />
+            <gpos v="-453.333313 -223.511353 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2409,7 +2412,7 @@
         <compNode>
           <uid v="1414777011" />
           <GUILayout>
-            <gpos v="-805.333313 -80 0" />
+            <gpos v="-809.066833 48 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2427,7 +2430,7 @@
         <compNode>
           <uid v="1414777013" />
           <GUILayout>
-            <gpos v="-541.0896 -48 0" />
+            <gpos v="-453.333313 0.488647461 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2445,7 +2448,7 @@
         <compNode>
           <uid v="1414777163" />
           <GUILayout>
-            <gpos v="-805.333313 112 0" />
+            <gpos v="-809.066833 272 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2463,7 +2466,7 @@
         <compNode>
           <uid v="1414777165" />
           <GUILayout>
-            <gpos v="-541.0896 144 0" />
+            <gpos v="-453.333313 224.488647 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2481,7 +2484,7 @@
         <compNode>
           <uid v="1414777219" />
           <GUILayout>
-            <gpos v="-805.333313 368 0" />
+            <gpos v="-809.066833 496 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2499,7 +2502,7 @@
         <compNode>
           <uid v="1414777221" />
           <GUILayout>
-            <gpos v="-541.0896 336 0" />
+            <gpos v="-453.333313 448.488647 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2517,7 +2520,7 @@
         <compNode>
           <uid v="1414777275" />
           <GUILayout>
-            <gpos v="-816 673.739441 0" />
+            <gpos v="-809.066833 720 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2535,7 +2538,7 @@
         <compNode>
           <uid v="1414777277" />
           <GUILayout>
-            <gpos v="-576.518372 624 0" />
+            <gpos v="-453.333313 672.488647 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2553,7 +2556,7 @@
         <compNode>
           <uid v="1414791314" />
           <GUILayout>
-            <gpos v="351.690491 581.333313 0" />
+            <gpos v="336 645.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3240,7 +3243,7 @@
         <compNode>
           <uid v="1414794944" />
           <GUILayout>
-            <gpos v="-1552 -671.994812 49" />
+            <gpos v="-1954.12317 -592 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3368,7 +3371,7 @@
         <compNode>
           <uid v="1414820823" />
           <GUILayout>
-            <gpos v="-1136 880 0" />
+            <gpos v="-1136 1104 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3407,7 +3410,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_7_toggle_position_color"
+                                  v="color_7_toggle_position_color"
                                 />
                               </constantValue>
                             </funcData>
@@ -3510,7 +3513,7 @@
         <compNode>
           <uid v="1414820994" />
           <GUILayout>
-            <gpos v="-1136 1104 501" />
+            <gpos v="-1136 1328 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3549,7 +3552,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="Color_8_toggle_position_color"
+                                  v="color_8_toggle_position_color"
                                 />
                               </constantValue>
                             </funcData>
@@ -3652,7 +3655,7 @@
         <compNode>
           <uid v="1414821024" />
           <GUILayout>
-            <gpos v="-1466.66663 506.666656 0" />
+            <gpos v="-1488 890.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3677,7 +3680,7 @@
         <compNode>
           <uid v="1414821098" />
           <GUILayout>
-            <gpos v="-805.333313 880 0" />
+            <gpos v="-809.066833 958.575806 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -3695,7 +3698,7 @@
         <compNode>
           <uid v="1414821101" />
           <GUILayout>
-            <gpos v="-592 861.715088 0" />
+            <gpos v="-453.333313 896.488647 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -3713,7 +3716,7 @@
         <compNode>
           <uid v="1414821150" />
           <GUILayout>
-            <gpos v="-816 1104 0" />
+            <gpos v="-809.066833 1200 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -3731,7 +3734,7 @@
         <compNode>
           <uid v="1414821167" />
           <GUILayout>
-            <gpos v="-624 1119.51135 0" />
+            <gpos v="-453.333313 1120.48865 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -3749,7 +3752,7 @@
         <compNode>
           <uid v="1414821359" />
           <GUILayout>
-            <gpos v="-464 -645.333313 0" />
+            <gpos v="-453.333344 -581.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3774,7 +3777,7 @@
         <compNode>
           <uid v="1414821471" />
           <GUILayout>
-            <gpos v="-677.333313 -368 0" />
+            <gpos v="-677.333313 -223.511353 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3799,7 +3802,7 @@
         <compNode>
           <uid v="1414821563" />
           <GUILayout>
-            <gpos v="-677.333313 -165.333328 0" />
+            <gpos v="-677.333313 0.488647461 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3824,7 +3827,7 @@
         <compNode>
           <uid v="1414821623" />
           <GUILayout>
-            <gpos v="-645.333313 37.3333321 0" />
+            <gpos v="-677.333313 224.488647 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3849,7 +3852,7 @@
         <compNode>
           <uid v="1414821680" />
           <GUILayout>
-            <gpos v="-666.666687 240 0" />
+            <gpos v="-677.333313 448.488647 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3874,7 +3877,7 @@
         <compNode>
           <uid v="1414821706" />
           <GUILayout>
-            <gpos v="-730.666687 496 0" />
+            <gpos v="-677.333313 672.488647 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3899,7 +3902,7 @@
         <compNode>
           <uid v="1414821781" />
           <GUILayout>
-            <gpos v="-752 794.666687 0" />
+            <gpos v="-677.333313 896.488647 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3924,7 +3927,7 @@
         <compNode>
           <uid v="1414821825" />
           <GUILayout>
-            <gpos v="-677.333313 1029.33337 0" />
+            <gpos v="-677.333313 1120.48865 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3949,7 +3952,7 @@
         <compNode>
           <uid v="1414821856" />
           <GUILayout>
-            <gpos v="-846.250549 1248.50977 0" />
+            <gpos v="-677.333313 1344.48865 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4138,7 +4141,7 @@
         <compNode>
           <uid v="1414804045" />
           <GUILayout>
-            <gpos v="112 944 0" />
+            <gpos v="528 944 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4184,7 +4187,7 @@
         <compNode>
           <uid v="1414804137" />
           <GUILayout>
-            <gpos v="560 944 0" />
+            <gpos v="752 944 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -4708,7 +4711,7 @@
         <compNode>
           <uid v="1413411338" />
           <GUILayout>
-            <gpos v="1360 400 0" />
+            <gpos v="1466.66675 400 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -4726,7 +4729,7 @@
         <compNode>
           <uid v="1418868161" />
           <GUILayout>
-            <gpos v="304 208 0" />
+            <gpos v="160.841217 208 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4783,7 +4786,7 @@
         <compNode>
           <uid v="1418868182" />
           <GUILayout>
-            <gpos v="112 208 0" />
+            <gpos v="-63.1587868 208 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4844,7 +4847,7 @@
         <compNode>
           <uid v="1418868325" />
           <GUILayout>
-            <gpos v="592 400 0" />
+            <gpos v="560 400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4907,7 +4910,7 @@
         <compNode>
           <uid v="1418868372" />
           <GUILayout>
-            <gpos v="1360 592 0" />
+            <gpos v="1466.66675 592 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -4925,7 +4928,7 @@
         <compNode>
           <uid v="1414787352" />
           <GUILayout>
-            <gpos v="400 400 0" />
+            <gpos v="336 400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5019,7 +5022,7 @@
         <compNode>
           <uid v="1414787429" />
           <GUILayout>
-            <gpos v="112 400 0" />
+            <gpos v="-48 400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5190,7 +5193,7 @@
         <compNode>
           <uid v="1414787921" />
           <GUILayout>
-            <gpos v="976 400 0" />
+            <gpos v="1008 400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5229,7 +5232,7 @@
         <compNode>
           <uid v="1414787984" />
           <GUILayout>
-            <gpos v="1168 400 0" />
+            <gpos v="1232 400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5309,7 +5312,7 @@
         <compNode>
           <uid v="1414788105" />
           <GUILayout>
-            <gpos v="1093.33337 592 0" />
+            <gpos v="1253.33337 592 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5783,7 +5786,7 @@
         <compNode>
           <uid v="1414803735" />
           <GUILayout>
-            <gpos v="61.4419403 -112 0" />
+            <gpos v="54.7209702 -112 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5844,7 +5847,7 @@
         <compNode>
           <uid v="1414803791" />
           <GUILayout>
-            <gpos v="61.4419403 16 0" />
+            <gpos v="54.7209702 16 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5905,7 +5908,7 @@
         <compNode>
           <uid v="1414803797" />
           <GUILayout>
-            <gpos v="61.4419403 144 0" />
+            <gpos v="54.7209702 144 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6101,7 +6104,7 @@
         <compNode>
           <uid v="1414804256" />
           <GUILayout>
-            <gpos v="80 944 0" />
+            <gpos v="54.7209702 929.138184 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6162,7 +6165,7 @@
         <compNode>
           <uid v="1414807569" />
           <GUILayout>
-            <gpos v="1040 368 0" />
+            <gpos v="1264 368 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -6180,7 +6183,7 @@
         <compNode>
           <uid v="1414819772" />
           <GUILayout>
-            <gpos v="61.4419403 272 501" />
+            <gpos v="54.7209702 272 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6241,7 +6244,7 @@
         <compNode>
           <uid v="1414820125" />
           <GUILayout>
-            <gpos v="61.4419403 400 501" />
+            <gpos v="54.7209702 400 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6302,7 +6305,7 @@
         <compNode>
           <uid v="1414820131" />
           <GUILayout>
-            <gpos v="61.4419403 528 501" />
+            <gpos v="54.7209702 528 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6363,7 +6366,7 @@
         <compNode>
           <uid v="1414820140" />
           <GUILayout>
-            <gpos v="61.4419403 656 501" />
+            <gpos v="54.7209702 656 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6424,7 +6427,7 @@
         <compNode>
           <uid v="1414820146" />
           <GUILayout>
-            <gpos v="61.4419403 784 501" />
+            <gpos v="54.7209702 784 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6485,7 +6488,7 @@
         <compNode>
           <uid v="1414821057" />
           <GUILayout>
-            <gpos v="336 929.138184 0" />
+            <gpos v="278.720978 929.138184 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6648,7 +6651,7 @@
         <compNode>
           <uid v="1414955295" />
           <GUILayout>
-            <gpos v="848 528 0" />
+            <gpos v="1040 528 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6687,7 +6690,7 @@
         <compNode>
           <uid v="1414955315" />
           <GUILayout>
-            <gpos v="688 528 0" />
+            <gpos v="816 528 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6720,7 +6723,7 @@
         <compNode>
           <uid v="1414955397" />
           <GUILayout>
-            <gpos v="1040 528 0" />
+            <gpos v="1264 528 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -6738,7 +6741,7 @@
         <compNode>
           <uid v="1414972338" />
           <GUILayout>
-            <gpos v="720 304 0" />
+            <gpos v="670.840332 368 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
