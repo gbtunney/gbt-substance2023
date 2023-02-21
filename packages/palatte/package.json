@@ -10,10 +10,10 @@
     ],
     "exports": {
         ".": [
-            "./dist/GBT_Value_Processor_Utilities.sbsar"
+            "./dist/GBT_Palatte.sbsar"
         ]
     },
-    "main": "dist/GBT_Value_Processor_Utilities.sbsar",
+    "main": "dist/GBT_Palatte.sbsar",
     "keywords": [
         "typescript",
         "python",
@@ -29,14 +29,16 @@
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
-        "test": "pnpm exec python3 src/build.py",
+        "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render",
+        "test:build": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker  --inputs ./tests/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages --quiet --size-limit 13 --output-path ./tests/_output",
+        "test:render": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbsrender render --inputs ./tests/_output/*.sbsar  --output-path ./tests/_output",
         "\n========== PUBLISH >> ==========": "",
         "release": "pnpm prerelease && pnpm publish --access public --report-summary --no-git-checks",
         "prerelease": "pnpm clean && pnpm build && pnpm run docs && pnpm fix && pnpm check && pnpm test",
         "\n========== CLEAN >> ==========": "",
-        "clean": "pnpm clean:ts && pnpm clean:sat",
+        "clean": "pnpm clean:build",
         "clean:ts": "tsc --build --clean",
-        "clean:build": "rm -R -f dist",
+        "clean:build": "rm -R -f dist && rm -R -f tests/_output",
         "\n========== CODE STYLE >> ==========": "",
         "prettier": "cross-var prettier {$npm_package_config_prettier_path}.{$npm_package_config_prettier_extensions} --write --ignore-path .gitignore",
         "\n========== CHECK >> ==========": "",
@@ -61,6 +63,9 @@
         "typescript": "^4.9.3"
     },
     "config": {
+        "batchtools": {
+            "path": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker"
+        },
         "eslint": {
             "extensions": "ts,js,cjs,mjs",
             "path": ".es*,*,**/*",

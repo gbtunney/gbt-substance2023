@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{da8964ee-7562-44d9-bc64-87d7e1245ab4}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1468984939" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="../dist/GBT_Palatte.sbsar" />
+      <uid v="1468985004" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="PalatteTest" />
+      <uid v="1468984969" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1468986094" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_1" />
+          <uid v="1468986128" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_2" />
+          <uid v="1468986148" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_3" />
+          <uid v="1468986167" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_4" />
+          <uid v="1468986191" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_5" />
+          <uid v="1468986208" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_6" />
+          <uid v="1468986226" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_7" />
+          <uid v="1468986539" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_8" />
+          <uid v="1468986561" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1468985033" />
+          <GUILayout>
+            <gpos v="-16 26.6666641 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1468985034" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///Resources/uv-checker-color?dependency=1468984939"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="10 10" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468985041" />
+          <GUILayout>
+            <gpos v="208 26.6666641 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1468985042" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985043" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985044" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985045" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985046" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985047" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985048" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985049" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985050" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985051" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985052" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985053" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985054" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985055" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985056" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985057" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985058" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468985059" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1468985033" />
+              <connRefOutput v="1468985034" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Palatte?dependency=1468985004" />
+              <parameters>
+                <parameter>
+                  <name v="color_1_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.178399995 0.0414999984" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_1_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.066200003 0.0595999993" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="number_of_points" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.282299995 0.0223999992" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_4_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_4input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.377000004 0.0478999987" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.440899998 0.0223999992" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_6_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_6_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.575100005 0.0287999995" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_7_input_color_value" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0 0.391585767 0.458333343 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_7_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_7_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.675000012 0.0233999994" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_8_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.83100003 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_8_input_color_value" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0 0.791666687 0.138349488 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_8_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1468985042" />
+                  <identifier v="output_Palette" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985043" />
+                  <identifier v="output_count" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985044" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985045" />
+                  <identifier v="output_value" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985046" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985047" />
+                  <identifier v="output_value_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985048" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985049" />
+                  <identifier v="output_value_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985050" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985051" />
+                  <identifier v="output_value_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985052" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985053" />
+                  <identifier v="output_value_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985054" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985055" />
+                  <identifier v="output_value_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985056" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985057" />
+                  <identifier v="output_value_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985058" />
+                  <identifier v="output_7" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468985059" />
+                  <identifier v="output_8" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468985970" />
+          <GUILayout>
+            <gpos v="432 -66.0728226 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1468985971" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="destination" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985042" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986095" />
+          <GUILayout>
+            <gpos v="656 -16 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985970" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986094" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986129" />
+          <GUILayout>
+            <gpos v="656 112 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985044" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986128" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986149" />
+          <GUILayout>
+            <gpos v="656 240 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985046" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986148" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986168" />
+          <GUILayout>
+            <gpos v="656 368 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985048" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986167" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986192" />
+          <GUILayout>
+            <gpos v="656 496 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985050" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986191" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986209" />
+          <GUILayout>
+            <gpos v="656 624 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985052" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986208" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986227" />
+          <GUILayout>
+            <gpos v="656 752 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985054" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986226" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986540" />
+          <GUILayout>
+            <gpos v="656 880 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985056" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986539" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468986562" />
+          <GUILayout>
+            <gpos v="656 1008 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1468985041" />
+              <connRefOutput v="1468985058" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1468986561" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1468986094" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986128" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986148" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986167" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986191" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986208" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986226" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986539" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1468986561" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <group>
+      <uid v="1468985022" />
+      <identifier v="Resources" />
+      <content>
+        <resource>
+          <identifier v="uv-checker-color" />
+          <uid v="1468985024" />
+          <type v="bitmap" />
+          <colorSpace v="[use_embedded_profile]" />
+          <format v="png" />
+          <filepath
+            v="../../../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-uv-checker-color.png"
+          />
+          <attributes>
+            <hideInLibrary v="1" />
+          </attributes>
+          <source>
+            <externalcopy>
+              <filename v="PalatteTest.resources/XXXXXX-uv-checker-color.png" />
+            </externalcopy>
+          </source>
+        </resource>
+      </content>
+    </group>
+  </content>
+</package>

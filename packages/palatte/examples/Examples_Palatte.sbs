@@ -20,6 +20,15 @@
       <fileUID v="0" />
       <versionUID v="0" />
     </dependency>
+    <dependency>
+      <filename
+        v="../../value-processor-utilities/dist/GBT_Value_Processor_Utilities.sbsar"
+      />
+      <uid v="1468995669" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
   </dependencies>
   <content>
     <graph>
@@ -47,7 +56,7 @@
         <compNode>
           <uid v="1413411338" />
           <GUILayout>
-            <gpos v="442.666687 -143.999985 0" />
+            <gpos v="442.666687 -143.999969 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -92,7 +101,7 @@
                   <name v="input_sampler_position" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueFloat2 v="0.449999988 0.5" />
+                    <constantValueFloat2 v="0.504700005 0.125" />
                   </paramValue>
                 </parameter>
                 <parameter>
@@ -146,7 +155,7 @@
                   <name v="input_sampler_position" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueFloat2 v="0.899999976 0.5" />
+                    <constantValueFloat2 v="0.915600002 0.0781000033" />
                   </paramValue>
                 </parameter>
                 <parameter>
@@ -200,7 +209,7 @@
                   <name v="input_sampler_position" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueFloat2 v="0.25 0.5" />
+                    <constantValueFloat2 v="0.320300013 0.125" />
                   </paramValue>
                 </parameter>
                 <parameter>
@@ -254,7 +263,7 @@
                   <name v="input_sampler_position" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueFloat2 v="0.100000001 0.5" />
+                    <constantValueFloat2 v="0.123400003 0.140599996" />
                   </paramValue>
                 </parameter>
                 <parameter>
@@ -343,7 +352,7 @@
                   <name v="input_sampler_position" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueFloat2 v="0.764000058 0.5" />
+                    <constantValueFloat2 v="0.701499999 0.101599999" />
                   </paramValue>
                 </parameter>
                 <parameter>
@@ -451,7 +460,7 @@
         <compNode>
           <uid v="1414781282" />
           <GUILayout>
-            <gpos v="432 37.3333397 0" />
+            <gpos v="432 37.3333511 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -476,7 +485,7 @@
         <compNode>
           <uid v="1414832143" />
           <GUILayout>
-            <gpos v="233.519638 -111.999992 0" />
+            <gpos v="233.519638 -111.999985 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1489,7 +1498,7 @@
         <compNode>
           <uid v="1469053788" />
           <GUILayout>
-            <gpos v="-272 -613.333313 0" />
+            <gpos v="-320.311218 -645.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1734,7 +1743,7 @@
         <compNode>
           <uid v="1469056375" />
           <GUILayout>
-            <gpos v="-61.4587975 -592 501" />
+            <gpos v="16 -624 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1783,17 +1792,17 @@
               <path v="pkg:///GBT_Palatte_Switcher?dependency=1469053779" />
               <parameters>
                 <parameter>
-                  <name v="input_selection" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="6" />
-                  </paramValue>
-                </parameter>
-                <parameter>
                   <name v="hsl_hue" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat1 v="0.569999993" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_selection" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="5" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -1941,6 +1950,1458 @@
             </compFilter>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1468995578" />
+          <GUILayout>
+            <gpos v="-112 -357.333344 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469053789" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053790" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053791" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053792" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053793" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053794" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053795" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053796" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053797" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053798" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053799" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053800" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053801" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053802" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053803" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053804" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053805" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053806" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414772144" />
+              <connRefOutput v="1414769979" />
+            </connection>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1468995678" />
+              <connRefOutput v="1468995679" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <parameters>
+                <parameter>
+                  <name v="color_1_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_1_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.0859000012 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.304699987 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="number_of_points" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="6" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.531099975 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_4_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_4input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.716099977 0.0546999983" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.914099991 0.101599999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_6_input_color_value" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1468995886" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1468995886" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469053789" />
+                  <identifier v="output_Palette" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053790" />
+                  <identifier v="output_count" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053791" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053792" />
+                  <identifier v="output_value" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053793" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053794" />
+                  <identifier v="output_value_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053795" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053796" />
+                  <identifier v="output_value_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053797" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053798" />
+                  <identifier v="output_value_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053799" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053800" />
+                  <identifier v="output_value_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053801" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053802" />
+                  <identifier v="output_value_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053803" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053804" />
+                  <identifier v="output_value_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053805" />
+                  <identifier v="output_7" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053806" />
+                  <identifier v="output_8" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1468995678" />
+          <GUILayout>
+            <gpos v="-400 -176 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1468995679" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1468995694" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Value_Color_Sampler?dependency=1468995669" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1468995679" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468995694" />
+          <GUILayout>
+            <gpos v="-720 -304 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1468995695" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0 0.625 0.330769271 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468996004" />
+          <GUILayout>
+            <gpos v="-80 -93.8429108 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1468996005" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468996006" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468996007" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1468996008" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float4" />
+              <connRef v="1468995678" />
+              <connRefOutput v="1468995679" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Value_Input_Viewer?dependency=1468995669" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1468996005" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468996006" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468996007" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1468996008" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1468996963" />
+          <GUILayout>
+            <gpos v="-784 -1381.33337 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469053789" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053790" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053791" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053792" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053793" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053794" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053795" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053796" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053797" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053798" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053799" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053800" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053801" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053802" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053803" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053804" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053805" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053806" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414772144" />
+              <connRefOutput v="1414769979" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <parameters>
+                <parameter>
+                  <name v="color_1_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_1_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.0859000012 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.304699987 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="number_of_points" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.531099975 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_4_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_4input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.716099977 0.0546999983" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.914099991 0.101599999" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469053789" />
+                  <identifier v="output_Palette" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053790" />
+                  <identifier v="output_count" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053791" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053792" />
+                  <identifier v="output_value" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053793" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053794" />
+                  <identifier v="output_value_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053795" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053796" />
+                  <identifier v="output_value_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053797" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053798" />
+                  <identifier v="output_value_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053799" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053800" />
+                  <identifier v="output_value_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053801" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053802" />
+                  <identifier v="output_value_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053803" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053804" />
+                  <identifier v="output_value_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053805" />
+                  <identifier v="output_7" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053806" />
+                  <identifier v="output_8" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469001924" />
+          <GUILayout>
+            <gpos v="-80 -848 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469001925" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="destination" />
+              <connRef v="1469053788" />
+              <connRefOutput v="1469053793" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003334" />
+          <GUILayout>
+            <gpos v="-432 -1488 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003335" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053791" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003374" />
+          <GUILayout>
+            <gpos v="-432 -1346.77148 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003375" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053793" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003404" />
+          <GUILayout>
+            <gpos v="-432 -1232 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003405" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053795" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003440" />
+          <GUILayout>
+            <gpos v="-432 -1136 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003441" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053797" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003461" />
+          <GUILayout>
+            <gpos v="-432 -1008 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003462" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053799" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003493" />
+          <GUILayout>
+            <gpos v="-432 -1744 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003494" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053789" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469003555" />
+          <GUILayout>
+            <gpos v="-432 -1616 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469003556" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469003557" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469003558" />
+              <comptype v="64" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469003559" />
+              <comptype v="128" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_int1" />
+              <connRef v="1468996963" />
+              <connRefOutput v="1469053790" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Value_Integer_To_Float?dependency=1468995669" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_inputs" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469003556" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469003557" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469003558" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469003559" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469004172" />
+          <GUILayout>
+            <gpos v="-16 -1488 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469053789" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053790" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053791" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053792" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053793" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053794" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053795" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053796" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053797" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053798" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053799" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053800" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053801" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053802" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053803" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053804" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053805" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469053806" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414772144" />
+              <connRefOutput v="1414769979" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <parameters>
+                <parameter>
+                  <name v="color_1_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.0859000012 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_2input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.304699987 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="number_of_points" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_3_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.531099975 0.0702999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_4_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Color_4input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.716099977 0.0546999983" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_5_input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.914099991 0.101599999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_output_format" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="color_1_toggle_position_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469053789" />
+                  <identifier v="output_Palette" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053790" />
+                  <identifier v="output_count" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053791" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053792" />
+                  <identifier v="output_value" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053793" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053794" />
+                  <identifier v="output_value_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053795" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053796" />
+                  <identifier v="output_value_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053797" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053798" />
+                  <identifier v="output_value_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053799" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053800" />
+                  <identifier v="output_value_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053801" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053802" />
+                  <identifier v="output_value_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053803" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053804" />
+                  <identifier v="output_value_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053805" />
+                  <identifier v="output_7" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469053806" />
+                  <identifier v="output_8" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469004258" />
+          <GUILayout>
+            <gpos v="400 -1712 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469004259" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1469004172" />
+              <connRefOutput v="1469053792" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469004284" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469004284" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1469004690" />
+          <GUILayout>
+            <gpos v="400 -1597.45288 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469004259" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1469004172" />
+              <connRefOutput v="1469053794" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469004284" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469004284" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1469004728" />
+          <GUILayout>
+            <gpos v="400 -1456 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469004259" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1469004172" />
+              <connRefOutput v="1469053796" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469004284" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469004284" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1469004773" />
+          <GUILayout>
+            <gpos v="400 -1200 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469004259" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1469004172" />
+              <connRefOutput v="1469053800" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469004284" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469004284" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1469004789" />
+          <GUILayout>
+            <gpos v="400 -1328 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469004259" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1469004172" />
+              <connRefOutput v="1469053798" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469004284" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469004284" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1469004851" />
+          <GUILayout>
+            <gpos v="400 -1840 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469004852" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1469004172" />
+              <connRefOutput v="1469053789" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
@@ -1978,7 +3439,7 @@
           </GUILayout>
           <GUIName v="Use GBT Color Swatch for sampling single colors. &#10;" />
           <uid v="1414781373" />
-          <title v="Example 1" />
+          <title v="Example 1b: Single Color Sampling" />
           <frameColor v="1 0 0 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
@@ -2024,6 +3485,42 @@
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-945.755676 -1734.99927 -100" />
+            <size v="604.422363 828.332581" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1469004199" />
+          <title v="Frame" />
+          <frameColor v="0.101960786 0.552941203 1 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-162.582764 -1588.47388 0" />
+            <size v="100 50" />
+          </GUILayout>
+          <GUIName v="issue : count is hidden when float4 out mode&#10;&#10;" />
+          <uid v="1469004526" />
+          <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-117.333336 -1909.33337 -100" />
+            <size v="586.666687 832" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1469004934" />
+          <title v="Frame" />
+          <frameColor v="0.101960786 0.552941203 1 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
       </GUIObjects>
       <options>
         <option>
@@ -2056,9 +3553,7 @@
       </attributes>
       <source>
         <externalcopy>
-          <filename
-            v="Examples_Palatte.resources/XXXXXX-drifloom palatte.tif"
-          />
+          <filename v="Examples_Palatte.resources/drifloom palatte.tif" />
         </externalcopy>
       </source>
     </resource>
