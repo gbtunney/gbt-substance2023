@@ -2222,7 +2222,7 @@
         <compNode>
           <uid v="1469776007" />
           <GUILayout>
-            <gpos v="1409.98413 272 0" />
+            <gpos v="1456 255.725769 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2244,9 +2244,9 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="input_int4" />
-              <connRef v="1469776155" />
-              <connRefOutput v="1469776156" />
+              <identifier v="input_int3" />
+              <connRef v="1469795197" />
+              <connRefOutput v="1469795200" />
             </connection>
           </connections>
           <compImplementation>
@@ -2254,10 +2254,10 @@
               <path v="pkg:///Value_Integer_To_Float?dependency=1469700228" />
               <parameters>
                 <parameter>
-                  <name v="toggle_inputs" />
+                  <name v="input_value_type" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueBool v="1" />
+                    <constantValueInt32 v="3" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2283,55 +2283,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469776155" />
-          <GUILayout>
-            <gpos v="1232 272 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469776156" />
-              <comptype v="128" />
-            </compOutput>
-          </compOutputs>
-          <compImplementation>
-            <compFilter>
-              <filter v="valueprocessor" />
-              <parameters>
-                <parameter>
-                  <name v="function" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1469776881" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1469776881" />
-                          <function v="const_int4" />
-                          <type v="128" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="const_int4" />
-                              <constantValue>
-                                <constantValueInt4 v="1 2 3 4" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                          <GUILayout>
-                            <gpos v="141 185 0" />
-                          </GUILayout>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-              </parameters>
-            </compFilter>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469776241" />
           <GUILayout>
-            <gpos v="1648 144 0" />
+            <gpos v="1680 255.725769 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2351,6 +2305,13 @@
               <comptype v="2048" />
             </compOutput>
           </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float3" />
+              <connRef v="1469776007" />
+              <connRefOutput v="1469776010" />
+            </connection>
+          </connections>
           <compImplementation>
             <compInstance>
               <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
@@ -2366,7 +2327,7 @@
                   <name v="input_value_type" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueInt32 v="4" />
+                    <constantValueInt32 v="3" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2385,69 +2346,6 @@
                 </outputBridging>
                 <outputBridging>
                   <uid v="1469776245" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469776637" />
-          <GUILayout>
-            <gpos v="1584 272 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469776638" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469776639" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469776640" />
-              <comptype v="64" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469776641" />
-              <comptype v="128" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_int3" />
-              <connRef v="1469776007" />
-              <connRefOutput v="1469776010" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Integer_To_Float?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="3" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469776638" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469776639" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469776640" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469776641" />
                   <identifier v="output_float4" />
                 </outputBridging>
               </outputBridgings>
@@ -2752,6 +2650,62 @@
             </compOutputBridge>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1469795197" />
+          <GUILayout>
+            <gpos v="1232 255.725769 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469795198" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469795199" />
+              <comptype v="32" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469795200" />
+              <comptype v="64" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469795201" />
+              <comptype v="128" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Value_Integer_Viewer?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469795198" />
+                  <identifier v="output_integer1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469795199" />
+                  <identifier v="output_integer2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469795200" />
+                  <identifier v="output_integer3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469795201" />
+                  <identifier v="output_integer4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
@@ -2962,7 +2916,7 @@
           </GUILayout>
           <GUIName v="" />
           <uid v="1469776105" />
-          <title v="TODO: BROKE Convert any integer to float" />
+          <title v="Convert any integer to float" />
           <frameColor v="0.101960786 0.552941203 1 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />

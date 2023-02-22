@@ -142,3 +142,8 @@ scratch
 samples
 /Users/gilliantunney/gh_repos/SNAILICIDE/snailicide-monorepo
 Substance Automation Toolkit
+
+#P4 files
+.p4config
+.p4ignore
+.p4root
