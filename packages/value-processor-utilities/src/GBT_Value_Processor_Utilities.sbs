@@ -8,7 +8,7 @@
   <metadata>
     <treestr>
       <name v="version" />
-      <value v="0.0.1" />
+      <value v="0.0.2" />
     </treestr>
   </metadata>
   <dependencies>
@@ -502,7 +502,9 @@
           <uid v="1413859469" />
           <attributes>
             <label v="Input / Output Visibility" />
-            <description v="Refresh input / output visibility" />
+            <description
+              v="Refresh input / output visibility to CLEAN UP extra inputs created when changing input and output types. "
+            />
           </attributes>
           <type v="4" />
           <defaultValue>
@@ -545,7 +547,7 @@
           <channels v="256" />
           <group v="Float" />
           <visibleIf
-            v="input[&quot;input_value_type&quot;] == 1 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+            v=" input[&quot;input_value_type&quot;] == 1 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
           />
         </graphoutput>
         <graphoutput>
@@ -557,7 +559,7 @@
           <channels v="512" />
           <group v="Float" />
           <visibleIf
-            v="input[&quot;input_value_type&quot;] == 2 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+            v=" input[&quot;input_value_type&quot;] == 2 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
           />
         </graphoutput>
         <graphoutput>
@@ -569,7 +571,7 @@
           <channels v="1024" />
           <group v="Float" />
           <visibleIf
-            v="input[&quot;input_value_type&quot;] == 3 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+            v=" input[&quot;input_value_type&quot;] == 3 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
           />
         </graphoutput>
         <graphoutput>
@@ -581,7 +583,7 @@
           <channels v="2048" />
           <group v="Float" />
           <visibleIf
-            v="input[&quot;input_value_type&quot;] == 4 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+            v=" input[&quot;input_value_type&quot;] == 4 &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
           />
         </graphoutput>
       </graphOutputs>
@@ -1386,6 +1388,132 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <sbspresets>
+        <sbspreset>
+          <label v="Input Value View" />
+          <presetinputs>
+            <presetinput>
+              <uid v="1413458196" />
+              <identifier v="input_value_type" />
+              <paramValue>
+                <constantValueInt1 v="1" />
+              </paramValue>
+              <type v="16" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469888787" />
+              <identifier v="toggle_value_source" />
+              <paramValue>
+                <constantValueBool v="1" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469888885" />
+              <identifier v="input_1" />
+              <paramValue>
+                <constantValueFloat1 v="0.159999996" />
+              </paramValue>
+              <type v="256" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890001" />
+              <identifier v="input_2" />
+              <paramValue>
+                <constantValueFloat2 v="0.0899999961 0.209999993" />
+              </paramValue>
+              <type v="512" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890006" />
+              <identifier v="input_3" />
+              <paramValue>
+                <constantValueFloat3 v="0 0 0" />
+              </paramValue>
+              <type v="1024" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890009" />
+              <identifier v="input_4" />
+              <paramValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </paramValue>
+              <type v="2048" />
+            </presetinput>
+            <presetinput>
+              <uid v="1413859469" />
+              <identifier v="toggle_inputs" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+          </presetinputs>
+          <usertags v="input,value,float" />
+        </sbspreset>
+        <sbspreset>
+          <label v="Parameter Value View" />
+          <presetinputs>
+            <presetinput>
+              <uid v="1413458196" />
+              <identifier v="input_value_type" />
+              <paramValue>
+                <constantValueInt1 v="1" />
+              </paramValue>
+              <type v="16" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469888787" />
+              <identifier v="toggle_value_source" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469888885" />
+              <identifier v="input_1" />
+              <paramValue>
+                <constantValueFloat1 v="0" />
+              </paramValue>
+              <type v="256" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890001" />
+              <identifier v="input_2" />
+              <paramValue>
+                <constantValueFloat2 v="0.0899999961 0.209999993" />
+              </paramValue>
+              <type v="512" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890006" />
+              <identifier v="input_3" />
+              <paramValue>
+                <constantValueFloat3 v="0 0 0" />
+              </paramValue>
+              <type v="1024" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890009" />
+              <identifier v="input_4" />
+              <paramValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </paramValue>
+              <type v="2048" />
+            </presetinput>
+            <presetinput>
+              <uid v="1413859469" />
+              <identifier v="toggle_inputs" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+          </presetinputs>
+          <usertags v="parameter, value, float" />
+        </sbspreset>
+      </sbspresets>
     </graph>
     <graph>
       <identifier v="Integer_Value_Graph" />
@@ -1900,7 +2028,9 @@
           <uid v="1413859469" />
           <attributes>
             <label v="Input / Output Visibility" />
-            <description v="Refresh input / output visibility" />
+            <description
+              v="Refresh input / output visibility to CLEAN UP extra inputs created when changing input and output types. "
+            />
           </attributes>
           <type v="4" />
           <defaultValue>
@@ -3203,6 +3333,162 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <sbspresets>
+        <sbspreset>
+          <label v="Parameter Value View" />
+          <presetinputs>
+            <presetinput>
+              <uid v="1469888787" />
+              <identifier v="toggle_value_source" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890001" />
+              <identifier v="param_input_2" />
+              <paramValue>
+                <constantValueInt2 v="0 0" />
+              </paramValue>
+              <type v="32" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890006" />
+              <identifier v="param_input_3" />
+              <paramValue>
+                <constantValueInt3 v="0 0 0" />
+              </paramValue>
+              <type v="64" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890009" />
+              <identifier v="param_input_4" />
+              <paramValue>
+                <constantValueInt4 v="0 0 0 0" />
+              </paramValue>
+              <type v="128" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469898560" />
+              <identifier v="toggle_float_output" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1413859469" />
+              <identifier v="toggle_inputs" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+          </presetinputs>
+          <usertags v="parameter, value, integer" />
+        </sbspreset>
+        <sbspreset>
+          <label v="Input Value View" />
+          <presetinputs>
+            <presetinput>
+              <uid v="1469888787" />
+              <identifier v="toggle_value_source" />
+              <paramValue>
+                <constantValueBool v="1" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890001" />
+              <identifier v="param_input_2" />
+              <paramValue>
+                <constantValueInt2 v="0 0" />
+              </paramValue>
+              <type v="32" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890006" />
+              <identifier v="param_input_3" />
+              <paramValue>
+                <constantValueInt3 v="0 0 0" />
+              </paramValue>
+              <type v="64" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890009" />
+              <identifier v="param_input_4" />
+              <paramValue>
+                <constantValueInt4 v="0 0 0 0" />
+              </paramValue>
+              <type v="128" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469898560" />
+              <identifier v="toggle_float_output" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1413859469" />
+              <identifier v="toggle_inputs" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+          </presetinputs>
+          <usertags v="input, value, integer" />
+        </sbspreset>
+        <sbspreset>
+          <label v="Convert to Float" />
+          <presetinputs>
+            <presetinput>
+              <uid v="1469890001" />
+              <identifier v="param_input_2" />
+              <paramValue>
+                <constantValueInt2 v="0 0" />
+              </paramValue>
+              <type v="32" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890006" />
+              <identifier v="param_input_3" />
+              <paramValue>
+                <constantValueInt3 v="0 0 0" />
+              </paramValue>
+              <type v="64" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469890009" />
+              <identifier v="param_input_4" />
+              <paramValue>
+                <constantValueInt4 v="0 0 0 0" />
+              </paramValue>
+              <type v="128" />
+            </presetinput>
+            <presetinput>
+              <uid v="1469898560" />
+              <identifier v="toggle_float_output" />
+              <paramValue>
+                <constantValueBool v="1" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+            <presetinput>
+              <uid v="1413859469" />
+              <identifier v="toggle_inputs" />
+              <paramValue>
+                <constantValueBool v="0" />
+              </paramValue>
+              <type v="4" />
+            </presetinput>
+          </presetinputs>
+          <usertags v="float, value, integer" />
+        </sbspreset>
+      </sbspresets>
     </graph>
     <graph>
       <identifier v="Float_Value_Switch" />
@@ -3566,6 +3852,9 @@
           <uid v="1413939457" />
           <attributes>
             <label v="Input / Output Visibility" />
+            <description
+              v="Refresh input / output visibility to CLEAN UP extra inputs created when changing input and output types. "
+            />
           </attributes>
           <type v="4" />
           <defaultValue>
@@ -5075,6 +5364,9 @@
           <uid v="1413875757" />
           <attributes>
             <label v="Input / Output Visibility" />
+            <description
+              v="Refresh input / output visibility to CLEAN UP extra inputs created when changing input and output types. "
+            />
           </attributes>
           <type v="4" />
           <defaultValue>
@@ -5101,6 +5393,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Debug" />
           <visibleIf
             v="input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  "
           />
@@ -7978,6 +8271,9 @@
           <uid v="1413887529" />
           <attributes>
             <label v="Input / Output Visibility" />
+            <description
+              v="Refresh input / output visibility to CLEAN UP extra inputs created when changing input and output types. "
+            />
           </attributes>
           <type v="4" />
           <defaultValue>
@@ -9262,11 +9558,11 @@
       </root>
     </graph>
     <graph>
-      <identifier v="Value_Grayscale_Sampler" />
-      <uid v="1414108893" />
+      <identifier v="Sampler_Image_To_Float" />
+      <uid v="1469258415" />
       <attributes>
         <category v="value processor" />
-        <label v="Sampler: Grayscale to Float" />
+        <label v="Sampler: Image to Float" />
         <author v="Gillian Tunney" />
         <tags v="value processor, values" />
         <icon>
@@ -9311,38 +9607,198 @@
           </defaultWidget>
         </paraminput>
         <paraminput>
-          <identifier v="input" />
+          <identifier v="toggle_color_mode" />
+          <uid v="1469259630" />
+          <attributes>
+            <label v="Color Mode" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Grayscale" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Color" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_grayscale" />
           <uid v="1414109196" />
           <attributes>
-            <label v="Sample Image Input" />
+            <label v="Grayscale Sample Image" />
           </attributes>
           <isConnectable v="1" />
           <type v="2" />
           <defaultValue>
-            <constantValueFloat1 v="0" />
+            <constantValueFloat1 v="0.651685417" />
           </defaultValue>
           <defaultWidget>
             <name v="" />
             <options />
           </defaultWidget>
+          <visibleIf
+            v="!input[&quot;toggle_color_mode&quot;] &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_output" />
+          <uid v="1469243375" />
+          <attributes>
+            <label v="Output Mode" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Uniform Color" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Float" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_inputs" />
+          <uid v="1469243962" />
+          <attributes>
+            <label v="Input / Output Visibility" />
+            <description
+              v="Refresh input / output visibility to CLEAN UP extra inputs created when changing input and output types. "
+            />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Refresh" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Refresh" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Debug" />
+          <visibleIf
+            v="input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  "
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="input_color" />
+          <uid v="1469258729" />
+          <attributes>
+            <label v="Color Sample Image" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="1" />
+          <defaultValue>
+            <constantValueFloat4 v="0 0 0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+          <visibleIf
+            v="input[&quot;toggle_color_mode&quot;] &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+          />
         </paraminput>
       </paraminputs>
       <primaryInput v="1414109196" />
       <graphOutputs>
         <graphoutput>
-          <identifier v="output" />
+          <identifier v="output_float" />
           <uid v="1414109128" />
           <attributes>
             <label v="Float1 Value" />
           </attributes>
           <channels v="256" />
+          <visibleIf
+            v="!input[&quot;toggle_color_mode&quot;] &amp;&amp; input[&quot;toggle_output&quot;] &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+          />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_grayscale" />
+          <uid v="1469243434" />
+          <attributes>
+            <label v="Grayscale" />
+          </attributes>
+          <channels v="2" />
+          <visibleIf
+            v="!input[&quot;toggle_color_mode&quot;] &amp;&amp; !input[&quot;toggle_output&quot;] &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+          />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_float4" />
+          <uid v="1469258731" />
+          <attributes>
+            <label v="Float4 Value" />
+          </attributes>
+          <channels v="2048" />
+          <visibleIf
+            v="input[&quot;toggle_color_mode&quot;]  &amp;&amp; input[&quot;toggle_output&quot;] &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+          />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_color" />
+          <uid v="1469258733" />
+          <attributes>
+            <label v="Color" />
+          </attributes>
+          <visibleIf
+            v="input[&quot;toggle_color_mode&quot;]   &amp;&amp; !input[&quot;toggle_output&quot;] &amp;&amp; ( input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  )"
+          />
         </graphoutput>
       </graphOutputs>
       <compNodes>
         <compNode>
           <uid v="1414109029" />
           <GUILayout>
-            <gpos v="477 208 0" />
+            <gpos v="349.497192 208 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -9410,7 +9866,7 @@
         <compNode>
           <uid v="1414109129" />
           <GUILayout>
-            <gpos v="669 208 0" />
+            <gpos v="733.497192 208 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -9427,7 +9883,7 @@
         <compNode>
           <uid v="1414109197" />
           <GUILayout>
-            <gpos v="285 208 0" />
+            <gpos v="157.497208 208 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -9485,103 +9941,90 @@
             </compInputBridge>
           </compImplementation>
         </compNode>
-      </compNodes>
-      <baseParameters />
-      <options>
-        <option>
-          <name v="defaultParentSize" />
-          <value v="6x6" />
-        </option>
-      </options>
-      <root>
-        <rootOutputs>
-          <rootOutput>
-            <output v="1414109128" />
-            <format v="0" />
-            <usertag v="" />
-          </rootOutput>
-        </rootOutputs>
-      </root>
-    </graph>
-    <graph>
-      <identifier v="Value_Color_Sampler" />
-      <uid v="1414109231" />
-      <attributes>
-        <category v="value processor" />
-        <label v="Sampler: Color to Float4" />
-        <author v="Gillian Tunney" />
-        <tags v="value processor, values, color, sampling, picker,colorize" />
-        <icon>
-          <datalength v="7091" />
-          <format v="png" />
-          <strdata
-            v="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"
-          />
-        </icon>
-      </attributes>
-      <paraminputs>
-        <paraminput>
-          <identifier v="input_sampler_position" />
-          <uid v="1414109052" />
-          <attributes>
-            <label v="Sample by Position" />
-          </attributes>
-          <type v="512" />
-          <defaultValue>
-            <constantValueFloat2 v="0 0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="position" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0;0" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-            </options>
-          </defaultWidget>
-        </paraminput>
-        <paraminput>
-          <identifier v="input" />
-          <uid v="1414109270" />
-          <isConnectable v="1" />
-          <type v="1" />
-          <defaultValue>
-            <constantValueFloat4 v="0 0 0 0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="" />
-            <options />
-          </defaultWidget>
-        </paraminput>
-      </paraminputs>
-      <primaryInput v="1414109270" />
-      <graphOutputs>
-        <graphoutput>
-          <identifier v="output" />
-          <uid v="1414109128" />
-          <attributes>
-            <label v="Float4 Value" />
-          </attributes>
-          <channels v="2048" />
-        </graphoutput>
-      </graphOutputs>
-      <compNodes>
         <compNode>
-          <uid v="1414109029" />
+          <uid v="1469243390" />
           <GUILayout>
-            <gpos v="477 208 0" />
+            <gpos v="541.497192 400 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469243391" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1414109029" />
+              <connRefOutput v="1414109030" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469243407" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469243407" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="256" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1469243435" />
+          <GUILayout>
+            <gpos v="733.497192 400 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1469243390" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1469243434" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469258726" />
+          <GUILayout>
+            <gpos v="349.497192 592 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -9592,7 +10035,7 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1414109271" />
+              <connRef v="1469258728" />
               <connRefOutput v="1414109272" />
             </connection>
           </connections>
@@ -9648,26 +10091,65 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1414109129" />
+          <uid v="1469258727" />
           <GUILayout>
-            <gpos v="669 208 0" />
+            <gpos v="541.497192 784 0" />
           </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469243033" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
           <connections>
             <connection>
-              <identifier v="inputNodeOutput" />
-              <connRef v="1414109029" />
+              <identifier v="#input" />
+              <connRef v="1469258726" />
+              <connRefOutput v="1414109030" />
             </connection>
           </connections>
           <compImplementation>
-            <compOutputBridge>
-              <output v="1414109128" />
-            </compOutputBridge>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469243076" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469243076" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="#input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
           </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="2048" />
+            </compInputValue>
+          </inputValues>
         </compNode>
         <compNode>
-          <uid v="1414109271" />
+          <uid v="1469258728" />
           <GUILayout>
-            <gpos v="304 208 0" />
+            <gpos v="157.497208 592 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -9677,7 +10159,7 @@
           </compOutputs>
           <compImplementation>
             <compInputBridge>
-              <entry v="1414109270" />
+              <entry v="1469258729" />
               <parameters>
                 <parameter>
                   <name v="outputsize" />
@@ -9725,6 +10207,40 @@
             </compInputBridge>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1469258730" />
+          <GUILayout>
+            <gpos v="733.497192 592 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1469258726" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1469258731" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469258732" />
+          <GUILayout>
+            <gpos v="733.497192 784 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1469258727" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1469258733" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <options>
@@ -9737,6 +10253,21 @@
         <rootOutputs>
           <rootOutput>
             <output v="1414109128" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1469243434" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1469258731" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1469258733" />
             <format v="0" />
             <usertag v="" />
           </rootOutput>
