@@ -79,7 +79,7 @@
         <compNode>
           <uid v="1469764344" />
           <GUILayout>
-            <gpos v="-677.333313 -723.46991 0" />
+            <gpos v="-570.666626 -791.569946 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -118,7 +118,7 @@
         <compNode>
           <uid v="1469764441" />
           <GUILayout>
-            <gpos v="-826.666626 -727.569946 0" />
+            <gpos v="-826.666626 -791.569946 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -151,79 +151,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469764521" />
-          <GUILayout>
-            <gpos v="-453.333313 -725.378906 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469764522" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469764523" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469764524" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469764525" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float4" />
-              <connRef v="1469764344" />
-              <connRefOutput v="1469764345" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="4" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="toggle_inputs" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueBool v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469764522" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469764523" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469764524" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469764525" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469764630" />
           <GUILayout>
-            <gpos v="-453.333313 -901.333374 0" />
+            <gpos v="-389.333313 -901.333374 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -279,7 +209,7 @@
         <compNode>
           <uid v="1469765120" />
           <GUILayout>
-            <gpos v="693.561035 687.869568 0" />
+            <gpos v="656 752 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -301,19 +231,19 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="input_value_a" />
-              <connRef v="1469765141" />
-              <connRefOutput v="1469765142" />
-            </connection>
-            <connection>
               <identifier v="input_value_b" />
               <connRef v="1469765299" />
               <connRefOutput v="1469765300" />
             </connection>
+            <connection>
+              <identifier v="input_value_a" />
+              <connRef v="1469921994" />
+              <connRefOutput v="1469921995" />
+            </connection>
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Switch_Boolean?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Switch?dependency=1469700228" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -337,72 +267,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469765141" />
-          <GUILayout>
-            <gpos v="346.666656 666.666687 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469765142" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469765143" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469765144" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469765145" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="input_float1" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueFloat1 v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469765142" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469765143" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469765144" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469765145" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469765299" />
           <GUILayout>
-            <gpos v="336 880 0" />
+            <gpos v="336 848 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -424,7 +291,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -438,6 +305,13 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat1 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_1" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.699999988" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -456,69 +330,6 @@
                 </outputBridging>
                 <outputBridging>
                   <uid v="1469765303" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469765586" />
-          <GUILayout>
-            <gpos v="949.561035 687.869568 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469765587" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469765588" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469765589" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469765590" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float1" />
-              <connRef v="1469765120" />
-              <connRefOutput v="1469765121" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469765587" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469765588" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469765589" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469765590" />
                   <identifier v="output_float4" />
                 </outputBridging>
               </outputBridgings>
@@ -550,7 +361,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -564,6 +375,13 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat2 v="0 0.25" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.25 0.5" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -591,7 +409,7 @@
         <compNode>
           <uid v="1469766497" />
           <GUILayout>
-            <gpos v="287.398773 1392 0" />
+            <gpos v="285.30722 1392 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -613,7 +431,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -627,6 +445,13 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat2 v="0.5 0.75" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.75 1" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -652,84 +477,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469766555" />
-          <GUILayout>
-            <gpos v="432 1328 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469766556" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766557" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766558" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766559" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_xy" />
-              <connRef v="1469766444" />
-              <connRefOutput v="1469766446" />
-            </connection>
-            <connection>
-              <identifier v="input_zw" />
-              <connRef v="1469766497" />
-              <connRefOutput v="1469766499" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Merge?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="output_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="3" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="2" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469766556" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766557" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766558" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766559" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469766833" />
           <GUILayout>
-            <gpos v="917.766785 1269.48389 0" />
+            <gpos v="912 1269.48389 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -751,63 +501,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469766834" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766835" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766836" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766837" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469766856" />
-          <GUILayout>
-            <gpos v="917.766785 1429.48389 501" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469766834" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766835" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766836" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766837" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -817,7 +511,7 @@
                   </paramValue>
                 </parameter>
                 <parameter>
-                  <name v="input_float1" />
+                  <name v="input_1" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat1 v="0.25" />
@@ -846,9 +540,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469766865" />
+          <uid v="1469766856" />
           <GUILayout>
-            <gpos v="917.766785 1589.48389 501" />
+            <gpos v="912 1429.48389 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -870,7 +564,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -881,6 +575,13 @@
                 </parameter>
                 <parameter>
                   <name v="input_float1" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.25" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_1" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat1 v="0.5" />
@@ -909,9 +610,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469766884" />
+          <uid v="1469766865" />
           <GUILayout>
-            <gpos v="917.766785 1749.48389 501" />
+            <gpos v="912 1589.48389 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -933,7 +634,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -944,6 +645,13 @@
                 </parameter>
                 <parameter>
                   <name v="input_float1" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_1" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat1 v="0.75" />
@@ -972,203 +680,69 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469766932" />
+          <uid v="1469766884" />
           <GUILayout>
-            <gpos v="1173.76672 1504.15051 0" />
+            <gpos v="912 1749.48389 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
-              <uid v="1469766933" />
+              <uid v="1469766834" />
               <comptype v="256" />
             </compOutput>
             <compOutput>
-              <uid v="1469766934" />
+              <uid v="1469766835" />
               <comptype v="512" />
             </compOutput>
             <compOutput>
-              <uid v="1469766935" />
+              <uid v="1469766836" />
               <comptype v="1024" />
             </compOutput>
             <compOutput>
-              <uid v="1469766936" />
+              <uid v="1469766837" />
               <comptype v="2048" />
             </compOutput>
           </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_x" />
-              <connRef v="1469766833" />
-              <connRefOutput v="1469766834" />
-            </connection>
-            <connection>
-              <identifier v="input_y" />
-              <connRef v="1469766856" />
-              <connRefOutput v="1469766834" />
-            </connection>
-            <connection>
-              <identifier v="input_z" />
-              <connRef v="1469766865" />
-              <connRefOutput v="1469766834" />
-            </connection>
-            <connection>
-              <identifier v="input_w" />
-              <connRef v="1469766884" />
-              <connRefOutput v="1469766834" />
-            </connection>
-          </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Merge?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="output_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="4" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469766933" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766934" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766935" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766936" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469766970" />
-          <GUILayout>
-            <gpos v="560 1328 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469766971" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766972" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766973" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469766974" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float4" />
-              <connRef v="1469766555" />
-              <connRefOutput v="1469766559" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueInt32 v="4" />
+                    <constantValueInt32 v="1" />
                   </paramValue>
                 </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469766971" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766972" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766973" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469766974" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469768097" />
-          <GUILayout>
-            <gpos v="1333.76672 1504.15051 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469768098" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768099" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768100" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768101" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float4" />
-              <connRef v="1469766932" />
-              <connRefOutput v="1469766936" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters>
                 <parameter>
-                  <name v="input_value_type" />
+                  <name v="input_float1" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueInt32 v="4" />
+                    <constantValueFloat1 v="0.75" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_1" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="1" />
                   </paramValue>
                 </parameter>
               </parameters>
               <outputBridgings>
                 <outputBridging>
-                  <uid v="1469768098" />
+                  <uid v="1469766834" />
                   <identifier v="output_float1" />
                 </outputBridging>
                 <outputBridging>
-                  <uid v="1469768099" />
+                  <uid v="1469766835" />
                   <identifier v="output_float2" />
                 </outputBridging>
                 <outputBridging>
-                  <uid v="1469768100" />
+                  <uid v="1469766836" />
                   <identifier v="output_float3" />
                 </outputBridging>
                 <outputBridging>
-                  <uid v="1469768101" />
+                  <uid v="1469766837" />
                   <identifier v="output_float4" />
                 </outputBridging>
               </outputBridgings>
@@ -1178,7 +752,7 @@
         <compNode>
           <uid v="1469768698" />
           <GUILayout>
-            <gpos v="-22.6713867 2490.6665 0" />
+            <gpos v="-48 2625.03857 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1200,13 +774,36 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_float4" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat4 v="1 2 3 4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.25 0.5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_4" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4
+                      v="0.200000003 0.400000006 0.600000024 0.800000012"
+                    />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -1232,540 +829,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469768736" />
-          <GUILayout>
-            <gpos v="169.328613 2490.6665 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469768737" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768738" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768739" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768740" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768741" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768742" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768743" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768744" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469768745" />
-              <comptype v="512" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float4" />
-              <connRef v="1469768698" />
-              <connRefOutput v="1469768702" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Split?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="toggle_value_type_input" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="toggle_output_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469768737" />
-                  <identifier v="output_1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768738" />
-                  <identifier v="output_2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768739" />
-                  <identifier v="output_3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768740" />
-                  <identifier v="output_4" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768741" />
-                  <identifier v="output_x_y" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768742" />
-                  <identifier v="output_z_w" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768743" />
-                  <identifier v="output_5" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768744" />
-                  <identifier v="output_6" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469768745" />
-                  <identifier v="output_x_y_2" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469769267" />
-          <GUILayout>
-            <gpos v="425.328613 2635.7207 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469769268" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769269" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769270" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769271" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float2" />
-              <connRef v="1469768736" />
-              <connRefOutput v="1469768741" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters />
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469769268" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769269" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769270" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769271" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469769280" />
-          <GUILayout>
-            <gpos v="425.328613 2795.7207 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469769281" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769282" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769283" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769284" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float2" />
-              <connRef v="1469768736" />
-              <connRefOutput v="1469768742" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters />
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469769281" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769282" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769283" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769284" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469769607" />
-          <GUILayout>
-            <gpos v="425.328613 2475.7207 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469769608" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769609" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769610" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769611" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769612" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769613" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769614" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769615" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769616" />
-              <comptype v="512" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float2" />
-              <connRef v="1469768736" />
-              <connRefOutput v="1469768741" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Split?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="toggle_inputs" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueBool v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469769608" />
-                  <identifier v="output_1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769609" />
-                  <identifier v="output_2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769610" />
-                  <identifier v="output_3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769611" />
-                  <identifier v="output_4" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769612" />
-                  <identifier v="output_x_y" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769613" />
-                  <identifier v="output_z_w" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769614" />
-                  <identifier v="output_5" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769615" />
-                  <identifier v="output_6" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769616" />
-                  <identifier v="output_x_y_2" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469769812" />
-          <GUILayout>
-            <gpos v="617.328613 2394.6665 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469769813" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769814" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769815" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469769816" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float1" />
-              <connRef v="1469769607" />
-              <connRefOutput v="1469769614" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="toggle_inputs" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueBool v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469769813" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769814" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769815" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469769816" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469772544" />
-          <GUILayout>
-            <gpos v="1200 2064 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469772545" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772546" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772547" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772548" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772549" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772550" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772551" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772552" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772553" />
-              <comptype v="512" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float2" />
-              <connRef v="1469773835" />
-              <connRefOutput v="1469773837" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Split?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_variable_select_1" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="3" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="input_variable_select_2" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="input_variable_select_4" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="input_variable_select_1_5" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="input_variable_select_2_5" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="toggle_output_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469772545" />
-                  <identifier v="output_1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772546" />
-                  <identifier v="output_2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772547" />
-                  <identifier v="output_3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772548" />
-                  <identifier v="output_4" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772549" />
-                  <identifier v="output_x_y" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772550" />
-                  <identifier v="output_z_w" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772551" />
-                  <identifier v="output_5" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772552" />
-                  <identifier v="output_6" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772553" />
-                  <identifier v="output_x_y_2" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469772627" />
           <GUILayout>
-            <gpos v="13.2418594 1843.60242 0" />
+            <gpos v="23.9085312 1758.26917 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1787,13 +853,29 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_float4" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat4 v="1 2 3 4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_4" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4
+                      v="0.129999995 0.269999981 0.429999977 0.599999964"
+                    />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -1819,174 +901,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469772708" />
-          <GUILayout>
-            <gpos v="1360 2064 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469772709" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772710" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772711" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469772712" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float2" />
-              <connRef v="1469772544" />
-              <connRefOutput v="1469772553" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters />
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469772709" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772710" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772711" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469772712" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469773552" />
-          <GUILayout>
-            <gpos v="173.241852 1843.60242 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469773553" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773554" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773555" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773556" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773557" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773558" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773559" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773560" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469773561" />
-              <comptype v="512" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float4" />
-              <connRef v="1469772627" />
-              <connRefOutput v="1469772631" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Split?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="toggle_value_type_input" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="toggle_output_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="0" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469773553" />
-                  <identifier v="output_1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773554" />
-                  <identifier v="output_2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773555" />
-                  <identifier v="output_3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773556" />
-                  <identifier v="output_4" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773557" />
-                  <identifier v="output_x_y" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773558" />
-                  <identifier v="output_z_w" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773559" />
-                  <identifier v="output_5" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773560" />
-                  <identifier v="output_6" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469773561" />
-                  <identifier v="output_x_y_2" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469773768" />
           <GUILayout>
-            <gpos v="397.241852 1843.60242 0" />
+            <gpos v="448.717682 1744 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2009,14 +926,22 @@
           <connections>
             <connection>
               <identifier v="input_float2" />
-              <connRef v="1469773552" />
-              <connRefOutput v="1469773557" />
+              <connRef v="1469919713" />
+              <connRefOutput v="1469919718" />
             </connection>
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
               <outputBridgings>
                 <outputBridging>
                   <uid v="1469773769" />
@@ -2041,7 +966,7 @@
         <compNode>
           <uid v="1469773780" />
           <GUILayout>
-            <gpos v="397.241852 2003.60242 0" />
+            <gpos v="448.717682 1904 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2064,14 +989,29 @@
           <connections>
             <connection>
               <identifier v="input_float2" />
-              <connRef v="1469773552" />
-              <connRefOutput v="1469773558" />
+              <connRef v="1469919713" />
+              <connRefOutput v="1469919719" />
             </connection>
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_inputs" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
               <outputBridgings>
                 <outputBridging>
                   <uid v="1469773781" />
@@ -2096,7 +1036,7 @@
         <compNode>
           <uid v="1469773835" />
           <GUILayout>
-            <gpos v="1040 2064 0" />
+            <gpos v="1008 2096 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2118,7 +1058,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -2132,6 +1072,13 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueFloat2 v="1 2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.25 0.75" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2157,135 +1104,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469774866" />
-          <GUILayout>
-            <gpos v="617.328613 2554.6665 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469774867" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469774868" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469774869" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469774870" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float1" />
-              <connRef v="1469769607" />
-              <connRefOutput v="1469769615" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469774867" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469774868" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469774869" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469774870" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1469776007" />
-          <GUILayout>
-            <gpos v="1456 255.725769 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469776008" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469776009" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469776010" />
-              <comptype v="64" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469776011" />
-              <comptype v="128" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_int3" />
-              <connRef v="1469795197" />
-              <connRefOutput v="1469795200" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Integer_To_Float?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="3" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469776008" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469776009" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469776010" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469776011" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469776241" />
           <GUILayout>
-            <gpos v="1680 255.725769 0" />
+            <gpos v="1680 222.246994 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2307,14 +1128,14 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="input_float3" />
-              <connRef v="1469776007" />
-              <connRefOutput v="1469776010" />
+              <identifier v="input_float4" />
+              <connRef v="1469912717" />
+              <connRefOutput v="1469912725" />
             </connection>
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="toggle_inputs" />
@@ -2327,7 +1148,14 @@
                   <name v="input_value_type" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueInt32 v="3" />
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2355,7 +1183,7 @@
         <compNode>
           <uid v="1469777092" />
           <GUILayout>
-            <gpos v="-649.476135 -228.770538 0" />
+            <gpos v="-617.476196 -292.770538 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2394,7 +1222,7 @@
         <compNode>
           <uid v="1469777131" />
           <GUILayout>
-            <gpos v="-809.476196 -228.770538 0" />
+            <gpos v="-809.476196 -292.770538 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2436,7 +1264,7 @@
         <compNode>
           <uid v="1469777146" />
           <GUILayout>
-            <gpos v="-378.666656 -229.333313 0" />
+            <gpos v="-336 -208 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2465,13 +1293,20 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Input_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2499,7 +1334,7 @@
         <compNode>
           <uid v="1469777252" />
           <GUILayout>
-            <gpos v="-506.666656 -405.167358 0" />
+            <gpos v="-336 -400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2577,7 +1412,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Parameter_Viewer?dependency=1469700228" />
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -2595,6 +1430,30 @@
                       <paramNodes>
                         <paramNode>
                           <uid v="1469778087" />
+                          <function v="get_float2" />
+                          <type v="512" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float2" />
+                              <constantValue>
+                                <constantValueString v="example_input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1469913448" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1469913448" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -2651,56 +1510,1685 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469795197" />
+          <uid v="1469912717" />
           <GUILayout>
-            <gpos v="1232 255.725769 0" />
+            <gpos v="1456 222.246994 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
-              <uid v="1469795198" />
+              <uid v="1469912718" />
               <comptype v="16" />
             </compOutput>
             <compOutput>
-              <uid v="1469795199" />
+              <uid v="1469912719" />
               <comptype v="32" />
             </compOutput>
             <compOutput>
-              <uid v="1469795200" />
+              <uid v="1469912720" />
               <comptype v="64" />
             </compOutput>
             <compOutput>
-              <uid v="1469795201" />
+              <uid v="1469912721" />
               <comptype v="128" />
             </compOutput>
+            <compOutput>
+              <uid v="1469912722" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912723" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912724" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912725" />
+              <comptype v="2048" />
+            </compOutput>
           </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_4" />
+              <connRef v="1469912751" />
+              <connRefOutput v="1469912755" />
+            </connection>
+          </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Value_Integer_Viewer?dependency=1469700228" />
+              <path v="pkg:///Integer_Value_Graph?dependency=1469700228" />
               <parameters>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
                 <parameter>
                   <name v="input_value_type" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <constantValueInt32 v="3" />
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_float_output" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
                   </paramValue>
                 </parameter>
               </parameters>
               <outputBridgings>
                 <outputBridging>
-                  <uid v="1469795198" />
-                  <identifier v="output_integer1" />
+                  <uid v="1469912718" />
+                  <identifier v="output_1" />
                 </outputBridging>
                 <outputBridging>
-                  <uid v="1469795199" />
-                  <identifier v="output_integer2" />
+                  <uid v="1469912719" />
+                  <identifier v="output_2" />
                 </outputBridging>
                 <outputBridging>
-                  <uid v="1469795200" />
-                  <identifier v="output_integer3" />
+                  <uid v="1469912720" />
+                  <identifier v="output_3" />
                 </outputBridging>
                 <outputBridging>
-                  <uid v="1469795201" />
-                  <identifier v="output_integer4" />
+                  <uid v="1469912721" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912722" />
+                  <identifier v="output_float_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912723" />
+                  <identifier v="output_float_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912724" />
+                  <identifier v="output_float_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912725" />
+                  <identifier v="output_float_4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469912751" />
+          <GUILayout>
+            <gpos v="1232 222.246994 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469912752" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912753" />
+              <comptype v="32" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912754" />
+              <comptype v="64" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912755" />
+              <comptype v="128" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912756" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912757" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912758" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469912759" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Integer_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="param_input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="2 4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="param_input_4" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt4 v="1 2 3 4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_inputs" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469912752" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912753" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912754" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912755" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912756" />
+                  <identifier v="output_float_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912757" />
+                  <identifier v="output_float_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912758" />
+                  <identifier v="output_float_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469912759" />
+                  <identifier v="output_float_4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469913069" />
+          <GUILayout>
+            <gpos v="-389.333313 -709.333374 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469913070" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913071" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913072" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913073" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float4" />
+              <connRef v="1469764344" />
+              <connRefOutput v="1469764345" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469913070" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913071" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913072" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913073" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469913529" />
+          <GUILayout>
+            <gpos v="464 1328 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469913530" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913531" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913532" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913533" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_zw" />
+              <connRef v="1469766497" />
+              <connRefOutput v="1469766499" />
+            </connection>
+            <connection>
+              <identifier v="input_xy" />
+              <connRef v="1469766444" />
+              <connRefOutput v="1469766446" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Merge?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="output_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469913530" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913531" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913532" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913533" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469913821" />
+          <GUILayout>
+            <gpos v="592 1328 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469913822" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913823" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913824" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469913825" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float4" />
+              <connRef v="1469913529" />
+              <connRefOutput v="1469913533" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469913822" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913823" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913824" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469913825" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469914116" />
+          <GUILayout>
+            <gpos v="1200 1466.66663 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469914117" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469914118" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469914119" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469914120" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_x" />
+              <connRef v="1469766833" />
+              <connRefOutput v="1469766834" />
+            </connection>
+            <connection>
+              <identifier v="input_y" />
+              <connRef v="1469766856" />
+              <connRefOutput v="1469766834" />
+            </connection>
+            <connection>
+              <identifier v="input_z" />
+              <connRef v="1469766865" />
+              <connRefOutput v="1469766834" />
+            </connection>
+            <connection>
+              <identifier v="input_w" />
+              <connRef v="1469766884" />
+              <connRefOutput v="1469766834" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Merge?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="output_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469914117" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469914118" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469914119" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469914120" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469916035" />
+          <GUILayout>
+            <gpos v="1392 1466.66663 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469916036" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916037" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916038" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916039" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float4" />
+              <connRef v="1469914116" />
+              <connRefOutput v="1469914120" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469916036" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916037" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916038" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916039" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469916439" />
+          <GUILayout>
+            <gpos v="1200 2096 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469916440" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916441" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916442" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916443" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916444" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916445" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916446" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916447" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916448" />
+              <comptype v="512" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float2" />
+              <connRef v="1469773835" />
+              <connRefOutput v="1469773837" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Split?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_output_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_variable_select_1_5" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_variable_select_2_5" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469916440" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916441" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916442" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916443" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916444" />
+                  <identifier v="output_x_y" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916445" />
+                  <identifier v="output_z_w" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916446" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916447" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916448" />
+                  <identifier v="output_x_y_2" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469916615" />
+          <GUILayout>
+            <gpos v="1392 2096 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469916616" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916617" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916618" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916619" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float2" />
+              <connRef v="1469916439" />
+              <connRefOutput v="1469916448" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469916616" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916617" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916618" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916619" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469916899" />
+          <GUILayout>
+            <gpos v="144 2625.03857 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469916900" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916901" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916902" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916903" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916904" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916905" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916906" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916907" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469916908" />
+              <comptype v="512" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float4" />
+              <connRef v="1469768698" />
+              <connRefOutput v="1469768702" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Split?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_type_input" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469916900" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916901" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916902" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916903" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916904" />
+                  <identifier v="output_x_y" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916905" />
+                  <identifier v="output_z_w" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916906" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916907" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469916908" />
+                  <identifier v="output_x_y_2" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469917044" />
+          <GUILayout>
+            <gpos v="336 2433.03857 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469917045" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917046" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917047" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917048" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469916899" />
+              <connRefOutput v="1469916900" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469917045" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917046" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917047" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917048" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469917229" />
+          <GUILayout>
+            <gpos v="336 2593.03857 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469917045" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917046" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917047" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917048" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469916899" />
+              <connRefOutput v="1469916901" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469917045" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917046" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917047" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917048" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469919713" />
+          <GUILayout>
+            <gpos v="183.908539 1758.26917 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469919714" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919715" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919716" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919717" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919718" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919719" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919720" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919721" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469919722" />
+              <comptype v="512" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float4" />
+              <connRef v="1469772627" />
+              <connRefOutput v="1469772631" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Split?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_type_input" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_output_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469919714" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919715" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919716" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919717" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919718" />
+                  <identifier v="output_x_y" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919719" />
+                  <identifier v="output_z_w" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919720" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919721" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469919722" />
+                  <identifier v="output_x_y_2" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469921449" />
+          <GUILayout>
+            <gpos v="336 2753.03857 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469917045" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917046" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917047" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917048" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469916899" />
+              <connRefOutput v="1469916902" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469917045" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917046" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917047" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917048" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469921601" />
+          <GUILayout>
+            <gpos v="336 2913.03857 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469917045" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917046" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917047" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469917048" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469916899" />
+              <connRefOutput v="1469916903" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469917045" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917046" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917047" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469917048" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469921994" />
+          <GUILayout>
+            <gpos v="336 688 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469921995" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469921996" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469921997" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469921998" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_1" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.200000003" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469921995" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469921996" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469921997" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469921998" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469922810" />
+          <GUILayout>
+            <gpos v="880 752 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469922811" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469922812" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469922813" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469922814" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469765120" />
+              <connRefOutput v="1469765121" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469922811" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469922812" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469922813" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469922814" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469923515" />
+          <GUILayout>
+            <gpos v="528 2544 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469923516" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923517" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923518" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923519" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_3" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat3 v="0.25 0.75 0.800000012" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_2" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.149999991 0.349999994" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469923516" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923517" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923518" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923519" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469923577" />
+          <GUILayout>
+            <gpos v="720 2544 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469923578" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923579" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923580" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923581" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923582" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923583" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923584" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923585" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923586" />
+              <comptype v="512" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float2" />
+              <connRef v="1469923515" />
+              <connRefOutput v="1469923517" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Split?dependency=1469700228" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469923578" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923579" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923580" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923581" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923582" />
+                  <identifier v="output_x_y" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923583" />
+                  <identifier v="output_z_w" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923584" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923585" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923586" />
+                  <identifier v="output_x_y_2" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469923961" />
+          <GUILayout>
+            <gpos v="912 2544 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469923962" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923963" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923964" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923965" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469923577" />
+              <connRefOutput v="1469923584" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469923962" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923963" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923964" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923965" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469923974" />
+          <GUILayout>
+            <gpos v="912 2736 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469923975" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923976" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923977" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469923978" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469923577" />
+              <connRefOutput v="1469923585" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469923975" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923976" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923977" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469923978" />
+                  <identifier v="output_float4" />
                 </outputBridging>
               </outputBridgings>
             </compInstance>
@@ -2734,19 +3222,6 @@
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
-          <GUIDependency v="NODE?1469764521" />
-          <GUILayout>
-            <gpos v="-40 50 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName
-            v="Float Input Viewer provides an quick way to see a value for debugging purposes"
-          />
-          <uid v="1469764860" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
           <GUIDependency v="NODE?1469764630" />
           <GUILayout>
             <gpos v="-37.3333549 58.6666641 -100" />
@@ -2754,19 +3229,6 @@
           </GUILayout>
           <GUIName v="Uniform Color Node with Float4 input&#10;" />
           <uid v="1469764973" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUIDependency v="NODE?1469765141" />
-          <GUILayout>
-            <gpos v="-40 50 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName
-            v="Float Parameter Viewer lets you directly enter a number in a graph without needing to use value processor. "
-          />
-          <uid v="1469765173" />
           <frameColor v="0 0 0 1" />
         </GUIObject>
         <GUIObject>
@@ -2786,9 +3248,11 @@
           <type v="COMMENT" />
           <GUILayout>
             <gpos v="234.666672 576 -100" />
-            <size v="901.561035 405.202911" />
+            <size v="746.666687 405.202911" />
           </GUILayout>
-          <GUIName v="" />
+          <GUIName
+            v="Float Parameter Viewer lets you directly enter a number in a graph without needing to use value processor. "
+          />
           <uid v="1469766271" />
           <title
             v="Switch Float - toggle between 2 values like the switch nodes"
@@ -2826,8 +3290,8 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="-128 2272 -100" />
-            <size v="889.328613 618.666687" />
+            <gpos v="-128 2304 -100" />
+            <size v="1162.66663 757.333313" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1469768665" />
@@ -2838,54 +3302,8 @@
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
-          <GUIDependency v="NODE?1469772544" />
           <GUILayout>
-            <gpos v="-40 50 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName
-            v="The split node also allows you to swap the x,y,z,w values&#10; "
-          />
-          <uid v="1469773491" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUIDependency v="NODE?1469773552" />
-          <GUILayout>
-            <gpos v="-40 50 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName v="Split Float 4 to Float 2 " />
-          <uid v="1469774765" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUIDependency v="NODE?1469768736" />
-          <GUILayout>
-            <gpos v="-37.3333321 48 -100" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName v="Split Float4 to Float2&#10;" />
-          <uid v="1469775727" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUIDependency v="NODE?1469769607" />
-          <GUILayout>
-            <gpos v="-40 50 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName v="Split float2 to float1" />
-          <uid v="1469775771" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUILayout>
-            <gpos v="-85.3333359 1738.66663 -100" />
+            <gpos v="-74.6666641 1653.33337 -100" />
             <size v="650.666687 362.666718" />
           </GUILayout>
           <GUIName v="" />
@@ -2912,7 +3330,7 @@
           <type v="COMMENT" />
           <GUILayout>
             <gpos v="1130.66663 74.6666641 -100" />
-            <size v="640.000061 437.333344" />
+            <size v="661.333374 277.333344" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1469776105" />
@@ -3033,6 +3451,32 @@
           <frameColor v="0.376470596 0.270588249 0.4627451 1" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1469913069" />
+          <GUILayout>
+            <gpos v="-40 50 0" />
+            <size v="117 40" />
+          </GUILayout>
+          <GUIName
+            v="Float Input Viewer provides an quick way to see a value for debugging purposes"
+          />
+          <uid v="1469913212" />
+          <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1469916439" />
+          <GUILayout>
+            <gpos v="-40 50 0" />
+            <size v="170.333328 40" />
+          </GUILayout>
+          <GUIName
+            v="The split node also allows you to swap the x,y,z,w values&#10; "
+          />
+          <uid v="1469916801" />
+          <frameColor v="0 0 0 1" />
         </GUIObject>
       </GUIObjects>
       <options>
