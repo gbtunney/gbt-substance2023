@@ -77,48 +77,9 @@
       </graphOutputs>
       <compNodes>
         <compNode>
-          <uid v="1469764344" />
-          <GUILayout>
-            <gpos v="-570.666626 -791.569946 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469764345" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input" />
-              <connRef v="1469764441" />
-              <connRefOutput v="1469764442" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Color_Sampler?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_sampler_position" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueFloat2 v="0.483700007 0.247500002" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469764345" />
-                  <identifier v="output" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469764441" />
           <GUILayout>
-            <gpos v="-826.666626 -791.569946 0" />
+            <gpos v="-848 -801.274414 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -153,7 +114,7 @@
         <compNode>
           <uid v="1469764630" />
           <GUILayout>
-            <gpos v="-389.333313 -901.333374 0" />
+            <gpos v="-400 -912 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -164,8 +125,8 @@
           <connections>
             <connection>
               <identifier v="#input" />
-              <connRef v="1469764344" />
-              <connRefOutput v="1469764345" />
+              <connRef v="1469279542" />
+              <connRefOutput v="1469279545" />
             </connection>
           </connections>
           <compImplementation>
@@ -1181,48 +1142,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469777092" />
-          <GUILayout>
-            <gpos v="-617.476196 -292.770538 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469777093" />
-              <comptype v="256" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input" />
-              <connRef v="1469777131" />
-              <connRefOutput v="1469777132" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Value_Grayscale_Sampler?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_sampler_position" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueFloat2 v="0.421799988 0.252999991" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469777093" />
-                  <identifier v="output" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469777131" />
           <GUILayout>
-            <gpos v="-809.476196 -292.770538 0" />
+            <gpos v="-816 -304 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1262,79 +1184,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1469777146" />
-          <GUILayout>
-            <gpos v="-336 -208 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1469777147" />
-              <comptype v="256" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469777148" />
-              <comptype v="512" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469777149" />
-              <comptype v="1024" />
-            </compOutput>
-            <compOutput>
-              <uid v="1469777150" />
-              <comptype v="2048" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input_float1" />
-              <connRef v="1469777092" />
-              <connRefOutput v="1469777093" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
-              <parameters>
-                <parameter>
-                  <name v="input_value_type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="toggle_value_source" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueBool v="1" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1469777147" />
-                  <identifier v="output_float1" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469777148" />
-                  <identifier v="output_float2" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469777149" />
-                  <identifier v="output_float3" />
-                </outputBridging>
-                <outputBridging>
-                  <uid v="1469777150" />
-                  <identifier v="output_float4" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1469777252" />
           <GUILayout>
-            <gpos v="-336 -400 0" />
+            <gpos v="-400 -450.153076 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1345,8 +1197,8 @@
           <connections>
             <connection>
               <identifier v="#input" />
-              <connRef v="1469777092" />
-              <connRefOutput v="1469777093" />
+              <connRef v="1469279716" />
+              <connRefOutput v="1469279717" />
             </connection>
           </connections>
           <compImplementation>
@@ -1730,7 +1582,7 @@
         <compNode>
           <uid v="1469913069" />
           <GUILayout>
-            <gpos v="-389.333313 -709.333374 0" />
+            <gpos v="-400 -656 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1753,8 +1605,8 @@
           <connections>
             <connection>
               <identifier v="input_float4" />
-              <connRef v="1469764344" />
-              <connRefOutput v="1469764345" />
+              <connRef v="1469279542" />
+              <connRefOutput v="1469279545" />
             </connection>
           </connections>
           <compImplementation>
@@ -3194,6 +3046,194 @@
             </compInstance>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1469279542" />
+          <GUILayout>
+            <gpos v="-624 -784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469279543" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279544" />
+              <comptype v="2" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279545" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279546" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_color" />
+              <connRef v="1469764441" />
+              <connRefOutput v="1469764442" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Sampler_Image_To_Float?dependency=1469700228" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469279543" />
+                  <identifier v="output_float" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279544" />
+                  <identifier v="output_grayscale" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279545" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279546" />
+                  <identifier v="output_color" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469279716" />
+          <GUILayout>
+            <gpos v="-624 -290.406281 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469279717" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279718" />
+              <comptype v="2" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279719" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279720" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_grayscale" />
+              <connRef v="1469777131" />
+              <connRefOutput v="1469777132" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Sampler_Image_To_Float?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_color_mode" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469279717" />
+                  <identifier v="output_float" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279718" />
+                  <identifier v="output_grayscale" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279719" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279720" />
+                  <identifier v="output_color" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1469279891" />
+          <GUILayout>
+            <gpos v="-432 -162.99736 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1469279892" />
+              <comptype v="256" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279893" />
+              <comptype v="512" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279894" />
+              <comptype v="1024" />
+            </compOutput>
+            <compOutput>
+              <uid v="1469279895" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_float1" />
+              <connRef v="1469279716" />
+              <connRefOutput v="1469279717" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Float_Value_Graph?dependency=1469700228" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_value_source" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_value_type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1469279892" />
+                  <identifier v="output_float1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279893" />
+                  <identifier v="output_float2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279894" />
+                  <identifier v="output_float3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1469279895" />
+                  <identifier v="output_float4" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
@@ -3209,25 +3249,14 @@
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
-          <GUIDependency v="NODE?1469764344" />
-          <GUILayout>
-            <gpos v="-40 62 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName
-            v="Convert a color channel to a float4, sample is based on a position&#10;"
-          />
-          <uid v="1469764364" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
           <GUIDependency v="NODE?1469764630" />
           <GUILayout>
             <gpos v="-37.3333549 58.6666641 -100" />
             <size v="117 40" />
           </GUILayout>
-          <GUIName v="Uniform Color Node with Float4 input&#10;" />
+          <GUIName
+            v="Add an float4 #input in the Uniform Color Node. Then connect #input with &quot;Color Output&quot; parameter in Uniform color node to get a visual.&#10;"
+          />
           <uid v="1469764973" />
           <frameColor v="0 0 0 1" />
         </GUIObject>
@@ -3353,19 +3382,6 @@
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
-          <GUIDependency v="NODE?1469777092" />
-          <GUILayout>
-            <gpos v="-40 50 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName
-            v="Convert a greyscale channel to a float1,&#10; sample is based on a position&#10;"
-          />
-          <uid v="1469777652" />
-          <frameColor v="0 0 0 1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
           <GUIDependency v="NODE?1469777252" />
           <GUILayout>
             <gpos v="-37.3333321 63.8340454 -100" />
@@ -3456,11 +3472,11 @@
           <type v="COMMENT" />
           <GUIDependency v="NODE?1469913069" />
           <GUILayout>
-            <gpos v="-40 50 0" />
+            <gpos v="-37.3333321 48 -100" />
             <size v="117 40" />
           </GUILayout>
           <GUIName
-            v="Float Input Viewer provides an quick way to see a value for debugging purposes"
+            v="Float Input Viewer provides a quick way to view a value. "
           />
           <uid v="1469913212" />
           <frameColor v="0 0 0 1" />
@@ -3476,6 +3492,19 @@
             v="The split node also allows you to swap the x,y,z,w values&#10; "
           />
           <uid v="1469916801" />
+          <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1469279542" />
+          <GUILayout>
+            <gpos v="-40 50 0" />
+            <size v="162.333328 40" />
+          </GUILayout>
+          <GUIName
+            v="Convert a color channel to a float4, sample is based on a position parameter.&#10;"
+          />
+          <uid v="1469279702" />
           <frameColor v="0 0 0 1" />
         </GUIObject>
       </GUIObjects>
