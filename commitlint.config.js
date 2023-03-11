@@ -16,6 +16,7 @@ module.exports = {
                 'release',
                 'sat-scripts',
                 'value-processor-utilities',
+                'functions',
                 'palatte',
                 'blend-tools',
             ],

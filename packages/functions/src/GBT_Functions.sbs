@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{aa0ff890-b40d-47bb-a696-b4f938168967}" />
+  <versionUID v="0" />
+  <metadata>
+    <treestr>
+      <name v="version" />
+      <value v="0.0.0" />
+    </treestr>
+  </metadata>
+  <dependencies>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1471275185" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <function>
+      <identifier v="isEven" />
+      <uid v="1471275227" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input" />
+          <uid v="1405755804" />
+          <attributes>
+            <label v="Input" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="10" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <type v="4" />
+      <paramValue>
+        <dynamicValue>
+          <rootnode v="1471275753" />
+          <paramNodes>
+            <paramNode>
+              <uid v="1405755823" />
+              <function v="get_integer1" />
+              <type v="16" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_integer1" />
+                  <constantValue>
+                    <constantValueString v="input" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="240 144 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1471275753" />
+              <function v="instance" />
+              <type v="118772" />
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1405755823" />
+                </connection>
+                <connection>
+                  <identifier v="input_divisor" />
+                  <connRef v="1471275784" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="instance" />
+                  <constantValue>
+                    <constantValueString
+                      v="pkg:///isModulo?dependency=1471275185"
+                    />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="432 240 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1471275784" />
+              <function v="const_int1" />
+              <type v="16" />
+              <funcDatas>
+                <funcData>
+                  <name v="const_int1" />
+                  <constantValue>
+                    <constantValueInt1 v="2" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="240 304 0" />
+              </GUILayout>
+            </paramNode>
+          </paramNodes>
+        </dynamicValue>
+      </paramValue>
+    </function>
+    <function>
+      <identifier v="isModulo" />
+      <uid v="1471275469" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input" />
+          <uid v="1405755804" />
+          <attributes>
+            <label v="Input" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="10" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_divisor" />
+          <uid v="1471275518" />
+          <attributes>
+            <label v="Divisor" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="10" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <type v="4" />
+      <paramValue>
+        <dynamicValue>
+          <rootnode v="1405755875" />
+          <paramNodes>
+            <paramNode>
+              <uid v="1405755823" />
+              <function v="get_integer1" />
+              <type v="16" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_integer1" />
+                  <constantValue>
+                    <constantValueString v="input" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="208 112 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1405755833" />
+              <function v="tofloat" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="value" />
+                  <connRef v="1405755823" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="400 97.8924637 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1405755838" />
+              <function v="mod" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1405755833" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1471275622" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="624 144 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1405755875" />
+              <function v="eq" />
+              <type v="4" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1405755838" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1405755884" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="801.581177 176 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1405755884" />
+              <function v="const_float1" />
+              <type v="256" />
+              <GUILayout>
+                <gpos v="400 368 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1471275582" />
+              <function v="get_integer1" />
+              <type v="16" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_integer1" />
+                  <constantValue>
+                    <constantValueString v="input_divisor" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="208 240 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1471275622" />
+              <function v="tofloat" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="value" />
+                  <connRef v="1471275582" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="400 240 0" />
+              </GUILayout>
+            </paramNode>
+          </paramNodes>
+        </dynamicValue>
+      </paramValue>
+    </function>
+  </content>
+</package>

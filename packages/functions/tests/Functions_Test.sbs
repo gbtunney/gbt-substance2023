@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{f9101856-9cb4-4a6c-bda9-4775915d662e}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="../dist/GBT_Functions.sbs" />
+      <uid v="1471275185" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="Test" />
+      <uid v="1470596037" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1470596241" />
+          <channels v="4" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_1" />
+          <uid v="1470596251" />
+          <channels v="4" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1470596058" />
+          <GUILayout>
+            <gpos v="336 30 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470596059" />
+              <comptype v="4" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="valueprocessor" />
+              <parameters>
+                <parameter>
+                  <name v="function" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470596093" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470596093" />
+                          <function v="instance" />
+                          <type v="118772" />
+                          <connections>
+                            <connection>
+                              <identifier v="input" />
+                              <connRef v="1470596124" />
+                            </connection>
+                            <connection>
+                              <identifier v="input_divisor" />
+                              <connRef v="1470596146" />
+                            </connection>
+                          </connections>
+                          <funcDatas>
+                            <funcData>
+                              <name v="instance" />
+                              <constantValue>
+                                <constantValueString
+                                  v="pkg:///isModulo?dependency=1471275185"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="208 144 0" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1470596124" />
+                          <function v="const_int1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="const_int1" />
+                              <constantValue>
+                                <constantValueInt1 v="9" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="-16 112 0" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1470596146" />
+                          <function v="const_int1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="const_int1" />
+                              <constantValue>
+                                <constantValueInt1 v="3" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="-16 240 0" />
+                          </GUILayout>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470596203" />
+          <GUILayout>
+            <gpos v="336 176 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470596059" />
+              <comptype v="4" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="valueprocessor" />
+              <parameters>
+                <parameter>
+                  <name v="function" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470596218" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470596124" />
+                          <function v="const_int1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="const_int1" />
+                              <constantValue>
+                                <constantValueInt1 v="9" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="-16 112 0" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1470596218" />
+                          <function v="instance" />
+                          <type v="118772" />
+                          <connections>
+                            <connection>
+                              <identifier v="input" />
+                              <connRef v="1470596124" />
+                            </connection>
+                          </connections>
+                          <funcDatas>
+                            <funcData>
+                              <name v="instance" />
+                              <constantValue>
+                                <constantValueString
+                                  v="pkg:///isEven?dependency=1471275185"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="144 144 0" />
+                          </GUILayout>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470596242" />
+          <GUILayout>
+            <gpos v="560 16 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1470596058" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1470596241" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470596252" />
+          <GUILayout>
+            <gpos v="560 176 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1470596203" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1470596251" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters>
+        <parameter>
+          <name v="format" />
+          <relativeTo v="0" />
+          <paramValue>
+            <constantValueInt32 v="1" />
+          </paramValue>
+        </parameter>
+      </baseParameters>
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1470596241" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1470596251" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+  </content>
+</package>

@@ -1,0 +1,4 @@
+.autosave
+node_modules
+/tests/_output
+/dist
