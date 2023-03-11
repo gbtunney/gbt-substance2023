@@ -24,8 +24,9 @@
     "scripts": {
         "\n========== BUILD >> ==========": "",
         "build": "mkdir -p dist && pnpm build:sbs",
-        "build:sbs": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages --quiet --size-limit 13 --output-path ./dist",
+        "build:sbs": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --verbose --merge  --output-path ./dist",
         "build:ts": "tsc --build",
+        "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
@@ -52,7 +53,7 @@
         "email": "gbtunney@mac.com"
     },
     "devDependencies": {
-        "@gbt/value-processor-utilities": "workspace:^0.0.1",
+        "@gbt/value-processor-utilities": "workspace:^0.0.2",
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.1.3",

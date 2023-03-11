@@ -8,7 +8,7 @@
   <dependencies>
     <dependency>
       <filename v="../dist/GBT_Palatte.sbsar" />
-      <uid v="1469053779" />
+      <uid v="1470577231" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -21,10 +21,8 @@
       <versionUID v="0" />
     </dependency>
     <dependency>
-      <filename
-        v="../../value-processor-utilities/dist/GBT_Value_Processor_Utilities.sbsar"
-      />
-      <uid v="1468995669" />
+      <filename v="dependencies/GBT_Value_Processor_Utilities.sbsar" />
+      <uid v="1470581683" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -95,7 +93,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="input_sampler_position" />
@@ -149,7 +147,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="input_sampler_position" />
@@ -203,7 +201,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="input_sampler_position" />
@@ -257,7 +255,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="input_sampler_position" />
@@ -346,7 +344,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="input_sampler_position" />
@@ -563,7 +561,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="number_of_points" />
@@ -773,7 +771,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="color_1_toggle_position_color" />
@@ -1009,7 +1007,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="number_of_points" />
@@ -1227,7 +1225,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Color_Swatch?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="toggle_position_color" />
@@ -1345,7 +1343,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Switcher?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Switcher?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="toggle_input_total" />
@@ -1625,7 +1623,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="color_1_toggle_position_color" />
@@ -1831,7 +1829,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte_Switcher?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte_Switcher?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="hsl_hue" />
@@ -2085,7 +2083,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="color_1_toggle_position_color" />
@@ -2360,7 +2358,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="color_1_toggle_position_color" />
@@ -2755,7 +2753,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="color_1_input_sampler_position" />
@@ -3256,7 +3254,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1468995669" />
+              <path v="pkg:///Float_Value_Graph?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="toggle_value_source" />
@@ -3326,7 +3324,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1468995669" />
+              <path v="pkg:///Float_Value_Graph?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="toggle_value_source" />
@@ -3396,7 +3394,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1468995669" />
+              <path v="pkg:///Float_Value_Graph?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="toggle_value_source" />
@@ -3466,7 +3464,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1468995669" />
+              <path v="pkg:///Float_Value_Graph?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="toggle_value_source" />
@@ -3536,7 +3534,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1468995669" />
+              <path v="pkg:///Float_Value_Graph?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="toggle_value_source" />
@@ -3606,7 +3604,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Sampler_Image_To_Float?dependency=1468995669" />
+              <path v="pkg:///Sampler_Image_To_Float?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="input_sampler_position" />
@@ -3735,7 +3733,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Integer_Value_Graph?dependency=1468995669" />
+              <path v="pkg:///Integer_Value_Graph?dependency=1470581683" />
               <parameters>
                 <parameter>
                   <name v="toggle_float_output" />
@@ -3920,7 +3918,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Palatte?dependency=1469053779" />
+              <path v="pkg:///GBT_Palatte?dependency=1470577231" />
               <parameters>
                 <parameter>
                   <name v="color_1_input_color_value" />
