@@ -903,8 +903,8 @@
           <group v="Input B/HSL" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_invert" />
-          <uid v="1414708372" />
+          <identifier v="mask_invert" />
+          <uid v="1470801227" />
           <attributes>
             <label v="Invert" />
           </attributes>
@@ -933,11 +933,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)" />
+          <group v="Mask" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_toggle_histogram_select" />
-          <uid v="1414708374" />
+          <identifier v="mask_toggle_histogram_select" />
+          <uid v="1470801229" />
           <attributes>
             <label v="Select mode" />
           </attributes>
@@ -966,11 +967,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)" />
+          <group v="Mask" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_histogram_select_position" />
-          <uid v="1414708376" />
+          <identifier v="mask_histogram_select_position" />
+          <uid v="1470801231" />
           <attributes>
             <label v="Position" />
           </attributes>
@@ -1003,14 +1005,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
+          <group v="Mask/Histogram Select" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_histogram_select_range" />
-          <uid v="1414708378" />
+          <identifier v="mask_histogram_select_range" />
+          <uid v="1470801233" />
           <attributes>
             <label v="Range" />
           </attributes>
@@ -1043,14 +1045,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
+          <group v="Mask/Histogram Select" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_histogram_select_constrast" />
-          <uid v="1414708380" />
+          <identifier v="mask_histogram_select_constrast" />
+          <uid v="1470801235" />
           <attributes>
             <label v="Contrast" />
           </attributes>
@@ -1083,14 +1085,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
+          <group v="Mask/Histogram Select" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelinlow" />
-          <uid v="1414708382" />
+          <identifier v="mask_levelinlow" />
+          <uid v="1470801237" />
           <attributes>
             <label v="Level In Low" />
             <description
@@ -1126,14 +1128,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelinhigh" />
-          <uid v="1414708384" />
+          <identifier v="mask_levelinhigh" />
+          <uid v="1470801239" />
           <attributes>
             <label v="Level In High" />
             <description
@@ -1169,14 +1171,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelinmid" />
-          <uid v="1414708386" />
+          <identifier v="mask_levelinmid" />
+          <uid v="1470801241" />
           <attributes>
             <label v="Level In Mid" />
             <description
@@ -1212,14 +1214,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_leveloutlow" />
-          <uid v="1414708388" />
+          <identifier v="mask_leveloutlow" />
+          <uid v="1470801243" />
           <attributes>
             <label v="Level Out Low" />
             <description
@@ -1255,14 +1257,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelouthigh" />
-          <uid v="1414708390" />
+          <identifier v="mask_levelouthigh" />
+          <uid v="1470801245" />
           <attributes>
             <label v="Level Out High" />
             <description
@@ -1298,14 +1300,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_clampinterm" />
-          <uid v="1414708392" />
+          <identifier v="mask_clampinterm" />
+          <uid v="1470801247" />
           <attributes>
             <label v="Intermediary Clamp" />
             <description
@@ -1337,14 +1339,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_toggle_distance" />
-          <uid v="1414708394" />
+          <identifier v="mask_toggle_distance" />
+          <uid v="1470801249" />
           <attributes>
             <label v="Distance" />
           </attributes>
@@ -1373,11 +1375,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
+          <group v="Mask/Distance" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;] " />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_distance" />
-          <uid v="1414708396" />
+          <identifier v="mask_distance" />
+          <uid v="1470801251" />
           <attributes>
             <label v="Maximum Distance" />
             <description
@@ -1413,14 +1416,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
+          <group v="Mask/Distance" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_distance&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; input[&quot;mask_toggle_distance&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_distancemode" />
-          <uid v="1414708398" />
+          <identifier v="mask_distancemode" />
+          <uid v="1470801253" />
           <attributes>
             <label v="Distance Mode" />
             <description v="Choose the method of distance computation" />
@@ -1454,14 +1457,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
+          <group v="Mask/Distance" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_distance&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp; input[&quot;mask_toggle_distance&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_blur_Intensity" />
-          <uid v="1414708400" />
+          <identifier v="mask_blur_Intensity" />
+          <uid v="1470801255" />
           <attributes>
             <label v="Intensity" />
           </attributes>
@@ -1494,11 +1497,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Blur" />
+          <group v="Mask/Blur (Post)" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;] " />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_blur_Quality" />
-          <uid v="1414708402" />
+          <identifier v="mask_blur_Quality" />
+          <uid v="1470801257" />
           <attributes>
             <label v="Quality" />
           </attributes>
@@ -1531,7 +1535,8 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Blur" />
+          <group v="Mask/Blur (Post)" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;] " />
         </paraminput>
         <paraminput>
           <identifier v="toggle_inputs" />
@@ -1564,6 +1569,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Debug" />
           <visibleIf
             v="input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  "
           />
@@ -1800,7 +1806,7 @@
         <compNode>
           <uid v="1404168852" />
           <GUILayout>
-            <gpos v="-305.321594 688 0" />
+            <gpos v="-304 656 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2730,19 +2736,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708373" />
+                      <rootnode v="1470801228" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708373" />
+                          <uid v="1470801228" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_invert"
-                                />
+                                <constantValueString v="mask_invert" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2756,10 +2760,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708375" />
+                      <rootnode v="1470801230" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708375" />
+                          <uid v="1470801230" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -2767,7 +2771,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_toggle_histogram_select"
+                                  v="mask_toggle_histogram_select"
                                 />
                               </constantValue>
                             </funcData>
@@ -2782,10 +2786,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708377" />
+                      <rootnode v="1470801232" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708377" />
+                          <uid v="1470801232" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -2793,7 +2797,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_position"
+                                  v="mask_histogram_select_position"
                                 />
                               </constantValue>
                             </funcData>
@@ -2808,10 +2812,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708379" />
+                      <rootnode v="1470801234" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708379" />
+                          <uid v="1470801234" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -2819,7 +2823,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_range"
+                                  v="mask_histogram_select_range"
                                 />
                               </constantValue>
                             </funcData>
@@ -2834,10 +2838,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708381" />
+                      <rootnode v="1470801236" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708381" />
+                          <uid v="1470801236" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -2845,7 +2849,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_constrast"
+                                  v="mask_histogram_select_constrast"
                                 />
                               </constantValue>
                             </funcData>
@@ -2860,19 +2864,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708383" />
+                      <rootnode v="1470801238" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708383" />
+                          <uid v="1470801238" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinlow"
-                                />
+                                <constantValueString v="mask_levelinlow" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2886,19 +2888,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708385" />
+                      <rootnode v="1470801240" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708385" />
+                          <uid v="1470801240" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinhigh"
-                                />
+                                <constantValueString v="mask_levelinhigh" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2912,19 +2912,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708387" />
+                      <rootnode v="1470801242" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708387" />
+                          <uid v="1470801242" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinmid"
-                                />
+                                <constantValueString v="mask_levelinmid" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2938,19 +2936,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708389" />
+                      <rootnode v="1470801244" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708389" />
+                          <uid v="1470801244" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_leveloutlow"
-                                />
+                                <constantValueString v="mask_leveloutlow" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2964,19 +2960,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708391" />
+                      <rootnode v="1470801246" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708391" />
+                          <uid v="1470801246" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelouthigh"
-                                />
+                                <constantValueString v="mask_levelouthigh" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2990,19 +2984,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708393" />
+                      <rootnode v="1470801248" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708393" />
+                          <uid v="1470801248" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_clampinterm"
-                                />
+                                <constantValueString v="mask_clampinterm" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3016,19 +3008,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708395" />
+                      <rootnode v="1470801250" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708395" />
+                          <uid v="1470801250" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_toggle_distance"
-                                />
+                                <constantValueString v="mask_toggle_distance" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3042,19 +3032,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708397" />
+                      <rootnode v="1470801252" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708397" />
+                          <uid v="1470801252" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_distance"
-                                />
+                                <constantValueString v="mask_distance" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3068,19 +3056,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708399" />
+                      <rootnode v="1470801254" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708399" />
+                          <uid v="1470801254" />
                           <function v="get_integer1" />
                           <type v="16" />
                           <funcDatas>
                             <funcData>
                               <name v="get_integer1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_distancemode"
-                                />
+                                <constantValueString v="mask_distancemode" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3094,19 +3080,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708401" />
+                      <rootnode v="1470801256" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708401" />
+                          <uid v="1470801256" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_blur_Intensity"
-                                />
+                                <constantValueString v="mask_blur_Intensity" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3120,19 +3104,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708403" />
+                      <rootnode v="1470801258" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708403" />
+                          <uid v="1470801258" />
                           <function v="get_integer1" />
                           <type v="16" />
                           <funcDatas>
                             <funcData>
                               <name v="get_integer1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_blur_Quality"
-                                />
+                                <constantValueString v="mask_blur_Quality" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -4994,8 +4976,8 @@
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_invert" />
-          <uid v="1414708372" />
+          <identifier v="mask_invert" />
+          <uid v="1470800976" />
           <attributes>
             <label v="Invert" />
           </attributes>
@@ -5024,11 +5006,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)" />
+          <group v="Mask" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_toggle_histogram_select" />
-          <uid v="1414708374" />
+          <identifier v="mask_toggle_histogram_select" />
+          <uid v="1470800978" />
           <attributes>
             <label v="Select mode" />
           </attributes>
@@ -5057,11 +5040,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)" />
+          <group v="Mask" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_histogram_select_position" />
-          <uid v="1414708376" />
+          <identifier v="mask_histogram_select_position" />
+          <uid v="1470800980" />
           <attributes>
             <label v="Position" />
           </attributes>
@@ -5094,14 +5078,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
+          <group v="Mask/Histogram Select" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp;input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_histogram_select_range" />
-          <uid v="1414708378" />
+          <identifier v="mask_histogram_select_range" />
+          <uid v="1470800982" />
           <attributes>
             <label v="Range" />
           </attributes>
@@ -5134,14 +5118,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
+          <group v="Mask/Histogram Select" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]&amp;&amp;input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_histogram_select_constrast" />
-          <uid v="1414708380" />
+          <identifier v="mask_histogram_select_constrast" />
+          <uid v="1470800984" />
           <attributes>
             <label v="Contrast" />
           </attributes>
@@ -5174,14 +5158,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
+          <group v="Mask/Histogram Select" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp; input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelinlow" />
-          <uid v="1414708382" />
+          <identifier v="mask_levelinlow" />
+          <uid v="1470800986" />
           <attributes>
             <label v="Level In Low" />
             <description
@@ -5217,14 +5201,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]  &amp;&amp;! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelinhigh" />
-          <uid v="1414708384" />
+          <identifier v="mask_levelinhigh" />
+          <uid v="1470800988" />
           <attributes>
             <label v="Level In High" />
             <description
@@ -5260,14 +5244,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp;! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelinmid" />
-          <uid v="1414708386" />
+          <identifier v="mask_levelinmid" />
+          <uid v="1470800990" />
           <attributes>
             <label v="Level In Mid" />
             <description
@@ -5303,14 +5287,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_leveloutlow" />
-          <uid v="1414708388" />
+          <identifier v="mask_leveloutlow" />
+          <uid v="1470800992" />
           <attributes>
             <label v="Level Out Low" />
             <description
@@ -5346,14 +5330,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]&amp;&amp;! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_levelouthigh" />
-          <uid v="1414708390" />
+          <identifier v="mask_levelouthigh" />
+          <uid v="1470800994" />
           <attributes>
             <label v="Level Out High" />
             <description
@@ -5389,14 +5373,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_clampinterm" />
-          <uid v="1414708392" />
+          <identifier v="mask_clampinterm" />
+          <uid v="1470800996" />
           <attributes>
             <label v="Intermediary Clamp" />
             <description
@@ -5428,14 +5412,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
+          <group v="Mask/Levels" />
           <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp;! input[&quot;mask_toggle_histogram_select&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_toggle_distance" />
-          <uid v="1414708394" />
+          <identifier v="mask_toggle_distance" />
+          <uid v="1470800998" />
           <attributes>
             <label v="Distance" />
           </attributes>
@@ -5464,11 +5448,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
+          <group v="Mask/Distance" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_distance" />
-          <uid v="1414708396" />
+          <identifier v="mask_distance" />
+          <uid v="1470801000" />
           <attributes>
             <label v="Maximum Distance" />
             <description
@@ -5504,14 +5489,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
+          <group v="Mask/Distance" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_distance&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;]&amp;&amp;input[&quot;mask_toggle_distance&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_distancemode" />
-          <uid v="1414708398" />
+          <identifier v="mask_distancemode" />
+          <uid v="1470801002" />
           <attributes>
             <label v="Distance Mode" />
             <description v="Choose the method of distance computation" />
@@ -5545,14 +5530,14 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
+          <group v="Mask/Distance" />
           <visibleIf
-            v="input[&quot;refine_select_mask_toggle_distance&quot;]"
+            v="!input[&quot;toggle_enable_mask&quot;] &amp;&amp;input[&quot;mask_toggle_distance&quot;]"
           />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_blur_Intensity" />
-          <uid v="1414708400" />
+          <identifier v="mask_blur_Intensity" />
+          <uid v="1470801004" />
           <attributes>
             <label v="Intensity" />
           </attributes>
@@ -5585,11 +5570,12 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Blur" />
+          <group v="Mask/Blur (Post)" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
-          <identifier v="refine_select_mask_blur_Quality" />
-          <uid v="1414708402" />
+          <identifier v="mask_blur_Quality" />
+          <uid v="1470801006" />
           <attributes>
             <label v="Quality" />
           </attributes>
@@ -5622,7 +5608,8 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Mask Channel (Refine)/Blur" />
+          <group v="Mask/Blur (Post)" />
+          <visibleIf v="!input[&quot;toggle_enable_mask&quot;]" />
         </paraminput>
         <paraminput>
           <identifier v="toggle_inputs" />
@@ -5655,6 +5642,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Debug" />
           <visibleIf
             v="input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  "
           />
@@ -6559,19 +6547,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708373" />
+                      <rootnode v="1470800977" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708373" />
+                          <uid v="1470800977" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_invert"
-                                />
+                                <constantValueString v="mask_invert" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6585,10 +6571,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708375" />
+                      <rootnode v="1470800979" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708375" />
+                          <uid v="1470800979" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -6596,7 +6582,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_toggle_histogram_select"
+                                  v="mask_toggle_histogram_select"
                                 />
                               </constantValue>
                             </funcData>
@@ -6611,10 +6597,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708377" />
+                      <rootnode v="1470800981" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708377" />
+                          <uid v="1470800981" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -6622,7 +6608,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_position"
+                                  v="mask_histogram_select_position"
                                 />
                               </constantValue>
                             </funcData>
@@ -6637,10 +6623,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708379" />
+                      <rootnode v="1470800983" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708379" />
+                          <uid v="1470800983" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -6648,7 +6634,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_range"
+                                  v="mask_histogram_select_range"
                                 />
                               </constantValue>
                             </funcData>
@@ -6663,10 +6649,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708381" />
+                      <rootnode v="1470800985" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708381" />
+                          <uid v="1470800985" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -6674,7 +6660,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_constrast"
+                                  v="mask_histogram_select_constrast"
                                 />
                               </constantValue>
                             </funcData>
@@ -6689,19 +6675,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708383" />
+                      <rootnode v="1470800987" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708383" />
+                          <uid v="1470800987" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinlow"
-                                />
+                                <constantValueString v="mask_levelinlow" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6715,19 +6699,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708385" />
+                      <rootnode v="1470800989" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708385" />
+                          <uid v="1470800989" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinhigh"
-                                />
+                                <constantValueString v="mask_levelinhigh" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6741,19 +6723,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708387" />
+                      <rootnode v="1470800991" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708387" />
+                          <uid v="1470800991" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinmid"
-                                />
+                                <constantValueString v="mask_levelinmid" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6767,19 +6747,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708389" />
+                      <rootnode v="1470800993" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708389" />
+                          <uid v="1470800993" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_leveloutlow"
-                                />
+                                <constantValueString v="mask_leveloutlow" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6793,19 +6771,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708391" />
+                      <rootnode v="1470800995" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708391" />
+                          <uid v="1470800995" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelouthigh"
-                                />
+                                <constantValueString v="mask_levelouthigh" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6819,19 +6795,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708393" />
+                      <rootnode v="1470800997" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708393" />
+                          <uid v="1470800997" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_clampinterm"
-                                />
+                                <constantValueString v="mask_clampinterm" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6845,19 +6819,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708395" />
+                      <rootnode v="1470800999" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708395" />
+                          <uid v="1470800999" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_toggle_distance"
-                                />
+                                <constantValueString v="mask_toggle_distance" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6871,19 +6843,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708397" />
+                      <rootnode v="1470801001" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708397" />
+                          <uid v="1470801001" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_distance"
-                                />
+                                <constantValueString v="mask_distance" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6897,19 +6867,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708399" />
+                      <rootnode v="1470801003" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708399" />
+                          <uid v="1470801003" />
                           <function v="get_integer1" />
                           <type v="16" />
                           <funcDatas>
                             <funcData>
                               <name v="get_integer1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_distancemode"
-                                />
+                                <constantValueString v="mask_distancemode" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6923,19 +6891,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708401" />
+                      <rootnode v="1470801005" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708401" />
+                          <uid v="1470801005" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_blur_Intensity"
-                                />
+                                <constantValueString v="mask_blur_Intensity" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -6949,19 +6915,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708403" />
+                      <rootnode v="1470801007" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708403" />
+                          <uid v="1470801007" />
                           <function v="get_integer1" />
                           <type v="16" />
                           <funcDatas>
                             <funcData>
                               <name v="get_integer1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_blur_Quality"
-                                />
+                                <constantValueString v="mask_blur_Quality" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -7990,6 +7954,41 @@
       </attributes>
       <paraminputs>
         <paraminput>
+          <identifier v="toggle_enable_mask" />
+          <uid v="1404168644" />
+          <attributes>
+            <label v=" Mask Channel (Input A)" />
+            <description v="Quickly turn mask off and on." />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Mask Enabled" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Mask Disabled" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Blend" />
+          <visibleIf v="input[&quot;toggle_solo_overlay&quot;] == 1" />
+        </paraminput>
+        <paraminput>
           <identifier v="toggle_layers_stack" />
           <uid v="1404093054" />
           <attributes>
@@ -8020,41 +8019,6 @@
               <option>
                 <name v="label1" />
                 <value v="Input A (FG) / Input B (BG)" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Blend" />
-          <visibleIf v="input[&quot;toggle_solo_overlay&quot;] == 1" />
-        </paraminput>
-        <paraminput>
-          <identifier v="toggle_enable_mask" />
-          <uid v="1404168644" />
-          <attributes>
-            <label v=" Mask Channel (Input A)" />
-            <description v="Quickly turn mask off and on." />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Mask Enabled" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="Mask Disabled" />
               </option>
             </options>
           </defaultWidget>
@@ -8213,33 +8177,6 @@
           <visibleIf v="input[&quot;toggle_solo_overlay&quot;] &gt; 1" />
         </paraminput>
         <paraminput>
-          <identifier v="color_alpha_blending" />
-          <uid v="1404343349" />
-          <attributes>
-            <label v="Alpha Blending" />
-            <description
-              v="The &lt;b&gt;Alpha Blending&lt;/b&gt; parameter defines the how alpha channels of color source and destination are interpreted"
-            />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="dropdownlist" />
-            <options>
-              <option>
-                <name v="parameters" />
-                <value
-                  v="0;0;Use Source Alpha;1;Ignore Alpha;2;Straight Alpha Blending;3;Premultiplied Alpha Blending (copy only)"
-                />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Blend/Advanced" />
-          <visibleIf v="input[&quot;toggle_solo_overlay&quot;] == 1" />
-        </paraminput>
-        <paraminput>
           <identifier v="maskrectangle" />
           <uid v="1404130683" />
           <attributes>
@@ -8304,7 +8241,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -8315,7 +8252,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -8375,7 +8312,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="1" />
+            <constantValueBool v="0" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -8386,7 +8323,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="1" />
+                <value v="0" />
               </option>
               <option>
                 <name v="label0" />
@@ -8408,7 +8345,7 @@
           </attributes>
           <type v="256" />
           <defaultValue>
-            <constantValueFloat1 v="1" />
+            <constantValueFloat1 v="0" />
           </defaultValue>
           <defaultWidget>
             <name v="color" />
@@ -8419,7 +8356,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="1" />
+                <value v="0" />
               </option>
               <option>
                 <name v="max" />
@@ -8437,672 +8374,6 @@
           </defaultWidget>
           <group v="Input B" />
           <visibleIf v="!input[&quot;toggle_b&quot;]" />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_invert" />
-          <uid v="1414708372" />
-          <attributes>
-            <label v="Invert" />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="False" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="True" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)" />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_toggle_histogram_select" />
-          <uid v="1414708374" />
-          <attributes>
-            <label v="Select mode" />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Levels" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="Histogram Select" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)" />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_histogram_select_position" />
-          <uid v="1414708376" />
-          <attributes>
-            <label v="Position" />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0.5" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0.5" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
-          <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_histogram_select_range" />
-          <uid v="1414708378" />
-          <attributes>
-            <label v="Range" />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0.25" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0.25" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
-          <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_histogram_select_constrast" />
-          <uid v="1414708380" />
-          <attributes>
-            <label v="Contrast" />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Histogram Select" />
-          <visibleIf
-            v="input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_levelinlow" />
-          <uid v="1414708382" />
-          <attributes>
-            <label v="Level In Low" />
-            <description
-              v="The &lt;b&gt;Level in low&lt;/b&gt; parameter defines the input image's lowlight levels"
-            />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
-          <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_levelinhigh" />
-          <uid v="1414708384" />
-          <attributes>
-            <label v="Level In High" />
-            <description
-              v="The &lt;b&gt;Level in high&lt;/b&gt; parameter defines the input image's highlight levels"
-            />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
-          <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_levelinmid" />
-          <uid v="1414708386" />
-          <attributes>
-            <label v="Level In Mid" />
-            <description
-              v="The &lt;b&gt;Level in mid&lt;/b&gt; parameter defines the input image's midtone levels"
-            />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0.5" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0.5" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
-          <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_leveloutlow" />
-          <uid v="1414708388" />
-          <attributes>
-            <label v="Level Out Low" />
-            <description
-              v="The &lt;b&gt;Level in low&lt;/b&gt; parameter defines the output image's lowlight levels"
-            />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
-          <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_levelouthigh" />
-          <uid v="1414708390" />
-          <attributes>
-            <label v="Level Out High" />
-            <description
-              v="The &lt;b&gt;Level out high&lt;/b&gt;parameter defines the output image's highlight levels"
-            />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
-          <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_clampinterm" />
-          <uid v="1414708392" />
-          <attributes>
-            <label v="Intermediary Clamp" />
-            <description
-              v="This parameter determines if transformed input value is clamped to 0..1 before computing output level"
-            />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="enumbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Passthru" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="Clamp" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Levels" />
-          <visibleIf
-            v="! input[&quot;refine_select_mask_toggle_histogram_select&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_toggle_distance" />
-          <uid v="1414708394" />
-          <attributes>
-            <label v="Distance" />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Disabled" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="Enabled" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_distance" />
-          <uid v="1414708396" />
-          <attributes>
-            <label v="Maximum Distance" />
-            <description
-              v="The &lt;b&gt;Maximum Distance&lt;/b&gt; parameter adjusts the distance computation and copy limit"
-            />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="10" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="10" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="256" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
-          <visibleIf
-            v="input[&quot;refine_select_mask_toggle_distance&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_distancemode" />
-          <uid v="1414708398" />
-          <attributes>
-            <label v="Distance Mode" />
-            <description v="Choose the method of distance computation" />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="3" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="1" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Distance" />
-          <visibleIf
-            v="input[&quot;refine_select_mask_toggle_distance&quot;]"
-          />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_blur_Intensity" />
-          <uid v="1414708400" />
-          <attributes>
-            <label v="Intensity" />
-          </attributes>
-          <type v="256" />
-          <defaultValue>
-            <constantValueFloat1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="16" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="0.01" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Blur" />
-        </paraminput>
-        <paraminput>
-          <identifier v="refine_select_mask_blur_Quality" />
-          <uid v="1414708402" />
-          <attributes>
-            <label v="Quality" />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="slider" />
-            <options>
-              <option>
-                <name v="clamp" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="max" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="min" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="step" />
-                <value v="1" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Mask Channel (Refine)/Blur" />
-        </paraminput>
-        <paraminput>
-          <identifier v="toggle_inputs" />
-          <uid v="1414767977" />
-          <attributes>
-            <label v="Input / Output Visibility" />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Refresh" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="Refresh" />
-              </option>
-            </options>
-          </defaultWidget>
-          <visibleIf
-            v="input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  "
-          />
         </paraminput>
         <paraminput>
           <identifier v="input_a" />
@@ -10386,6 +9657,678 @@
           </defaultWidget>
           <group v="Input B/Refine/Blur" />
         </paraminput>
+        <paraminput>
+          <identifier v="mask_invert" />
+          <uid v="1470789015" />
+          <attributes>
+            <label v="Invert" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask" />
+          <visibleIf v="input[&quot;toggle_enable_mask&quot;] != true" />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_toggle_histogram_select" />
+          <uid v="1470789017" />
+          <attributes>
+            <label v="Select mode" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Levels" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Histogram Select" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask" />
+          <visibleIf v="input[&quot;toggle_enable_mask&quot;] != true" />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_histogram_select_position" />
+          <uid v="1470789019" />
+          <attributes>
+            <label v="Position" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Histogram Select" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_histogram_select_range" />
+          <uid v="1470789021" />
+          <attributes>
+            <label v="Range" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.25" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.25" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Histogram Select" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_histogram_select_constrast" />
+          <uid v="1470789023" />
+          <attributes>
+            <label v="Contrast" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Histogram Select" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp;input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_levelinlow" />
+          <uid v="1470789025" />
+          <attributes>
+            <label v="Level In Low" />
+            <description
+              v="The &lt;b&gt;Level in low&lt;/b&gt; parameter defines the input image's lowlight levels"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Levels" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_levelinhigh" />
+          <uid v="1470789027" />
+          <attributes>
+            <label v="Level In High" />
+            <description
+              v="The &lt;b&gt;Level in high&lt;/b&gt; parameter defines the input image's highlight levels"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Levels" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_levelinmid" />
+          <uid v="1470789029" />
+          <attributes>
+            <label v="Level In Mid" />
+            <description
+              v="The &lt;b&gt;Level in mid&lt;/b&gt; parameter defines the input image's midtone levels"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Levels" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_leveloutlow" />
+          <uid v="1470789031" />
+          <attributes>
+            <label v="Level Out Low" />
+            <description
+              v="The &lt;b&gt;Level in low&lt;/b&gt; parameter defines the output image's lowlight levels"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Levels" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_levelouthigh" />
+          <uid v="1470789033" />
+          <attributes>
+            <label v="Level Out High" />
+            <description
+              v="The &lt;b&gt;Level out high&lt;/b&gt;parameter defines the output image's highlight levels"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Levels" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true&amp;&amp; ! input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_clampinterm" />
+          <uid v="1470789035" />
+          <attributes>
+            <label v="Intermediary Clamp" />
+            <description
+              v="This parameter determines if transformed input value is clamped to 0..1 before computing output level"
+            />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="enumbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Passthru" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Clamp" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Levels" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp;! input[&quot;mask_toggle_histogram_select&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_toggle_distance" />
+          <uid v="1470789037" />
+          <attributes>
+            <label v="Distance" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Disabled" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Enabled" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Distance" />
+          <visibleIf v="input[&quot;toggle_enable_mask&quot;] != true" />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_distance" />
+          <uid v="1470789039" />
+          <attributes>
+            <label v="Maximum Distance" />
+            <description
+              v="The &lt;b&gt;Maximum Distance&lt;/b&gt; parameter adjusts the distance computation and copy limit"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="10" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="10" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="256" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Distance" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true  &amp;&amp;input[&quot;mask_toggle_distance&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_distancemode" />
+          <uid v="1470789042" />
+          <attributes>
+            <label v="Distance Mode" />
+            <description v="Choose the method of distance computation" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="3" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Distance" />
+          <visibleIf
+            v="input[&quot;toggle_enable_mask&quot;] != true &amp;&amp; input[&quot;mask_toggle_distance&quot;]"
+          />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_blur_Intensity" />
+          <uid v="1470789044" />
+          <attributes>
+            <label v="Intensity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="16" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Blur (Post)" />
+          <visibleIf v="input[&quot;toggle_enable_mask&quot;] != true" />
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_blur_Quality" />
+          <uid v="1470789046" />
+          <attributes>
+            <label v="Quality" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Mask/Blur (Post)" />
+          <visibleIf v="input[&quot;toggle_enable_mask&quot;] != true" />
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_inputs" />
+          <uid v="1414767977" />
+          <attributes>
+            <label v="Input / Output Visibility" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Refresh" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Refresh" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Debug" />
+          <visibleIf
+            v="input[&quot;toggle_inputs&quot;] || !input[&quot;toggle_inputs&quot;]  "
+          />
+        </paraminput>
       </paraminputs>
       <primaryInput v="1404086034" />
       <graphOutputs>
@@ -10427,7 +10370,7 @@
         <compNode>
           <uid v="1404086035" />
           <GUILayout>
-            <gpos v="-304 405.2229 0" />
+            <gpos v="-336 397.192932 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10495,117 +10438,9 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1404092527" />
-          <GUILayout>
-            <gpos v="958.563171 -304 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1404092528" />
-              <comptype v="2" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="opacity" />
-              <connRef v="1404096169" />
-              <connRefOutput v="1404096170" />
-            </connection>
-            <connection>
-              <identifier v="source" />
-              <connRef v="1415366662" />
-              <connRefOutput v="1415366663" />
-            </connection>
-            <connection>
-              <identifier v="destination" />
-              <connRef v="1415366724" />
-              <connRefOutput v="1415366725" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compFilter>
-              <filter v="blend" />
-              <parameters>
-                <parameter>
-                  <name v="blendingmode" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1404093332" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1404093332" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="Blending_Mode" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="opacitymult" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1404093342" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1404093342" />
-                          <function v="get_float1" />
-                          <type v="256" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_float1" />
-                              <constantValue>
-                                <constantValueString v="Foreground_Opacity" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="maskrectangle" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1404130684" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1404130684" />
-                          <function v="get_float4" />
-                          <type v="2048" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_float4" />
-                              <constantValue>
-                                <constantValueString v="maskrectangle" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-              </parameters>
-            </compFilter>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1404093098" />
           <GUILayout>
-            <gpos v="2049.87524 446.205872 0" />
+            <gpos v="2000 528 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -10623,7 +10458,7 @@
         <compNode>
           <uid v="1404096169" />
           <GUILayout>
-            <gpos v="816 453.333344 0" />
+            <gpos v="720 410.666656 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10648,7 +10483,7 @@
         <compNode>
           <uid v="1404168823" />
           <GUILayout>
-            <gpos v="608.953369 464 0" />
+            <gpos v="144 414.967773 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10727,7 +10562,7 @@
         <compNode>
           <uid v="1404168852" />
           <GUILayout>
-            <gpos v="-304 565.2229 0" />
+            <gpos v="-336 574.246338 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10791,7 +10626,7 @@
         <compNode>
           <uid v="1404329976" />
           <GUILayout>
-            <gpos v="1104 464 0" />
+            <gpos v="1168 31.811615 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10801,14 +10636,14 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="destination" />
-              <connRef v="1404092527" />
-              <connRefOutput v="1404092528" />
-            </connection>
-            <connection>
               <identifier v="source" />
               <connRef v="1404096169" />
               <connRefOutput v="1404096170" />
+            </connection>
+            <connection>
+              <identifier v="destination" />
+              <connRef v="1470712202" />
+              <connRefOutput v="1470712203" />
             </connection>
           </connections>
           <compImplementation>
@@ -10903,7 +10738,7 @@
         <compNode>
           <uid v="1414699816" />
           <GUILayout>
-            <gpos v="400 48 0" />
+            <gpos v="400 72 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10921,7 +10756,7 @@
         <compNode>
           <uid v="1414708304" />
           <GUILayout>
-            <gpos v="240 400 0" />
+            <gpos v="-80 400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -10945,19 +10780,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708373" />
+                      <rootnode v="1470789016" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708373" />
+                          <uid v="1470789016" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_invert"
-                                />
+                                <constantValueString v="mask_invert" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -10971,10 +10804,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708375" />
+                      <rootnode v="1470789018" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708375" />
+                          <uid v="1470789018" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -10982,7 +10815,7 @@
                               <name v="get_bool" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_toggle_histogram_select"
+                                  v="mask_toggle_histogram_select"
                                 />
                               </constantValue>
                             </funcData>
@@ -10997,10 +10830,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708377" />
+                      <rootnode v="1470789020" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708377" />
+                          <uid v="1470789020" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -11008,7 +10841,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_position"
+                                  v="mask_histogram_select_position"
                                 />
                               </constantValue>
                             </funcData>
@@ -11023,10 +10856,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708379" />
+                      <rootnode v="1470789022" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708379" />
+                          <uid v="1470789022" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -11034,7 +10867,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_range"
+                                  v="mask_histogram_select_range"
                                 />
                               </constantValue>
                             </funcData>
@@ -11049,10 +10882,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708381" />
+                      <rootnode v="1470789024" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708381" />
+                          <uid v="1470789024" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
@@ -11060,7 +10893,7 @@
                               <name v="get_float1" />
                               <constantValue>
                                 <constantValueString
-                                  v="refine_select_mask_histogram_select_constrast"
+                                  v="mask_histogram_select_constrast"
                                 />
                               </constantValue>
                             </funcData>
@@ -11075,19 +10908,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708383" />
+                      <rootnode v="1470789026" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708383" />
+                          <uid v="1470789026" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinlow"
-                                />
+                                <constantValueString v="mask_levelinlow" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11101,19 +10932,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708385" />
+                      <rootnode v="1470789028" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708385" />
+                          <uid v="1470789028" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinhigh"
-                                />
+                                <constantValueString v="mask_levelinhigh" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11127,19 +10956,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708387" />
+                      <rootnode v="1470789030" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708387" />
+                          <uid v="1470789030" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelinmid"
-                                />
+                                <constantValueString v="mask_levelinmid" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11153,19 +10980,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708389" />
+                      <rootnode v="1470789032" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708389" />
+                          <uid v="1470789032" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_leveloutlow"
-                                />
+                                <constantValueString v="mask_leveloutlow" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11179,19 +11004,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708391" />
+                      <rootnode v="1470789034" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708391" />
+                          <uid v="1470789034" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_levelouthigh"
-                                />
+                                <constantValueString v="mask_levelouthigh" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11205,19 +11028,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708393" />
+                      <rootnode v="1470789036" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708393" />
+                          <uid v="1470789036" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_clampinterm"
-                                />
+                                <constantValueString v="mask_clampinterm" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11231,19 +11052,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708395" />
+                      <rootnode v="1470789038" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708395" />
+                          <uid v="1470789038" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
                             <funcData>
                               <name v="get_bool" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_toggle_distance"
-                                />
+                                <constantValueString v="mask_toggle_distance" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11257,19 +11076,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708397" />
+                      <rootnode v="1470789041" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708397" />
+                          <uid v="1470789041" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_distance"
-                                />
+                                <constantValueString v="mask_distance" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11283,19 +11100,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708399" />
+                      <rootnode v="1470789043" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708399" />
+                          <uid v="1470789043" />
                           <function v="get_integer1" />
                           <type v="16" />
                           <funcDatas>
                             <funcData>
                               <name v="get_integer1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_distancemode"
-                                />
+                                <constantValueString v="mask_distancemode" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11309,19 +11124,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708401" />
+                      <rootnode v="1470789045" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708401" />
+                          <uid v="1470789045" />
                           <function v="get_float1" />
                           <type v="256" />
                           <funcDatas>
                             <funcData>
                               <name v="get_float1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_blur_Intensity"
-                                />
+                                <constantValueString v="mask_blur_Intensity" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11335,19 +11148,17 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414708403" />
+                      <rootnode v="1470789047" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414708403" />
+                          <uid v="1470789047" />
                           <function v="get_integer1" />
                           <type v="16" />
                           <funcDatas>
                             <funcData>
                               <name v="get_integer1" />
                               <constantValue>
-                                <constantValueString
-                                  v="refine_select_mask_blur_Quality"
-                                />
+                                <constantValueString v="mask_blur_Quality" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -11369,7 +11180,7 @@
         <compNode>
           <uid v="1414708695" />
           <GUILayout>
-            <gpos v="2032 656 0" />
+            <gpos v="2000 656 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -11387,7 +11198,7 @@
         <compNode>
           <uid v="1414708734" />
           <GUILayout>
-            <gpos v="912 624 0" />
+            <gpos v="922.666687 666.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11412,7 +11223,7 @@
         <compNode>
           <uid v="1414830952" />
           <GUILayout>
-            <gpos v="1616 442.666656 0" />
+            <gpos v="1616 538.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11422,24 +11233,24 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="#input" />
-              <connRef v="1414834597" />
-              <connRefOutput v="1414834598" />
-            </connection>
-            <connection>
-              <identifier v="source" />
-              <connRef v="1414830980" />
-              <connRefOutput v="1414830981" />
-            </connection>
-            <connection>
               <identifier v="destination" />
               <connRef v="1415366839" />
               <connRefOutput v="1415366840" />
             </connection>
             <connection>
+              <identifier v="#input" />
+              <connRef v="1470706504" />
+              <connRefOutput v="1470706505" />
+            </connection>
+            <connection>
               <identifier v="opacity" />
-              <connRef v="1415370716" />
-              <connRefOutput v="1415370717" />
+              <connRef v="1470706534" />
+              <connRefOutput v="1470706535" />
+            </connection>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1470706555" />
+              <connRefOutput v="1470706556" />
             </connection>
           </connections>
           <compImplementation>
@@ -11510,7 +11321,7 @@
         <compNode>
           <uid v="1414830980" />
           <GUILayout>
-            <gpos v="912 720 0" />
+            <gpos v="-176 880 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11557,7 +11368,7 @@
         <compNode>
           <uid v="1414834597" />
           <GUILayout>
-            <gpos v="1168 880 0" />
+            <gpos v="-336 1008 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11603,7 +11414,7 @@
         <compNode>
           <uid v="1414837350" />
           <GUILayout>
-            <gpos v="48 624 501" />
+            <gpos v="-336 766.246338 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11763,7 +11574,7 @@
         <compNode>
           <uid v="1415365780" />
           <GUILayout>
-            <gpos v="-317.227997 -98.4197006 0" />
+            <gpos v="-336 -193.753677 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11813,7 +11624,7 @@
         <compNode>
           <uid v="1415365859" />
           <GUILayout>
-            <gpos v="-304 240 0" />
+            <gpos v="-336 176 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11863,7 +11674,7 @@
         <compNode>
           <uid v="1415365960" />
           <GUILayout>
-            <gpos v="-304 -240 0" />
+            <gpos v="-336 -385.753662 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11933,7 +11744,7 @@
         <compNode>
           <uid v="1415365991" />
           <GUILayout>
-            <gpos v="-16 -80 0" />
+            <gpos v="-71.1072922 -293.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -11994,7 +11805,7 @@
         <compNode>
           <uid v="1415366036" />
           <GUILayout>
-            <gpos v="-317.492218 80 0" />
+            <gpos v="-336 -1.75367618 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -12064,7 +11875,7 @@
         <compNode>
           <uid v="1415366071" />
           <GUILayout>
-            <gpos v="-16 125.492226 0" />
+            <gpos v="-71.1072922 72 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -12124,7 +11935,7 @@
         <compNode>
           <uid v="1415366125" />
           <GUILayout>
-            <gpos v="240 -304 0" />
+            <gpos v="240 -298.666656 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -12552,7 +12363,7 @@
         <compNode>
           <uid v="1415366412" />
           <GUILayout>
-            <gpos v="240 112 0" />
+            <gpos v="240 72 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -12980,7 +12791,7 @@
         <compNode>
           <uid v="1415366662" />
           <GUILayout>
-            <gpos v="637.166931 -336 0" />
+            <gpos v="624 -298.666656 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -13041,7 +12852,7 @@
         <compNode>
           <uid v="1415366724" />
           <GUILayout>
-            <gpos v="624 62.2709427 0" />
+            <gpos v="624 72 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -13102,7 +12913,7 @@
         <compNode>
           <uid v="1415366839" />
           <GUILayout>
-            <gpos v="1328 427.145599 0" />
+            <gpos v="1360 90.6666641 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -13118,13 +12929,13 @@
             </connection>
             <connection>
               <identifier v="input_3" />
-              <connRef v="1415366662" />
-              <connRefOutput v="1415366663" />
+              <connRef v="1470706630" />
+              <connRefOutput v="1470706631" />
             </connection>
             <connection>
               <identifier v="input_4" />
-              <connRef v="1415366724" />
-              <connRefOutput v="1415366725" />
+              <connRef v="1470712478" />
+              <connRefOutput v="1470712479" />
             </connection>
           </connections>
           <compImplementation>
@@ -13175,7 +12986,7 @@
         <compNode>
           <uid v="1415367098" />
           <GUILayout>
-            <gpos v="1853.47717 442.666656 0" />
+            <gpos v="1840 525.033081 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -13201,8 +13012,8 @@
             </connection>
             <connection>
               <identifier v="input_1" />
-              <connRef v="1404092527" />
-              <connRefOutput v="1404092528" />
+              <connRef v="1470706416" />
+              <connRefOutput v="1470706417" />
             </connection>
           </connections>
           <compImplementation>
@@ -13253,7 +13064,7 @@
         <compNode>
           <uid v="1415370657" />
           <GUILayout>
-            <gpos v="752 720 0" />
+            <gpos v="-336 880 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -13277,7 +13088,7 @@
         <compNode>
           <uid v="1415370716" />
           <GUILayout>
-            <gpos v="1168 720 0" />
+            <gpos v="80 880 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -13319,13 +13130,277 @@
             </compInstance>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1470706416" />
+          <GUILayout>
+            <gpos v="1509.33337 -282.666656 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470706417" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1470712202" />
+              <connRefOutput v="1470712203" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470706504" />
+          <GUILayout>
+            <gpos v="1328 997.333313 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470706505" />
+              <comptype v="4" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414834597" />
+              <connRefOutput v="1414834598" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470706534" />
+          <GUILayout>
+            <gpos v="1082.66663 880 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470706535" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1415370716" />
+              <connRefOutput v="1415370717" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470706555" />
+          <GUILayout>
+            <gpos v="400 528 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470706556" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414830980" />
+              <connRefOutput v="1414830981" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470706630" />
+          <GUILayout>
+            <gpos v="912 80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470706631" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1415366662" />
+              <connRefOutput v="1415366663" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470712202" />
+          <GUILayout>
+            <gpos v="976 -289.35498 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470712203" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_fg" />
+              <connRef v="1415366662" />
+              <connRefOutput v="1415366663" />
+            </connection>
+            <connection>
+              <identifier v="input_bg" />
+              <connRef v="1415366724" />
+              <connRefOutput v="1415366725" />
+            </connection>
+            <connection>
+              <identifier v="input_mask" />
+              <connRef v="1404096169" />
+              <connRefOutput v="1404096170" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_BlendMode_Grayscale?dependency=1470579567" />
+              <parameters>
+                <parameter>
+                  <name v="input_opacity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470712334" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470712334" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Foreground_Opacity" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="blendingmode" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470712359" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470712359" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="Blending_Mode" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470712381" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470712381" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1470712203" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470712478" />
+          <GUILayout>
+            <gpos v="912 208 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470712479" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1415366724" />
+              <connRefOutput v="1415366725" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="992 341.333344 -100" />
+            <gpos v="1045.33337 -32 -100" />
             <size v="384 192" />
           </GUILayout>
           <GUIName v="" />
@@ -13334,17 +13409,6 @@
           <frameColor v="0.983870983 1 0 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUIDependency v="NODE?1404092527" />
-          <GUILayout>
-            <gpos v="-40 62 0" />
-            <size v="117 40" />
-          </GUILayout>
-          <GUIName v="blend: A (foreground), B (background)" />
-          <uid v="1414699365" />
-          <frameColor v="0 0 0 1" />
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
@@ -13360,8 +13424,8 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="821.333313 -448 -100" />
-            <size v="256 704" />
+            <gpos v="853.333313 -426.666656 -100" />
+            <size v="256 309.333313" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1414699572" />
@@ -13385,7 +13449,7 @@
           <type v="COMMENT" />
           <GUILayout>
             <gpos v="544 -416 0" />
-            <size v="192 949.333313" />
+            <size v="192 618.666687" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1415372087" />
@@ -13409,7 +13473,7 @@
           <type v="COMMENT" />
           <GUILayout>
             <gpos v="160 -384 0" />
-            <size v="160 885.333313" />
+            <size v="160 618.666687" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1415372420" />
@@ -13417,6 +13481,17 @@
           <frameColor v="1 0.322147667 0 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1470712202" />
+          <GUILayout>
+            <gpos v="-40 62 0" />
+            <size v="117 40" />
+          </GUILayout>
+          <GUIName v="blend: A (foreground), B (background)" />
+          <uid v="1470712436" />
+          <frameColor v="0 0 0 1" />
         </GUIObject>
       </GUIObjects>
       <options>
@@ -14352,7 +14427,7 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Blur" />
+          <group v="Blur (Post)" />
         </paraminput>
         <paraminput>
           <identifier v="blur_Quality" />
@@ -14389,7 +14464,7 @@
               </option>
             </options>
           </defaultWidget>
-          <group v="Blur" />
+          <group v="Blur (Post)" />
         </paraminput>
       </paraminputs>
       <primaryInput v="1404101834" />
@@ -14474,7 +14549,7 @@
         <compNode>
           <uid v="1404101897" />
           <GUILayout>
-            <gpos v="496 48 0" />
+            <gpos v="510.758606 80 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -14591,7 +14666,7 @@
         <compNode>
           <uid v="1404102007" />
           <GUILayout>
-            <gpos v="688 185.109894 0" />
+            <gpos v="720 185.109894 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -14651,7 +14726,7 @@
         <compNode>
           <uid v="1404102056" />
           <GUILayout>
-            <gpos v="944 185.109894 0" />
+            <gpos v="1410.10327 176 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -14662,8 +14737,8 @@
           <connections>
             <connection>
               <identifier v="Source" />
-              <connRef v="1404102007" />
-              <connRefOutput v="1404102008" />
+              <connRef v="1404102636" />
+              <connRefOutput v="1404102637" />
             </connection>
           </connections>
           <compImplementation>
@@ -14731,7 +14806,7 @@
         <compNode>
           <uid v="1404102139" />
           <GUILayout>
-            <gpos v="1168 80 0" />
+            <gpos v="976 80 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -14742,8 +14817,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1404102056" />
-              <connRefOutput v="1404102057" />
+              <connRef v="1470777534" />
+              <connRefOutput v="1470777535" />
             </connection>
           </connections>
           <compImplementation>
@@ -14841,7 +14916,7 @@
         <compNode>
           <uid v="1404102636" />
           <GUILayout>
-            <gpos v="1360 185.109894 0" />
+            <gpos v="1186.10327 180.554947 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -14904,13 +14979,13 @@
         <compNode>
           <uid v="1404102680" />
           <GUILayout>
-            <gpos v="1570.37366 185.109894 0" />
+            <gpos v="1584 176 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1404102636" />
-              <connRefOutput v="1404102637" />
+              <connRef v="1404102056" />
+              <connRefOutput v="1404102057" />
             </connection>
           </connections>
           <compImplementation>
@@ -14922,7 +14997,7 @@
         <compNode>
           <uid v="1404103101" />
           <GUILayout>
-            <gpos v="1168 272 0" />
+            <gpos v="976 272 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -14933,8 +15008,8 @@
           <connections>
             <connection>
               <identifier v="input1" />
-              <connRef v="1404102056" />
-              <connRefOutput v="1404102057" />
+              <connRef v="1470777534" />
+              <connRefOutput v="1470777535" />
             </connection>
           </connections>
           <compImplementation>
@@ -15170,13 +15245,38 @@
             </compInstance>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1470777534" />
+          <GUILayout>
+            <gpos v="816 186.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470777535" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1404102007" />
+              <connRefOutput v="1404102008" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="608 96 0" />
+            <gpos v="640 96 -100" />
             <size v="160 192" />
           </GUILayout>
           <GUIName v="" />
@@ -15189,7 +15289,7 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="864 96 -100" />
+            <gpos v="1319.43665 74.6666641 -100" />
             <size v="160 192" />
           </GUILayout>
           <GUIName v="" />
@@ -15202,7 +15302,7 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="1280 96 -100" />
+            <gpos v="1106.10327 74.6666641 -100" />
             <size v="160 192" />
           </GUILayout>
           <GUIName v="" />
