@@ -101,12 +101,16 @@
 				<_2 prefix="_">
 					<url>file:///Users/gilliantunney/snailicide_helix/substance/Substance_Automation_Toolkit/resources/packages</url>
 					<isRecursive>true</isRecursive>
-					<isEnabled>true</isEnabled>
+					<isEnabled>false</isEnabled>
+					<excludePattern></excludePattern>
+					<excludeFilter></excludeFilter>
 				</_2>
 				<_1 prefix="_">
 					<url>file:///Users/gilliantunney/snailicide_helix/substance/nodes/sbsar</url>
 					<isRecursive>false</isRecursive>
-					<isEnabled>true</isEnabled>
+					<isEnabled>false</isEnabled>
+					<excludePattern></excludePattern>
+					<excludeFilter></excludeFilter>
 				</_1>
 			</watchedPaths>
 			<settingsInfo>
