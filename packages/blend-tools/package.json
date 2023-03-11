@@ -24,7 +24,7 @@
     "scripts": {
         "\n========== BUILD >> ==========": "",
         "build": "mkdir -p dist && pnpm build:sbs",
-        "build:sbs": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --verbose --merge --output-path ./dist",
+        "build:sbs": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --verbose --merge --output-name GBT_Blend_Tools --output-path ./dist",
         "build:ts": "tsc --build",
         "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
         "\n========== DEV >> ==========": "",

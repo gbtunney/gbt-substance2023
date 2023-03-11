@@ -5,6 +5,12 @@
   <updaterVersion v="1.1.0.202202" />
   <fileUID v="{1927028b-ee27-4576-8d46-db598e58b9b1}" />
   <versionUID v="0" />
+  <metadata>
+    <treestr>
+      <name v="version" />
+      <value v="0.0.0" />
+    </treestr>
+  </metadata>
   <dependencies>
     <dependency>
       <filename v="sbs://blend_switch.sbs" />
@@ -16,47 +22,17 @@
   </dependencies>
   <content>
     <graph>
-      <identifier v="GBT_BlendModeColor" />
+      <identifier v="GBT_BlendMode_Color" />
       <uid v="1470599662" />
+      <graphtype v="filter" />
+      <attributes>
+        <label v="GBT BlendMode Color" />
+        <tags v="blend,blendmodes,color" />
+        <description
+          v="The same as the build in blend node, but the &quot;blendmode&quot; dropdown can be exposed in sbsar"
+        />
+      </attributes>
       <paraminputs>
-        <paraminput>
-          <identifier v="input_mask" />
-          <uid v="1470599685" />
-          <isConnectable v="1" />
-          <type v="2" />
-          <defaultValue>
-            <constantValueFloat1 v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="" />
-            <options />
-          </defaultWidget>
-        </paraminput>
-        <paraminput>
-          <identifier v="blendingmode" />
-          <uid v="1470599828" />
-          <attributes>
-            <label v="Blending Mode" />
-            <description
-              v="The &lt;b&gt;Blending Mode&lt;/b&gt; parameter defines the blending operation used to combine the foreground and background images"
-            />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="dropdownlist" />
-            <options>
-              <option>
-                <name v="parameters" />
-                <value
-                  v="0;0;Copy;1;Add (Linear Dodge);2;Subtract;3;Multiply;4;Add Sub;5;Max (Lighten);6;Min (Darken);7;Switch;8;Divide;9;Overlay;10;Screen;11;Soft Light"
-                />
-              </option>
-            </options>
-          </defaultWidget>
-        </paraminput>
         <paraminput>
           <identifier v="input_opacity" />
           <uid v="1470599848" />
@@ -97,8 +73,36 @@
           </defaultWidget>
         </paraminput>
         <paraminput>
+          <identifier v="blendingmode" />
+          <uid v="1470599828" />
+          <attributes>
+            <label v="Blending Mode" />
+            <description
+              v="The &lt;b&gt;Blending Mode&lt;/b&gt; parameter defines the blending operation used to combine the foreground and background images"
+            />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value
+                  v="0;0;Copy;1;Add (Linear Dodge);2;Subtract;3;Multiply;4;Add Sub;5;Max (Lighten);6;Min (Darken);7;Switch;8;Divide;9;Overlay;10;Screen;11;Soft Light"
+                />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
           <identifier v="input_fg" />
           <uid v="1470602171" />
+          <attributes>
+            <label v="Foreground" />
+          </attributes>
           <isConnectable v="1" />
           <type v="1" />
           <defaultValue>
@@ -112,6 +116,9 @@
         <paraminput>
           <identifier v="input_bg" />
           <uid v="1470602569" />
+          <attributes>
+            <label v="Background" />
+          </attributes>
           <isConnectable v="1" />
           <type v="1" />
           <defaultValue>
@@ -121,6 +128,104 @@
             <name v="" />
             <options />
           </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_mask" />
+          <uid v="1470599685" />
+          <attributes>
+            <label v="Mask" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="2" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="alpha_blending" />
+          <uid v="1470663409" />
+          <attributes>
+            <label v="Alpha Blending" />
+            <description
+              v="The &lt;b&gt;Alpha Blending&lt;/b&gt; parameter defines the how alpha channels of color source and destination are interpreted"
+            />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value
+                  v="0;0;Use Source Alpha;1;Ignore Alpha;2;Straight Alpha Blending;3;Premultiplied Alpha Blending (Copy only)"
+                />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Advanced" />
+        </paraminput>
+        <paraminput>
+          <identifier v="maskrectangle" />
+          <uid v="1470663418" />
+          <attributes>
+            <label v="Cropping Area" />
+            <description
+              v="The &lt;b&gt;Cropping Area&lt;/b&gt; parameter applies a cropping area on the foreground input"
+            />
+          </attributes>
+          <type v="2048" />
+          <defaultValue>
+            <constantValueFloat4 v="0 1 0 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0;1;0;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Left" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Right" />
+              </option>
+              <option>
+                <name v="label2" />
+                <value v="Top" />
+              </option>
+              <option>
+                <name v="label3" />
+                <value v="Bottom" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Advanced" />
         </paraminput>
       </paraminputs>
       <primaryInput v="1470599685" />
@@ -248,6 +353,54 @@
                     </dynamicValue>
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663410" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663410" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663419" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663419" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -313,6 +466,54 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663480" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663480" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663535" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663535" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -382,6 +583,54 @@
                     <constantValueInt32 v="2" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663550" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663550" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663554" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663554" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -447,6 +696,54 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663560" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663560" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663563" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663563" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -516,6 +813,54 @@
                     <constantValueInt32 v="4" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663589" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663589" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663598" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663598" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -581,6 +926,54 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663623" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663623" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663633" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663633" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -650,6 +1043,54 @@
                     <constantValueInt32 v="6" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663647" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663647" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663658" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663658" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -715,6 +1156,54 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663677" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663677" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663687" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663687" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -784,6 +1273,54 @@
                     <constantValueInt32 v="9" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663700" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663700" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663712" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663712" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -851,6 +1388,54 @@
                     <constantValueInt32 v="10" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663726" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663726" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663736" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663736" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -916,6 +1501,54 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="11" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663750" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663750" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663761" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663761" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="alpha_blending" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -1386,12 +2019,23 @@
       </root>
     </graph>
     <graph>
-      <identifier v="GBT_BlendModeGreyscale" />
+      <identifier v="GBT_BlendMode_Grayscale" />
       <uid v="1470602091" />
+      <graphtype v="filter" />
+      <attributes>
+        <label v="GBT BlendMode Grayscale" />
+        <tags v="blend,blendmodes,grayscale,greyscale" />
+        <description
+          v="The same as the build in blend node, but the &quot;blendmode&quot; dropdown can be exposed in sbsar"
+        />
+      </attributes>
       <paraminputs>
         <paraminput>
           <identifier v="input_fg" />
           <uid v="1470599668" />
+          <attributes>
+            <label v="Foreground" />
+          </attributes>
           <isConnectable v="1" />
           <type v="2" />
           <defaultValue>
@@ -1405,6 +2049,9 @@
         <paraminput>
           <identifier v="input_bg" />
           <uid v="1470599678" />
+          <attributes>
+            <label v="Background" />
+          </attributes>
           <isConnectable v="1" />
           <type v="2" />
           <defaultValue>
@@ -1418,6 +2065,9 @@
         <paraminput>
           <identifier v="input_mask" />
           <uid v="1470599685" />
+          <attributes>
+            <label v="Mask" />
+          </attributes>
           <isConnectable v="1" />
           <type v="2" />
           <defaultValue>
@@ -1426,31 +2076,6 @@
           <defaultWidget>
             <name v="" />
             <options />
-          </defaultWidget>
-        </paraminput>
-        <paraminput>
-          <identifier v="blendingmode" />
-          <uid v="1470599828" />
-          <attributes>
-            <label v="Blending Mode" />
-            <description
-              v="The &lt;b&gt;Blending Mode&lt;/b&gt; parameter defines the blending operation used to combine the foreground and background images"
-            />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="dropdownlist" />
-            <options>
-              <option>
-                <name v="parameters" />
-                <value
-                  v="0;0;Copy;1;Add (Linear Dodge);2;Subtract;3;Multiply;4;Add Sub;5;Max (Lighten);6;Min (Darken);7;Switch;8;Divide;9;Overlay;10;Screen;11;Soft Light"
-                />
-              </option>
-            </options>
           </defaultWidget>
         </paraminput>
         <paraminput>
@@ -1491,6 +2116,87 @@
               </option>
             </options>
           </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="blendingmode" />
+          <uid v="1470599828" />
+          <attributes>
+            <label v="Blending Mode" />
+            <description
+              v="The &lt;b&gt;Blending Mode&lt;/b&gt; parameter defines the blending operation used to combine the foreground and background images"
+            />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value
+                  v="0;0;Copy;1;Add (Linear Dodge);2;Subtract;3;Multiply;4;Add Sub;5;Max (Lighten);6;Min (Darken);7;Switch;8;Divide;9;Overlay;10;Screen;11;Soft Light"
+                />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="maskrectangle" />
+          <uid v="1470663825" />
+          <attributes>
+            <label v="Cropping Area" />
+            <description
+              v="The &lt;b&gt;Cropping Area&lt;/b&gt; parameter applies a cropping area on the foreground input"
+            />
+          </attributes>
+          <type v="2048" />
+          <defaultValue>
+            <constantValueFloat4 v="0 1 0 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0;1;0;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Left" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Right" />
+              </option>
+              <option>
+                <name v="label2" />
+                <value v="Top" />
+              </option>
+              <option>
+                <name v="label3" />
+                <value v="Bottom" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Advanced" />
         </paraminput>
       </paraminputs>
       <primaryInput v="1470599668" />
@@ -1741,6 +2447,30 @@
                     </dynamicValue>
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663826" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663826" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -1963,6 +2693,30 @@
                     <constantValueInt32 v="1" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663871" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663871" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -2028,6 +2782,30 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663881" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663881" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2097,6 +2875,30 @@
                     <constantValueInt32 v="3" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663886" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663886" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -2162,6 +2964,30 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663891" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663891" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2231,6 +3057,30 @@
                     <constantValueInt32 v="5" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663896" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663896" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -2296,6 +3146,30 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="6" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663901" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663901" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2365,6 +3239,30 @@
                     <constantValueInt32 v="8" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663906" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663906" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -2430,6 +3328,30 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="9" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663922" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663922" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2499,6 +3421,30 @@
                     <constantValueInt32 v="10" />
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663927" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663927" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -2564,6 +3510,30 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueInt32 v="11" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="maskrectangle" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1470663932" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1470663932" />
+                          <function v="get_float4" />
+                          <type v="2048" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float4" />
+                              <constantValue>
+                                <constantValueString v="maskrectangle" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
                   </paramValue>
                 </parameter>
               </parameters>
