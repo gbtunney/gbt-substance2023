@@ -17,6 +17,7 @@ module.exports = {
                 'sat-scripts',
                 'value-processor-utilities',
                 'palatte',
+                'blend-tools',
             ],
         ],
     },
