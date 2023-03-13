@@ -1,0 +1,15 @@
+{
+    "pkg": {
+        "version": "0.0.1",
+        "id": "232323232",
+        "desc": "descriptioni am gillian!!!"
+    },
+    "gph": {
+        "category": "ExampleCategory",
+        "label": "Label Example",
+        "author": "Gillian B Tunney",
+        "authorURL": "http://pyromancy.org",
+        "desc": "i am gillian!!!",
+        "tags": ["tag1", "tag2"]
+    }
+}

@@ -4,10 +4,11 @@
         "target": "ESNext",
         "lib": ["ESNext", "DOM"],
         "module": "ESNext",
+        "resolveJsonModule": true,
         "rootDir": ".",
         "types": ["node"],
         "skipLibCheck": true
     },
     "exclude": ["./node_modules"],
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts", "./src/meta_updater/*.ts"]
 }
