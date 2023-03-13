@@ -4,6 +4,16 @@ export {}
 import { z } from 'zod'
 import { zod, node } from '@snailicide/g-library'
 
+/* todo:
+   rootdir (package.json in the calling dir)
+inputdir //sbs
+datadir //jsons
+outdir //output file pagth
+logfilepath //full filepath
+NoOverwrite boole
+descfilepath ( like readme.md)
+ */
+
 //make a schema for arguments:
 const example_schema = zod.object({
     repository: zod.optionalDefault(

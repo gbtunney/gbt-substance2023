@@ -1,5 +1,5 @@
 ///TYPES FOR REPLACE FILES
-type GraphAttributes = {
+export type GraphAttributes = {
     category?: string
     label?: string
     author?: string
@@ -9,14 +9,14 @@ type GraphAttributes = {
     icon?: string
 }
 
-type ReplaceFile = {
+export type ReplaceFile = {
     pkg: {
         desc: string
-        metadata: Record<string, string> //see example
+        metadata?: Record<string, string> //see example
     }
     gph_defaults: {
         attributes: GraphAttributes
-        metadata: Record<string, string>
+        metadata?: Record<string, string>
     }
     ///specific graph attributes by id
     gph: Record<string /*id*/, GraphAttributes>

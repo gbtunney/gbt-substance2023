@@ -12,7 +12,9 @@
         "outDir": "./../dist" /* Specify an output folder for all emitted files. */,
         // Output settings.
         "sourceMap": true,
-        "rootDir": ".",
+        //  "rootDir": ".",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
         // Type declaration settings.
         "declaration": true,
         "declarationDir": "./../types",
@@ -21,5 +23,5 @@
         "types": ["@types/jest", "jest", "node"]
     },
     "exclude": ["**/*.test.ts"],
-    "include": ["**/*.ts", "**/*.cts", "**/*.mts"]
+    "include": ["**/*.ts", "**/*.json"]
 }
