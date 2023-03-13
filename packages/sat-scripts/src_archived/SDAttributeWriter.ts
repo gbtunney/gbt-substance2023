@@ -3,7 +3,22 @@ import fs from 'fs'
 import path from 'path'
 import _data from './examples/SBS_DataSpec.json'
 import _replacespec from './examples/fileReplaceSpec.json'
-import { deepmerge, deepmergeCustom } from 'deepmerge-ts'
+
+import merge from 'ts-deepmerge'
+
+//type MergeArrayFn = (options: MergeArrayFnOptions) => (target: any[], source: any[]) => any[]
+
+const obj1 = {
+    array: ['A'],
+}
+
+const obj2 = {
+    array: ['B'],
+}
+
+const result = merge.withOptions({ mergeArrays: true }, obj1, obj2)
+
+console.log('options', result)
 
 const inputURL =
     '/Users/gilliantunney/gh_repos/SNAILICIDE/gbt-substance2023/packages/value-processor-utilities/src/GBT_Value_Processor_Utilities.sbs'
@@ -49,7 +64,7 @@ const main = async () => {
                 .replace(/&&/g, '&amp;&amp;')
         },
     })
-    //debug::: fs.writeFileSync('./dist/datadump.json', JSON.stringify(returned))
+    fs.writeFileSync('./dist/datadump.json', JSON.stringify(returned))
     fs.writeFileSync(outputURL, result)
 }
 
@@ -75,22 +90,30 @@ const populateData = (sbsData: SpecData, replaceData: ReplaceData) => {
             },
             {}
         )
-        return deepmerge(
+        return merge(
             _value,
             replacedGraphObj,
             foundArray.length === 1 ? foundArray[0] : {}
         )
     })
-    const newPackageData = getNewPackageDataObj(replaceData)
+    const newPackageData = { package: getNewPackageDataObj(replaceData) }
     if (mysbsData.package.metadata) {
-        mysbsData.package.metadata.treestr = []
+        // mysbsData.package.metadata.treestr = []
     }
-    mysbsData.package.content.graph = newGraphArray
-    // @ts-expect-error ffddfd
-    mysbsData.package.metadata = newPackageData.metadata
-    // @ts-expect-error ffddfd
-    mysbsData.package['desc'] = newPackageData.desc
-    return { ...mysbsData }
+
+    // mysbsData.package.content.graph = newGraphArray
+    //  // @ts-expect-error ffddfd
+    // mysbsData.package.metadata = newPackageData.metadata
+    //  mysbsData.package['desc'] = newPackageData.desc
+
+    console.log('ffff', {
+        package: {
+            content: {
+                ...newGraphArray,
+            },
+        },
+    })
+    return merge.withOptions({ mergeArrays: true }, mysbsData, newPackageData)
 }
 
 const getNewPackageDataObj = (inData: ReplaceData) => {
@@ -106,7 +129,7 @@ const getNewPackageDataObj = (inData: ReplaceData) => {
                 {
                     name: {
                         _attributes: {
-                            v: 'version',
+                            v: 'gillversion',
                         },
                     },
                     value: {
