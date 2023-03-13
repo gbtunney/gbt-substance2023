@@ -3,12 +3,13 @@
     "compilerOptions": {
         "target": "ESNext",
         "lib": ["ESNext", "DOM"],
+        "composite": true,
+        "noEmit": true,
         "module": "ESNext",
-        "resolveJsonModule": true,
         "rootDir": ".",
-        "types": ["node"],
-        "skipLibCheck": true
+        "types": ["@types/jest", "jest", "node"]
     },
     "exclude": ["./node_modules"],
-    "include": ["**/*.ts", "./src/meta_updater/*.ts"]
+    "include": ["./**/*.test.ts"],
+    "references": [{ "path": "./src" }]
 }

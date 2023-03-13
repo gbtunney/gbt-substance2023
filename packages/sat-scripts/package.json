@@ -9,6 +9,9 @@
         "CHANGELOG.md",
         "exampleNodeScript.ts"
     ],
+    "bin": {
+        "sdbuilder": "./dist/index.js"
+    },
     "exports": {
         ".": [
             {
@@ -41,10 +44,11 @@
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
-        "test:temp": "pnpm exec python3 src/build.py",
-        "test:example": "ts-node --esm ./exampleNodeScript.ts --path ./src/Sbs --name shopify-dawn",
-        "test:write": "ts-node --esm ./readSBS.ts --path ./src/Sbs --name shopify-dawn",
-        "test2": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/Sbs/plastic_leather_pattern/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages  --quiet --size-limit 13 --output-path ./dist",
+        "test:temp": "pnpm exec python3 src_archived/build.py",
+        "test:cli": "ts-node --esm ./src/index.ts  --peppers ",
+        "test:example": "ts-node --esm ./exampleNodeScript.ts --no-cheese NOTE: send dditional args -- at end  ",
+        "test:write": "ts-node --esm ./readSBS.ts --path src_archived/Sbs --name shopify-dawn",
+        "test2": "/Users/gilliantunney/Substance\\\\ 12/Adobe\\\\ Substance\\\\ 3D\\\\ Designer.app/Contents/MacOS/sbscooker --inputs src_archived/Sbs/plastic_leather_pattern/*.sbs --includes /Users/gilliantunney/Substance\\\\ 12/packages  --quiet --size-limit 13 --output-path ./dist",
         "test:read": "ts-node --esm ./SDAttributeWriter.ts",
         "build:spec": "ts-node --esm ./outputSBSSpecFile.ts",
         "\n========== PUBLISH >> ==========": "",
@@ -56,7 +60,7 @@
         "clean:sat": " rm -f sat",
         "clean:build": "rm -R -f dist && rm -R -f types && rm -R -f docs",
         "\n========== CODE STYLE >> ==========": "",
-        "black": "black src",
+        "black": "black src_archived",
         "prettier": "cross-var prettier {$npm_package_config_prettier_path}.{$npm_package_config_prettier_extensions} --write",
         "\n========== CHECK >> ==========": "",
         "check": "pnpm build:ts && pnpm clean:ts",
@@ -71,31 +75,43 @@
         "name": "Gillian Tunney",
         "email": "gbtunney@mac.com"
     },
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "clear": "^0.1.0",
+        "commander": "^7.1.0",
+        "figlet": "^1.5.0",
+        "path": "^0.12.7"
+    },
     "devDependencies": {
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.1.3",
+        "@types/clear": "^0.1.2",
+        "@types/figlet": "^1.5.5",
         "@types/glob": "^8.0.0",
+        "@types/jest": "^29.4.0",
         "@types/lodash": "^4.14.191",
-        "@types/node": "^18.7.18",
+        "@types/node": "^18.15.0",
         "@types/shelljs": "^0.8.11",
-        "@types/yargs": "^17.0.13",
+        "@types/yargs": "^17.0.22",
         "deepmerge-ts": "^4.3.0",
         "eslint": "^8.27.0",
         "glob": "^8.1.0",
-        "jest": "^29.3.1",
+        "jest": "^29.5.0",
         "jsdoc": "^4.0.0",
+        "markdown-it": "^13.0.1",
         "nodemon": "^2.0.20",
         "prettier": "^2.7.1",
         "python-shell": "^5.0.0",
         "shelljs": "^0.8.5",
+        "ts-deepmerge": "^6.0.2",
         "ts-node": "^10.9.1",
         "typescript": "^4.9.3",
         "vite": "^3.2.4",
         "xml-js": "^1.6.11",
         "xmldom": "^0.6.0",
-        "yargs": "^17.7.0",
-        "zod": "^3.20.6"
+        "yargs": "^17.7.1",
+        "zod": "^3.21.4"
     },
     "directories": {
         "doc": "docs"
