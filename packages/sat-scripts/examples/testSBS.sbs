@@ -1515,6 +1515,12 @@
           <usertags v="parameter, value, float" />
         </sbspreset>
       </sbspresets>
+      <metadata>
+        <treestr>
+          <name v="uid" />
+          <value v="232323232" />
+        </treestr>
+      </metadata>
     </graph>
     <graph>
       <identifier v="Integer_Value_Graph" />
@@ -3487,6 +3493,12 @@
           <usertags v="float, value, integer" />
         </sbspreset>
       </sbspresets>
+      <metadata>
+        <treestr>
+          <name v="uid" />
+          <value v="232323232" />
+        </treestr>
+      </metadata>
     </graph>
     <graph>
       <identifier v="Float_Value_Switch" />
@@ -5114,6 +5126,12 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <metadata>
+        <treestr>
+          <name v="uid" />
+          <value v="232323232" />
+        </treestr>
+      </metadata>
     </graph>
     <graph>
       <identifier v="Float_Value_Split" />
@@ -8044,6 +8062,12 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <metadata>
+        <treestr>
+          <name v="uid" />
+          <value v="232323232" />
+        </treestr>
+      </metadata>
     </graph>
     <graph>
       <identifier v="Float_Value_Merge" />
@@ -9555,6 +9579,12 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <metadata>
+        <treestr>
+          <name v="uid" />
+          <value v="232323232" />
+        </treestr>
+      </metadata>
     </graph>
     <graph>
       <identifier v="Sampler_Image_To_Float" />
@@ -10274,6 +10304,12 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <metadata>
+        <treestr>
+          <name v="uid" />
+          <value v="232323232" />
+        </treestr>
+      </metadata>
     </graph>
   </content>
   <desc v="descriptioni am gillian!!!" />

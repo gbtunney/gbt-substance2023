@@ -133,11 +133,26 @@ const getNewPackageDataObj = (inData: ReplaceData) => {
     return obj
 }
 const getNewGraphDefaultObj = (inData: ReplaceData) => {
-    return getNewSpecificsDefaultObj(inData.gph_defaults)
+    const graph_meta = {
+        metadata: {
+            treestr: {
+                name: {
+                    _attributes: {
+                        v: 'uid',
+                    },
+                },
+                value: {
+                    _attributes: {
+                        v: inData.pkg.id,
+                    },
+                },
+            },
+        },
+    }
+    return { ...getNewSpecificsDefaultObj(inData.gph_defaults), ...graph_meta }
 }
 const getNewSpecificsDefaultObj = (inData: GraphAttributes) => {
     ///mimic object
-
     let constructObj = {}
 
     if (inData.desc) {
