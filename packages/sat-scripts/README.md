@@ -6,6 +6,12 @@ This is because SBSMutator and the old Automation toolkit is broke.
 
 trying to make a cli thing to:I am trying to populate graph & package values automatically so i can make sure they are uniform than build sbsar's using [sbscooker | Substance 3D Automation ToolKit](https://substance3d.adobe.com/documentation/sat/command-line-tools/sbscooker) UGH.
 
+### TS-TO-ZOD
+
+```shell
+pnpm exec ts-to-zod src/data.ts src/schemas/replaceFileSchema.ts
+```
+
 ## Completely insane notes:
 
 -   [ ] Graph source package name ( in meta )
@@ -56,7 +62,7 @@ For each metaFile:
 -   [ ] ERROr if no matching input file , trace
 
 -   [ ] OutputFilepatg : The path :: Root dir > outputDir > metaFile name,”sbs”  
-        If can write file?
+         If can write file?
 
 If InputFilePath excists
 

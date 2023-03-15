@@ -2,3 +2,4 @@
 __pycache__
 # this is a stupid symlink
 src/fileReplaceSpec.json
+types
