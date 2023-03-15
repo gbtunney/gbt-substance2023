@@ -6,7 +6,7 @@ import path from 'path'
 export {}
 
 //LOAD FILE JSON and SBS BY KEY.
-import { ReplaceFile } from './data'
+//import { ReplaceFile } from './data'
 import type _replacespec from './fileReplaceSpec.json'
 import { deepmerge } from 'deepmerge-ts'
 

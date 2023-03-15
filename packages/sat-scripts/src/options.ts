@@ -1,62 +1,30 @@
 ///resolve ARGS!! like in vite plugins/
-export {}
-//ts-node typescript zod
-import { z } from 'zod'
-import { zod, node } from '@snailicide/g-library'
+import {
+    sbs_updater_options,
+    resolved_sbs_updater_options,
+} from './schemas/optionsSchema.js'
+import type {
+    SBS_UpdaterOptions,
+    ResolvedSBS_UpdaterOptions,
+} from './schemas/optionsSchema'
 
-/* todo:
-   rootdir (package.json in the calling dir)
-inputdir //sbs
-datadir //jsons
-outdir //output file pagth
-logfilepath //full filepath
-NoOverwrite boole
-descfilepath ( like readme.md)
- */
-
-//make a schema for arguments:
-const example_schema = zod.object({
-    repository: zod.optionalDefault(
-        z.string().url(),
-        'https://github.com/gbtunney/gbt-theme-dawn'
-    ),
-    commitOrBranch: zod.optionalDefault(z.string(), 'main'),
-    path: z.string(),
-    name: z.string(),
-    overwrite: zod.optionalDefault(z.boolean(), false),
-})
-const _argObj = {
-    //repository: "hhh",
-    path: './../../themes/',
-    name: '/shopify-theme-example',
-}
-
-const getParsedArguments = (schema: z.ZodSchema) => {
-    const parsedData = node.getYArgs(schema, false, process.argv)
-    if (parsedData !== undefined) {
-        const data = parsedData
-        const file_path = `${data.path}/${data.name}`
-
-        //   console.log("access " ,file_path,zod.filePath(false).parse("http://") )
+export const resolveOptions = (
+    options: any //SBS_UpdaterOptions
+): ResolvedSBS_UpdaterOptions | undefined => {
+    if (sbs_updater_options.safeParse(options).success) {
         if (
-            zod.filePathDoesNotExist.safeParse(file_path).success === true ||
-            (zod.filePathExists.safeParse(file_path).success === true &&
-                data.overwrite === true)
+            resolved_sbs_updater_options.safeParse(
+                sbs_updater_options.parse(options)
+            ).success
         ) {
-            let command = `mkdir ${file_path} ${file_path}/temp && cd ${file_path}/temp`
-            command += ` && wget ${data.repository}/archive/${data.commitOrBranch}.zip`
-            command += ` && unzip * && rm *.zip && mv **!/!* .. && cd .. && rm -rf temp`
-            console.log(command)
-        } else {
-            console.log(
-                'Error: file path already excists',
-                zod.filePath.parse(file_path)
+            return resolved_sbs_updater_options.parse(
+                sbs_updater_options.parse(options)
             )
         }
     } else {
-        //use debug option to get error message
-        node.getYArgs(schema, true, process.argv)
+        sbs_updater_options.parse(options)
     }
+    return undefined
 }
-getParsedArguments(example_schema)
-export {}
+
+export default resolveOptions

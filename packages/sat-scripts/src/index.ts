@@ -1,11 +1,13 @@
-#!/usr/bin/env node
-
 import chalk from 'chalk'
 import clear from 'clear'
 import figlet from 'figlet'
 import program from 'commander'
-import fs from 'fs'
-import path from 'path'
+import yargs from 'yargs'
+import {
+    SBS_UpdaterOptions,
+    sbs_updater_options,
+} from './schemas/optionsSchema.js'
+import { resolveOptions } from './options.js'
 clear()
 console.log(
     chalk.red(figlet.textSync('sd-build-cli', { horizontalLayout: 'full' }))
@@ -14,24 +16,34 @@ console.log(
 program
     .version('0.0.3')
     .description('An example CLI for SBS BUILDING')
-    .option('-p, --peppers', 'Add peppers')
-    .option('-P, --pineapple', 'Add pineapple')
-    .option('-b, --bbq', 'Add bbq sauce')
-    .option('-c, --cheese <type>', 'Add the specified type of cheese [marble]')
-    .option('-C, --no-cheese', 'You do not want any cheese')
+    .option('-r, --rootDir <dir>', 'Root Directory')
+    .option(
+        '-i, --inputSBS<glob>',
+        'Directory containing sbs (Relative to rootDir)( todo: or glob idk??)'
+    )
+    .option(
+        '-d, --inputData<glob>',
+        'Data file Directory (Relative)( todo: glob?)'
+    )
+    .option('-o, --outDir <type>', 'Output directory')
+    .option(
+        '-ow, --overwrite',
+        'Overwrite output files if they already exccist'
+    )
+    .option('-debug', '--debugSBS', 'Write json of transformed sbs')
+    .option('-h', '--help', 'HELP')
+
     .parse(process.argv)
 
 const options = program.opts()
-
-console.log('you ordered a pizza with:')
-if (options['peppers']) console.log('  - peppers')
-if (options['pineapple']) console.log('  - pineapple')
-if (options['bbq']) console.log('  - bbq')
-
-const cheese = options['cheese']
-
-console.log('  - %s cheese', cheese)
+if (options['help']) program.outputHelp()
 
 if (!process.argv.slice(2).length) {
-    program.outputHelp()
+    // program.outputHelp()
 }
+
+const getArgsObject = (value = process.argv) => yargs(value).argv
+
+const resolvedArgs = resolveOptions(getArgsObject()) //sbs_updater_options.safeParse(testme)
+
+console.log('parsed', resolvedArgs)
