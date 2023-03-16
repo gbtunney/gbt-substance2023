@@ -8,6 +8,7 @@ import {
     sbs_updater_options,
 } from './schemas/optionsSchema.js'
 import { resolveOptions } from './options.js'
+import { loadAllFiles } from './loaders.js'
 clear()
 console.log(
     chalk.red(figlet.textSync('sd-build-cli', { horizontalLayout: 'full' }))
@@ -16,34 +17,34 @@ console.log(
 program
     .version('0.0.3')
     .description('An example CLI for SBS BUILDING')
-    .option('-r, --rootDir <dir>', 'Root Directory')
+    .option('--rootDir <dir>', 'Root Directory')
     .option(
-        '-i, --inputSBS<glob>',
-        'Directory containing sbs (Relative to rootDir)( todo: or glob idk??)'
+        '--inputSBS <glob>',
+        'Directory containing sbs (Relative to rootDir) If using glob USE QUOTES OR WILL ONLY GET 1 file'
     )
     .option(
-        '-d, --inputData<glob>',
+        '--inputData <glob>',
         'Data file Directory (Relative)( todo: glob?)'
     )
-    .option('-o, --outDir <type>', 'Output directory')
-    .option(
-        '-ow, --overwrite',
-        'Overwrite output files if they already exccist'
-    )
-    .option('-debug', '--debugSBS', 'Write json of transformed sbs')
+    .option('--outDir <type>', 'Output directory')
+    .option('--overwrite', 'Overwrite output files if they already exccist')
+    .option('--debug', 'Write json of transformed sbs')
     .option('-h', '--help', 'HELP')
 
     .parse(process.argv)
 
 const options = program.opts()
-if (options['help']) program.outputHelp()
+if (options['help']) {
+    program.outputHelp()
+} else {
+    const getArgsObject = (value = process.argv) => yargs(value).argv
+    const resolvedArgs = resolveOptions(getArgsObject()) //sbs_updater_options.safeParse(testme)
+    //console.log('parsed', resolvedArgs)
+    if (resolvedArgs !== undefined) {
+        loadAllFiles(resolvedArgs)
+    }
+}
 
 if (!process.argv.slice(2).length) {
     // program.outputHelp()
 }
-
-const getArgsObject = (value = process.argv) => yargs(value).argv
-
-const resolvedArgs = resolveOptions(getArgsObject()) //sbs_updater_options.safeParse(testme)
-
-console.log('parsed', resolvedArgs)

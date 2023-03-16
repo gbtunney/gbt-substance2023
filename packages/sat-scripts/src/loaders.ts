@@ -2,31 +2,77 @@
 import { js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
 import path from 'path'
-
-export {}
-
-//LOAD FILE JSON and SBS BY KEY.
-//import { ReplaceFile } from './data'
-import type _replacespec from './fileReplaceSpec.json'
+import { zod, node } from '@snailicide/g-library'
 import { deepmerge } from 'deepmerge-ts'
+import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
+import {
+    replaceFileSchema,
+    ReplaceFileSchema,
+} from './schemas/replaceFileSchema.js'
+import {
+    SingleMetaSchema,
+    SingleAttributeSchema,
+    SBS_Schema,
+    sbs_schema,
+} from './schemas/sbsSchema.js'
 
-//const _replacespecNWQ  :ReplaceFile= _replacespec
+import * as console from 'console'
+export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
+    ///LOAD PACKAGE>
+    options.inputSBS.forEach((_inputSBS) => {
+        loadFile(
+            _inputSBS,
+            options.inputData.length > 0 ? options.inputData[0] : undefined,
+            options.outDir
+        )
+    })
+}
+export const loadPackageJSON = () => {}
 
-const loadFile = async (
-    _inputFilePath: string,
-    _dataFilePath: string,
-    _outputPath: string,
+export const loadFile = async (
+    inputSBS: string,
+    inputData: string | undefined,
+    outDir: string,
     overwrite: boolean = true,
-    outputJSPath: undefined | string = undefined
+    debug: boolean = true
 ) => {
-    const inputFilePath = path.resolve(_inputFilePath)
-    const dataFilePath = path.resolve(_dataFilePath)
+    if (
+        inputData !== undefined &&
+        zod.filePathExists.safeParse(inputSBS).success &&
+        zod.filePathExists.safeParse(inputData).success
+    ) {
+        //RESOLVED PATHS
+        const resolvedInputSBSPath = zod.filePathExists.parse(inputSBS)
+        const resolvedInputDataPath = zod.filePathExists.parse(inputData)
 
-    if (fs.existsSync(inputFilePath) && fs.existsSync(dataFilePath)) {
-        const replaceDataJS = fs.readFileSync(dataFilePath, 'utf8')
+        //TODO: EVENTUALLY SWITCH TO IMPORT
 
-        const inputXML = fs.readFileSync(inputFilePath, 'utf8')
+        const _tempDataJS = JSON.parse(
+            fs.readFileSync(resolvedInputDataPath, 'utf8')
+        )
+        if (replaceFileSchema.safeParse(_tempDataJS).success) {
+            const replaceDataJS: ReplaceFileSchema =
+                replaceFileSchema.parse(_tempDataJS)
+        } else {
+            console.log('INVALID FILE ReplaceFileSchema', resolvedInputDataPath)
+            console.log(replaceFileSchema.parse(_tempDataJS))
+        }
+        //VALIDARE DATA FILE
+        /*  const {default: getSchema} = await import(
+            path.resolve(`${module_path}/${_importableFilePath}`)
+            )*/
+        const inputXML = fs.readFileSync(resolvedInputSBSPath, 'utf8')
+
         const inputJS = xml2js(inputXML, { compact: true })
+
+        //VALIDATE SBS
+        if (sbs_schema.safeParse(inputJS).success) {
+            const inputSBS: SBS_Schema = sbs_schema.parse(inputJS)
+        } else {
+            console.log('INVALID FILE SBS SCHEMA', resolvedInputSBSPath)
+            console.log(sbs_schema.parse(inputJS))
+        }
+
         const outputJS = inputJS
         const outputXML: string = js2xml(inputJS, {
             compact: true,
@@ -40,42 +86,55 @@ const loadFile = async (
         })
         /* * OUTPUT XML  * */
 
-        if ((!fs.existsSync(_outputPath) && !overwrite) || overwrite) {
-            const outputPath = path.resolve(_outputPath)
-            fs.writeFileSync(outputPath, outputXML)
-            console.log('FILE WRITTEN TO ', outputPath)
-            /* * OUTPUT JS OBJECT * */
-            if (outputJSPath !== undefined) {
-                fs.writeFileSync(
-                    path.resolve(outputJSPath),
-                    JSON.stringify(inputJS)
+        if (
+            (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
+            overwrite
+        ) {
+            const outputPathDir = zod.filePath.parse(outDir)
+            //*** get filename
+            const testArr = node.getFilePathArr(resolvedInputSBSPath)
+            if (testArr.length >= 1 && testArr[0]) {
+                const fileObj = testArr[0]
+                const outputFilePath = zod.filePath.parse(
+                    `${outputPathDir}/${fileObj.basename}`
                 )
-                console.log(
-                    'outputJSPath FILE WRITTEN TO ',
-                    path.resolve(outputJSPath)
+                const outputJSONFilePath = zod.filePath.parse(
+                    `${outputPathDir}/${fileObj.filename}.json`
                 )
+                fs.writeFileSync(outputFilePath, outputXML)
+                console.log('FILE WRITTEN TO::: ', outputFilePath)
+
+                /* * OUTPUT JS OBJECT * */
+                if (debug === true) {
+                    fs.writeFileSync(
+                        outputJSONFilePath,
+                        JSON.stringify(inputJS, undefined, 4)
+                    )
+                    console.log(
+                        'outputJSPath FILE WRITTEN TO ',
+                        path.resolve(outputJSONFilePath)
+                    )
+                }
             }
         } else {
             console.log(
                 'FILE NOT WRITTEN TO ',
-                _outputPath,
+                outDir,
+                '\ninputSBS:::',
+                zod.filePath.parse(inputSBS),
+                '\ninputData :::',
+                zod.filePath.parse(inputData),
                 'BECAUSE overwrite is set to false'
             )
         }
     } else {
         console.error(
-            'inputFilePath',
-            fs.existsSync(inputFilePath),
-            'dataFilePath ',
-            fs.existsSync(dataFilePath)
+            'inputSBS:::',
+            zod.filePath.parse(inputSBS),
+            'inputData ',
+            zod.filePath.parse(inputData)
         )
     }
 }
 
-loadFile(
-    '/Users/gilliantunney/gh_repos/SNAILICIDE/gbt-substance2023/packages/value-processor-utilities/src/GBT_Value_Processor_Utilities.sbs',
-    './examples/fileReplaceSpec.json',
-    './examples/testSBS.sbs',
-    true,
-    './dist/dump.json'
-)
+export default loadAllFiles

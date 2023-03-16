@@ -3,11 +3,11 @@ import { z } from 'zod'
 
 export const sbs_updater_options = zod.object({
     rootDir: zod.optionalDefault(zod.filePathExists, '.'),
-    inputSBS: zod.optionalDefault(zod.filePath, './src'),
-    inputData: zod.optionalDefault(zod.filePath, './src'),
-    outDir: zod.optionalDefault(zod.filePath, './dist'),
+    inputSBS: zod.optionalDefault(zod.string(), './examples22/*.sbs'),
+    inputData: zod.optionalDefault(zod.string(), './examples/*.json'),
+    outDir: zod.optionalDefault(zod.string(), './dist'),
     overwrite: zod.optionalDefault(zod.boolean(), false),
-    debugSBS: zod.optionalDefault(zod.boolean(), false),
+    debug: zod.optionalDefault(zod.boolean(), false),
 
     logFilePath: zod.filePath.optional(),
     descFilePath: zod.filePath.optional(),
@@ -15,12 +15,12 @@ export const sbs_updater_options = zod.object({
 
 export const resolved_sbs_updater_options = zod.object({
     rootDir: zod.filePathExists,
-    inputSBS: zod.filePath,
-    inputData: zod.filePath,
-    outDir: zod.filePath,
+    inputSBS: zod.array(zod.filePathExists).nonempty(),
+    inputData: zod.array(zod.filePathExists),
+    outDir: zod.filePathExists,
 
     overwrite: zod.boolean(),
-    debugSBS: zod.boolean(),
+    debug: zod.boolean(),
 
     logFilePath: zod.filePath.optional(),
     descFilePath: zod.filePath.optional(),
