@@ -30,7 +30,6 @@ program
     .option('--overwrite', 'Overwrite output files if they already exccist')
     .option('--debug', 'Write json of transformed sbs')
     .option('-h', '--help', 'HELP')
-
     .parse(process.argv)
 
 const options = program.opts()
@@ -39,10 +38,7 @@ if (options['help']) {
 } else {
     const getArgsObject = (value = process.argv) => yargs(value).argv
     const resolvedArgs = resolveOptions(getArgsObject()) //sbs_updater_options.safeParse(testme)
-    //console.log('parsed', resolvedArgs)
-    if (resolvedArgs !== undefined) {
-        loadAllFiles(resolvedArgs)
-    }
+    if (resolvedArgs !== undefined) loadAllFiles(resolvedArgs)
 }
 
 if (!process.argv.slice(2).length) {

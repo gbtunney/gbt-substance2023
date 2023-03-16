@@ -1,22 +1,16 @@
 //load input files
-import { js2xml, xml2js } from 'xml-js'
+import { Element, ElementCompact, js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
-import path from 'path'
-import { zod, node } from '@snailicide/g-library'
-import { deepmerge } from 'deepmerge-ts'
+import { zod } from '@snailicide/g-library'
+import { getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
+import { replaceFileSchema } from './schemas/replaceFileSchema.js'
+import { SBS_Schema, sbs_schema } from './schemas/sbsSchema.js'
 import {
-    replaceFileSchema,
-    ReplaceFileSchema,
-} from './schemas/replaceFileSchema.js'
-import {
-    SingleMetaSchema,
-    SingleAttributeSchema,
-    SBS_Schema,
-    sbs_schema,
-} from './schemas/sbsSchema.js'
+    parseGraphByIdDictionary,
+    parseGraphDictionaryToElement,
+} from './parsers/graph.js'
 
-import * as console from 'console'
 export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
     ///LOAD PACKAGE>
     options.inputSBS.forEach((_inputSBS) => {
@@ -29,6 +23,23 @@ export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
 }
 export const loadPackageJSON = () => {}
 
+export const writeXMLFile = (
+    outputFilePath: string,
+    _element: ElementCompact | Element
+) => {
+    const resolvedOutputFilepath = zod.filePath.parse(outputFilePath)
+    const outputXMLString: string = js2xml(_element, {
+        compact: true,
+        attributeValueFn: function (value) {
+            return value
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(' & ', ' &amp; ')
+                .replace(/&&/g, '&amp;&amp;')
+        },
+    })
+    fs.writeFileSync(resolvedOutputFilepath, outputXMLString)
+}
 export const loadFile = async (
     inputSBS: string,
     inputData: string | undefined,
@@ -44,97 +55,95 @@ export const loadFile = async (
         //RESOLVED PATHS
         const resolvedInputSBSPath = zod.filePathExists.parse(inputSBS)
         const resolvedInputDataPath = zod.filePathExists.parse(inputData)
-
-        //TODO: EVENTUALLY SWITCH TO IMPORT
-
         const _tempDataJS = JSON.parse(
             fs.readFileSync(resolvedInputDataPath, 'utf8')
         )
-        if (replaceFileSchema.safeParse(_tempDataJS).success) {
-            const replaceDataJS: ReplaceFileSchema =
-                replaceFileSchema.parse(_tempDataJS)
-        } else {
-            console.log('INVALID FILE ReplaceFileSchema', resolvedInputDataPath)
-            console.log(replaceFileSchema.parse(_tempDataJS))
-        }
+        //TODO: EVENTUALLY SWITCH TO IMPORT
         //VALIDARE DATA FILE
         /*  const {default: getSchema} = await import(
             path.resolve(`${module_path}/${_importableFilePath}`)
             )*/
         const inputXML = fs.readFileSync(resolvedInputSBSPath, 'utf8')
-
         const inputJS = xml2js(inputXML, { compact: true })
 
+        replaceFileSchema.parse(_tempDataJS)
         //VALIDATE SBS
-        if (sbs_schema.safeParse(inputJS).success) {
-            const inputSBS: SBS_Schema = sbs_schema.parse(inputJS)
-        } else {
-            console.log('INVALID FILE SBS SCHEMA', resolvedInputSBSPath)
-            console.log(sbs_schema.parse(inputJS))
-        }
-
-        const outputJS = inputJS
-        const outputXML: string = js2xml(inputJS, {
-            compact: true,
-            attributeValueFn: function (value) {
-                return value
-                    .replace(/</g, '&lt;')
-                    .replace(/>/g, '&gt;')
-                    .replace(' & ', ' &amp; ')
-                    .replace(/&&/g, '&amp;&amp;')
-            },
-        })
-        /* * OUTPUT XML  * */
-
         if (
-            (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
-            overwrite
+            sbs_schema.safeParse(inputJS).success &&
+            replaceFileSchema.safeParse(_tempDataJS).success
         ) {
-            const outputPathDir = zod.filePath.parse(outDir)
-            //*** get filename
-            const testArr = node.getFilePathArr(resolvedInputSBSPath)
-            if (testArr.length >= 1 && testArr[0]) {
-                const fileObj = testArr[0]
+            //PARSED VALUES
+            const replaceDataJS = replaceFileSchema.parse(_tempDataJS)
+            const inputSBS: SBS_Schema = sbs_schema.parse(inputJS)
+
+            const inputPackage = inputSBS.package
+            /// ResolvedGraphDictSchema ::::::index these by graph ID and {meta,attributes.
+            if (
+                (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
+                overwrite
+            ) {
+                let initialGraphDict: any = inputPackage.content.graph
+                if (inputPackage.content.graph) {
+                    const parsedDict = parseGraphByIdDictionary(
+                        inputPackage.content.graph
+                    )
+                    const initialGraphDict =
+                        parseGraphDictionaryToElement(parsedDict)
+                    //todo: FIX THIS..
+                }
+                const WRITE_ELEMENT = initialGraphDict
+                const outputPathDir = zod.filePath.parse(outDir)
+                //*** get filename
+                /* * OUTPUT XML  * */
+                const outputSBSFilename = getFilename(resolvedInputSBSPath)
                 const outputFilePath = zod.filePath.parse(
-                    `${outputPathDir}/${fileObj.basename}`
+                    `${outputPathDir}/${outputSBSFilename}.sbs`
                 )
+                writeXMLFile(outputFilePath, WRITE_ELEMENT)
+
                 const outputJSONFilePath = zod.filePath.parse(
-                    `${outputPathDir}/${fileObj.filename}.json`
+                    `${outputPathDir}/${outputSBSFilename}.json`
                 )
-                fs.writeFileSync(outputFilePath, outputXML)
                 console.log('FILE WRITTEN TO::: ', outputFilePath)
 
                 /* * OUTPUT JS OBJECT * */
                 if (debug === true) {
                     fs.writeFileSync(
                         outputJSONFilePath,
-                        JSON.stringify(inputJS, undefined, 4)
+                        JSON.stringify(WRITE_ELEMENT, undefined, 4)
                     )
                     console.log(
-                        'outputJSPath FILE WRITTEN TO ',
-                        path.resolve(outputJSONFilePath)
+                        'DEBUG:::::: outputJSPath FILE WRITTEN TO ',
+                        outputJSONFilePath
                     )
                 }
+            } else {
+                console.log('INVALID FILE SBS SCHEMA', resolvedInputSBSPath)
+                console.log(sbs_schema.parse(inputJS))
             }
+            /*
+              if (
+                  (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
+                  overwrite
+              ) {  } else {
+                  console.log(
+                      'FILE NOT WRITTEN TO ',
+                      outDir,
+                      '\ninputSBS:::',
+                      zod.filePath.parse(inputSBS),
+                      '\ninputData :::',
+                      zod.filePath.parse(inputData),
+                      'BECAUSE overwrite is set to false'
+                  )
+              }*/
         } else {
-            console.log(
-                'FILE NOT WRITTEN TO ',
-                outDir,
-                '\ninputSBS:::',
+            console.error(
+                'inputSBS:::',
                 zod.filePath.parse(inputSBS),
-                '\ninputData :::',
-                zod.filePath.parse(inputData),
-                'BECAUSE overwrite is set to false'
+                'inputData ',
+                zod.filePath.parse(inputData)
             )
         }
-    } else {
-        console.error(
-            'inputSBS:::',
-            zod.filePath.parse(inputSBS),
-            'inputData ',
-            zod.filePath.parse(inputData)
-        )
     }
 }
-
 export default loadAllFiles
