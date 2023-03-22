@@ -8,7 +8,7 @@ export const graphAttributesSchema = z.object({
     label: z.string().optional(),
     author: z.string().optional(),
     authorURL: z.string().optional(),
-    desc: z.string().optional(),
+    description: z.string().optional(),
     tags: z.string().optional(), //todo: switch back to arr?????????z.array(z.string()).optional(),
     icon: z.string().optional(),
 })
@@ -40,6 +40,21 @@ export const resolvedGraphDictSchema = zod.object({
     attributes: graphAttributesSchema,
     metadata: replaceMetaSchema,
 })
+
+export const _dataSBSPackageSchema = z.object({
+    desc: z.string().optional(),
+    metadata: replaceMetaSchema.optional(),
+})
+
+export const _dataGraphSchema = zod.object({
+    attributes: graphAttributesSchema,
+    metadata: replaceMetaSchema,
+})
+export const _queueDataProcesses = () =>
+    z.union(
+        /* * meta + desc + dependencies = sdpackage.js * */
+        [_dataSBSPackageSchema, _dataGraphSchema]
+    )
 
 export type GraphDictByIDSchema = z.infer<typeof graphDictByIDSchema>
 export const graphDictByIDSchema = z.record(resolvedGraphDictSchema)

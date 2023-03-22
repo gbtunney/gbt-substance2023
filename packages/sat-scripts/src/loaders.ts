@@ -4,12 +4,18 @@ import fs from 'fs'
 import { zod } from '@snailicide/g-library'
 import { getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
-import { replaceFileSchema } from './schemas/replaceFileSchema.js'
+import {
+    graphDictByIDSchema,
+    replaceFileSchema,
+} from './schemas/replaceFileSchema.js'
 import { SBS_Schema, sbs_schema } from './schemas/sbsSchema.js'
 import {
+    mergeGraphDictToElement,
     parseGraphByIdDictionary,
-    parseGraphDictionaryToElement,
-} from './parsers/graph.js'
+} from './mappers/graph.js'
+import { getPackageDict, getPackageFinalEntry } from './mappers/package.js'
+import { deepmerge } from 'deepmerge-ts'
+import { _flattenDataQueue } from './mappers/mergeAll.js'
 
 export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
     ///LOAD PACKAGE>
@@ -73,25 +79,129 @@ export const loadFile = async (
             replaceFileSchema.safeParse(_tempDataJS).success
         ) {
             //PARSED VALUES
+            // const overwriteDataFile =    replaceFileSchema.parse(_tempDataJS)
             const replaceDataJS = replaceFileSchema.parse(_tempDataJS)
             const inputSBS: SBS_Schema = sbs_schema.parse(inputJS)
 
             const inputPackage = inputSBS.package
+            ///get package metadict.
             /// ResolvedGraphDictSchema ::::::index these by graph ID and {meta,attributes.
             if (
                 (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
                 overwrite
             ) {
-                let initialGraphDict: any = inputPackage.content.graph
+                let FINALPACKAGE: SBS_Schema['package'] = inputSBS.package
+                /* * the package key * */
+                const packageKey = getFilename(resolvedInputSBSPath)
+
+                //inprogress
+                const _packageEntry = {
+                    [packageKey]: getPackageDict(inputPackage),
+                }
+                let pendingPackageMergeArr: Record<string, any>[] = [
+                    _packageEntry,
+                ]
+
+                /* * replace package dict with file contents. * */
+                pendingPackageMergeArr = [
+                    ...pendingPackageMergeArr,
+                    replaceDataJS.pkg
+                        ? { [packageKey]: replaceDataJS.pkg }
+                        : {},
+                ]
+
+                /* * package dictionary REAL * */
+                const packageDictionary = _flattenDataQueue(
+                    pendingPackageMergeArr
+                )
+
+                /* * pending graph array * */
+                let graphArr: Record<string, any>[] = []
+
                 if (inputPackage.content.graph) {
+                    /* * Parse graphs into dictionary * */
                     const parsedDict = parseGraphByIdDictionary(
                         inputPackage.content.graph
                     )
-                    const initialGraphDict =
-                        parseGraphDictionaryToElement(parsedDict)
-                    //todo: FIX THIS..
+                    /* * add to pending graph array * */
+                    graphArr = [parsedDict]
+
+                    /* * GRAPH KEYS * */
+                    const graphKeys = Object.keys(parsedDict)
+
+                    /* * See if the file has Graph defaults.  * */
+                    if (replaceDataJS.gph_defaults) {
+                        /* * push to end of pending graph array * */
+                        graphArr = [
+                            ...graphArr,
+                            graphKeys.reduce((acc, _graphKey) => {
+                                return {
+                                    ...acc,
+                                    [_graphKey]: replaceDataJS.gph_defaults,
+                                }
+                            }, {}),
+                        ]
+                    }
+
+                    if (replaceDataJS.gph) {
+                        const overrideGraphAttrs = Object.entries(
+                            replaceDataJS.gph
+                        ).reduce((acc, item) => {
+                            const [key, _value] = item
+                            /* * filter out non relevant keys * */
+                            const filtered = graphKeys.filter((target_key) => {
+                                if (target_key === key) return true
+                                return false
+                            })
+                            if (filtered.length > 0)
+                                return { ...acc, [key]: _value }
+                            else return acc
+                        }, {})
+
+                        /* * push to end of  pending graph array * */
+                        graphArr = [...graphArr, overrideGraphAttrs]
+                    }
                 }
-                const WRITE_ELEMENT = initialGraphDict
+                if (packageDictionary[packageKey]) {
+                    /* * WIPE graph arr and metadata * */
+                    const _tempPackageCleaned = {
+                        ...inputPackage,
+                        metadata: { treestr: [] },
+                        content: { graph: [] },
+                    }
+
+                    /* * merge with new package attributes * */
+                    FINALPACKAGE = {
+                        ...deepmerge(
+                            _tempPackageCleaned,
+                            getPackageFinalEntry(packageDictionary[packageKey])
+                        ),
+                        content: { graph: [] },
+                    }
+
+                    /* * FLATTEN GRAPH ARRAY to DICT OBJECT * */
+                    const flattenedGraphDict = _flattenDataQueue(graphArr)
+
+                    /* * parse flattened graph dictionary * */
+                    if (
+                        graphDictByIDSchema.safeParse(flattenedGraphDict)
+                            .success
+                    ) {
+                        /* * merge graph dict with origonal graph objects * */
+                        const mergedGraphElements = mergeGraphDictToElement(
+                            graphDictByIDSchema.parse(flattenedGraphDict),
+                            inputPackage.content.graph
+                        )
+
+                        /* * finalize new package output * */
+                        FINALPACKAGE = {
+                            ...FINALPACKAGE,
+                            content: { graph: mergedGraphElements },
+                        }
+                    }
+                }
+                /* * finalize new SBS output * */
+                const WRITE_ELEMENT = { ...inputSBS, package: FINALPACKAGE }
                 const outputPathDir = zod.filePath.parse(outDir)
                 //*** get filename
                 /* * OUTPUT XML  * */
@@ -146,4 +256,6 @@ export const loadFile = async (
         }
     }
 }
+
+const getPackageFile = () => {}
 export default loadAllFiles

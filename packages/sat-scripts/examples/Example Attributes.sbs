@@ -9,11 +9,7 @@
   <metadata>
     <treestr>
       <name v="version" />
-      <value v="%pkgversion%" />
-    </treestr>
-    <treestr>
-      <name v="uid" />
-      <value v="%pkguid%" />
+      <value v="0.0.1" />
     </treestr>
   </metadata>
   <dependencies>
@@ -116,6 +112,10 @@
         <treestr>
           <name v="uid" />
           <value v="%pkguid%" />
+        </treestr>
+        <treestr>
+          <name v="addl_meta" />
+          <value v="untouched" />
         </treestr>
       </metadata>
     </graph>

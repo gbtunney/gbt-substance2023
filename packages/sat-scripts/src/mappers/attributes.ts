@@ -1,42 +1,33 @@
+///this is a ELEMENT > att lookup wstring  . (
 import { z } from 'zod'
+import RA from 'ramda-adjunct'
+import { GraphAttributesSchema } from '../schemas/replaceFileSchema.js'
 import {
     attributeSchema,
-    metaTreeSchema,
-    singleAttributeSchema,
     SingleAttributeSchema,
-    SingleMetaSchema,
-} from './schemas/sbsSchema.js'
-import { GraphAttributesSchema } from './schemas/replaceFileSchema.js'
+    singleAttributeSchema,
+} from '../schemas/sbsSchema.js'
 
-import RA from 'ramda-adjunct'
-
-export const getMetaDict = (
-    _tree: z.infer<typeof metaTreeSchema>
-): Record<string, string> => {
-    return _tree.reduce((acc, _item) => {
-        const key: string = _item.name._attributes.v
-        const value: string = _item.value._attributes.v
-        return { ...acc, [key]: value }
-    }, {})
-}
-///this is a ELEMENT > att lookup wstring  . (
+/* * This takes an Attribute Dictionary  array of
+and  raw elements - in a typed INDEX.
+transforms it BACK TO ELEMENT ( raw file format ) to parsedAttributesElement
+  this is UNTYPED so not specific to graphs.
+  * */
 export const getAttributeElement = (
     inAttributeDict: GraphAttributesSchema // z.infer<typeof attributeSchema>
 ) => {
+    ///this is for serializing.
     const postTransformAttributesElements: GraphAttributesSchema =
         Object.entries(inAttributeDict).reduce((accumulator, [key, value]) => {
             ///is TARGET!! attributeSchema
-            // .
             if (RA.isString(value)) {
-                const attributeElement = getAttributeEntry(key, value) //singleAttributeSchema.parse(value)
+                //todo:::
                 if (value === 'icon') {
-                    //todo:ddddd
                     return accumulator
                 }
-
                 return {
                     ...accumulator,
-                    ...attributeElement,
+                    [key]: getRawElementArribute(value),
                 }
             }
             return accumulator
@@ -50,7 +41,6 @@ export const getAttributeElement = (
     return {}
 }
 
-///this is a ELEMENT > att lookup wstring  . (
 export const getAttributeDict = (
     inAttributes: z.infer<typeof attributeSchema>
 ) => {
@@ -82,9 +72,10 @@ export const getAttributeEntry = (
         },
     }
 }
-export const getMetaEntry = (key: string, value: string): SingleMetaSchema => {
+
+/* * RAW ELEMENT arrtribute with just a value.(NO KEY)  * */
+export const getRawElementArribute = (value: string): SingleAttributeSchema => {
     return {
-        name: { _attributes: { v: key } },
-        value: { _attributes: { v: value } },
+        _attributes: { v: value },
     }
 }

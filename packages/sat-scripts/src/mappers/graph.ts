@@ -1,4 +1,3 @@
-import { z } from 'zod'
 import RA from 'ramda-adjunct'
 import {
     graphDictByIDSchema,
@@ -7,50 +6,53 @@ import {
     resolvedGraphDictSchema,
 } from '../schemas/replaceFileSchema.js'
 import {
-    getAttributeDict,
-    getAttributeElement,
-    getAttributeEntry,
-    getMetaDict,
-} from '../mappers.js'
-import {
     graphElementArraySchema,
     GraphElementArraySchema,
     GraphSchema,
     graphSchema,
 } from '../schemas/sbsSchema.js'
-export const parseGraphDictionaryToElement = (
-    _graphDict: GraphDictByIDSchema
+import { getMetaDict, getMetaDictToElement } from './meta.js'
+import { getAttributeDict, getAttributeElement } from './attributes.js'
+
+export const mergeGraphDictToElement = (
+    _graphDict: GraphDictByIDSchema,
+    origGraphArr: GraphElementArraySchema
 ): GraphElementArraySchema => {
-    const _graphArr = Object.entries(_graphDict).reduce(
-        (acc: GraphElementArraySchema, [key, value]) => {
-            const newElement = {
-                ...getAttributeEntry('identifier', key),
-                attributes: getAttributeElement(value.attributes),
+    const mapped = origGraphArr.map((_graph) => {
+        const ID = _graph.identifier._attributes.v
+        if (
+            _graphDict[ID] &&
+            _graphDict[ID] !== undefined &&
+            resolvedGraphDictSchema.safeParse(_graphDict[ID]).success
+        ) {
+            const targetObj = resolvedGraphDictSchema.parse(_graphDict[ID])
+            const newObject = {
+                ..._graph,
+                attributes: getAttributeElement(targetObj.attributes),
+                metadata: {
+                    treestr: getMetaDictToElement(targetObj.metadata),
+                },
             }
-            if (graphSchema.safeParse(newElement).success) {
-                const graphElement: z.infer<typeof graphSchema> =
-                    graphSchema.parse(newElement)
-                return [...acc, graphElement]
-            }
-            return acc
-        },
-        []
-    )
-    if (graphElementArraySchema.safeParse(_graphArr).success) {
-        const graphArr = graphElementArraySchema.parse(_graphArr)
-        return graphArr
+            if (graphSchema.safeParse(newObject).success)
+                return graphSchema.parse(newObject)
+            else console.error('NOT FOUND')
+        }
+        return graphSchema.parse(_graph)
+    })
+
+    if (graphElementArraySchema.safeParse(mapped).success) {
+        return graphElementArraySchema.parse(mapped)
     } else {
         console.log(
             'parseGraphDictionaryToElement',
-            graphElementArraySchema.parse(_graphArr)
+            graphElementArraySchema.parse(mapped)
         )
     }
     return []
 }
 
 export const parseGraphByIdDictionary = (
-    _graphArr: GraphElementArraySchema,
-    clean_keys: boolean = true
+    _graphArr: GraphElementArraySchema
 ): GraphDictByIDSchema => {
     const _graphDict = _graphArr.reduce((acc: GraphDictByIDSchema, __graph) => {
         if (graphSchema.safeParse(__graph).success) {
@@ -67,14 +69,11 @@ export const parseGraphByIdDictionary = (
                 metadata: getMetaDict(tree_arr),
                 attributes: getAttributeDict(attributes),
             }
-            //if ( clean_keys ) {
-            //   return {...acc, [graph_id] :  graphPropsDict }//}else{
             return { ...acc, [graph_id]: { ...__graph, ...graphPropsDict } }
         }
         return acc
     }, {})
     if (graphDictByIDSchema.safeParse(_graphDict).success) {
-        // const dictSchema = ( clean_keys === true) ?z.record(graphDictByIDSchema.element.strict()) : graphDictByIDSchema
         return graphDictByIDSchema.parse(_graphDict)
     } else {
         console.log(
@@ -85,5 +84,4 @@ export const parseGraphByIdDictionary = (
     }
     return {}
 }
-
 export {}

@@ -82,6 +82,7 @@
         "@types/glob": "^8.0.0",
         "@types/jest": "^29.4.0",
         "@types/lodash": "^4.14.191",
+        "@types/markdown-it": "^12.2.3",
         "@types/node": "^18.15.0",
         "@types/ramda": "^0.28.23",
         "@types/shelljs": "^0.8.11",
