@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <package>
   <identifier v="Unsaved Package" />
+  <desc v="THIS IS A THING." />
   <formatVersion v="1.1.0.202202" />
   <updaterVersion v="1.1.0.202202" />
   <fileUID v="{9834da56-09ef-4463-91d7-86d25ab9af2a}" />
   <versionUID v="0" />
-  <metadata>
-    <treestr>
-      <name v="version" />
-      <value v="0.0.0" />
-    </treestr>
-  </metadata>
   <dependencies>
     <dependency>
       <filename v="?himself" />
@@ -4369,10 +4364,7 @@
       <identifier v="GBT_Palatte_Color_Swatch" />
       <uid v="1418868154" />
       <attributes>
-        <category v="color" />
         <label v="GBT Palatte Color Swatch" />
-        <author v="Gillian Tunney" />
-        <tags v="color,float4,sample, swatch" />
         <icon>
           <datalength v="7084" />
           <format v="png" />
@@ -5393,10 +5385,8 @@
       <identifier v="GBT_Palatte_Switcher" />
       <uid v="1414800279" />
       <attributes>
-        <category v="greyscale" />
         <label v="GBT Palatte Switcher" />
-        <author v="Gillian Tunney" />
-        <tags v="greyscale, grayscale,  gs,  float1" />
+        <description v="OLD DESC" />
         <icon>
           <datalength v="7084" />
           <format v="png" />
