@@ -8,6 +8,15 @@ type PackageDict = {
     metadata: Record<string, string>
 }
 export type PackageDictionary = PackageDict
+export const getPackageDictionaryByID = (
+    key: string,
+    data: SBS_Schema
+): Record<string, PackageDictionary> => {
+    return {
+        [key]: getPackageDict(data.package),
+    }
+}
+
 export const getPackageDict = (
     _package: SBS_Schema['package']
 ): PackageDictionary => {

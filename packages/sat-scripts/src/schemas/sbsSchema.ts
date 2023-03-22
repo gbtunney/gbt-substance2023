@@ -211,9 +211,14 @@ export const sbs_schema = z
         fileUID: z.object({ _attributes: z.object({ v: z.string() }) }),
         versionUID: z.object({ _attributes: z.object({ v: z.string() }) }),
 */
-                /*  dependencies: z.object({
+                /*dependencies: z.object({
             dependency: z.union([dependencySchema, z.array(dependencySchema)]),
-        }),*/
+        }),
+        todo: dependencies dump
+        const temp = tempInputSBS.package.dependencies.dependency
+temp.map( (_dep)=>{
+    return _dep.type
+})   */
                 content: z.object({
                     graph: graphElementArraySchema,
                 }),

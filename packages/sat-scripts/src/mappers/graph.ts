@@ -1,7 +1,11 @@
 import RA from 'ramda-adjunct'
+import { z } from 'zod'
+import micromatch from 'micromatch'
 import {
+    _dataGraphSchema,
     graphDictByIDSchema,
     GraphDictByIDSchema,
+    ReplaceFileSchema,
     ResolvedGraphDictSchema,
     resolvedGraphDictSchema,
 } from '../schemas/replaceFileSchema.js'
@@ -13,7 +17,43 @@ import {
 } from '../schemas/sbsSchema.js'
 import { getMetaDict, getMetaDictToElement } from './meta.js'
 import { getAttributeDict, getAttributeElement } from './attributes.js'
+import { _flattenDataQueue } from './mergeAll.js'
 
+export const getGraphMatcherDict = (
+    graphKeys: string[],
+    _graphReplace: ReplaceFileSchema['gph']
+) => {
+    if (_graphReplace === undefined) return {}
+    const search = _graphReplace
+    const myschema = z.record(_dataGraphSchema)
+    const resultArr: z.infer<typeof myschema>[] = Object.entries(search).reduce(
+        (acc: z.infer<typeof myschema>[], [key_selector, value]) => {
+            const resolvedSelectors = micromatch(graphKeys, [key_selector])
+            const _singleSelectors: ReplaceFileSchema['gph'] =
+                resolvedSelectors.reduce((_innerAcc, _graphKey) => {
+                    return {
+                        ..._innerAcc,
+                        [_graphKey]: value,
+                    }
+                }, {})
+            if (myschema.safeParse(_singleSelectors).success) {
+                return [...acc, myschema.parse(_singleSelectors)]
+            } else {
+                return acc
+            }
+        },
+        []
+    )
+    return _flattenDataQueue(resultArr)
+}
+
+export const getGraphDictionary = (
+    _graphs: GraphElementArraySchema
+): GraphDictByIDSchema => {
+    const parsedDict: GraphDictByIDSchema | undefined =
+        parseGraphByIdDictionary(_graphs)
+    return parsedDict !== undefined ? parsedDict : {}
+}
 export const mergeGraphDictToElement = (
     _graphDict: GraphDictByIDSchema,
     origGraphArr: GraphElementArraySchema

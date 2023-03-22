@@ -1,34 +1,26 @@
 //load input files
-import { Element, ElementCompact, js2xml, xml2js } from 'xml-js'
-import micromatch from 'micromatch'
+import { js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
-import { zod, Json } from '@snailicide/g-library'
+import { Json, zod } from '@snailicide/g-library'
 import { getExt, getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
 import {
-    _dataGraphSchema,
-    GraphDictByIDSchema,
     graphDictByIDSchema,
     replaceFileSchema,
     ReplaceFileSchema,
 } from './schemas/replaceFileSchema.js'
+import { SBS_Schema, sbs_schema } from './schemas/sbsSchema.js'
 import {
-    GraphElementArraySchema,
-    SBS_Schema,
-    sbs_schema,
-} from './schemas/sbsSchema.js'
-import {
+    getGraphDictionary,
+    getGraphMatcherDict,
     mergeGraphDictToElement,
-    parseGraphByIdDictionary,
 } from './mappers/graph.js'
 import {
-    getPackageDict,
+    getPackageDictionaryByID,
     getPackageFinalEntry,
-    PackageDictionary,
 } from './mappers/package.js'
 import { deepmerge } from 'deepmerge-ts'
-import { _dataQueueInSchema, _flattenDataQueue } from './mappers/mergeAll.js'
-import { z } from 'zod'
+import { _flattenDataQueue } from './mappers/mergeAll.js'
 
 export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
     ///LOAD PACKAGE>
@@ -45,30 +37,8 @@ export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
         )
     })
 }
-export const loadPackageJSON = () => {}
 
-export const getSBSData = (inputSBS: string): SBS_Schema | undefined => {
-    if (zod.filePathExists.safeParse(inputSBS).success) {
-        const resolvedInputSBSPath = zod.filePathExists.parse(inputSBS)
-        const inputXML = fs.readFileSync(resolvedInputSBSPath, 'utf8')
-        const inputJS = xml2js(inputXML, { compact: true })
-
-        if (sbs_schema.safeParse(inputJS).success) {
-            return sbs_schema.parse(inputJS)
-        }
-        return undefined
-    }
-    return undefined
-}
-const getPackageDictionary = (
-    key: string,
-    data: SBS_Schema
-): Record<string, PackageDictionary> => {
-    return {
-        [key]: getPackageDict(data.package),
-    }
-}
-
+/* * Get InputData Data * */
 export const getReplaceData = async (
     inputDataPath: string
 ): Promise<ReplaceFileSchema | undefined> => {
@@ -90,6 +60,20 @@ export const getReplaceData = async (
     return undefined
 }
 
+/* * Get SBSData * */
+export const getSBSData = (inputSBS: string): SBS_Schema | undefined => {
+    if (zod.filePathExists.safeParse(inputSBS).success) {
+        const resolvedInputSBSPath = zod.filePathExists.parse(inputSBS)
+        const inputXML = fs.readFileSync(resolvedInputSBSPath, 'utf8')
+        const inputJS = xml2js(inputXML, { compact: true })
+        if (sbs_schema.safeParse(inputJS).success) {
+            return sbs_schema.parse(inputJS)
+        }
+        return undefined
+    }
+    return undefined
+}
+
 const loadReplaceData = async (
     resolvedInputDataPath: string
 ): Promise<Json.Object> => {
@@ -100,84 +84,6 @@ const loadReplaceData = async (
         return tempJS !== undefined ? JSON.parse(JSON.stringify(tempJS)) : {}
     }
     return {}
-}
-const getGraphDictionary = (
-    _graphs: GraphElementArraySchema
-): GraphDictByIDSchema => {
-    const parsedDict: GraphDictByIDSchema | undefined =
-        parseGraphByIdDictionary(_graphs)
-    return parsedDict !== undefined ? parsedDict : {}
-}
-const getGraphDefaults = (
-    graphKeys: string[],
-    _graphDefaults: ReplaceFileSchema['gph_defaults']
-): GraphDictByIDSchema => {
-    return _graphDefaults
-        ? /* * push to end of pending graph array * */
-          graphKeys.reduce((acc, _graphKey) => {
-              return {
-                  ...acc,
-                  [_graphKey]: _graphDefaults,
-              }
-          }, {})
-        : {}
-}
-
-const getGraphMatcherDefaults = (
-    graphKeys: string[],
-    _graphReplace: ReplaceFileSchema['gph']
-) => {
-    if (_graphReplace === undefined) return {}
-    const search = _graphReplace
-    const myschema = z.record(_dataGraphSchema)
-    const resultArr: z.infer<typeof myschema>[] = Object.entries(search).reduce(
-        (acc: z.infer<typeof myschema>[], [key_selector, value]) => {
-            const resolvedSelectors = micromatch(graphKeys, [key_selector])
-
-            const _singleSelectors: ReplaceFileSchema['gph'] =
-                resolvedSelectors.reduce((_innerAcc, _graphKey) => {
-                    return {
-                        ..._innerAcc,
-                        [_graphKey]: value,
-                    }
-                }, {})
-
-            if (myschema.safeParse(_singleSelectors).success) {
-                return [...acc, myschema.parse(_singleSelectors)]
-            } else {
-                return acc
-            }
-        },
-        []
-    )
-    const tempPackageDict = _flattenDataQueue(resultArr)
-
-    return tempPackageDict
-    /* * push to end of pending graph array * */
-    /*    graphKeys.reduce((acc, _graphKey) => {
-            return {
-                ...acc,
-                [_graphKey]: _graphDefaults,
-            }
-        }, {})*/
-}
-const getGraphReplace = (
-    graphKeys: string[],
-    _graphReplace: ReplaceFileSchema['gph']
-): GraphDictByIDSchema => {
-    const graphDict: GraphDictByIDSchema = Object.entries(
-        _graphReplace ? _graphReplace : {}
-    ).reduce((acc, item) => {
-        const [key, _value] = item
-        /* * filter out non relevant keys * */
-        const filtered = graphKeys.filter((target_key) => {
-            if (target_key === key) return true
-            return false
-        })
-        if (filtered.length > 0) return { ...acc, [key]: _value }
-        else return acc
-    }, {})
-    return graphDict
 }
 
 const getDefaultReplaceData = (key: string): ReplaceFileSchema => {
@@ -202,6 +108,7 @@ const getDefaultReplaceData = (key: string): ReplaceFileSchema => {
         return replaceFileSchema.parse({})
     }
 }
+
 export const loadFile = async (
     inputSBS: string,
     inputData: string | undefined,
@@ -218,9 +125,8 @@ export const loadFile = async (
                 : undefined
 
         const rawSBSData: SBS_Schema = tempInputSBS
-
         const packageKey = getFilename(inputSBS)
-        const _tempPackageDictionary = getPackageDictionary(
+        const _tempPackageDictionary = getPackageDictionaryByID(
             packageKey,
             rawSBSData
         )
@@ -261,11 +167,9 @@ export const loadFile = async (
 
         const pendingGraphMergeArr: Record<string, any>[] = [
             sbsGraphDictionary,
-            getGraphDefaults(graphKeys, replaceData.gph_defaults),
+            getGraphMatcherDict(graphKeys, replaceData.gph),
             //the defaults for the graphs
-            // getGraphDefaults(graphKeys, defaultData.gph_defaults),
-            getGraphMatcherDefaults(graphKeys, replaceData.gph),
-            //  getGraphReplace(graphKeys, replaceData.gph),
+            getGraphMatcherDict(graphKeys, defaultData.gph),
         ]
         const graphDictionary = _flattenDataQueue(pendingGraphMergeArr)
         if (graphDictByIDSchema.safeParse(graphDictionary).success) {
@@ -291,6 +195,7 @@ export const loadFile = async (
     }
 }
 
+/* * WRITE XML OUTPUT * */
 const writeXMLFile = (
     data: Json.Object,
     filename: string,
@@ -323,7 +228,7 @@ const writeXMLFile = (
         )
     }
 }
-
+/* * WRITE DEBUG JSON OUTPUT * */
 const writeFile = (
     data: Json.Object,
     filename: string,
@@ -339,5 +244,4 @@ const writeFile = (
         )
     }
 }
-const getPackageFile = () => {}
 export default loadAllFiles
