@@ -1,19 +1,29 @@
 //load input files
 import { Element, ElementCompact, js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
-import { zod } from '@snailicide/g-library'
-import { getFilename } from './helpers.js'
+import { zod, Json } from '@snailicide/g-library'
+import { getExt, getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
 import {
+    GraphDictByIDSchema,
     graphDictByIDSchema,
     replaceFileSchema,
+    ReplaceFileSchema,
 } from './schemas/replaceFileSchema.js'
-import { SBS_Schema, sbs_schema } from './schemas/sbsSchema.js'
+import {
+    GraphElementArraySchema,
+    SBS_Schema,
+    sbs_schema,
+} from './schemas/sbsSchema.js'
 import {
     mergeGraphDictToElement,
     parseGraphByIdDictionary,
 } from './mappers/graph.js'
-import { getPackageDict, getPackageFinalEntry } from './mappers/package.js'
+import {
+    getPackageDict,
+    getPackageFinalEntry,
+    PackageDictionary,
+} from './mappers/package.js'
 import { deepmerge } from 'deepmerge-ts'
 import { _flattenDataQueue } from './mappers/mergeAll.js'
 
@@ -22,240 +32,258 @@ export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
     options.inputSBS.forEach((_inputSBS) => {
         loadFile(
             _inputSBS,
-            options.inputData.length > 0 ? options.inputData[0] : undefined,
+            options.inputData && options.inputData.length > 0
+                ? options.inputData[0]
+                : undefined,
             options.outDir
         )
     })
 }
 export const loadPackageJSON = () => {}
 
-export const writeXMLFile = (
-    outputFilePath: string,
-    _element: ElementCompact | Element
-) => {
-    const resolvedOutputFilepath = zod.filePath.parse(outputFilePath)
-    const outputXMLString: string = js2xml(_element, {
-        compact: true,
-        attributeValueFn: function (value) {
-            return value
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(' & ', ' &amp; ')
-                .replace(/&&/g, '&amp;&amp;')
+export const getSBSData = (inputSBS: string): SBS_Schema | undefined => {
+    if (zod.filePathExists.safeParse(inputSBS).success) {
+        const resolvedInputSBSPath = zod.filePathExists.parse(inputSBS)
+        const inputXML = fs.readFileSync(resolvedInputSBSPath, 'utf8')
+        const inputJS = xml2js(inputXML, { compact: true })
+
+        if (sbs_schema.safeParse(inputJS).success) {
+            return sbs_schema.parse(inputJS)
+        }
+        return undefined
+    }
+    return undefined
+}
+const getPackageDictionary = (
+    key: string,
+    data: SBS_Schema
+): Record<string, PackageDictionary> => {
+    return {
+        [key]: getPackageDict(data.package),
+    }
+}
+
+export const getReplaceData = async (
+    inputDataPath: string
+): Promise<ReplaceFileSchema | undefined> => {
+    if (zod.filePathExists.safeParse(inputDataPath).success) {
+        const loadedData = await loadReplaceData(
+            zod.filePathExists.parse(inputDataPath)
+        )
+        if (replaceFileSchema.safeParse(loadedData).success) {
+            return replaceFileSchema.parse(loadedData)
+        }
+        return undefined
+    }
+    return undefined
+}
+
+const loadReplaceData = async (
+    resolvedInputDataPath: string
+): Promise<Json.Object> => {
+    if (getExt(resolvedInputDataPath) === 'json') {
+        return JSON.parse(fs.readFileSync(resolvedInputDataPath, 'utf8'))
+    } else {
+        const { default: tempJS } = await import(resolvedInputDataPath)
+        return tempJS !== undefined ? JSON.parse(JSON.stringify(tempJS)) : {}
+    }
+    return {}
+}
+const getGraphDictionary = (
+    _graphs: GraphElementArraySchema
+): GraphDictByIDSchema => {
+    const parsedDict: GraphDictByIDSchema | undefined =
+        parseGraphByIdDictionary(_graphs)
+    return parsedDict !== undefined ? parsedDict : {}
+}
+const getGraphDefaults = (
+    graphKeys: string[],
+    _graphDefaults: ReplaceFileSchema['gph_defaults']
+): GraphDictByIDSchema => {
+    return _graphDefaults
+        ? /* * push to end of pending graph array * */
+          graphKeys.reduce((acc, _graphKey) => {
+              return {
+                  ...acc,
+                  [_graphKey]: _graphDefaults,
+              }
+          }, {})
+        : {}
+}
+const getGraphReplace = (
+    graphKeys: string[],
+    _graphReplace: ReplaceFileSchema['gph']
+): GraphDictByIDSchema => {
+    const graphDict: GraphDictByIDSchema = Object.entries(
+        _graphReplace ? _graphReplace : {}
+    ).reduce((acc, item) => {
+        const [key, _value] = item
+        /* * filter out non relevant keys * */
+        const filtered = graphKeys.filter((target_key) => {
+            if (target_key === key) return true
+            return false
+        })
+        if (filtered.length > 0) return { ...acc, [key]: _value }
+        else return acc
+    }, {})
+    return graphDict
+}
+
+const getDefaultReplaceData = (key: string): ReplaceFileSchema => {
+    const defaultData = {
+        pkg: {
+            metadata: {
+                filename: key,
+            },
         },
-    })
-    fs.writeFileSync(resolvedOutputFilepath, outputXMLString)
+        gph_defaults: {
+            metadata: {
+                filename: key,
+            },
+        },
+    }
+    if (replaceFileSchema.safeParse(defaultData).success) {
+        return replaceFileSchema.parse(defaultData)
+    } else {
+        console.error('Default data is malformed', defaultData)
+        return replaceFileSchema.parse({})
+    }
 }
 export const loadFile = async (
     inputSBS: string,
     inputData: string | undefined,
-    outDir: string,
+    _outDir: string,
     overwrite: boolean = true,
     debug: boolean = true
 ) => {
-    if (
-        inputData !== undefined &&
-        zod.filePathExists.safeParse(inputSBS).success &&
-        zod.filePathExists.safeParse(inputData).success
-    ) {
-        //RESOLVED PATHS
-        const resolvedInputSBSPath = zod.filePathExists.parse(inputSBS)
-        const resolvedInputDataPath = zod.filePathExists.parse(inputData)
-        const _tempDataJS = JSON.parse(
-            fs.readFileSync(resolvedInputDataPath, 'utf8')
+    const tempInputSBS = getSBSData(inputSBS)
+
+    if (tempInputSBS !== undefined) {
+        const _tempReplaceData =
+            inputData !== undefined
+                ? await getReplaceData(inputData)
+                : undefined
+
+        const rawSBSData: SBS_Schema = tempInputSBS
+
+        const packageKey = getFilename(inputSBS)
+        const _tempPackageDictionary = getPackageDictionary(
+            packageKey,
+            rawSBSData
         )
-        //TODO: EVENTUALLY SWITCH TO IMPORT
-        //VALIDARE DATA FILE
-        /*  const {default: getSchema} = await import(
-            path.resolve(`${module_path}/${_importableFilePath}`)
-            )*/
-        const inputXML = fs.readFileSync(resolvedInputSBSPath, 'utf8')
-        const inputJS = xml2js(inputXML, { compact: true })
 
-        replaceFileSchema.parse(_tempDataJS)
-        //VALIDATE SBS
-        if (
-            sbs_schema.safeParse(inputJS).success &&
-            replaceFileSchema.safeParse(_tempDataJS).success
-        ) {
-            //PARSED VALUES
-            // const overwriteDataFile =    replaceFileSchema.parse(_tempDataJS)
-            const replaceDataJS = replaceFileSchema.parse(_tempDataJS)
-            const inputSBS: SBS_Schema = sbs_schema.parse(inputJS)
+        const replaceData =
+            _tempReplaceData !== undefined ? _tempReplaceData : {}
+        const defaultData = getDefaultReplaceData(packageKey)
 
-            const inputPackage = inputSBS.package
-            ///get package metadict.
-            /// ResolvedGraphDictSchema ::::::index these by graph ID and {meta,attributes.
-            if (
-                (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
-                overwrite
-            ) {
-                let FINALPACKAGE: SBS_Schema['package'] = inputSBS.package
-                /* * the package key * */
-                const packageKey = getFilename(resolvedInputSBSPath)
+        const pendingPackageMergeArr: Record<string, any>[] = [
+            _tempPackageDictionary,
+            { [packageKey]: replaceData.pkg ? replaceData.pkg : {} },
+            { [packageKey]: defaultData.pkg ? defaultData.pkg : {} },
+        ]
 
-                //inprogress
-                const _packageEntry = {
-                    [packageKey]: getPackageDict(inputPackage),
-                }
-                let pendingPackageMergeArr: Record<string, any>[] = [
-                    _packageEntry,
-                ]
+        const tempPackageDict = _flattenDataQueue(pendingPackageMergeArr)
+        const packageDictionary = tempPackageDict[packageKey]
+            ? tempPackageDict[packageKey]
+            : {}
+        const _tempPackageCleaned = {
+            ...rawSBSData.package,
+            metadata: { treestr: [] },
+            content: { graph: [] },
+        }
 
-                /* * replace package dict with file contents. * */
-                pendingPackageMergeArr = [
-                    ...pendingPackageMergeArr,
-                    replaceDataJS.pkg
-                        ? { [packageKey]: replaceDataJS.pkg }
-                        : {},
-                ]
+        /* * merge with new package attributes * */
+        let FINALPACKAGE: SBS_Schema['package'] = {
+            ...deepmerge(
+                _tempPackageCleaned,
+                getPackageFinalEntry(packageDictionary)
+            ),
+            content: { graph: [] },
+        }
 
-                /* * package dictionary REAL * */
-                const packageDictionary = _flattenDataQueue(
-                    pendingPackageMergeArr
-                )
+        const sbsGraphDictionary = getGraphDictionary(
+            rawSBSData.package.content.graph
+        )
+        const graphKeys = Object.keys(sbsGraphDictionary)
 
-                /* * pending graph array * */
-                let graphArr: Record<string, any>[] = []
-
-                if (inputPackage.content.graph) {
-                    /* * Parse graphs into dictionary * */
-                    const parsedDict = parseGraphByIdDictionary(
-                        inputPackage.content.graph
-                    )
-                    /* * add to pending graph array * */
-                    graphArr = [parsedDict]
-
-                    /* * GRAPH KEYS * */
-                    const graphKeys = Object.keys(parsedDict)
-
-                    /* * See if the file has Graph defaults.  * */
-                    if (replaceDataJS.gph_defaults) {
-                        /* * push to end of pending graph array * */
-                        graphArr = [
-                            ...graphArr,
-                            graphKeys.reduce((acc, _graphKey) => {
-                                return {
-                                    ...acc,
-                                    [_graphKey]: replaceDataJS.gph_defaults,
-                                }
-                            }, {}),
-                        ]
-                    }
-
-                    if (replaceDataJS.gph) {
-                        const overrideGraphAttrs = Object.entries(
-                            replaceDataJS.gph
-                        ).reduce((acc, item) => {
-                            const [key, _value] = item
-                            /* * filter out non relevant keys * */
-                            const filtered = graphKeys.filter((target_key) => {
-                                if (target_key === key) return true
-                                return false
-                            })
-                            if (filtered.length > 0)
-                                return { ...acc, [key]: _value }
-                            else return acc
-                        }, {})
-
-                        /* * push to end of  pending graph array * */
-                        graphArr = [...graphArr, overrideGraphAttrs]
-                    }
-                }
-                if (packageDictionary[packageKey]) {
-                    /* * WIPE graph arr and metadata * */
-                    const _tempPackageCleaned = {
-                        ...inputPackage,
-                        metadata: { treestr: [] },
-                        content: { graph: [] },
-                    }
-
-                    /* * merge with new package attributes * */
-                    FINALPACKAGE = {
-                        ...deepmerge(
-                            _tempPackageCleaned,
-                            getPackageFinalEntry(packageDictionary[packageKey])
-                        ),
-                        content: { graph: [] },
-                    }
-
-                    /* * FLATTEN GRAPH ARRAY to DICT OBJECT * */
-                    const flattenedGraphDict = _flattenDataQueue(graphArr)
-
-                    /* * parse flattened graph dictionary * */
-                    if (
-                        graphDictByIDSchema.safeParse(flattenedGraphDict)
-                            .success
-                    ) {
-                        /* * merge graph dict with origonal graph objects * */
-                        const mergedGraphElements = mergeGraphDictToElement(
-                            graphDictByIDSchema.parse(flattenedGraphDict),
-                            inputPackage.content.graph
-                        )
-
-                        /* * finalize new package output * */
-                        FINALPACKAGE = {
-                            ...FINALPACKAGE,
-                            content: { graph: mergedGraphElements },
-                        }
-                    }
-                }
-                /* * finalize new SBS output * */
-                const WRITE_ELEMENT = { ...inputSBS, package: FINALPACKAGE }
-                const outputPathDir = zod.filePath.parse(outDir)
-                //*** get filename
-                /* * OUTPUT XML  * */
-                const outputSBSFilename = getFilename(resolvedInputSBSPath)
-                const outputFilePath = zod.filePath.parse(
-                    `${outputPathDir}/${outputSBSFilename}.sbs`
-                )
-                writeXMLFile(outputFilePath, WRITE_ELEMENT)
-
-                const outputJSONFilePath = zod.filePath.parse(
-                    `${outputPathDir}/${outputSBSFilename}.json`
-                )
-                console.log('FILE WRITTEN TO::: ', outputFilePath)
-
-                /* * OUTPUT JS OBJECT * */
-                if (debug === true) {
-                    fs.writeFileSync(
-                        outputJSONFilePath,
-                        JSON.stringify(WRITE_ELEMENT, undefined, 4)
-                    )
-                    console.log(
-                        'DEBUG:::::: outputJSPath FILE WRITTEN TO ',
-                        outputJSONFilePath
-                    )
-                }
-            } else {
-                console.log('INVALID FILE SBS SCHEMA', resolvedInputSBSPath)
-                console.log(sbs_schema.parse(inputJS))
-            }
-            /*
-              if (
-                  (!zod.filePathExists.safeParse(outDir).success && !overwrite) ||
-                  overwrite
-              ) {  } else {
-                  console.log(
-                      'FILE NOT WRITTEN TO ',
-                      outDir,
-                      '\ninputSBS:::',
-                      zod.filePath.parse(inputSBS),
-                      '\ninputData :::',
-                      zod.filePath.parse(inputData),
-                      'BECAUSE overwrite is set to false'
-                  )
-              }*/
-        } else {
-            console.error(
-                'inputSBS:::',
-                zod.filePath.parse(inputSBS),
-                'inputData ',
-                zod.filePath.parse(inputData)
+        const pendingGraphMergeArr: Record<string, any>[] = [
+            sbsGraphDictionary,
+            getGraphDefaults(graphKeys, replaceData.gph_defaults),
+            //the defaults for the graphs
+            getGraphDefaults(graphKeys, defaultData.gph_defaults),
+            getGraphReplace(graphKeys, replaceData.gph),
+        ]
+        const graphDictionary = _flattenDataQueue(pendingGraphMergeArr)
+        if (graphDictByIDSchema.safeParse(graphDictionary).success) {
+            const mergedGraphElements = mergeGraphDictToElement(
+                graphDictByIDSchema.parse(graphDictionary),
+                rawSBSData.package.content.graph
             )
+            FINALPACKAGE = {
+                ...FINALPACKAGE,
+                content: { graph: mergedGraphElements },
+            }
+        }
+
+        const tempFILE = { ...rawSBSData, package: FINALPACKAGE }
+        if (sbs_schema.safeParse(tempFILE).success) {
+            const fileObj = JSON.parse(
+                JSON.stringify(sbs_schema.parse(tempFILE))
+            )
+            const outDir = zod.filePath.parse(_outDir)
+            writeFile(fileObj, packageKey, outDir, debug)
+            writeXMLFile(fileObj, packageKey, outDir, overwrite)
         }
     }
 }
 
+const writeXMLFile = (
+    data: Json.Object,
+    filename: string,
+    _outDir: string,
+    overwrite: boolean
+) => {
+    const outputFilePath = zod.filePath.parse(`${_outDir}/${filename}.sbs`)
+    if (
+        (!zod.filePathExists.safeParse(outputFilePath).success && !overwrite) ||
+        overwrite
+    ) {
+        // writeXMLFile(outputFilePath, data)
+        const outputXMLString: string = js2xml(data, {
+            compact: true,
+            attributeValueFn: function (value) {
+                return value
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(' & ', ' &amp; ')
+                    .replace(/&&/g, '&amp;&amp;')
+            },
+        })
+        fs.writeFileSync(outputFilePath, outputXMLString)
+        console.log('FILE WRITTEN TO::: ', outputFilePath)
+    } else {
+        console.log(
+            'FILE NOT WRITTEN TO inputSBS:::',
+            outputFilePath,
+            'BECAUSE overwrite is set to false'
+        )
+    }
+}
+
+const writeFile = (
+    data: Json.Object,
+    filename: string,
+    _outDir: string,
+    debug: boolean = true
+) => {
+    const outputJSONFilePath = zod.filePath.parse(`${_outDir}/${filename}.json`)
+    if (debug === true) {
+        fs.writeFileSync(outputJSONFilePath, JSON.stringify(data, undefined, 4))
+        console.log(
+            'DEBUG:::::: outputJSPath FILE WRITTEN TO ',
+            outputJSONFilePath
+        )
+    }
+}
 const getPackageFile = () => {}
 export default loadAllFiles

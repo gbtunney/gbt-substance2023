@@ -4,7 +4,7 @@ import { z } from 'zod'
 export const sbs_updater_options = zod.object({
     rootDir: zod.optionalDefault(zod.filePathExists, '.'),
     inputSBS: zod.optionalDefault(zod.string(), './examples22/*.sbs'),
-    inputData: zod.optionalDefault(zod.string(), './examples/*.json'),
+    inputData: zod.string().optional(), //zod.optionalDefault(zod.string(), './examples/*.json'),
     outDir: zod.optionalDefault(zod.string(), './dist'),
     overwrite: zod.optionalDefault(zod.boolean(), false),
     debug: zod.optionalDefault(zod.boolean(), false),
@@ -16,7 +16,7 @@ export const sbs_updater_options = zod.object({
 export const resolved_sbs_updater_options = zod.object({
     rootDir: zod.filePathExists,
     inputSBS: zod.array(zod.filePathExists).nonempty(),
-    inputData: zod.array(zod.filePathExists),
+    inputData: zod.array(zod.filePathExists).optional(),
     outDir: zod.filePathExists,
 
     overwrite: zod.boolean(),

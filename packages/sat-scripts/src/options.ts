@@ -26,17 +26,19 @@ export const resolveOptions = (
                           )
                           .map((_file) => _file.absolute)
                     : [],
-            inputData:
-                parsedData.inputData !== undefined
-                    ? node
+
+            ...(parsedData.inputData && parsedData.inputData !== undefined
+                ? {
+                      inputData: node
                           .getFilePathArr(
                               getFullPath(
                                   parsedData.inputData,
                                   parsedData.rootDir
                               )
                           )
-                          .map((_file) => _file.absolute)
-                    : [],
+                          .map((_file) => _file.absolute),
+                  }
+                : {}),
             ...(parsedData.outDir
                 ? {
                       outDir: getFullPath(

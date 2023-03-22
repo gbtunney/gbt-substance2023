@@ -23,7 +23,8 @@ export const getAttributeElement = (
             if (RA.isString(value)) {
                 //todo:::
                 if (value === 'icon') {
-                    return accumulator
+                    //todo: THIS BREAKS EVERYTHING.
+                    // return accumulator
                 }
                 return {
                     ...accumulator,

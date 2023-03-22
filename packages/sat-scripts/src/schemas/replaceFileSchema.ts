@@ -2,13 +2,22 @@
 import { z } from 'zod'
 import { zod } from '@snailicide/g-library'
 
+import MarkdownIt from 'markdown-it'
+
+const MDtoHTML = (value: string) => {
+    // value = value.replace('\n','')
+    /* return new MarkdownIt({
+        html: false
+    }).render(value)*/
+    return value
+}
 export type GraphAttributesSchema = z.infer<typeof graphAttributesSchema>
 export const graphAttributesSchema = z.object({
     category: z.string().optional(),
     label: z.string().optional(),
     author: z.string().optional(),
     authorURL: z.string().optional(),
-    description: z.string().optional(),
+    description: z.string().transform(MDtoHTML).optional(),
     tags: z.string().optional(), //todo: switch back to arr?????????z.array(z.string()).optional(),
     icon: z.string().optional(),
 })
@@ -26,7 +35,7 @@ export type ReplaceFileSchema = z.infer<typeof replaceFileSchema>
 export const replaceFileSchema = z.object({
     pkg: zod.optionalDefault(
         z.object({
-            desc: z.string().optional(),
+            desc: z.string().transform(MDtoHTML).optional(),
             metadata: replaceMetaSchema.optional(),
         }),
         {}

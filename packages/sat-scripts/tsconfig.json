@@ -11,5 +11,5 @@
     },
     "exclude": ["./node_modules"],
     "include": ["./**/*.test.ts"],
-    "references": [{ "path": "./src" }]
+    "references": [{ "path": "./src" }, { "path": "./examples" }]
 }

@@ -19,6 +19,18 @@ export type SingleMetaSchema = z.infer<typeof singleMetaSchema>
 export type MetadataSchema = z.infer<typeof metadataSchema>
 export const metadataSchema = zod.optionalDefault(
     z.object({
+        //TODO: INTEGRATE THIS PLEASE!!! URL instead of string
+        /*  treeurl: zod.optionalDefault(
+            z
+                .union([z.array(singleMetaSchema), singleMetaSchema])
+                .transform((val) => {
+                    if (singleMetaSchema.safeParse(val).success) {
+                        return z.array(singleMetaSchema).parse([val])
+                    }
+                    return val
+                }),
+            []
+        ),*/
         treestr: zod.optionalDefault(
             z
                 .union([z.array(singleMetaSchema), singleMetaSchema])

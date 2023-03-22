@@ -53,26 +53,29 @@ export const mergeGraphDictToElement = (
 
 export const parseGraphByIdDictionary = (
     _graphArr: GraphElementArraySchema
-): GraphDictByIDSchema => {
-    const _graphDict = _graphArr.reduce((acc: GraphDictByIDSchema, __graph) => {
-        if (graphSchema.safeParse(__graph).success) {
-            const graph_id = __graph.identifier._attributes.v
-            const preTransform: GraphSchema = graphSchema.parse(__graph)
-            const tree_arr =
-                preTransform.metadata && preTransform.metadata.treestr
-                    ? RA.ensureArray(preTransform.metadata.treestr)
-                    : []
-            const attributes = preTransform.attributes
+): GraphDictByIDSchema | undefined => {
+    const _graphDict = _graphArr.reduce(
+        (acc: Record<string, ResolvedGraphDictSchema>, __graph) => {
+            if (graphSchema.safeParse(__graph).success) {
+                const graph_id = __graph.identifier._attributes.v
+                const preTransform: GraphSchema = graphSchema.parse(__graph)
+                const tree_arr =
+                    preTransform.metadata && preTransform.metadata.treestr
+                        ? RA.ensureArray(preTransform.metadata.treestr)
+                        : []
+                const attributes = preTransform.attributes
 
-            /* * change xml json elements to dictionary objects * */
-            const graphPropsDict: ResolvedGraphDictSchema = {
-                metadata: getMetaDict(tree_arr),
-                attributes: getAttributeDict(attributes),
+                /* * change xml json elements to dictionary objects * */
+                const graphPropsDict: ResolvedGraphDictSchema = {
+                    metadata: getMetaDict(tree_arr),
+                    attributes: getAttributeDict(attributes),
+                }
+                return { ...acc, [graph_id]: { ...__graph, ...graphPropsDict } }
             }
-            return { ...acc, [graph_id]: { ...__graph, ...graphPropsDict } }
-        }
-        return acc
-    }, {})
+            return acc
+        },
+        {}
+    )
     if (graphDictByIDSchema.safeParse(_graphDict).success) {
         return graphDictByIDSchema.parse(_graphDict)
     } else {
@@ -82,6 +85,6 @@ export const parseGraphByIdDictionary = (
             '\ninitial array'
         )
     }
-    return {}
+    return undefined
 }
 export {}

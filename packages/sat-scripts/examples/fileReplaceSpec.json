@@ -1,11 +1,11 @@
 {
     "pkg": {
-        "desc": "GBT N am package gillian!!!",
+        "desc": "JSON@@@@@@@@@i **graph** am gillian!!! ",
         "metadata": {
             "version": "0.0.44",
-            "id": "232323232",
+            "id": "NEWER",
             "packageName": "%nameofpackage.json%",
-            "fileName": "%nameofsourceSBSfile%"
+            "filename": "%nameofsourceSBSfile%"
         }
     },
     "gph_defaults": {
@@ -13,14 +13,14 @@
             "category": "ExampleCategory",
             "author": "Latest B Tunney",
             "authorURL": "http://ALTERS.org",
-            "description": "i graph am gillian!!!",
+            "description": "this is a **bold** text",
             "tags": "tag1, tag2"
         },
         "metadata": {
             "uid": "default overridesn",
             "distid": "6666232323232",
             "packageName": "LATEST%nameofpackage.json%",
-            "fileName": "%nameofsourceSBSfile%"
+            "filename": "%nameofsourceSBSfile%"
         }
     },
     "gph": {
@@ -31,7 +31,7 @@
                 "tags": "tag44"
             },
             "metadata": {
-                "fileName": "%OVERRIDDEN BY SPECIDFIC%"
+                "distid": "%OVERRIDDEN BY SPECIDFIC%"
             }
         },
         "Integer_Value_Graph": {

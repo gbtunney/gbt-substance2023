@@ -41,6 +41,19 @@ if (options['help']) {
     if (resolvedArgs !== undefined) loadAllFiles(resolvedArgs)
 }
 
+const mystr = ` 
+  # THIS IS SAT-SCRIPTS
+
+[Command Line Tools | Substance 3D Automation ToolKit](https://substance3d.adobe.com/documentation/sat/command-line-tools)
+  
+ this is a **bold** text`
+import MarkdownIt from 'markdown-it'
+
+const markdown = new MarkdownIt({
+    html: false,
+})
+
+console.log(markdown.renderInline(mystr))
 if (!process.argv.slice(2).length) {
     // program.outputHelp()
 }

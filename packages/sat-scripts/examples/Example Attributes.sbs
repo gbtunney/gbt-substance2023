@@ -11,6 +11,12 @@
       <name v="version" />
       <value v="0.0.1" />
     </treestr>
+    <treeurl>
+      <name v="resource" />
+      <value
+        v="pkg:///Resources/XXXXXX-uv-checker-color?dependency=1471534563"
+      />
+    </treeurl>
   </metadata>
   <dependencies>
     <dependency>
@@ -113,10 +119,6 @@
           <name v="uid" />
           <value v="%pkguid%" />
         </treestr>
-        <treestr>
-          <name v="addl_meta" />
-          <value v="untouched" />
-        </treestr>
       </metadata>
     </graph>
     <graph>
@@ -139,5 +141,31 @@
         </treestr>
       </metadata>
     </graph>
+    <group>
+      <uid v="1471534965" />
+      <identifier v="Resources" />
+      <content>
+        <resource>
+          <identifier v="XXXXXX-uv-checker-color" />
+          <uid v="1471534967" />
+          <type v="bitmap" />
+          <colorSpace v="[use_embedded_profile]" />
+          <format v="png" />
+          <filepath
+            v="../../../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-XXXXXX-uv-checker-color.png"
+          />
+          <attributes>
+            <hideInLibrary v="1" />
+          </attributes>
+          <source>
+            <externalcopy>
+              <filename
+                v="Example Attributes.resources/XXXXXX-XXXXXX-uv-checker-color.png"
+              />
+            </externalcopy>
+          </source>
+        </resource>
+      </content>
+    </group>
   </content>
 </package>

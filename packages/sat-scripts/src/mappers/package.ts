@@ -7,14 +7,17 @@ type PackageDict = {
     desc?: string
     metadata: Record<string, string>
 }
-export const getPackageDict = (_package: SBS_Schema['package']) => {
+export type PackageDictionary = PackageDict
+export const getPackageDict = (
+    _package: SBS_Schema['package']
+): PackageDictionary => {
     const tree_arr =
         _package.metadata && _package.metadata.treestr
             ? RA.ensureArray(_package.metadata.treestr)
             : []
     const desc =
         _package.desc !== undefined ? _package.desc._attributes.v : 'NOT SET'
-    const newPackageObj: PackageDict = {
+    const newPackageObj: PackageDictionary = {
         metadata: getMetaDict(tree_arr),
         desc,
     }
