@@ -7,7 +7,9 @@ import type {
     SBS_UpdaterOptions,
     ResolvedSBS_UpdaterOptions,
 } from './schemas/optionsSchema'
-import { node } from '@snailicide/g-library'
+import { node, zod } from '@snailicide/g-library'
+import isGlob from 'is-glob'
+import shell from 'shelljs'
 
 export const resolveOptions = (
     options: any //SBS_UpdaterOptions
@@ -28,16 +30,25 @@ export const resolveOptions = (
                     : [],
 
             ...(parsedData.inputData && parsedData.inputData !== undefined
-                ? {
-                      inputData: node
-                          .getFilePathArr(
+                ? isGlob(parsedData.inputData)
+                    ? {
+                          inputData: node
+                              .getFilePathArr(
+                                  getFullPath(
+                                      parsedData.inputData,
+                                      parsedData.rootDir
+                                  )
+                              )
+                              .map((_file) => _file.absolute),
+                      }
+                    : {
+                          inputData: [
                               getFullPath(
                                   parsedData.inputData,
                                   parsedData.rootDir
-                              )
-                          )
-                          .map((_file) => _file.absolute),
-                  }
+                              ),
+                          ],
+                      }
                 : {}),
             ...(parsedData.outDir
                 ? {
@@ -49,6 +60,11 @@ export const resolveOptions = (
                 : {}),
         }
         const mergedData = { ...parsedData, ...concatFilePaths }
+
+        /* * write outdir if it doesnt excist * */
+        if (!zod.filePathExists.safeParse(mergedData.outDir).success) {
+            shell.mkdir('-p', zod.filePath.parse(mergedData.outDir))
+        }
         if (
             resolved_sbs_updater_options.safeParse(mergedData).success === false
         ) {

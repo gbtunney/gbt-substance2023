@@ -1,10 +1,12 @@
 //load input files
 import { Element, ElementCompact, js2xml, xml2js } from 'xml-js'
+import micromatch from 'micromatch'
 import fs from 'fs'
 import { zod, Json } from '@snailicide/g-library'
 import { getExt, getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
 import {
+    _dataGraphSchema,
     GraphDictByIDSchema,
     graphDictByIDSchema,
     replaceFileSchema,
@@ -25,17 +27,21 @@ import {
     PackageDictionary,
 } from './mappers/package.js'
 import { deepmerge } from 'deepmerge-ts'
-import { _flattenDataQueue } from './mappers/mergeAll.js'
+import { _dataQueueInSchema, _flattenDataQueue } from './mappers/mergeAll.js'
+import { z } from 'zod'
 
 export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
     ///LOAD PACKAGE>
     options.inputSBS.forEach((_inputSBS) => {
         loadFile(
             _inputSBS,
+            //todo: THIS ONLY ALLOWS 1 DATAFILE AT THE MOMENT
             options.inputData && options.inputData.length > 0
                 ? options.inputData[0]
                 : undefined,
-            options.outDir
+            options.outDir,
+            options.overwrite,
+            options.debug
         )
     })
 }
@@ -75,6 +81,12 @@ export const getReplaceData = async (
         }
         return undefined
     }
+    {
+        console.error(
+            'ERROR :: inputDataPath FILE NOT FOUND',
+            zod.filePath.parse(inputDataPath)
+        )
+    }
     return undefined
 }
 
@@ -110,6 +122,45 @@ const getGraphDefaults = (
           }, {})
         : {}
 }
+
+const getGraphMatcherDefaults = (
+    graphKeys: string[],
+    _graphReplace: ReplaceFileSchema['gph']
+) => {
+    if (_graphReplace === undefined) return {}
+    const search = _graphReplace
+    const myschema = z.record(_dataGraphSchema)
+    const resultArr: z.infer<typeof myschema>[] = Object.entries(search).reduce(
+        (acc: z.infer<typeof myschema>[], [key_selector, value]) => {
+            const resolvedSelectors = micromatch(graphKeys, [key_selector])
+
+            const _singleSelectors: ReplaceFileSchema['gph'] =
+                resolvedSelectors.reduce((_innerAcc, _graphKey) => {
+                    return {
+                        ..._innerAcc,
+                        [_graphKey]: value,
+                    }
+                }, {})
+
+            if (myschema.safeParse(_singleSelectors).success) {
+                return [...acc, myschema.parse(_singleSelectors)]
+            } else {
+                return acc
+            }
+        },
+        []
+    )
+    const tempPackageDict = _flattenDataQueue(resultArr)
+
+    return tempPackageDict
+    /* * push to end of pending graph array * */
+    /*    graphKeys.reduce((acc, _graphKey) => {
+            return {
+                ...acc,
+                [_graphKey]: _graphDefaults,
+            }
+        }, {})*/
+}
 const getGraphReplace = (
     graphKeys: string[],
     _graphReplace: ReplaceFileSchema['gph']
@@ -136,9 +187,11 @@ const getDefaultReplaceData = (key: string): ReplaceFileSchema => {
                 filename: key,
             },
         },
-        gph_defaults: {
-            metadata: {
-                filename: key,
+        gph: {
+            '*': {
+                metadata: {
+                    filename: key,
+                },
             },
         },
     }
@@ -210,8 +263,9 @@ export const loadFile = async (
             sbsGraphDictionary,
             getGraphDefaults(graphKeys, replaceData.gph_defaults),
             //the defaults for the graphs
-            getGraphDefaults(graphKeys, defaultData.gph_defaults),
-            getGraphReplace(graphKeys, replaceData.gph),
+            // getGraphDefaults(graphKeys, defaultData.gph_defaults),
+            getGraphMatcherDefaults(graphKeys, replaceData.gph),
+            //  getGraphReplace(graphKeys, replaceData.gph),
         ]
         const graphDictionary = _flattenDataQueue(pendingGraphMergeArr)
         if (graphDictByIDSchema.safeParse(graphDictionary).success) {

@@ -14,6 +14,17 @@ export const singleMetaSchema = z.object({
     }),
 })
 
+export const iconSchema = z.object({
+    datalength: z.object({
+        _attributes: z.object({ v: z.string() }),
+    }),
+    format: z.object({
+        _attributes: z.object({ v: z.string() }),
+    }),
+    strdata: z.object({
+        _attributes: z.object({ v: z.string() }),
+    }),
+})
 export const metaTreeSchema = z.array(singleMetaSchema)
 export type SingleMetaSchema = z.infer<typeof singleMetaSchema>
 export type MetadataSchema = z.infer<typeof metadataSchema>

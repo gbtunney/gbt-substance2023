@@ -1,7 +1,7 @@
 *.js
+*.d.ts
+*.js.map
 __pycache__
-# this is a stupid symlink
-src/fileReplaceSpec.json
 types
 output_test
 src_archived

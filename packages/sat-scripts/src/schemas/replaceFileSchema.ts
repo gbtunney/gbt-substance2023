@@ -3,13 +3,16 @@ import { z } from 'zod'
 import { zod } from '@snailicide/g-library'
 
 import MarkdownIt from 'markdown-it'
+import { Options } from 'markdown-it'
 
 const MDtoHTML = (value: string) => {
     // value = value.replace('\n','')
-    /* return new MarkdownIt({
-        html: false
-    }).render(value)*/
-    return value
+    const options: MarkdownIt['options'] = {
+        html: false,
+        breaks: false,
+    }
+    return new MarkdownIt(options).render(value)
+    //return value
 }
 export type GraphAttributesSchema = z.infer<typeof graphAttributesSchema>
 export const graphAttributesSchema = z.object({

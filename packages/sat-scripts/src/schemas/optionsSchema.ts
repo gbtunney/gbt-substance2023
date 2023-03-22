@@ -16,7 +16,7 @@ export const sbs_updater_options = zod.object({
 export const resolved_sbs_updater_options = zod.object({
     rootDir: zod.filePathExists,
     inputSBS: zod.array(zod.filePathExists).nonempty(),
-    inputData: zod.array(zod.filePathExists).optional(),
+    inputData: zod.array(zod.filePath).optional(),
     outDir: zod.filePathExists,
 
     overwrite: zod.boolean(),

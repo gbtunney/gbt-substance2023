@@ -4,6 +4,7 @@ import RA from 'ramda-adjunct'
 import { GraphAttributesSchema } from '../schemas/replaceFileSchema.js'
 import {
     attributeSchema,
+    iconSchema,
     SingleAttributeSchema,
     singleAttributeSchema,
 } from '../schemas/sbsSchema.js'
@@ -22,7 +23,12 @@ export const getAttributeElement = (
             ///is TARGET!! attributeSchema
             if (RA.isString(value)) {
                 //todo:::
-                if (value === 'icon') {
+                if (key === 'icon') {
+                    return {
+                        ...accumulator,
+                        icon: getRawElementArributeIcon(value),
+                    }
+
                     //todo: THIS BREAKS EVERYTHING.
                     // return accumulator
                 }
@@ -49,8 +55,15 @@ export const getAttributeDict = (
     const postTransform: GraphAttributesSchema = Object.entries(
         preprocessesAttr
     ).reduce((accumulator, [key, value]) => {
-        if (singleAttributeSchema.safeParse(value).success) {
-            const attributeElement = singleAttributeSchema.parse(value)
+        let _value = value
+        if (key === 'icon' && value) {
+            if (iconSchema.safeParse(value).success) {
+                const parsedIcon = iconSchema.parse(value)
+                _value = parsedIcon.strdata
+            }
+        }
+        if (singleAttributeSchema.safeParse(_value).success) {
+            const attributeElement = singleAttributeSchema.parse(_value)
             return {
                 ...accumulator,
                 [key]: attributeElement._attributes.v,
@@ -78,5 +91,15 @@ export const getAttributeEntry = (
 export const getRawElementArribute = (value: string): SingleAttributeSchema => {
     return {
         _attributes: { v: value },
+    }
+}
+
+export const getRawElementArributeIcon = (
+    value: string
+): z.infer<typeof iconSchema> => {
+    return {
+        datalength: { _attributes: { v: '5000' } },
+        format: { _attributes: { v: 'png' } },
+        strdata: { _attributes: { v: value } },
     }
 }

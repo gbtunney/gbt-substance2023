@@ -5,7 +5,7 @@ import {
     _dataGraphSchema,
     _dataSBSPackageSchema,
 } from '../schemas/replaceFileSchema.js'
-const _dataQueueInSchema = z.array(
+export const _dataQueueInSchema = z.array(
     z.union([z.record(_dataGraphSchema), z.record(_dataSBSPackageSchema)])
 )
 const _dataQueueFlattenedSchema = z.union([

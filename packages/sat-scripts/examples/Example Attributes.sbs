@@ -124,8 +124,108 @@
     <graph>
       <identifier v="Example2" />
       <uid v="1470710523" />
-      <graphOutputs />
-      <compNodes />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input" />
+          <uid v="1471541065" />
+          <isConnectable v="1" />
+          <type v="1" />
+          <defaultValue>
+            <constantValueFloat4 v="0 0 0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <primaryInput v="1471541065" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1471541077" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1471541066" />
+          <GUILayout>
+            <gpos v="112 176 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471541067" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1471541065" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471541078" />
+          <GUILayout>
+            <gpos v="400 176 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1471541066" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1471541077" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
       <baseParameters />
       <options>
         <option>
@@ -133,7 +233,15 @@
           <value v="10x10" />
         </option>
       </options>
-      <root />
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1471541077" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
       <metadata>
         <treestr>
           <name v="uid" />
