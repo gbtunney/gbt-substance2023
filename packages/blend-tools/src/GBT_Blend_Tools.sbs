@@ -1631,7 +1631,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/ellipse?dependency=1403897675"
+                      v="pkg:///ellipse?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -1999,7 +1999,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/uv-checker-color?dependency=1403897675"
+                      v="pkg:///XXXXXX-uv-checker-color?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -2069,7 +2069,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/uv-checker-color?dependency=1403897675"
+                      v="pkg:///XXXXXX-uv-checker-color?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -3311,7 +3311,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Resources/Solo_Icon?dependency=1403897675" />
+              <path v="pkg:///Solo_Icon?dependency=1403897675" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -5704,7 +5704,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/ellipse?dependency=1403897675"
+                      v="pkg:///ellipse?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -6175,7 +6175,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/uv-checker-color?dependency=1403897675"
+                      v="pkg:///XXXXXX-uv-checker-color?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -7000,7 +7000,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Resources/Solo_Icon?dependency=1403897675" />
+              <path v="pkg:///Solo_Icon?dependency=1403897675" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -10387,7 +10387,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/ellipse?dependency=1403897675"
+                      v="pkg:///ellipse?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -11691,7 +11691,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/uv_checker_greyscale?dependency=1403897675"
+                      v="pkg:///XXXXXX-XXXXXX-XXXXXX-greyscale_uv_checker?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -11822,7 +11822,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/uv_checker_greyscale?dependency=1403897675"
+                      v="pkg:///XXXXXX-XXXXXX-XXXXXX-greyscale_uv_checker?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -13074,7 +13074,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Resources/Solo_Icon_GS?dependency=1403897675" />
+              <path v="pkg:///Solo_Icon_GS?dependency=1403897675" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -14496,7 +14496,7 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <constantValueString
-                      v="pkg:///Resources/ellipse?dependency=1403897675"
+                      v="pkg:///ellipse?dependency=1403897675"
                     />
                   </paramValue>
                 </parameter>
@@ -15329,597 +15329,570 @@
         </rootOutputs>
       </root>
     </graph>
-    <group>
-      <uid v="1404085753" />
-      <identifier v="Resources" />
-      <content>
-        <graph>
-          <identifier v="Solo_Icon" />
-          <uid v="1414825398" />
-          <attributes>
-            <category v="greyscale" />
-            <author v="Gillian Tunney" />
-            <tags v="greyscale, grayscale,  gs,  float1" />
-            <hideInLibrary v="1" />
-          </attributes>
-          <graphOutputs>
-            <graphoutput>
-              <identifier v="output" />
-              <uid v="1414828021" />
-            </graphoutput>
-          </graphOutputs>
-          <compNodes>
-            <compNode>
-              <uid v="1414825566" />
-              <GUILayout>
-                <gpos v="208 240 0" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
+    <graph>
+      <identifier v="Solo_Icon" />
+      <uid v="1414825398" />
+      <attributes>
+        <category v="greyscale" />
+        <author v="Gillian Tunney" />
+        <tags v="greyscale, grayscale,  gs,  float1" />
+        <hideInLibrary v="1" />
+      </attributes>
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1414828021" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1414825566" />
+          <GUILayout>
+            <gpos v="208 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414825567" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Pattern_Specific" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.340000004" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.849999964" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
                   <uid v="1414825567" />
-                  <comptype v="2" />
-                </compOutput>
-              </compOutputs>
-              <compImplementation>
-                <compInstance>
-                  <path v="pkg:///shape?dependency=1311189026" />
-                  <parameters>
-                    <parameter>
-                      <name v="Pattern_Specific" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.340000004" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="Size" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.849999964" />
-                      </paramValue>
-                    </parameter>
-                  </parameters>
-                  <outputBridgings>
-                    <outputBridging>
-                      <uid v="1414825567" />
-                      <identifier v="output" />
-                    </outputBridging>
-                  </outputBridgings>
-                </compInstance>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414826217" />
-              <GUILayout>
-                <gpos v="400 240 0" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
-                  <uid v="1414826218" />
-                  <comptype v="1" />
-                </compOutput>
-              </compOutputs>
-              <connections>
-                <connection>
-                  <identifier v="input1" />
-                  <connRef v="1414825566" />
-                  <connRefOutput v="1414825567" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compFilter>
-                  <filter v="gradient" />
-                  <parameters />
-                  <paramsArrays>
-                    <paramsArray>
-                      <name v="gradientrgba" />
-                      <uid v="1414826228" />
-                      <paramsArrayCells>
-                        <paramsArrayCell>
-                          <uid v="1414827094" />
-                          <parameters>
-                            <parameter>
-                              <name v="position" />
-                              <paramValue>
-                                <constantValueFloat1 v="0" />
-                              </paramValue>
-                            </parameter>
-                            <parameter>
-                              <name v="midpoint" />
-                              <paramValue>
-                                <constantValueFloat1 v="0" />
-                              </paramValue>
-                            </parameter>
-                            <parameter>
-                              <name v="value" />
-                              <paramValue>
-                                <constantValueFloat4 v="0.782608688 0 0 1" />
-                              </paramValue>
-                            </parameter>
-                          </parameters>
-                        </paramsArrayCell>
-                        <paramsArrayCell>
-                          <uid v="1414827095" />
-                          <parameters>
-                            <parameter>
-                              <name v="position" />
-                              <paramValue>
-                                <constantValueFloat1 v="1" />
-                              </paramValue>
-                            </parameter>
-                            <parameter>
-                              <name v="midpoint" />
-                              <paramValue>
-                                <constantValueFloat1 v="0" />
-                              </paramValue>
-                            </parameter>
-                            <parameter>
-                              <name v="value" />
-                              <paramValue>
-                                <constantValueFloat4 v="1 1 1 0.56078434" />
-                              </paramValue>
-                            </parameter>
-                          </parameters>
-                        </paramsArrayCell>
-                      </paramsArrayCells>
-                    </paramsArray>
-                  </paramsArrays>
-                </compFilter>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414827466" />
-              <GUILayout>
-                <gpos v="592 240 0" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
-                  <uid v="1414827467" />
-                  <comptype v="1" />
-                </compOutput>
-              </compOutputs>
-              <connections>
-                <connection>
-                  <identifier v="background" />
-                  <connRef v="1414831904" />
-                  <connRefOutput v="1414827467" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compFilter>
-                  <filter v="text" />
-                  <parameters>
-                    <parameter>
-                      <name v="fontdata" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="Hiragino Kaku Gothic Std|W8" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="colorswitch" />
-                      <paramValue>
-                        <constantValueBool v="1" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="frontcolor" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat4 v="1 0 0 1" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="text" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="S" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="position" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat2 v="-0.0124855042 0.225900471" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="fontsize" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.629999995" />
-                      </paramValue>
-                    </parameter>
-                  </parameters>
-                </compFilter>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414828022" />
-              <GUILayout>
-                <gpos v="784 240 0" />
-              </GUILayout>
-              <connections>
-                <connection>
-                  <identifier v="inputNodeOutput" />
-                  <connRef v="1414827466" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compOutputBridge>
-                  <output v="1414828021" />
-                </compOutputBridge>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414831904" />
-              <GUILayout>
-                <gpos v="592 240 501" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
-                  <uid v="1414827467" />
-                  <comptype v="1" />
-                </compOutput>
-              </compOutputs>
-              <connections>
-                <connection>
-                  <identifier v="background" />
-                  <connRef v="1414826217" />
-                  <connRefOutput v="1414826218" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compFilter>
-                  <filter v="text" />
-                  <parameters>
-                    <parameter>
-                      <name v="fontdata" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="Hiragino Kaku Gothic Std|W8" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="colorswitch" />
-                      <paramValue>
-                        <constantValueBool v="1" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="frontcolor" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat4 v="0 0 0 1" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="text" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="S" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="position" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat2 v="-0.01171875 0.251086891" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="fontsize" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.629999995" />
-                      </paramValue>
-                    </parameter>
-                  </parameters>
-                </compFilter>
-              </compImplementation>
-            </compNode>
-          </compNodes>
-          <baseParameters />
-          <options>
-            <option>
-              <name v="defaultParentSize" />
-              <value v="10x10" />
-            </option>
-          </options>
-          <root>
-            <disabled v="1" />
-            <rootOutputs>
-              <rootOutput>
-                <output v="1414828021" />
-                <format v="0" />
-                <usertag v="" />
-              </rootOutput>
-            </rootOutputs>
-          </root>
-        </graph>
-        <graph>
-          <identifier v="Solo_Icon_GS" />
-          <uid v="1415370338" />
-          <attributes>
-            <category v="greyscale" />
-            <author v="Gillian Tunney" />
-            <tags v="greyscale, grayscale,  gs,  float1" />
-            <hideInLibrary v="1" />
-          </attributes>
-          <graphOutputs>
-            <graphoutput>
-              <identifier v="output" />
-              <uid v="1414828021" />
-              <channels v="2" />
-            </graphoutput>
-          </graphOutputs>
-          <compNodes>
-            <compNode>
-              <uid v="1414825566" />
-              <GUILayout>
-                <gpos v="272 254.342987 0" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414826217" />
+          <GUILayout>
+            <gpos v="400 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414826218" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1414825566" />
+              <connRefOutput v="1414825567" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="gradient" />
+              <parameters />
+              <paramsArrays>
+                <paramsArray>
+                  <name v="gradientrgba" />
+                  <uid v="1414826228" />
+                  <paramsArrayCells>
+                    <paramsArrayCell>
+                      <uid v="1414827094" />
+                      <parameters>
+                        <parameter>
+                          <name v="position" />
+                          <paramValue>
+                            <constantValueFloat1 v="0" />
+                          </paramValue>
+                        </parameter>
+                        <parameter>
+                          <name v="midpoint" />
+                          <paramValue>
+                            <constantValueFloat1 v="0" />
+                          </paramValue>
+                        </parameter>
+                        <parameter>
+                          <name v="value" />
+                          <paramValue>
+                            <constantValueFloat4 v="0.782608688 0 0 1" />
+                          </paramValue>
+                        </parameter>
+                      </parameters>
+                    </paramsArrayCell>
+                    <paramsArrayCell>
+                      <uid v="1414827095" />
+                      <parameters>
+                        <parameter>
+                          <name v="position" />
+                          <paramValue>
+                            <constantValueFloat1 v="1" />
+                          </paramValue>
+                        </parameter>
+                        <parameter>
+                          <name v="midpoint" />
+                          <paramValue>
+                            <constantValueFloat1 v="0" />
+                          </paramValue>
+                        </parameter>
+                        <parameter>
+                          <name v="value" />
+                          <paramValue>
+                            <constantValueFloat4 v="1 1 1 0.56078434" />
+                          </paramValue>
+                        </parameter>
+                      </parameters>
+                    </paramsArrayCell>
+                  </paramsArrayCells>
+                </paramsArray>
+              </paramsArrays>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414827466" />
+          <GUILayout>
+            <gpos v="592 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414827467" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414831904" />
+              <connRefOutput v="1414827467" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Hiragino Kaku Gothic Std|W8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="frontcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1 0 0 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="S" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.0124855042 0.225900471" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.629999995" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414828022" />
+          <GUILayout>
+            <gpos v="784 240 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1414827466" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1414828021" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414831904" />
+          <GUILayout>
+            <gpos v="592 240 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414827467" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414826217" />
+              <connRefOutput v="1414826218" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Hiragino Kaku Gothic Std|W8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="frontcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0 0 0 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="S" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.01171875 0.251086891" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.629999995" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <disabled v="1" />
+        <rootOutputs>
+          <rootOutput>
+            <output v="1414828021" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <graph>
+      <identifier v="Solo_Icon_GS" />
+      <uid v="1415370338" />
+      <attributes>
+        <category v="greyscale" />
+        <author v="Gillian Tunney" />
+        <tags v="greyscale, grayscale,  gs,  float1" />
+        <hideInLibrary v="1" />
+      </attributes>
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1414828021" />
+          <channels v="2" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1414825566" />
+          <GUILayout>
+            <gpos v="272 254.342987 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414825567" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Pattern_Specific" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.340000004" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.849999964" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
                   <uid v="1414825567" />
-                  <comptype v="2" />
-                </compOutput>
-              </compOutputs>
-              <compImplementation>
-                <compInstance>
-                  <path v="pkg:///shape?dependency=1311189026" />
-                  <parameters>
-                    <parameter>
-                      <name v="Pattern_Specific" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.340000004" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="Size" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.849999964" />
-                      </paramValue>
-                    </parameter>
-                  </parameters>
-                  <outputBridgings>
-                    <outputBridging>
-                      <uid v="1414825567" />
-                      <identifier v="output" />
-                    </outputBridging>
-                  </outputBridgings>
-                </compInstance>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414827466" />
-              <GUILayout>
-                <gpos v="656 254.342987 0" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
-                  <uid v="1414827467" />
-                  <comptype v="2" />
-                </compOutput>
-              </compOutputs>
-              <connections>
-                <connection>
-                  <identifier v="background" />
-                  <connRef v="1414831904" />
-                  <connRefOutput v="1414827467" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compFilter>
-                  <filter v="text" />
-                  <parameters>
-                    <parameter>
-                      <name v="fontdata" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="Hiragino Kaku Gothic Std|W8" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="colorswitch" />
-                      <paramValue>
-                        <constantValueBool v="0" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="frontcolor" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat4 v="1 0 0 1" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="text" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="S" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="position" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat2 v="-0.0124855042 0.225900471" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="fontsize" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.629999995" />
-                      </paramValue>
-                    </parameter>
-                  </parameters>
-                </compFilter>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414828022" />
-              <GUILayout>
-                <gpos v="848 254.342987 0" />
-              </GUILayout>
-              <connections>
-                <connection>
-                  <identifier v="inputNodeOutput" />
-                  <connRef v="1414827466" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compOutputBridge>
-                  <output v="1414828021" />
-                </compOutputBridge>
-              </compImplementation>
-            </compNode>
-            <compNode>
-              <uid v="1414831904" />
-              <GUILayout>
-                <gpos v="464 254.342987 501" />
-              </GUILayout>
-              <compOutputs>
-                <compOutput>
-                  <uid v="1414827467" />
-                  <comptype v="2" />
-                </compOutput>
-              </compOutputs>
-              <connections>
-                <connection>
-                  <identifier v="background" />
-                  <connRef v="1414825566" />
-                  <connRefOutput v="1414825567" />
-                </connection>
-              </connections>
-              <compImplementation>
-                <compFilter>
-                  <filter v="text" />
-                  <parameters>
-                    <parameter>
-                      <name v="fontdata" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="Hiragino Kaku Gothic Std|W8" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="colorswitch" />
-                      <paramValue>
-                        <constantValueBool v="0" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="frontcolor" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat4 v="0 0 0 1" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="text" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueString v="S" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="position" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat2 v="-0.01171875 0.251086891" />
-                      </paramValue>
-                    </parameter>
-                    <parameter>
-                      <name v="fontsize" />
-                      <relativeTo v="0" />
-                      <paramValue>
-                        <constantValueFloat1 v="0.629999995" />
-                      </paramValue>
-                    </parameter>
-                  </parameters>
-                </compFilter>
-              </compImplementation>
-            </compNode>
-          </compNodes>
-          <baseParameters />
-          <options>
-            <option>
-              <name v="defaultParentSize" />
-              <value v="10x10" />
-            </option>
-          </options>
-          <root>
-            <disabled v="1" />
-            <rootOutputs>
-              <rootOutput>
-                <output v="1414828021" />
-                <format v="0" />
-                <usertag v="" />
-              </rootOutput>
-            </rootOutputs>
-          </root>
-        </graph>
-        <resource>
-          <identifier v="uv-checker-color" />
-          <uid v="1470553056" />
-          <type v="bitmap" />
-          <colorSpace v="[use_embedded_profile]" />
-          <format v="png" />
-          <filepath
-            v="../../../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-uv-checker-color.png"
-          />
-          <attributes>
-            <hideInLibrary v="1" />
-          </attributes>
-          <source>
-            <externalcopy>
-              <filename
-                v="GBT_Blend_Tools.resources/XXXXXX-uv-checker-color.png"
-              />
-            </externalcopy>
-          </source>
-        </resource>
-        <resource>
-          <identifier v="uv_checker_greyscale" />
-          <uid v="1470553078" />
-          <type v="bitmap" />
-          <colorSpace v="[use_embedded_profile]" />
-          <format v="png" />
-          <filepath
-            v="../../../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-XXXXXX-XXXXXX-greyscale uv checker.png"
-          />
-          <attributes>
-            <hideInLibrary v="1" />
-          </attributes>
-          <source>
-            <externalcopy>
-              <filename
-                v="GBT_Blend_Tools.resources/XXXXXX-XXXXXX-XXXXXX-greyscale uv checker.png"
-              />
-            </externalcopy>
-          </source>
-        </resource>
-        <resource>
-          <identifier v="ellipse" />
-          <uid v="1470568896" />
-          <type v="bitmap" />
-          <colorSpace v="[use_embedded_profile]" />
-          <format v="png" />
-          <filepath v="../../../../../../Downloads/ellipse.png" />
-          <attributes>
-            <hideInLibrary v="1" />
-          </attributes>
-          <source>
-            <externalcopy>
-              <filename v="GBT_Blend_Tools.resources/ellipse.png" />
-            </externalcopy>
-          </source>
-        </resource>
-      </content>
-    </group>
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414827466" />
+          <GUILayout>
+            <gpos v="656 254.342987 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414827467" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414831904" />
+              <connRefOutput v="1414827467" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Hiragino Kaku Gothic Std|W8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="frontcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1 0 0 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="S" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.0124855042 0.225900471" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.629999995" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414828022" />
+          <GUILayout>
+            <gpos v="848 254.342987 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1414827466" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1414828021" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414831904" />
+          <GUILayout>
+            <gpos v="464 254.342987 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414827467" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414825566" />
+              <connRefOutput v="1414825567" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Hiragino Kaku Gothic Std|W8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="frontcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0 0 0 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="S" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.01171875 0.251086891" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.629999995" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <disabled v="1" />
+        <rootOutputs>
+          <rootOutput>
+            <output v="1414828021" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <resource>
+      <identifier v="ellipse" />
+      <uid v="1471628272" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="png" />
+      <filepath v="../resources/ellipse.png" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
+    <resource>
+      <identifier v="XXXXXX-uv-checker-color" />
+      <uid v="1471628273" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="png" />
+      <filepath v="../resources/XXXXXX-uv-checker-color.png" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
+    <resource>
+      <identifier v="XXXXXX-XXXXXX-XXXXXX-greyscale_uv_checker" />
+      <uid v="1471628274" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="png" />
+      <filepath
+        v="../resources/XXXXXX-XXXXXX-XXXXXX-greyscale uv checker.png"
+      />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
   </content>
 </package>
