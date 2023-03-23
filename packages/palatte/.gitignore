@@ -1,3 +1,6 @@
+*.js
+*.d.ts
+*.js.map
 .autosave
 /tests/_output
 examples/dependencies

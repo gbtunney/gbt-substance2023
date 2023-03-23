@@ -147,3 +147,6 @@ Substance Automation Toolkit
 .p4config
 .p4ignore
 .p4root
+
+# SD Autosave
+.autosave
