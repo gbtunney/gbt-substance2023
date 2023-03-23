@@ -1,5 +1,5 @@
 //load input files
-import { js2xml, xml2js } from 'xml-js'
+import { ElementCompact, js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
 import { Json, zod } from '@snailicide/g-library'
 import { getExt, getFilename } from './helpers.js'
@@ -69,6 +69,8 @@ export const getSBSData = (inputSBS: string): SBS_Schema | undefined => {
         if (sbs_schema.safeParse(inputJS).success) {
             return sbs_schema.parse(inputJS)
         }
+
+        const thearr = sbs_schema.parse(inputJS)
         return undefined
     }
     return undefined
@@ -182,8 +184,11 @@ export const loadFile = async (
                 content: { graph: mergedGraphElements },
             }
         }
-
-        const tempFILE = { ...rawSBSData, package: FINALPACKAGE }
+        let clearFile = rawSBSData
+        clearFile.package.content.graph = []
+        // const tempClearFILE = deepmerge( rawSBSData,{ package: { content :{ graph :[] }} })
+        const tempFILE = deepmerge(clearFile, { package: FINALPACKAGE })
+        debugger
         if (sbs_schema.safeParse(tempFILE).success) {
             const fileObj = JSON.parse(
                 JSON.stringify(sbs_schema.parse(tempFILE))
@@ -196,7 +201,7 @@ export const loadFile = async (
 }
 
 /* * WRITE XML OUTPUT * */
-const writeXMLFile = (
+export const writeXMLFile = (
     data: Json.Object,
     filename: string,
     _outDir: string,
@@ -229,7 +234,7 @@ const writeXMLFile = (
     }
 }
 /* * WRITE DEBUG JSON OUTPUT * */
-const writeFile = (
+export const writeFile = (
     data: Json.Object,
     filename: string,
     _outDir: string,

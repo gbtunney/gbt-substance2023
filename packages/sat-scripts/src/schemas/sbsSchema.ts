@@ -182,6 +182,62 @@ export const graphSchema = z
     })
     .nonstrict()
 
+export const resourceSchema = z
+    .object({
+        identifier: z.object({
+            _attributes: z.object({ v: z.string() }),
+        }),
+        attributes: z
+            .object({
+                category: z
+                    .object({
+                        _attributes: z.object({ v: z.string() }),
+                    })
+                    .optional(),
+                label: z
+                    .object({
+                        _attributes: z.object({ v: z.string() }),
+                    })
+                    .optional(),
+                author: z
+                    .object({
+                        _attributes: z.object({ v: z.string() }),
+                    })
+                    .optional(),
+                authorURL: z
+                    .object({
+                        _attributes: z.object({ v: z.string() }),
+                    })
+                    .optional(),
+                tags: z
+                    .object({
+                        _attributes: z.object({ v: z.string() }),
+                    })
+                    .optional(),
+                description: z
+                    .object({
+                        _attributes: z.object({ v: z.string() }),
+                    })
+                    .optional(),
+                icon: z
+                    .object({
+                        datalength: z.object({
+                            _attributes: z.object({ v: z.string() }),
+                        }),
+                        format: z.object({
+                            _attributes: z.object({ v: z.string() }),
+                        }),
+                        strdata: z.object({
+                            _attributes: z.object({ v: z.string() }),
+                        }),
+                    })
+                    .optional(),
+            })
+            .optional(),
+        metadata: metadataSchema,
+    })
+    .nonstrict()
+
 /* * this is an array of the RAW XML-TO-JS elements * */
 export type GraphElementArraySchema = z.infer<typeof graphElementArraySchema>
 export const graphElementArraySchema = z.array(graphSchema.passthrough())
@@ -221,6 +277,8 @@ temp.map( (_dep)=>{
 })   */
                 content: z.object({
                     graph: graphElementArraySchema,
+                    resource: z.any(), // z.array(  z.record(singleAttributeSchema.passthrough()).optional() ).optional()
+                    //resource: z.array( z.object({} ).passthrough())
                 }),
             })
             .passthrough(),

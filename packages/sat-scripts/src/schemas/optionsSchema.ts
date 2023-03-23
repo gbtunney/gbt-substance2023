@@ -8,6 +8,7 @@ export const sbs_updater_options = zod.object({
     outDir: zod.optionalDefault(zod.string(), './dist'),
     overwrite: zod.optionalDefault(zod.boolean(), false),
     debug: zod.optionalDefault(zod.boolean(), false),
+    raw: zod.optionalDefault(zod.boolean(), false),
 
     logFilePath: zod.filePath.optional(),
     descFilePath: zod.filePath.optional(),
@@ -19,6 +20,7 @@ export const resolved_sbs_updater_options = zod.object({
     inputData: zod.array(zod.filePath).optional(),
     outDir: zod.filePathExists,
 
+    raw: zod.boolean(),
     overwrite: zod.boolean(),
     debug: zod.boolean(),
 

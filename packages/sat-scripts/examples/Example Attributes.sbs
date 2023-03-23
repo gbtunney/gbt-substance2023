@@ -11,17 +11,18 @@
       <name v="version" />
       <value v="0.0.1" />
     </treestr>
-    <treeurl>
-      <name v="resource" />
-      <value
-        v="pkg:///Resources/XXXXXX-uv-checker-color?dependency=1471534563"
-      />
-    </treeurl>
   </metadata>
   <dependencies>
     <dependency>
       <filename v="sbs://noise_bnw_spots_1.sbs" />
       <uid v="1470700143" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1471575236" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -124,104 +125,175 @@
     <graph>
       <identifier v="Example2" />
       <uid v="1470710523" />
-      <paraminputs>
-        <paraminput>
-          <identifier v="input" />
-          <uid v="1471541065" />
-          <isConnectable v="1" />
-          <type v="1" />
-          <defaultValue>
-            <constantValueFloat4 v="0 0 0 0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="" />
-            <options />
-          </defaultWidget>
-        </paraminput>
-      </paraminputs>
-      <primaryInput v="1471541065" />
       <graphOutputs>
         <graphoutput>
           <identifier v="output" />
           <uid v="1471541077" />
         </graphoutput>
+        <graphoutput>
+          <identifier v="output_1" />
+          <uid v="1471578005" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_2" />
+          <uid v="1471578021" />
+        </graphoutput>
       </graphOutputs>
       <compNodes>
         <compNode>
-          <uid v="1471541066" />
-          <GUILayout>
-            <gpos v="112 176 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1471541067" />
-              <comptype v="1" />
-            </compOutput>
-          </compOutputs>
-          <compImplementation>
-            <compInputBridge>
-              <entry v="1471541065" />
-              <parameters>
-                <parameter>
-                  <name v="outputsize" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueInt2 v="0 0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="format" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueInt1 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="pixelsize" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueFloat2 v="1 1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="pixelratio" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueInt1 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="tiling" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueInt1 v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="randomseed" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueInt1 v="0" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-            </compInputBridge>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1471541078" />
           <GUILayout>
-            <gpos v="400 176 0" />
+            <gpos v="432 112 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1471541066" />
+              <connRef v="1471577986" />
+              <connRefOutput v="1471577987" />
             </connection>
           </connections>
           <compImplementation>
             <compOutputBridge>
               <output v="1471541077" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471577986" />
+          <GUILayout>
+            <gpos v="16 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471577987" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///icon-flame-gs?dependency=1471575236"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="10 10" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471577999" />
+          <GUILayout>
+            <gpos v="-16 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471578000" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///icon-flame?dependency=1471575236"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="10 10" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471578006" />
+          <GUILayout>
+            <gpos v="240 208 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1471577999" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1471578005" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471578012" />
+          <GUILayout>
+            <gpos v="16 368 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471578013" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///scale?dependency=1471575236"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="10 10" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471578022" />
+          <GUILayout>
+            <gpos v="240 368 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1471578012" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1471578021" />
             </compOutputBridge>
           </compImplementation>
         </compNode>
@@ -240,6 +312,16 @@
             <format v="0" />
             <usertag v="" />
           </rootOutput>
+          <rootOutput>
+            <output v="1471578005" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1471578021" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
         </rootOutputs>
       </root>
       <metadata>
@@ -249,31 +331,109 @@
         </treestr>
       </metadata>
     </graph>
-    <group>
-      <uid v="1471534965" />
-      <identifier v="Resources" />
-      <content>
-        <resource>
-          <identifier v="XXXXXX-uv-checker-color" />
-          <uid v="1471534967" />
-          <type v="bitmap" />
-          <colorSpace v="[use_embedded_profile]" />
-          <format v="png" />
-          <filepath
-            v="../../../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-XXXXXX-uv-checker-color.png"
-          />
-          <attributes>
-            <hideInLibrary v="1" />
-          </attributes>
-          <source>
-            <externalcopy>
-              <filename
-                v="Example Attributes.resources/XXXXXX-XXXXXX-uv-checker-color.png"
-              />
-            </externalcopy>
-          </source>
-        </resource>
-      </content>
-    </group>
+    <graph>
+      <identifier v="TestMe" />
+      <uid v="1471584115" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1471584137" />
+          <channels v="2" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1471584130" />
+          <GUILayout>
+            <gpos v="80 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471584131" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///bnw_spots_1?dependency=1470700143" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1471584131" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471584138" />
+          <GUILayout>
+            <gpos v="304 112 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1471584130" />
+              <connRefOutput v="1471584131" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1471584137" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1471584137" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <resource>
+      <identifier v="icon-flame-gs" />
+      <uid v="1471577961" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="png" />
+      <filepath v="../icons/icon-flame-gs.png" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
+    <resource>
+      <identifier v="icon-flame" />
+      <uid v="1471577962" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="png" />
+      <filepath v="../icons/icon-flame.png" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
+    <resource>
+      <identifier v="scale" />
+      <uid v="1471577963" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="png" />
+      <filepath v="../icons/scale.png" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
   </content>
 </package>

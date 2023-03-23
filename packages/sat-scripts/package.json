@@ -42,6 +42,7 @@
         "test:temp": "pnpm exec python3 src_archived/build.py",
         "test:cli": "ts-node --esm ./src/index.ts  --rootDir '.' --inputSBS 'examples/*.sbs' --inputData examples/fileReplaceSpec.json --overwrite --debug  --outDir output_test",
         "test:cli:help": "pnpm run cli -- --help",
+        "test:raw": "pnpm run build:ts && pnpm run cli -- --rootDir '.' --inputSBS 'examples/Example Attributes.sbs' --raw   --outDir output_test",
         "test:js": "pnpm run build:ts && pnpm run cli -- --rootDir '.' --inputSBS 'examples/*.sbs' --inputData examples/fileReplaceSpecScript.ts --overwrite --debug  --outDir output_test",
         "\n========== PUBLISH >> ==========": "",
         "release": "pnpm prerelease && pnpm publish --access public --report-summary --no-git-checks",

@@ -9,6 +9,7 @@ import {
 } from './schemas/optionsSchema.js'
 import { resolveOptions } from './options.js'
 import { loadAllFiles } from './loaders.js'
+import { writeAllRawFile } from './raw.js'
 clear()
 console.log(
     chalk.red(figlet.textSync('sd-build-cli', { horizontalLayout: 'full' }))
@@ -29,16 +30,27 @@ program
     .option('--outDir <type>', 'Output directory')
     .option('--overwrite', 'Overwrite output files if they already exccist')
     .option('--debug', 'Write json of transformed sbs')
+
+    .option('--raw', 'Dump raw xmltoJS')
+
     .option('-h', '--help', 'HELP')
     .parse(process.argv)
 
 const options = program.opts()
+
 if (options['help']) {
     program.outputHelp()
 } else {
     const getArgsObject = (value = process.argv) => yargs(value).argv
     const resolvedArgs = resolveOptions(getArgsObject()) //sbs_updater_options.safeParse(testme)
-    if (resolvedArgs !== undefined) loadAllFiles(resolvedArgs)
+
+    if (resolvedArgs !== undefined) {
+        if (resolvedArgs.raw) {
+            writeAllRawFile(resolvedArgs)
+        } else {
+            loadAllFiles(resolvedArgs)
+        }
+    }
 }
 if (!process.argv.slice(2).length) {
     // program.outputHelp()
