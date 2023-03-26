@@ -12,6 +12,18 @@ trying to make a cli thing to:I am trying to populate graph & package values aut
 pnpm exec ts-to-zod src/data.ts src/schemas/replaceFileSchema.ts
 ```
 
+### Unzip sbsar
+
+```shell
+7za --help
+
+#unzip archive ? IDK
+7za e ./dist/*.sbsar -o./dist/directory
+
+#rezip - broke
+cd dist/special && ls . && pnpm exec 7za a ./dist/GBT_Palatten.sbsar ./dist/special/*.*
+```
+
 ## Completely insane notes:
 
 -   [ ] Graph source package name ( in meta )
