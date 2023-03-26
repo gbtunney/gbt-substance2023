@@ -94,10 +94,99 @@
       </attributes>
       <paraminputs>
         <paraminput>
+          <identifier v="toggle_solo_overlay" />
+          <uid v="1404330173" />
+          <attributes>
+            <label v="Overlay Mode : Solo Layer" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;1;Disabled;2;Mask;3;Input A;4;Input B" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="mask_overlay_opacity" />
+          <uid v="1404330519" />
+          <attributes>
+            <label v="Solo Overlay Layer Opacity" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Opactiy 70%" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Opactiy 100%" />
+              </option>
+            </options>
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_solo_overlay&quot;]== 2" />
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_solo_icon" />
+          <uid v="1414833678" />
+          <attributes>
+            <label v="Solo Overlay Mode Icon" />
+            <description
+              v="Enable the icon so it is obvious when layer is in SOLO mode."
+            />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="Hide" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Show" />
+              </option>
+            </options>
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_solo_overlay&quot;] &gt; 1" />
+        </paraminput>
+        <paraminput>
           <identifier v="toggle_layers_stack" />
           <uid v="1404093054" />
           <attributes>
-            <label v="Input Layer Stack" />
+            <label v="Foreground Switcher" />
             <description
               v="True returns the first input, False returns the second input."
             />
@@ -119,23 +208,24 @@
               </option>
               <option>
                 <name v="label0" />
-                <value v="Input B (FG) / Input A (BG)" />
+                <value v="Input B" />
               </option>
               <option>
                 <name v="label1" />
-                <value v="Input A (FG) / Input B (BG)" />
+                <value v="Input A" />
               </option>
             </options>
           </defaultWidget>
-          <group v="Blend" />
           <visibleIf v="input[&quot;toggle_solo_overlay&quot;] == 1" />
         </paraminput>
         <paraminput>
           <identifier v="toggle_enable_mask" />
           <uid v="1404168644" />
           <attributes>
-            <label v=" Mask Channel (Input A)" />
-            <description v="Quickly turn mask off and on." />
+            <label v="Foreground Mask" />
+            <description
+              v="Quickly turn mask off and on. Mask is active on the foreground layer set above "
+            />
           </attributes>
           <type v="4" />
           <defaultValue>
@@ -169,7 +259,7 @@
           <identifier v="Foreground_Opacity" />
           <uid v="1404093213" />
           <attributes>
-            <label v="Blend Opacity (Input A)" />
+            <label v="Foreground Opacity" />
           </attributes>
           <type v="256" />
           <defaultValue>
@@ -207,7 +297,7 @@
           <identifier v="Blending_Mode" />
           <uid v="1404093196" />
           <attributes>
-            <label v="Blending mode (Input A)" />
+            <label v="Blending Mode" />
           </attributes>
           <type v="16" />
           <defaultValue>
@@ -228,95 +318,6 @@
           <visibleIf v="input[&quot;toggle_solo_overlay&quot;] == 1" />
         </paraminput>
         <paraminput>
-          <identifier v="toggle_solo_overlay" />
-          <uid v="1404330173" />
-          <attributes>
-            <label v="Overlay Mode : Solo Layer" />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="dropdownlist" />
-            <options>
-              <option>
-                <name v="parameters" />
-                <value v="0;1;Disabled;2;Mask;3;Input A;4;Input B" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Blend" />
-        </paraminput>
-        <paraminput>
-          <identifier v="mask_overlay_opacity" />
-          <uid v="1404330519" />
-          <attributes>
-            <label v="Solo Overlay Opacity  (for debugging)" />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="0" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="0" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Opactiy 70%" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="Opactiy 100%" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Blend" />
-          <visibleIf v="input[&quot;toggle_solo_overlay&quot;]== 2" />
-        </paraminput>
-        <paraminput>
-          <identifier v="toggle_solo_icon" />
-          <uid v="1414833678" />
-          <attributes>
-            <label v="Solo Icon" />
-          </attributes>
-          <type v="4" />
-          <defaultValue>
-            <constantValueBool v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="buttons" />
-            <options>
-              <option>
-                <name v="booleditortype" />
-                <value v="pushbuttons" />
-              </option>
-              <option>
-                <name v="default" />
-                <value v="1" />
-              </option>
-              <option>
-                <name v="label0" />
-                <value v="Off" />
-              </option>
-              <option>
-                <name v="label1" />
-                <value v="On" />
-              </option>
-            </options>
-          </defaultWidget>
-          <group v="Blend" />
-          <visibleIf v="input[&quot;toggle_solo_overlay&quot;] &gt; 1" />
-        </paraminput>
-        <paraminput>
           <identifier v="color_alpha_blending" />
           <uid v="1404343349" />
           <attributes>
@@ -327,7 +328,7 @@
           </attributes>
           <type v="16" />
           <defaultValue>
-            <constantValueInt1 v="0" />
+            <constantValueInt1 v="2" />
           </defaultValue>
           <defaultWidget>
             <name v="dropdownlist" />
@@ -335,7 +336,7 @@
               <option>
                 <name v="parameters" />
                 <value
-                  v="0;0;Use Source Alpha;1;Ignore Alpha;2;Straight Alpha Blending;3;Premultiplied Alpha Blending (copy only)"
+                  v="2;0;Use Source Alpha;1;Ignore Alpha;2;Straight Alpha Blending;3;Premultiplied Alpha Blending (copy only)"
                 />
               </option>
             </options>
@@ -944,7 +945,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="1" />
+            <constantValueBool v="0" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -955,7 +956,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="1" />
+                <value v="0" />
               </option>
               <option>
                 <name v="label0" />
@@ -1614,7 +1615,7 @@
         <compNode>
           <uid v="1404086035" />
           <GUILayout>
-            <gpos v="-305.321594 416 0" />
+            <gpos v="-305.321594 424 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1684,7 +1685,7 @@
         <compNode>
           <uid v="1404093098" />
           <GUILayout>
-            <gpos v="2064 272 0" />
+            <gpos v="2408.1123 384.280365 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -1727,7 +1728,7 @@
         <compNode>
           <uid v="1404168823" />
           <GUILayout>
-            <gpos v="112 656 0" />
+            <gpos v="176 424 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1806,7 +1807,7 @@
         <compNode>
           <uid v="1404168852" />
           <GUILayout>
-            <gpos v="-304 656 0" />
+            <gpos v="-65.3432083 592 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1845,7 +1846,7 @@
         <compNode>
           <uid v="1404185396" />
           <GUILayout>
-            <gpos v="410.666656 -144 0" />
+            <gpos v="586.666626 -150.704315 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1856,8 +1857,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1414700264" />
-              <connRefOutput v="1414700265" />
+              <connRef v="1472689649" />
+              <connRefOutput v="1472689650" />
             </connection>
           </connections>
           <compImplementation>
@@ -1870,7 +1871,7 @@
         <compNode>
           <uid v="1404329976" />
           <GUILayout>
-            <gpos v="1200 432 0" />
+            <gpos v="1328 448.250916 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1914,7 +1915,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="144 157 0" />
+                            <gpos v="80 144 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -1936,7 +1937,7 @@
                             </connection>
                           </connections>
                           <GUILayout>
-                            <gpos v="464 126 0" />
+                            <gpos v="432 304 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -1968,11 +1969,18 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="240 336 0" />
+                            <gpos v="80 464 0" />
                           </GUILayout>
                         </paramNode>
                       </paramNodes>
                     </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -2122,7 +2130,7 @@
         <compNode>
           <uid v="1404342676" />
           <GUILayout>
-            <gpos v="-96.4078827 48 0" />
+            <gpos v="-88.8647385 48 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2182,7 +2190,7 @@
         <compNode>
           <uid v="1404342698" />
           <GUILayout>
-            <gpos v="-96.4078827 -144 0" />
+            <gpos v="-88.8647385 -134.742661 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2242,7 +2250,7 @@
         <compNode>
           <uid v="1404342926" />
           <GUILayout>
-            <gpos v="880 418.601532 0" />
+            <gpos v="1072 432 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2379,7 +2387,7 @@
         <compNode>
           <uid v="1413168092" />
           <GUILayout>
-            <gpos v="112 -144 0" />
+            <gpos v="112 -140.037643 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2477,7 +2485,7 @@
         <compNode>
           <uid v="1413168286" />
           <GUILayout>
-            <gpos v="112 48 0" />
+            <gpos v="112 49.4093285 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2575,7 +2583,7 @@
         <compNode>
           <uid v="1414699816" />
           <GUILayout>
-            <gpos v="400 48 0" />
+            <gpos v="586.666626 38.7426567 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2586,8 +2594,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1414700499" />
-              <connRefOutput v="1414700265" />
+              <connRef v="1472689806" />
+              <connRefOutput v="1472689807" />
             </connection>
           </connections>
           <compImplementation>
@@ -2600,7 +2608,7 @@
         <compNode>
           <uid v="1414700264" />
           <GUILayout>
-            <gpos v="304 -144 0" />
+            <gpos v="336 -257.980408 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2618,32 +2626,7 @@
           <compImplementation>
             <compInstance>
               <path v="pkg:///invert?dependency=1368115694" />
-              <parameters>
-                <parameter>
-                  <name v="invert" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1414700278" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1414700278" />
-                          <function v="get_bool" />
-                          <type v="4" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_bool" />
-                              <constantValue>
-                                <constantValueString v="invert_color_input_a" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-              </parameters>
+              <parameters />
               <outputBridgings>
                 <outputBridging>
                   <uid v="1414700265" />
@@ -2656,7 +2639,7 @@
         <compNode>
           <uid v="1414700499" />
           <GUILayout>
-            <gpos v="304 48 0" />
+            <gpos v="336 -65.9804153 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2674,32 +2657,7 @@
           <compImplementation>
             <compInstance>
               <path v="pkg:///invert?dependency=1368115694" />
-              <parameters>
-                <parameter>
-                  <name v="invert" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1414700522" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1414700522" />
-                          <function v="get_bool" />
-                          <type v="4" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_bool" />
-                              <constantValue>
-                                <constantValueString v="invert_color_input_b" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-              </parameters>
+              <parameters />
               <outputBridgings>
                 <outputBridging>
                   <uid v="1414700265" />
@@ -2712,7 +2670,7 @@
         <compNode>
           <uid v="1414708304" />
           <GUILayout>
-            <gpos v="-144 416 0" />
+            <gpos v="-88.8647385 424 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3136,7 +3094,7 @@
         <compNode>
           <uid v="1414708695" />
           <GUILayout>
-            <gpos v="2032 656 0" />
+            <gpos v="2352 656 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -3154,7 +3112,7 @@
         <compNode>
           <uid v="1414708734" />
           <GUILayout>
-            <gpos v="506.666656 613.333313 0" />
+            <gpos v="517.333313 645.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3179,7 +3137,7 @@
         <compNode>
           <uid v="1414828552" />
           <GUILayout>
-            <gpos v="720 -208 0" />
+            <gpos v="848 -144 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3240,7 +3198,7 @@
         <compNode>
           <uid v="1414828641" />
           <GUILayout>
-            <gpos v="720 66.0675278 0" />
+            <gpos v="848 48 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3301,7 +3259,7 @@
         <compNode>
           <uid v="1414830916" />
           <GUILayout>
-            <gpos v="-305.321594 1008 0" />
+            <gpos v="1285.33325 816 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3325,7 +3283,7 @@
         <compNode>
           <uid v="1414830952" />
           <GUILayout>
-            <gpos v="1566.10474 1114.66663 0" />
+            <gpos v="1744 840.917542 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3335,14 +3293,14 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="#input" />
-              <connRef v="1414834597" />
-              <connRefOutput v="1414834598" />
-            </connection>
-            <connection>
               <identifier v="destination" />
               <connRef v="1414834998" />
               <connRefOutput v="1414834098" />
+            </connection>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1472690692" />
+              <connRefOutput v="1472690693" />
             </connection>
             <connection>
               <identifier v="source" />
@@ -3418,7 +3376,7 @@
         <compNode>
           <uid v="1414830980" />
           <GUILayout>
-            <gpos v="1168 976 0" />
+            <gpos v="1477.33325 816 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3465,7 +3423,7 @@
         <compNode>
           <uid v="1414834097" />
           <GUILayout>
-            <gpos v="1744 266.964722 501" />
+            <gpos v="2224 378.666656 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3543,7 +3501,7 @@
         <compNode>
           <uid v="1414834597" />
           <GUILayout>
-            <gpos v="-305.321594 1168 0" />
+            <gpos v="1285.33325 1008 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3589,7 +3547,7 @@
         <compNode>
           <uid v="1414834998" />
           <GUILayout>
-            <gpos v="1360 26.666666 0" />
+            <gpos v="1631.56055 154.666672 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3604,14 +3562,14 @@
               <connRefOutput v="1404329977" />
             </connection>
             <connection>
-              <identifier v="input_3" />
-              <connRef v="1414828552" />
-              <connRefOutput v="1404342835" />
+              <identifier v="input_4" />
+              <connRef v="1472691063" />
+              <connRefOutput v="1472691064" />
             </connection>
             <connection>
-              <identifier v="input_4" />
-              <connRef v="1414828641" />
-              <connRefOutput v="1404342835" />
+              <identifier v="input_3" />
+              <connRef v="1472691083" />
+              <connRefOutput v="1472691084" />
             </connection>
           </connections>
           <compImplementation>
@@ -3662,7 +3620,7 @@
         <compNode>
           <uid v="1414837350" />
           <GUILayout>
-            <gpos v="-305.321594 848 0" />
+            <gpos v="-80 752 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3822,7 +3780,7 @@
         <compNode>
           <uid v="1470608448" />
           <GUILayout>
-            <gpos v="762.666687 272 0" />
+            <gpos v="960 229.333344 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3833,8 +3791,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1404096169" />
-              <connRefOutput v="1404096170" />
+              <connRef v="1472690440" />
+              <connRefOutput v="1472690441" />
             </connection>
           </connections>
           <compImplementation>
@@ -3847,7 +3805,7 @@
         <compNode>
           <uid v="1470608545" />
           <GUILayout>
-            <gpos v="1616 -186.666672 0" />
+            <gpos v="1893.33337 -122.666664 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3872,7 +3830,7 @@
         <compNode>
           <uid v="1470653405" />
           <GUILayout>
-            <gpos v="1136 -176 0" />
+            <gpos v="1136 -127.849442 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4007,19 +3965,258 @@
             </compInstance>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1472689649" />
+          <GUILayout>
+            <gpos v="464 -150.704315 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472689650" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_1" />
+              <connRef v="1414700264" />
+              <connRefOutput v="1414700265" />
+            </connection>
+            <connection>
+              <identifier v="input_2" />
+              <connRef v="1413168092" />
+              <connRefOutput v="1413168093" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///switch?dependency=1299239600" />
+              <parameters>
+                <parameter>
+                  <name v="switch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1472689728" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1472689728" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="invert_color_input_a" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1472689650" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472689806" />
+          <GUILayout>
+            <gpos v="464 38.7426567 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472689807" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_1" />
+              <connRef v="1414700499" />
+              <connRefOutput v="1414700265" />
+            </connection>
+            <connection>
+              <identifier v="input_2" />
+              <connRef v="1413168286" />
+              <connRefOutput v="1413168287" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///switch?dependency=1299239600" />
+              <parameters>
+                <parameter>
+                  <name v="switch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1472689868" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1472689868" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="invert_color_input_b" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1472689807" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472690440" />
+          <GUILayout>
+            <gpos v="586.666626 229.333328 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472690441" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1404096169" />
+              <connRefOutput v="1404096170" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472690639" />
+          <GUILayout>
+            <gpos v="986.666687 890.666687 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472690640" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472690692" />
+          <GUILayout>
+            <gpos v="1477.33325 1008 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472690693" />
+              <comptype v="4" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414834597" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472691063" />
+          <GUILayout>
+            <gpos v="1125.33337 186.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472691064" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414828641" />
+              <connRefOutput v="1404342835" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472691083" />
+          <GUILayout>
+            <gpos v="1125.33337 165.333328 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472691084" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414828552" />
+              <connRefOutput v="1404342835" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="992 341.333344 -100" />
-            <size v="384 192" />
+            <gpos v="1002.66669 330.666656 -100" />
+            <size v="384 224.000015" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1414699315" />
-          <title v="mask overlay" />
-          <frameColor v="0.983870983 1 0 0.250980407" />
+          <title v="mask overlay layer" />
+          <frameColor v="0 0.778095305 0.791666687 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
@@ -4059,21 +4256,21 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="608 -384 -100" />
-            <size v="256 704" />
+            <gpos v="736 -274.666656 -100" />
+            <size v="213.333313 456" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1414699572" />
           <title v="Blend" />
-          <frameColor v="1 0 0 0.250980407" />
+          <frameColor v="0 1 0.0742855072 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="224 -224 0" />
-            <size v="160 384" />
+            <gpos v="266.666656 -352 -100" />
+            <size v="266.666656 522.666687" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1414700558" />
@@ -4085,7 +4282,7 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="32 -224 0" />
+            <gpos v="32 -213.333328 -100" />
             <size v="160 384" />
           </GUILayout>
           <GUIName v="" />
@@ -4116,6 +4313,45 @@
           <GUIName v="blend: A (foreground), B (background)&#10;" />
           <uid v="1470697695" />
           <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1216 725.333313 -100" />
+            <size v="341.333344 362.666687" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472690731" />
+          <title v="Solo Icon Layer" />
+          <frameColor v="0.101960786 0.552941203 1 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1536 64 0" />
+            <size v="192 224" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472691014" />
+          <title v="SWITCH: Solo Layer Modes" />
+          <frameColor v="1 0 0 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1664 736 -100" />
+            <size v="160 224" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472691284" />
+          <title v="BLEND: Icon with Solo Layer" />
+          <frameColor v="0 0.431372553 0.152941182 1" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
         </GUIObject>
       </GUIObjects>
       <options>
@@ -4472,7 +4708,7 @@
           <identifier v="toggle_enable_mask" />
           <uid v="1404168644" />
           <attributes>
-            <label v=" Mask" />
+            <label v="Foreground Mask" />
             <description v="Quickly turn mask off and on." />
           </attributes>
           <type v="4" />
@@ -4570,7 +4806,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -4581,7 +4817,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -4641,7 +4877,7 @@
           </attributes>
           <type v="16" />
           <defaultValue>
-            <constantValueInt1 v="0" />
+            <constantValueInt1 v="2" />
           </defaultValue>
           <defaultWidget>
             <name v="dropdownlist" />
@@ -4649,7 +4885,7 @@
               <option>
                 <name v="parameters" />
                 <value
-                  v="0;0;Use Source Alpha;1;Ignore Alpha;2;Straight Alpha Blending;3;Premultiplied Alpha Blending (copy only)"
+                  v="2;0;Use Source Alpha;1;Ignore Alpha;2;Straight Alpha Blending;3;Premultiplied Alpha Blending (copy only)"
                 />
               </option>
             </options>
@@ -4722,7 +4958,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -4733,7 +4969,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -4930,10 +5166,10 @@
           <group v="Input/HSL" />
         </paraminput>
         <paraminput>
-          <identifier v="input_A" />
+          <identifier v="input" />
           <uid v="1404342528" />
           <attributes>
-            <label v="Input A" />
+            <label v="Input" />
             <description v="&#10;" />
           </attributes>
           <isConnectable v="1" />
@@ -4950,17 +5186,11 @@
           />
         </paraminput>
         <paraminput>
-          <identifier v="mask" />
+          <identifier v="input_mask" />
           <uid v="1404086034" />
           <attributes>
             <label v="Mask" />
           </attributes>
-          <usages>
-            <usage>
-              <components v="RGBA" />
-              <name v="mask" />
-            </usage>
-          </usages>
           <isConnectable v="1" />
           <type v="2" />
           <defaultValue>
@@ -5017,7 +5247,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="1" />
+            <constantValueBool v="0" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -5028,7 +5258,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="1" />
+                <value v="0" />
               </option>
               <option>
                 <name v="label0" />
@@ -5687,7 +5917,7 @@
         <compNode>
           <uid v="1404086035" />
           <GUILayout>
-            <gpos v="-304 405.2229 0" />
+            <gpos v="-337.733276 265.25769 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5757,7 +5987,7 @@
         <compNode>
           <uid v="1404092527" />
           <GUILayout>
-            <gpos v="976 -208 0" />
+            <gpos v="784 -112 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5860,7 +6090,7 @@
         <compNode>
           <uid v="1404093098" />
           <GUILayout>
-            <gpos v="2064 272 0" />
+            <gpos v="2202.30811 516.024536 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -5878,7 +6108,7 @@
         <compNode>
           <uid v="1404096169" />
           <GUILayout>
-            <gpos v="421.333344 432 0" />
+            <gpos v="368 560 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5903,7 +6133,7 @@
         <compNode>
           <uid v="1404168823" />
           <GUILayout>
-            <gpos v="176 432 0" />
+            <gpos v="189.439453 560 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -5982,7 +6212,7 @@
         <compNode>
           <uid v="1404168852" />
           <GUILayout>
-            <gpos v="-304 565.2229 0" />
+            <gpos v="-27.9061165 560 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6021,7 +6251,7 @@
         <compNode>
           <uid v="1404185396" />
           <GUILayout>
-            <gpos v="410.666656 -144 0" />
+            <gpos v="581.333313 -85.3333359 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6032,8 +6262,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1414700264" />
-              <connRefOutput v="1414700265" />
+              <connRef v="1472658898" />
+              <connRefOutput v="1472658899" />
             </connection>
           </connections>
           <compImplementation>
@@ -6046,7 +6276,7 @@
         <compNode>
           <uid v="1404329976" />
           <GUILayout>
-            <gpos v="1200 432 0" />
+            <gpos v="1072 240 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6056,14 +6286,14 @@
           </compOutputs>
           <connections>
             <connection>
+              <identifier v="destination" />
+              <connRef v="1472094051" />
+              <connRefOutput v="1472094052" />
+            </connection>
+            <connection>
               <identifier v="source" />
               <connRef v="1404342926" />
               <connRefOutput v="1404342927" />
-            </connection>
-            <connection>
-              <identifier v="destination" />
-              <connRef v="1404092527" />
-              <connRefOutput v="1404092528" />
             </connection>
           </connections>
           <compImplementation>
@@ -6090,7 +6320,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="144 157 0" />
+                            <gpos v="80 157 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -6112,7 +6342,7 @@
                             </connection>
                           </connections>
                           <GUILayout>
-                            <gpos v="464 126 0" />
+                            <gpos v="528 318.399994 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -6128,7 +6358,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="80 304 0" />
+                            <gpos v="80 317 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -6144,11 +6374,18 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="240 336 0" />
+                            <gpos v="80 477 0" />
                           </GUILayout>
                         </paramNode>
                       </paramNodes>
                     </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -6158,7 +6395,7 @@
         <compNode>
           <uid v="1404342529" />
           <GUILayout>
-            <gpos v="-304 -272 0" />
+            <gpos v="-337.733276 -194.457138 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6228,7 +6465,7 @@
         <compNode>
           <uid v="1404342698" />
           <GUILayout>
-            <gpos v="-96.4078827 -144 0" />
+            <gpos v="-112 -85.3333359 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6238,13 +6475,13 @@
           </compOutputs>
           <connections>
             <connection>
+              <identifier v="input_2" />
+              <connRef v="1404346183" />
+            </connection>
+            <connection>
               <identifier v="input_1" />
               <connRef v="1404342529" />
               <connRefOutput v="1404342530" />
-            </connection>
-            <connection>
-              <identifier v="input_2" />
-              <connRef v="1404346183" />
             </connection>
           </connections>
           <compImplementation>
@@ -6288,7 +6525,7 @@
         <compNode>
           <uid v="1404342926" />
           <GUILayout>
-            <gpos v="880 418.601532 0" />
+            <gpos v="826.666687 229.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6313,7 +6550,7 @@
         <compNode>
           <uid v="1404346183" />
           <GUILayout>
-            <gpos v="-304 -112 0" />
+            <gpos v="-336 16 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6355,13 +6592,6 @@
                     </dynamicValue>
                   </paramValue>
                 </parameter>
-                <parameter>
-                  <name v="outputsize" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt2 v="4 4" />
-                  </paramValue>
-                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -6369,7 +6599,7 @@
         <compNode>
           <uid v="1413168092" />
           <GUILayout>
-            <gpos v="112 -144 0" />
+            <gpos v="80 -85.3333359 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6467,7 +6697,7 @@
         <compNode>
           <uid v="1414700264" />
           <GUILayout>
-            <gpos v="304 -144 0" />
+            <gpos v="240 -222.800735 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6485,32 +6715,7 @@
           <compImplementation>
             <compInstance>
               <path v="pkg:///invert?dependency=1368115694" />
-              <parameters>
-                <parameter>
-                  <name v="invert" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1414700278" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1414700278" />
-                          <function v="get_bool" />
-                          <type v="4" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_bool" />
-                              <constantValue>
-                                <constantValueString v="invert_color_input" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-              </parameters>
+              <parameters />
               <outputBridgings>
                 <outputBridging>
                   <uid v="1414700265" />
@@ -6523,7 +6728,7 @@
         <compNode>
           <uid v="1414708304" />
           <GUILayout>
-            <gpos v="-144 400 0" />
+            <gpos v="-80 265.25769 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6947,7 +7152,7 @@
         <compNode>
           <uid v="1414708695" />
           <GUILayout>
-            <gpos v="2032 656 0" />
+            <gpos v="2202.30811 720 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -6965,7 +7170,7 @@
         <compNode>
           <uid v="1414708734" />
           <GUILayout>
-            <gpos v="506.666656 613.333313 0" />
+            <gpos v="549.333313 715.999512 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -6990,7 +7195,7 @@
         <compNode>
           <uid v="1414830916" />
           <GUILayout>
-            <gpos v="735.748718 720 0" />
+            <gpos v="89.4272079 1221.3335 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7014,7 +7219,7 @@
         <compNode>
           <uid v="1414830952" />
           <GUILayout>
-            <gpos v="1616 538.666687 0" />
+            <gpos v="1562.66663 530.666626 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7024,19 +7229,19 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="#input" />
-              <connRef v="1414834597" />
-              <connRefOutput v="1414834598" />
-            </connection>
-            <connection>
               <identifier v="destination" />
               <connRef v="1414834998" />
               <connRefOutput v="1414834098" />
             </connection>
             <connection>
+              <identifier v="#input" />
+              <connRef v="1472094227" />
+              <connRefOutput v="1472094228" />
+            </connection>
+            <connection>
               <identifier v="source" />
-              <connRef v="1414830980" />
-              <connRefOutput v="1414830981" />
+              <connRef v="1472094371" />
+              <connRefOutput v="1472094372" />
             </connection>
           </connections>
           <compImplementation>
@@ -7094,6 +7299,13 @@
                     </dynamicValue>
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="colorblending" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
               </parameters>
             </compFilter>
           </compImplementation>
@@ -7107,7 +7319,7 @@
         <compNode>
           <uid v="1414830980" />
           <GUILayout>
-            <gpos v="1057.07031 720 0" />
+            <gpos v="281.427216 1221.3335 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7154,7 +7366,7 @@
         <compNode>
           <uid v="1414834097" />
           <GUILayout>
-            <gpos v="1744 266.964722 501" />
+            <gpos v="1829.33337 516.024536 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7164,22 +7376,17 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="input_1" />
-              <connRef v="1404092527" />
-              <connRefOutput v="1404092528" />
-            </connection>
-            <connection>
               <identifier v="input_2" />
               <connRef v="1414830952" />
               <connRefOutput v="1414830953" />
             </connection>
             <connection>
-              <identifier v="input_3" />
-              <connRef v="1414830952" />
-              <connRefOutput v="1414830953" />
+              <identifier v="input_1" />
+              <connRef v="1472094120" />
+              <connRefOutput v="1472094121" />
             </connection>
             <connection>
-              <identifier v="input_4" />
+              <identifier v="input_3" />
               <connRef v="1414830952" />
               <connRefOutput v="1414830953" />
             </connection>
@@ -7188,13 +7395,6 @@
             <compInstance>
               <path v="pkg:///multi_switch?dependency=1299239600" />
               <parameters>
-                <parameter>
-                  <name v="input_number" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt32 v="4" />
-                  </paramValue>
-                </parameter>
                 <parameter>
                   <name v="input_selection" />
                   <relativeTo v="0" />
@@ -7219,6 +7419,13 @@
                     </dynamicValue>
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="input_number" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
               </parameters>
               <outputBridgings>
                 <outputBridging>
@@ -7232,7 +7439,7 @@
         <compNode>
           <uid v="1414834597" />
           <GUILayout>
-            <gpos v="1328 752 501" />
+            <gpos v="89.4272079 1033.3335 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7278,7 +7485,7 @@
         <compNode>
           <uid v="1414834998" />
           <GUILayout>
-            <gpos v="1424 186.666672 0" />
+            <gpos v="1296 528 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7294,8 +7501,8 @@
             </connection>
             <connection>
               <identifier v="input_3" />
-              <connRef v="1404185396" />
-              <connRefOutput v="1404185397" />
+              <connRef v="1472094084" />
+              <connRefOutput v="1472094085" />
             </connection>
           </connections>
           <compImplementation>
@@ -7346,7 +7553,7 @@
         <compNode>
           <uid v="1414837350" />
           <GUILayout>
-            <gpos v="-176 720 0" />
+            <gpos v="-27.9061165 720 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -7384,7 +7591,7 @@
                             </connection>
                           </connections>
                           <GUILayout>
-                            <gpos v="912 48 0" />
+                            <gpos v="720 32 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7400,7 +7607,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="112 287.9841 0" />
+                            <gpos v="96 240 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7418,7 +7625,7 @@
                             </connection>
                           </connections>
                           <GUILayout>
-                            <gpos v="528 157.337601 0" />
+                            <gpos v="464 224.277802 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7436,7 +7643,7 @@
                             </connection>
                           </connections>
                           <GUILayout>
-                            <gpos v="290.807098 48 0" />
+                            <gpos v="304 32 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7452,7 +7659,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="80 144 0" />
+                            <gpos v="96 112 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7468,7 +7675,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="94.9465027 -16 0" />
+                            <gpos v="96 -16 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7476,7 +7683,7 @@
                           <function v="const_bool" />
                           <type v="4" />
                           <GUILayout>
-                            <gpos v="560 -16 0" />
+                            <gpos v="464 -240 0" />
                           </GUILayout>
                         </paramNode>
                         <paramNode>
@@ -7492,7 +7699,7 @@
                             </funcData>
                           </funcDatas>
                           <GUILayout>
-                            <gpos v="688 240 0" />
+                            <gpos v="464 -80 0" />
                           </GUILayout>
                         </paramNode>
                       </paramNodes>
@@ -7503,19 +7710,248 @@
             </compFilter>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1472094037" />
+          <GUILayout>
+            <gpos v="1168.66541 203.713928 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094038" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472094051" />
+          <GUILayout>
+            <gpos v="965.333374 -106.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094052" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1404092527" />
+              <connRefOutput v="1404092528" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472094084" />
+          <GUILayout>
+            <gpos v="698.666687 549.333313 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094085" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1404185396" />
+              <connRefOutput v="1404185397" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472094120" />
+          <GUILayout>
+            <gpos v="1637.33337 -106.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094121" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1472094051" />
+              <connRefOutput v="1472094052" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472094227" />
+          <GUILayout>
+            <gpos v="1306.66663 1054.66675 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094228" />
+              <comptype v="4" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414834597" />
+              <connRefOutput v="1414834598" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472094317" />
+          <GUILayout>
+            <gpos v="549.333313 890.666626 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094318" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1414830980" />
+              <connRefOutput v="1414830981" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472094371" />
+          <GUILayout>
+            <gpos v="1242.66663 890.666626 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472094372" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1472094317" />
+              <connRefOutput v="1472094318" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472658898" />
+          <GUILayout>
+            <gpos v="368 -85.3333359 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472658899" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_1" />
+              <connRef v="1414700264" />
+              <connRefOutput v="1414700265" />
+            </connection>
+            <connection>
+              <identifier v="input_2" />
+              <connRef v="1413168092" />
+              <connRefOutput v="1413168093" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///switch?dependency=1299239600" />
+              <parameters>
+                <parameter>
+                  <name v="switch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1472658953" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1472658953" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="invert_color_input" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1472658899" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="992 341.333344 -100" />
-            <size v="384 192" />
+            <gpos v="704 128 -100" />
+            <size v="522.666626 213.333328" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1414699315" />
-          <title v="mask overlay" />
-          <frameColor v="0.983870983 1 0 0.250980407" />
+          <title v=" BLEND: Mask Layer Solo Overlay" />
+          <frameColor v="0.0494699478 1 0 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
@@ -7555,39 +7991,28 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="608 -384 -100" />
-            <size v="256 704" />
+            <gpos v="682.666687 -234.666672 -100" />
+            <size v="202.666672 245.333328" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1414699572" />
           <title v="Blend" />
-          <frameColor v="1 0 0 0.250980407" />
+          <frameColor v="0.0470588244 0.450980395 0.145098045 0.579999983" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="224 -224 0" />
-            <size v="160 757.333313" />
+            <gpos v="21.333334 -352 -100" />
+            <size v="437.333344 351.999969" />
           </GUILayout>
-          <GUIName v="" />
+          <GUIName
+            v="TODO: this invert ( switch is temp fix )&#10;node appears to be broken when toggled -- it loses any alpha/transparency when set to false.&#10;                             &gt;&gt;&gt;&gt;"
+          />
           <uid v="1414700558" />
-          <title v="invert color" />
+          <title v="Apply Color Adjustments HSL &gt;&gt; INVERT COLOR" />
           <frameColor v="1 0.920454562 0 0.250980407" />
-          <isTitleVisible v="1" />
-          <isFrameVisible v="1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUILayout>
-            <gpos v="32 -224 0" />
-            <size v="160 384" />
-          </GUILayout>
-          <GUIName v="" />
-          <uid v="1414700570" />
-          <title v="HSL" />
-          <frameColor v="0 0.897727489 1 0.250980407" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
@@ -7595,11 +8020,124 @@
           <type v="COMMENT" />
           <GUIDependency v="NODE?1414834097" />
           <GUILayout>
-            <gpos v="-40 72.6666641 0" />
+            <gpos v="-62.9305 42.666626 -100" />
             <size v="117 40" />
           </GUILayout>
           <GUIName v="solo overlay switch" />
           <uid v="1414834241" />
+          <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="10.666667 938.666687 -100" />
+            <size v="384 384.000031" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472094273" />
+          <title v="Solo Icon" />
+          <frameColor v="0 0.433333308 0.833333313 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1216 448 -100" />
+            <size v="160.000046 181.333344" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472094641" />
+          <title v="SWITCH - Solo Overlay" />
+          <frameColor v="0.958333313 0 0 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1404342926" />
+          <GUILayout>
+            <gpos v="-40 62 0" />
+            <size v="117 40" />
+          </GUILayout>
+          <GUIName v="Mask to Color Output" />
+          <uid v="1472095171" />
+          <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1482.66663 448 -100" />
+            <size v="160 191.999985" />
+          </GUILayout>
+          <GUIName v="over intended final layer&#10;" />
+          <uid v="1472095440" />
+          <title v="BLEND: solo icon " />
+          <frameColor v="0.129999995 0.41568628 0.152941182 1" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1414837350" />
+          <GUILayout>
+            <gpos v="-58.6666679 44.6279106 -100" />
+            <size v="117 40" />
+          </GUILayout>
+          <GUIName v="Logic: Mask On/Off&#10;" />
+          <uid v="1472099317" />
+          <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-117.333336 469.333344 -100" />
+            <size v="394.666656 362.666656" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472099583" />
+          <title v="Toggle Mask On/Off Switch" />
+          <frameColor v="0.474509805 0.168627456 0.180392161 1" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-224 146.515381 -100" />
+            <size v="277.333344 192" />
+          </GUILayout>
+          <GUIName
+            v="GBT Mask Select and Refine&#10;- Levels OR Histogram Select&#10;- Distance&#10;- Blur"
+          />
+          <uid v="1472099723" />
+          <title v="Apply Mask Adjustments " />
+          <frameColor v="0.443137258 0.423529416 0.141176477 1" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1728 437.333344 -100" />
+            <size v="192 202.666641" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472100097" />
+          <title v="SWITCH: Mask Overlay Combined" />
+          <frameColor v="0.600000024 0 0 0.479999989" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUIDependency v="NODE?1414700264" />
+          <GUILayout>
+            <gpos v="-240 -69.3333359 -100" />
+            <size v="117 40" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1472659214" />
           <frameColor v="0 0 0 1" />
         </GUIObject>
       </GUIObjects>
@@ -7625,39 +8163,15 @@
       </root>
       <sbspresets>
         <sbspreset>
-          <label v="New Preset" />
+          <label v="Colorize Layer" />
           <presetinputs>
-            <presetinput>
-              <uid v="1404093054" />
-              <identifier v="toggle_layers_stack" />
-              <paramValue>
-                <constantValueBool v="0" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
             <presetinput>
               <uid v="1404168644" />
               <identifier v="toggle_enable_mask" />
               <paramValue>
-                <constantValueBool v="1" />
+                <constantValueBool v="0" />
               </paramValue>
               <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1404093213" />
-              <identifier v="Foreground_Opacity" />
-              <paramValue>
-                <constantValueFloat1 v="1" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1404093196" />
-              <identifier v="Blending_Mode" />
-              <paramValue>
-                <constantValueInt1 v="0" />
-              </paramValue>
-              <type v="16" />
             </presetinput>
             <presetinput>
               <uid v="1404330173" />
@@ -7668,16 +8182,16 @@
               <type v="16" />
             </presetinput>
             <presetinput>
-              <uid v="1414833678" />
-              <identifier v="toggle_solo_icon" />
+              <uid v="1404330519" />
+              <identifier v="mask_overlay_opacity" />
               <paramValue>
                 <constantValueBool v="1" />
               </paramValue>
               <type v="4" />
             </presetinput>
             <presetinput>
-              <uid v="1404330519" />
-              <identifier v="mask_overlay_opacity" />
+              <uid v="1414833678" />
+              <identifier v="toggle_solo_icon" />
               <paramValue>
                 <constantValueBool v="1" />
               </paramValue>
@@ -7701,7 +8215,7 @@
             </presetinput>
             <presetinput>
               <uid v="1404184483" />
-              <identifier v="toggle_a" />
+              <identifier v="toggle_input" />
               <paramValue>
                 <constantValueBool v="0" />
               </paramValue>
@@ -7709,219 +8223,11 @@
             </presetinput>
             <presetinput>
               <uid v="1404184598" />
-              <identifier v="fill_color_a" />
+              <identifier v="fill_color" />
               <paramValue>
-                <constantValueFloat4 v="0 1 0.896551609 1" />
+                <constantValueFloat4 v="1 0 0 1" />
               </paramValue>
               <type v="2048" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168607" />
-              <identifier v="invert_color_input_a" />
-              <paramValue>
-                <constantValueBool v="0" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168368" />
-              <identifier v="input_a_hue" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168370" />
-              <identifier v="input_a_saturation" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168372" />
-              <identifier v="input_a_luminosity" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1404185169" />
-              <identifier v="toggle_b" />
-              <paramValue>
-                <constantValueBool v="1" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1404185204" />
-              <identifier v="fill_color_b" />
-              <paramValue>
-                <constantValueFloat4 v="1 1 1 1" />
-              </paramValue>
-              <type v="2048" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414700354" />
-              <identifier v="invert_color_input_b" />
-              <paramValue>
-                <constantValueBool v="0" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168327" />
-              <identifier v="input_b_hue" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168329" />
-              <identifier v="input_b_saturation" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1413168331" />
-              <identifier v="input_b_luminosity" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708372" />
-              <identifier v="refine_select_mask_invert" />
-              <paramValue>
-                <constantValueBool v="0" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708374" />
-              <identifier v="refine_select_mask_toggle_histogram_select" />
-              <paramValue>
-                <constantValueBool v="0" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708376" />
-              <identifier v="refine_select_mask_histogram_select_position" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708378" />
-              <identifier v="refine_select_mask_histogram_select_range" />
-              <paramValue>
-                <constantValueFloat1 v="0.25" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708380" />
-              <identifier v="refine_select_mask_histogram_select_constrast" />
-              <paramValue>
-                <constantValueFloat1 v="0" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708382" />
-              <identifier v="refine_select_mask_levelinlow" />
-              <paramValue>
-                <constantValueFloat1 v="0" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708384" />
-              <identifier v="refine_select_mask_levelinhigh" />
-              <paramValue>
-                <constantValueFloat1 v="1" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708386" />
-              <identifier v="refine_select_mask_levelinmid" />
-              <paramValue>
-                <constantValueFloat1 v="0.5" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708388" />
-              <identifier v="refine_select_mask_leveloutlow" />
-              <paramValue>
-                <constantValueFloat1 v="0" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708390" />
-              <identifier v="refine_select_mask_levelouthigh" />
-              <paramValue>
-                <constantValueFloat1 v="1" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708392" />
-              <identifier v="refine_select_mask_clampinterm" />
-              <paramValue>
-                <constantValueBool v="1" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708394" />
-              <identifier v="refine_select_mask_toggle_distance" />
-              <paramValue>
-                <constantValueBool v="0" />
-              </paramValue>
-              <type v="4" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708396" />
-              <identifier v="refine_select_mask_distance" />
-              <paramValue>
-                <constantValueFloat1 v="10" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708398" />
-              <identifier v="refine_select_mask_distancemode" />
-              <paramValue>
-                <constantValueInt1 v="1" />
-              </paramValue>
-              <type v="16" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708400" />
-              <identifier v="refine_select_mask_blur_Intensity" />
-              <paramValue>
-                <constantValueFloat1 v="7.17000008" />
-              </paramValue>
-              <type v="256" />
-            </presetinput>
-            <presetinput>
-              <uid v="1414708402" />
-              <identifier v="refine_select_mask_blur_Quality" />
-              <paramValue>
-                <constantValueInt1 v="0" />
-              </paramValue>
-              <type v="16" />
             </presetinput>
             <presetinput>
               <uid v="1414767977" />
