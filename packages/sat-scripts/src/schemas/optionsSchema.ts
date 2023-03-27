@@ -1,5 +1,6 @@
-import { zod } from '@snailicide/g-library'
+import { zod, stringTransform } from '@snailicide/g-library'
 import { z } from 'zod'
+import RA from 'ramda-adjunct'
 
 export const sbs_updater_options = zod
     .object({
@@ -18,6 +19,42 @@ export const sbs_updater_options = zod
         outDir: zod
             .optionalDefault(zod.string(), './dist')
             .describe('<dir> Output directory'),
+        outFile: z
+            .string()
+            .optional()
+            .refine(
+                (val) => {
+                    return RA.isString(val) ? !/\\|\//.test(val) : true
+                },
+                {
+                    message:
+                        "outFile can't contain filepath characters like file extension, / ,\\",
+                }
+            )
+            .transform((val) => {
+                /* this will identify a file/([a-zA-Z\d]|\d){3,}\.{1}([a-zA-Z0-9]{2,})$/ that can be split  */
+                if (
+                    val !== undefined &&
+                    /\./.test(val) &&
+                    /([a-zA-Z\d]|\d){3,}\.{1}([a-zA-Z0-9]{2,})$/.test(val)
+                ) {
+                    return val.split('.') !== undefined &&
+                        val.split('.').length > 0
+                        ? val.split('.')[0]
+                        : val
+                } else return val
+            })
+            .refine(
+                (val) => {
+                    return val === undefined || !/\./.test(val) ? true : false
+                },
+                {
+                    message: "outFile can't contain '.' characters",
+                }
+            )
+            .describe(
+                '<string>The name of file to export.\nThis option will only be used with the --merge flag OR disregarded if more than 1 file in --inputSBS'
+            ),
         overwrite: zod
             .optionalDefault(zod.boolean(), false)
             .describe('Overwrite output files if they already excist'),
@@ -40,7 +77,7 @@ export const resolved_sbs_updater_options = zod.object({
     inputSBS: zod.array(zod.filePathExists).nonempty(),
     inputData: zod.array(zod.filePath).optional(),
     outDir: zod.filePathExists,
-
+    outFile: z.string().optional(),
     merge: zod.optionalDefault(zod.boolean(), false),
     raw: zod.boolean(),
     overwrite: zod.boolean(),

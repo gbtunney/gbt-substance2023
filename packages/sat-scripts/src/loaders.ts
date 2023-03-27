@@ -26,6 +26,23 @@ import { _flattenDataQueue } from './mappers/mergeAll.js'
 
 //this file is a MESS.
 export const loadAllFiles = async (options: ResolvedSBS_UpdaterOptions) => {
+    const outDir = zod.filePath.parse(options.outDir)
+    let outFilename: string | undefined = undefined
+
+    if (options.merge === true) {
+        outFilename =
+            options.outFile !== undefined
+                ? options.outFile
+                : //use first file name
+                  getFilename(options.inputSBS[0])
+    } else {
+        if (options.inputSBS.length === 1) {
+            outFilename =
+                options.outFile !== undefined
+                    ? options.outFile
+                    : getFilename(options.inputSBS[0])
+        }
+    }
     const dataToMerge = await options.inputSBS.map(async (_inputSBS) => {
         return await getData(
             _inputSBS,
@@ -35,7 +52,7 @@ export const loadAllFiles = async (options: ResolvedSBS_UpdaterOptions) => {
                 : undefined
         )
     })
-    const outDir = zod.filePath.parse(options.outDir)
+
     Promise.all(dataToMerge)
         .catch(() => {
             console.log('busted', dataToMerge)
@@ -53,7 +70,12 @@ export const loadAllFiles = async (options: ResolvedSBS_UpdaterOptions) => {
                         console.log('warn: data is undefined')
                         return acc
                     }, {})
-                    const fileName = 'merged' //todo: replace this with name flag??
+                    const fileName =
+                        outFilename !== undefined
+                            ? outFilename
+                            : 'merged_something_is_wrong'
+
+                    //todo: replace this with name flag??
                     const outputJSONFilePath = zod.filePath.parse(
                         `${outDir}/${fileName}.json`
                     )
@@ -70,9 +92,14 @@ export const loadAllFiles = async (options: ResolvedSBS_UpdaterOptions) => {
                             sbs_schema.safeParse(_dataToWrite).success &&
                             options.inputSBS[index] !== undefined
                         ) {
-                            const fileName = getFilename(
-                                options.inputSBS[index] as string
-                            ) //todo:fix someday
+                            const fileName =
+                                outFilename !== undefined
+                                    ? outFilename
+                                    : getFilename(
+                                          options.inputSBS[index] as string
+                                      )
+
+                            //todo:fix someday
                             const newfilecontent = JSON.parse(
                                 JSON.stringify(sbs_schema.parse(_dataToWrite))
                             )
