@@ -1,6 +1,9 @@
 //load input files
-import { ElementCompact, js2xml, xml2js } from 'xml-js'
+import { js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
+import { z } from 'zod'
+import RA from 'ramda-adjunct'
+import { deepmerge } from 'deepmerge-ts'
 import { Json, zod } from '@snailicide/g-library'
 import { getExt, getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
@@ -19,23 +22,82 @@ import {
     getPackageDictionaryByID,
     getPackageFinalEntry,
 } from './mappers/package.js'
-import { deepmerge } from 'deepmerge-ts'
 import { _flattenDataQueue } from './mappers/mergeAll.js'
 
-export const loadAllFiles = (options: ResolvedSBS_UpdaterOptions) => {
-    ///LOAD PACKAGE>
-    options.inputSBS.forEach((_inputSBS) => {
-        loadFile(
+//this file is a MESS.
+export const loadAllFiles = async (options: ResolvedSBS_UpdaterOptions) => {
+    const dataToMerge = await options.inputSBS.map(async (_inputSBS) => {
+        return await getData(
             _inputSBS,
             //todo: THIS ONLY ALLOWS 1 DATAFILE AT THE MOMENT
             options.inputData && options.inputData.length > 0
                 ? options.inputData[0]
-                : undefined,
-            options.outDir,
-            options.overwrite,
-            options.debug
+                : undefined
         )
     })
+    const outDir = zod.filePath.parse(options.outDir)
+    Promise.all(dataToMerge)
+        .catch(() => {
+            console.log('busted', dataToMerge)
+        })
+        .then((_data) => {
+            if (options.merge) {
+                if (RA.isArray(_data)) {
+                    const _flattened = _data.reduce((acc, value) => {
+                        if (value !== undefined) {
+                            const mergeResult = deepmerge(acc, value)
+                            if (sbs_schema.safeParse(mergeResult).success) {
+                                return sbs_schema.parse(mergeResult)
+                            }
+                        }
+                        console.log('warn: data is undefined')
+                        return acc
+                    }, {})
+                    const fileName = 'merged' //todo: replace this with name flag??
+                    const outputJSONFilePath = zod.filePath.parse(
+                        `${outDir}/${fileName}.json`
+                    )
+                    const outputFilePath = zod.filePath.parse(
+                        `${outDir}/${fileName}.sbs`
+                    )
+                    writeFile(_flattened, outputJSONFilePath, options.debug)
+                    writeXMLFile(_flattened, outputFilePath, options.overwrite)
+                }
+            } else {
+                if (RA.isArray(_data)) {
+                    _data.forEach((_dataToWrite, index) => {
+                        if (
+                            sbs_schema.safeParse(_dataToWrite).success &&
+                            options.inputSBS[index] !== undefined
+                        ) {
+                            const fileName = getFilename(
+                                options.inputSBS[index] as string
+                            ) //todo:fix someday
+                            const newfilecontent = JSON.parse(
+                                JSON.stringify(sbs_schema.parse(_dataToWrite))
+                            )
+
+                            const outputJSONFilePath = zod.filePath.parse(
+                                `${outDir}/${fileName}.json`
+                            )
+                            writeFile(
+                                newfilecontent,
+                                outputJSONFilePath,
+                                options.debug
+                            )
+                            const outputFilePath = zod.filePath.parse(
+                                `${outDir}/${fileName}.sbs`
+                            )
+                            writeXMLFile(
+                                newfilecontent,
+                                outputFilePath,
+                                options.overwrite
+                            )
+                        }
+                    })
+                }
+            }
+        })
 }
 
 /* * Get InputData Data * */
@@ -69,8 +131,6 @@ export const getSBSData = (inputSBS: string): SBS_Schema | undefined => {
         if (sbs_schema.safeParse(inputJS).success) {
             return sbs_schema.parse(inputJS)
         }
-
-        const thearr = sbs_schema.parse(inputJS)
         return undefined
     }
     return undefined
@@ -85,7 +145,6 @@ const loadReplaceData = async (
         const { default: tempJS } = await import(resolvedInputDataPath)
         return tempJS !== undefined ? JSON.parse(JSON.stringify(tempJS)) : {}
     }
-    return {}
 }
 
 const getDefaultReplaceData = (key: string): ReplaceFileSchema => {
@@ -111,13 +170,11 @@ const getDefaultReplaceData = (key: string): ReplaceFileSchema => {
     }
 }
 
-export const loadFile = async (
+///todo: this needs to be moved somewhere data related
+export const getData = async (
     inputSBS: string,
-    inputData: string | undefined,
-    _outDir: string,
-    overwrite: boolean = true,
-    debug: boolean = true
-) => {
+    inputData: string | undefined
+): Promise<z.infer<typeof sbs_schema> | undefined> => {
     const tempInputSBS = getSBSData(inputSBS)
 
     if (tempInputSBS !== undefined) {
@@ -186,33 +243,25 @@ export const loadFile = async (
         }
         let clearFile = rawSBSData
         clearFile.package.content.graph = []
-        // const tempClearFILE = deepmerge( rawSBSData,{ package: { content :{ graph :[] }} })
         const tempFILE = deepmerge(clearFile, { package: FINALPACKAGE })
         debugger
         if (sbs_schema.safeParse(tempFILE).success) {
-            const fileObj = JSON.parse(
-                JSON.stringify(sbs_schema.parse(tempFILE))
-            )
-            const outDir = zod.filePath.parse(_outDir)
-            writeFile(fileObj, packageKey, outDir, debug)
-            writeXMLFile(fileObj, packageKey, outDir, overwrite)
+            return sbs_schema.parse(tempFILE)
         }
     }
+    return undefined
 }
 
 /* * WRITE XML OUTPUT * */
 export const writeXMLFile = (
     data: Json.Object,
-    filename: string,
-    _outDir: string,
+    filepath: string,
     overwrite: boolean
 ) => {
-    const outputFilePath = zod.filePath.parse(`${_outDir}/${filename}.sbs`)
     if (
-        (!zod.filePathExists.safeParse(outputFilePath).success && !overwrite) ||
+        (!zod.filePathExists.safeParse(filepath).success && !overwrite) ||
         overwrite
     ) {
-        // writeXMLFile(outputFilePath, data)
         const outputXMLString: string = js2xml(data, {
             compact: true,
             attributeValueFn: function (value) {
@@ -223,12 +272,12 @@ export const writeXMLFile = (
                     .replace(/&&/g, '&amp;&amp;')
             },
         })
-        fs.writeFileSync(outputFilePath, outputXMLString)
-        console.log('FILE WRITTEN TO::: ', outputFilePath)
+        fs.writeFileSync(filepath, outputXMLString)
+        console.log('FILE WRITTEN TO::: ', filepath)
     } else {
         console.log(
             'FILE NOT WRITTEN TO inputSBS:::',
-            outputFilePath,
+            filepath,
             'BECAUSE overwrite is set to false'
         )
     }
@@ -236,17 +285,12 @@ export const writeXMLFile = (
 /* * WRITE DEBUG JSON OUTPUT * */
 export const writeFile = (
     data: Json.Object,
-    filename: string,
-    _outDir: string,
+    filepath: string,
     debug: boolean = true
 ) => {
-    const outputJSONFilePath = zod.filePath.parse(`${_outDir}/${filename}.json`)
     if (debug === true) {
-        fs.writeFileSync(outputJSONFilePath, JSON.stringify(data, undefined, 4))
-        console.log(
-            'DEBUG:::::: outputJSPath FILE WRITTEN TO ',
-            outputJSONFilePath
-        )
+        fs.writeFileSync(filepath, JSON.stringify(data, undefined, 4))
+        console.log('DEBUG:::::: outputJSPath FILE WRITTEN TO ', filepath)
     }
 }
 export default loadAllFiles

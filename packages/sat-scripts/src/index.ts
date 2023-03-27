@@ -1,40 +1,35 @@
 import chalk from 'chalk'
 import clear from 'clear'
 import figlet from 'figlet'
-import program from 'commander'
+import { program } from 'commander'
 import yargs from 'yargs'
-import {
-    SBS_UpdaterOptions,
-    sbs_updater_options,
-} from './schemas/optionsSchema.js'
+import { sbs_updater_options } from './schemas/optionsSchema.js'
 import { resolveOptions } from './options.js'
 import { loadAllFiles } from './loaders.js'
 import { writeAllRawFile } from './raw.js'
+import pkg from './../package.json' assert { type: 'json' }
+
 clear()
 console.log(
     chalk.red(figlet.textSync('sd-build-cli', { horizontalLayout: 'full' }))
 )
 
 program
-    .version('0.0.3')
-    .description('An example CLI for SBS BUILDING')
-    .option('--rootDir <dir>', 'Root Directory')
-    .option(
-        '--inputSBS <glob>',
-        'Directory containing sbs (Relative to rootDir) If using glob USE QUOTES OR WILL ONLY GET 1 file'
+    .version(pkg.version)
+    .description(
+        sbs_updater_options.description
+            ? sbs_updater_options.description
+            : 'error: no title'
     )
-    .option(
-        '--inputData <glob>',
-        'Data file Directory (Relative)( todo: glob?)'
+
+Object.entries(sbs_updater_options.shape).forEach(([key, _schema]) => {
+    program.option(
+        `--${key}`,
+        _schema.description ? _schema.description : 'sdffdfdf'
     )
-    .option('--outDir <type>', 'Output directory')
-    .option('--overwrite', 'Overwrite output files if they already exccist')
-    .option('--debug', 'Write json of transformed sbs')
+})
 
-    .option('--raw', 'Dump raw xmltoJS')
-
-    .option('-h', '--help', 'HELP')
-    .parse(process.argv)
+program.parse(process.argv)
 
 const options = program.opts()
 

@@ -1,16 +1,12 @@
 ///resolve ARGS!! like in vite plugins/
-import {
-    sbs_updater_options,
-    resolved_sbs_updater_options,
-} from './schemas/optionsSchema.js'
-import type {
-    SBS_UpdaterOptions,
-    ResolvedSBS_UpdaterOptions,
-} from './schemas/optionsSchema'
 import { node, zod } from '@snailicide/g-library'
 import isGlob from 'is-glob'
 import shell from 'shelljs'
-
+import {
+    sbs_updater_options,
+    resolved_sbs_updater_options,
+    ResolvedSBS_UpdaterOptions,
+} from './schemas/optionsSchema.js'
 export const resolveOptions = (
     options: any //SBS_UpdaterOptions
 ): ResolvedSBS_UpdaterOptions | undefined => {

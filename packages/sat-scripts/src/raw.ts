@@ -12,14 +12,17 @@ export const writeAllRawFile = (options: ResolvedSBS_UpdaterOptions) => {
 }
 export const writeRawFile = async (inputSBS: string, _outDir: string) => {
     const tempInputSBS = getRawSBSData(inputSBS)
-
     if (tempInputSBS !== undefined) {
         const fileObj = JSON.parse(JSON.stringify(tempInputSBS))
         debugger
-        const outFileName = `raw_${getFilename(inputSBS)}`
         const outDir = zod.filePath.parse(_outDir)
-        writeFile(fileObj, outFileName, outDir, true)
-        writeXMLFile(fileObj, outFileName, outDir, true)
+        const fileName = `raw_${getFilename(inputSBS)}`
+        const outputJSONFilePath = zod.filePath.parse(
+            `${outDir}/${fileName}.json`
+        )
+        const outputFilePath = zod.filePath.parse(`${outDir}/${fileName}.sbs`)
+        writeFile(fileObj, outputJSONFilePath, true)
+        writeXMLFile(fileObj, outputFilePath, true)
     }
 }
 
