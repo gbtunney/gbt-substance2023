@@ -1,6 +1,6 @@
 {
-    "name": "@gbt/blend-tools",
-    "description": "SD Blend Tools",
+    "name": "@gbt/wallpaper-groups",
+    "description": "wallpaper-groups",
     "version": "0.0.0",
     "private": false,
     "type": "module",
@@ -23,33 +23,27 @@
     ],
     "scripts": {
         "\n========== BUILD >> ==========": "",
-        "build": "pnpm build:ts && pnpm build:sbs && mkdir -p dist && pnpm build:sbsar",
-        "build:sbsar": "pnpm sbs:cooker -- --inputs ./_temp/*.sbs --output-path $PWD/dist",
-        "build:sbs": "pnpm run sd:builder -- --outDir ./_temp --inputSBS 'src/*.sbs' --inputData 'meta/fileReplaceSpecScript.js'",
+        "build2": "pnpm clean && mkdir -p dist  && pnpm build:sbs",
+        "build:sbs": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker --inputs ./src/*.sbs --verbose --merge --output-name GBT_WallpaperGroups --output-path ./dist",
         "build:ts": "tsc --build",
+        "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
-        "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render",
-        "test:build": "pnpm sbs:cooker -- --inputs ./tests/*.sbs  --output-path ./tests/_output",
-        "test:render": "pnpm sbs:render --  --inputs ./tests/_output/*.sbsar  --output-path ./tests/_output",
-        "test:pwd": "echo $PWD;",
-        "test:cli": "pnpm exec sdbuilder --help",
-        "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
+        "testbk": "pnpm clean:test && mkdir -p tests/_output && pnpm test:build && pnpm test:render",
+        "test:build": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker  --inputs ./tests/*.sbs --includes /Users/gilliantunney/Substance\\ 12/packages --verbose --size-limit 13 --output-path ./tests/_output",
+        "test:render": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbsrender  render --inputs ./tests/_output/*.sbsar  --output-path ./tests/_output",
         "\n========== PUBLISH >> ==========": "",
         "release": "pnpm prerelease && pnpm publish --access public --report-summary --no-git-checks",
         "prerelease": "pnpm clean && pnpm build && pnpm run docs && pnpm fix && pnpm check && pnpm test",
         "\n========== CLEAN >> ==========": "",
-        "clean": "pnpm clean:ts && pnpm clean:build",
+        "clean": "pnpm clean:autosave && pnpm clean:build &&  pnpm clean:test",
         "clean:ts": "tsc --build --clean",
-        "clean:build": "rm -R -f _temp && rm -R -f dist && rm -R -f tests/_output",
+        "clean:build": "rm -R -f dist",
+        "clean:test": "rm -R -f tests/_output",
         "clean:autosave": "pnpm autosave:list && pnpm run autosave:rm",
         "autosave:list": "find . -name '.autosave' -type d -prune",
         "autosave:rm": "find . -name '.autosave' -type d -prune -exec rm -rf '{}' +",
-        "\n========== SUBSTANCE CLIS >> ==========": "",
-        "sd:builder": "cross-var pnpm exec sdbuilder $npm_package_config_substance_sdbuilder_args",
-        "sbs:cooker": "cross-var pnpm exec $npm_package_config_substance_sbscooker_path $npm_package_config_substance_sbscooker_args",
-        "sbs:render": "cross-var pnpm exec $npm_package_config_substance_sbsrender_path",
         "\n========== CODE STYLE >> ==========": "",
         "prettier": "cross-var prettier {$npm_package_config_prettier_path}.{$npm_package_config_prettier_extensions} --write --ignore-path .gitignore",
         "\n========== CHECK >> ==========": "",
@@ -63,11 +57,9 @@
         "email": "gbtunney@mac.com"
     },
     "devDependencies": {
-        "@gbt/sat-scripts": "workspace:^0.0.0",
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.1.3",
-        "@types/node": "^18.15.11",
         "nodemon": "^2.0.22",
         "prettier": "^2.8.7",
         "python-shell": "^5.0.0",
@@ -75,20 +67,8 @@
         "typescript": "^5.0.2"
     },
     "config": {
-        "substance": {
-            "dependencies": {
-                "path": "/Users/gilliantunney/snailicide_helix/substance/packages"
-            },
-            "sdbuilder": {
-                "args": "--rootDir $PWD --debug --overwrite"
-            },
-            "sbscooker": {
-                "args": "--enable-icons --verbose --includes $npm_package_config_substance_dependencies_path ",
-                "path": "/Users/gilliantunney/snailicide_helix/substance/Contents/MacOS/sbscooker"
-            },
-            "sbsrender": {
-                "path": "/Users/gilliantunney/snailicide_helix/substance/Contents/MacOS/sbsrender render"
-            }
+        "batchtools": {
+            "path": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker"
         },
         "eslint": {
             "extensions": "ts,js,cjs,mjs",
