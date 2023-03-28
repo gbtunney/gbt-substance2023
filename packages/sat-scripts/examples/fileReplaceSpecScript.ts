@@ -1,4 +1,5 @@
-import pkg from './../package.json' assert { type: 'json' }
+//todo: bug SO ANNOYING !!!!!!!  i had to symlink :(will not let me load a json it is so annoying.
+import * as pkg from './package.json'
 const name = pkg.name
 const version = pkg.name
 const description = pkg.description

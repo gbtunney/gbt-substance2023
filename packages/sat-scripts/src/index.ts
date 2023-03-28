@@ -7,7 +7,8 @@ import { sbs_updater_options } from './schemas/optionsSchema.js'
 import { resolveOptions } from './options.js'
 import { loadAllFiles, loadAllInventory } from './loaders.js'
 import { writeAllRawFile } from './raw.js'
-import pkg from './../package.json' assert { type: 'json' }
+//todo: bug SO ANNOYING !!!!!!!  i had to symlink :(will not let me load a json it is so annoying.
+import pkg from './package.json' assert { type: 'json' }
 const hex = '#15034f'
 clear()
 /* * PRINT TITLE * */
