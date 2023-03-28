@@ -1,5 +1,5 @@
 //load input files
-import { js2xml, xml2js } from 'xml-js'
+import { ElementCompact, js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
 import { z } from 'zod'
 import RA from 'ramda-adjunct'
@@ -309,6 +309,40 @@ export const writeXMLFile = (
         )
     }
 }
+
+export const loadAllInventory = (
+    options: ResolvedSBS_UpdaterOptions,
+    filename = 'inventory'
+) => {
+    const dataToMerge = options.inputSBS.map((_inputSBS) => {
+        return getInventoryData(_inputSBS)
+    })
+    console.log(dataToMerge)
+    const outDir = zod.filePath.parse(options.outDir)
+    //todo: replace this with name flag??
+    const outputJSONFilePath = zod.filePath.parse(`${outDir}/${filename}.json`)
+    writeFile(
+        JSON.parse(JSON.stringify(dataToMerge, undefined, 4)),
+        outputJSONFilePath
+    )
+}
+export const getInventoryData = (_inputSBS: string) => {
+    //get resolved raw data
+    const inputSBS: SBS_Schema | undefined = getSBSData(_inputSBS)
+    if (inputSBS !== undefined) {
+        const packageKey = getFilename(_inputSBS) ///the file mame
+        const _tempPackageDictionary = getPackageDictionaryByID(
+            packageKey,
+            inputSBS
+        )
+        const sbsGraphDictionary = getGraphDictionary(
+            inputSBS.package.content.graph
+        )
+        return { ..._tempPackageDictionary, graphs: sbsGraphDictionary }
+    }
+    return undefined
+}
+
 /* * WRITE DEBUG JSON OUTPUT * */
 export const writeFile = (
     data: Json.Object,

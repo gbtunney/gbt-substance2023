@@ -5,13 +5,16 @@ import { program } from 'commander'
 import yargs from 'yargs'
 import { sbs_updater_options } from './schemas/optionsSchema.js'
 import { resolveOptions } from './options.js'
-import { loadAllFiles } from './loaders.js'
+import { loadAllFiles, loadAllInventory } from './loaders.js'
 import { writeAllRawFile } from './raw.js'
 import pkg from './../package.json' assert { type: 'json' }
-
+const hex = '#15034f'
 clear()
+/* * PRINT TITLE * */
 console.log(
-    chalk.red(figlet.textSync('sd-build-cli', { horizontalLayout: 'full' }))
+    chalk
+        .bgHex('15034F')
+        .magenta(figlet.textSync('sd-build-cli', { horizontalLayout: 'full' }))
 )
 
 program
@@ -30,7 +33,6 @@ Object.entries(sbs_updater_options.shape).forEach(([key, _schema]) => {
 })
 
 program.parse(process.argv)
-
 const options = program.opts()
 
 if (options['help']) {
@@ -42,9 +44,8 @@ if (options['help']) {
     if (resolvedArgs !== undefined) {
         if (resolvedArgs.raw) {
             writeAllRawFile(resolvedArgs)
-        } else {
-            loadAllFiles(resolvedArgs)
-        }
+        } else if (resolvedArgs.inventory) loadAllInventory(resolvedArgs)
+        else loadAllFiles(resolvedArgs)
     }
 }
 if (!process.argv.slice(2).length) {

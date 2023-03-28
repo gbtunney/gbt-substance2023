@@ -67,6 +67,10 @@ export const sbs_updater_options = zod
         raw: zod
             .optionalDefault(zod.boolean(), false)
             .describe('Dump raw xmltoJS data '),
+        inventory: zod
+            .boolean()
+            .default(false)
+            .describe('Dump raw file > (dictionary format) '),
         //logFilePath: zod.filePath.optional(),
         //descFilePath: zod.filePath.optional(),
     })
@@ -82,6 +86,7 @@ export const resolved_sbs_updater_options = zod.object({
     raw: zod.boolean(),
     overwrite: zod.boolean(),
     debug: zod.boolean(),
+    inventory: zod.boolean(),
 })
 
 export type SBS_UpdaterOptions = z.infer<typeof sbs_updater_options>
