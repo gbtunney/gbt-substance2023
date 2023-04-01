@@ -19,6 +19,7 @@ module.exports = {
                 'functions',
                 'palatte',
                 'blend-tools',
+                'shelf',
             ],
         ],
     },
