@@ -9156,7 +9156,7 @@
         <compNode>
           <uid v="1413458748" />
           <GUILayout>
-            <gpos v="880 656 0" />
+            <gpos v="880 664.28186 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -9398,7 +9398,7 @@
         <compNode>
           <uid v="1414109666" />
           <GUILayout>
-            <gpos v="669.766785 672.563782 0" />
+            <gpos v="669.766785 664.28186 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>

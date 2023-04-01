@@ -18,5 +18,5 @@
         "types": ["@types/jest", "jest", "node"]
     },
     "exclude": ["**/*.test.ts"],
-    "include": ["**/*.ts", "**/*.json"]
+    "include": ["**/*.ts", "**/package.json"]
 }

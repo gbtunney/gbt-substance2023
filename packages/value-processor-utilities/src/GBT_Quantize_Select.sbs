@@ -15,7 +15,7 @@
     </dependency>
     <dependency>
       <filename v="?himself" />
-      <uid v="1471161787" />
+      <uid v="1472132311" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -695,7 +695,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Quantize_Select?dependency=1471161787" />
+              <path v="pkg:///GBT_Quantize_Select?dependency=1472132311" />
               <parameters>
                 <parameter>
                   <name v="input_total" />
@@ -740,7 +740,7 @@
         <compNode>
           <uid v="1471163117" />
           <GUILayout>
-            <gpos v="62.6457634 176 0" />
+            <gpos v="-80 144 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1000,7 +1000,7 @@
         <compNode>
           <uid v="1471169441" />
           <GUILayout>
-            <gpos v="-48 -2.30867338 0" />
+            <gpos v="-112 -48 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1014,7 +1014,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Grid?dependency=1471161787" />
+              <path v="pkg:///GBT_Grid?dependency=1472132311" />
               <parameters>
                 <parameter>
                   <name v="columns" />
