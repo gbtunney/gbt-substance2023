@@ -321,5 +321,761 @@
         </dynamicValue>
       </paramValue>
     </function>
+    <function>
+      <identifier v="func_lerp_float2" />
+      <uid v="1472416662" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="a" />
+          <uid v="1409361296" />
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="b" />
+          <uid v="1409361333" />
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="x" />
+          <uid v="1409361344" />
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <type v="512" />
+      <paramValue>
+        <dynamicValue>
+          <rootnode v="1409361227" />
+          <paramNodes>
+            <paramNode>
+              <uid v="1409361217" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1409361224" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="436.5 -133.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361218" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1409361224" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="swizzle1" />
+                  <constantValue>
+                    <constantValueInt1 v="1" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="436.5 346.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361219" />
+              <function v="get_float2" />
+              <type v="512" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float2" />
+                  <constantValue>
+                    <constantValueString v="x" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="52.5 186.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361220" />
+              <function v="lerp" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1409361218" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1409361222" />
+                </connection>
+                <connection>
+                  <identifier v="x" />
+                  <connRef v="1409361223" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="628.5 506.5 502" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361221" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1409361219" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="436.5 186.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361222" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1409361228" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="swizzle1" />
+                  <constantValue>
+                    <constantValueInt1 v="1" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="436.5 506.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361223" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1409361219" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="swizzle1" />
+                  <constantValue>
+                    <constantValueInt1 v="1" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="436.5 666.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361224" />
+              <function v="get_float2" />
+              <type v="512" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float2" />
+                  <constantValue>
+                    <constantValueString v="a" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="52.5 -133.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361225" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1409361228" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="436.5 26.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361226" />
+              <function v="lerp" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1409361217" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1409361225" />
+                </connection>
+                <connection>
+                  <identifier v="x" />
+                  <connRef v="1409361221" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="628.5 26.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361227" />
+              <function v="vector2" />
+              <type v="512" />
+              <connections>
+                <connection>
+                  <identifier v="componentsin" />
+                  <connRef v="1409361226" />
+                </connection>
+                <connection>
+                  <identifier v="componentslast" />
+                  <connRef v="1409361220" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="820.5 282.5 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1409361228" />
+              <function v="get_float2" />
+              <type v="512" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float2" />
+                  <constantValue>
+                    <constantValueString v="b" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="52.5 26.5 1" />
+              </GUILayout>
+            </paramNode>
+          </paramNodes>
+        </dynamicValue>
+      </paramValue>
+    </function>
+    <function>
+      <identifier v="func_float1_remap_value" />
+      <uid v="1472461730" />
+      <attributes>
+        <category v="Function" />
+        <author v="Gillian Tunney" />
+        <tags v="remap,  range" />
+        <description v="Remap a floating point value" />
+      </attributes>
+      <paraminputs>
+        <paraminput>
+          <identifier v="input_value" />
+          <uid v="1413423321" />
+          <attributes>
+            <label v="Value" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_old_range" />
+          <uid v="1413423322" />
+          <attributes>
+            <label v="Old Range" />
+          </attributes>
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_new_range" />
+          <uid v="1413423323" />
+          <attributes>
+            <label v="New Range" />
+          </attributes>
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <type v="256" />
+      <paramValue>
+        <dynamicValue>
+          <rootnode v="1413423920" />
+          <paramNodes>
+            <paramNode>
+              <uid v="1413423909" />
+              <function v="get_float1" />
+              <type v="256" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float1" />
+                  <constantValue>
+                    <constantValueString v="input_value" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="-662.275757 77.1666565 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423910" />
+              <function v="passthrough" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1413423923" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="228.166687 503.833344 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423911" />
+              <function v="div" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1413423913" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1413423916" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="185.5 205.166656 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423912" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1413423914" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="swizzle1" />
+                  <constantValue>
+                    <constantValueInt1 v="1" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="-390.5 -306.833344 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423913" />
+              <function v="mul" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1413423921" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1413423915" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="-6.5 205.166656 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423914" />
+              <function v="get_float2" />
+              <type v="512" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float2" />
+                  <constantValue>
+                    <constantValueString v="input_old_range" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="-662.275757 -178.833344 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423915" />
+              <function v="sub" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1413423918" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1413423923" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="-198.5 397.166656 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423916" />
+              <function v="sub" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1413423912" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1413423919" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="-198.5 -178.833344 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423918" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1413423922" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="swizzle1" />
+                  <constantValue>
+                    <constantValueInt1 v="1" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="-390.5 269.166656 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423919" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1413423914" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="-390.5 -82.8333435 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423920" />
+              <function v="add" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1413423911" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1413423910" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="377.5 205.166656 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423921" />
+              <function v="sub" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="a" />
+                  <connRef v="1413423909" />
+                </connection>
+                <connection>
+                  <identifier v="b" />
+                  <connRef v="1413423919" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="-198.5 45.1666565 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423922" />
+              <function v="get_float2" />
+              <type v="512" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float2" />
+                  <constantValue>
+                    <constantValueString v="input_new_range" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="-662.275757 333.166656 1" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1413423923" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1413423922" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="-390.5 493.166656 1" />
+              </GUILayout>
+            </paramNode>
+          </paramNodes>
+          <GUIObjects>
+            <GUIObject>
+              <type v="COMMENT" />
+              <GUILayout>
+                <gpos v="-758.5 -258.833344 1" />
+                <size v="192 672" />
+              </GUILayout>
+              <GUIName v="" />
+              <uid v="1413423917" />
+              <title v="Inputs" />
+              <frameColor v="1 0.67567569 0 0.250980407" />
+              <isTitleVisible v="1" />
+              <isFrameVisible v="1" />
+            </GUIObject>
+          </GUIObjects>
+        </dynamicValue>
+      </paramValue>
+    </function>
   </content>
 </package>
