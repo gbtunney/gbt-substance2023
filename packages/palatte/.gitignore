@@ -1,6 +1,0 @@
-*.js
-*.d.ts
-*.js.map
-/tests/_output
-examples/dependencies
-_temp

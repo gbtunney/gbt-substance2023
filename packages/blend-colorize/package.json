@@ -1,6 +1,6 @@
 {
-    "name": "@gbt/blend-tools",
-    "description": "SD Blend Tools",
+    "name": "@gbt/blend-colorize",
+    "description": "SD Blend & Colorize Tools",
     "version": "0.0.0",
     "private": false,
     "type": "module",

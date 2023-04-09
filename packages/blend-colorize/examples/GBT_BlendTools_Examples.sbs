@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{671d15fc-0877-43ed-b6f0-b180f734ddae}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="sbs://pattern_shape.sbs" />
+      <uid v="1311189026" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://noise_bnw_spots_1.sbs" />
+      <uid v="1470704102" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://noise_cells_4.sbs" />
+      <uid v="1470704340" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="../dist/GBT_Blend_Tools.sbsar" />
+      <uid v="1470708583" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <group>
+      <uid v="1470557861" />
+      <identifier v="Resources" />
+      <content>
+        <resource>
+          <identifier v="ellipse" />
+          <uid v="1470557862" />
+          <type v="bitmap" />
+          <colorSpace v="[use_embedded_profile]" />
+          <format v="png" />
+          <filepath v="../../../../../../Downloads/ellipse.png" />
+          <attributes>
+            <hideInLibrary v="1" />
+          </attributes>
+          <source>
+            <externalcopy>
+              <filename v="GBT_BlendTools_Examples.resources/ellipse.png" />
+            </externalcopy>
+          </source>
+        </resource>
+      </content>
+    </group>
+    <graph>
+      <identifier v="Greyscale_Examples" />
+      <uid v="1470557878" />
+      <graphOutputs />
+      <compNodes>
+        <compNode>
+          <uid v="1470703546" />
+          <GUILayout>
+            <gpos v="-1136 432 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470703547" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Pattern" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.680000007" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size_xy" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.629999995 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1470703547" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470704330" />
+          <GUILayout>
+            <gpos v="-1328 592 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470704331" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///bnw_spots_1?dependency=1470704102" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1470704331" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470704952" />
+          <GUILayout>
+            <gpos v="-1360 784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470704953" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///cells_4?dependency=1470704340" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1470704953" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470704963" />
+          <GUILayout>
+            <gpos v="-848 432 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470704964" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1470703546" />
+              <connRefOutput v="1470703547" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Mask_Select_Refine?dependency=1470708583" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_distance" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="distance" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="46.0399971" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="histogram_select_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.74000001" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="histogram_select_range" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.269999981" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="histogram_select_constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.429999977" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1470704964" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1470708630" />
+          <GUILayout>
+            <gpos v="-912 592 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1470708631" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1470703546" />
+              <connRefOutput v="1470703547" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Mask_Select_Refine?dependency=1470708583" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_distance" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="distance" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="58.3199997" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="histogram_select_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.75999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="histogram_select_constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.459999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="blur_Intensity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="10.5900002" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1470708631" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471838931" />
+          <GUILayout>
+            <gpos v="-1040 656 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471838932" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1471838933" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Blend_Plus_Color?dependency=1470708583" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1471838932" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1471838933" />
+                  <identifier v="output_mask" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471838947" />
+          <GUILayout>
+            <gpos v="-1104 912 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471838948" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1471838949" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_mask" />
+              <connRef v="1470704952" />
+              <connRefOutput v="1470704953" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Quick_Colorize?dependency=1470708583" />
+              <parameters>
+                <parameter>
+                  <name v="fill_color" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1 0 0 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_input" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1471838948" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1471838949" />
+                  <identifier v="output_mask" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1471838988" />
+          <GUILayout>
+            <gpos v="-656 848 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1471838989" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1471838947" />
+              <connRefOutput v="1471838948" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root />
+    </graph>
+  </content>
+</package>
