@@ -17,7 +17,10 @@
     ],
     "scripts": {
         "\n========== BUILD >> ==========": "",
-        "build": "mkdir -p dist && cp node_modules/@gbt/**/dist/* dist",
+        "build": "pnpm build:dir && pnpm build:cp",
+        "build:dir": "mkdir -p dist",
+        "build:ls": "ls -l node_modules/@gbt/**/dist/* ",
+        "build:cp": "cp node_modules/@gbt/**/dist/* dist",
         "\n========== CLEAN >> ==========": "",
         "clean": "pnpm clean:build",
         "clean:build": "rm -R -f _temp && rm -R -f dist && rm -R -f tests/_output",
