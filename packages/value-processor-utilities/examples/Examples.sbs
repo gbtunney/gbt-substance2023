@@ -79,7 +79,7 @@
         <compNode>
           <uid v="1469764441" />
           <GUILayout>
-            <gpos v="-848 -801.274414 0" />
+            <gpos v="-797.579712 -901.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -114,7 +114,7 @@
         <compNode>
           <uid v="1469764630" />
           <GUILayout>
-            <gpos v="-400 -912 0" />
+            <gpos v="-377.579681 -901.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -170,7 +170,7 @@
         <compNode>
           <uid v="1469765120" />
           <GUILayout>
-            <gpos v="656 752 0" />
+            <gpos v="-506.666687 698.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -230,7 +230,7 @@
         <compNode>
           <uid v="1469765299" />
           <GUILayout>
-            <gpos v="336 848 0" />
+            <gpos v="-826.666687 794.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1144,7 +1144,7 @@
         <compNode>
           <uid v="1469777131" />
           <GUILayout>
-            <gpos v="-816 -304 0" />
+            <gpos v="-805.333313 -400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1186,7 +1186,7 @@
         <compNode>
           <uid v="1469777252" />
           <GUILayout>
-            <gpos v="-400 -450.153076 0" />
+            <gpos v="-369.333344 -400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1242,7 +1242,7 @@
         <compNode>
           <uid v="1469778026" />
           <GUILayout>
-            <gpos v="126.466103 282.666687 0" />
+            <gpos v="-854.867249 282.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1346,7 +1346,7 @@
         <compNode>
           <uid v="1469778554" />
           <GUILayout>
-            <gpos v="367.999969 282.666687 0" />
+            <gpos v="-613.333374 282.666687 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -1582,7 +1582,7 @@
         <compNode>
           <uid v="1469913069" />
           <GUILayout>
-            <gpos v="-400 -656 0" />
+            <gpos v="-377.579681 -645.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2618,7 +2618,7 @@
         <compNode>
           <uid v="1469921994" />
           <GUILayout>
-            <gpos v="336 688 0" />
+            <gpos v="-826.666687 634.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2681,7 +2681,7 @@
         <compNode>
           <uid v="1469922810" />
           <GUILayout>
-            <gpos v="880 752 0" />
+            <gpos v="-282.666687 698.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3049,7 +3049,7 @@
         <compNode>
           <uid v="1469279542" />
           <GUILayout>
-            <gpos v="-624 -784 0" />
+            <gpos v="-587.579712 -901.333313 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3073,7 +3073,6 @@
             <connection>
               <identifier v="input_color" />
               <connRef v="1469764441" />
-              <connRefOutput v="1469764442" />
             </connection>
           </connections>
           <compImplementation>
@@ -3104,7 +3103,7 @@
         <compNode>
           <uid v="1469279716" />
           <GUILayout>
-            <gpos v="-624 -290.406281 0" />
+            <gpos v="-595.333313 -400 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3128,7 +3127,6 @@
             <connection>
               <identifier v="input_grayscale" />
               <connRef v="1469777131" />
-              <connRefOutput v="1469777132" />
             </connection>
           </connections>
           <compImplementation>
@@ -3167,7 +3165,7 @@
         <compNode>
           <uid v="1469279891" />
           <GUILayout>
-            <gpos v="-432 -162.99736 0" />
+            <gpos v="-369.333344 -112.844292 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3240,7 +3238,7 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="-541.745056 -174.425125 -100" />
+            <gpos v="-544.708862 -174.42514 -100" />
             <size v="100 50" />
           </GUILayout>
           <GUIName v="GBT Value Processor Utilities Usage Examples" />
@@ -3276,7 +3274,7 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="234.666672 576 -100" />
+            <gpos v="-928 522.666687 -100" />
             <size v="746.666687 405.202911" />
           </GUILayout>
           <GUIName
@@ -3419,19 +3417,6 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="10.666667 138.666672 -100" />
-            <size v="479.999969 362.666656" />
-          </GUILayout>
-          <GUIName v="" />
-          <uid v="1469778672" />
-          <title v="View an exposed parameter value" />
-          <frameColor v="0 0.5 0.116923094 0.250980407" />
-          <isTitleVisible v="1" />
-          <isFrameVisible v="1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUILayout>
             <gpos v="-981.333313 -1034.66663 -100" />
             <size v="938.666626 1034.66663" />
           </GUILayout>
@@ -3445,26 +3430,13 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="-896 -970.666687 -100" />
+            <gpos v="-906.666687 -992 -100" />
             <size v="661.333313 437.333313" />
           </GUILayout>
           <GUIName v="" />
           <uid v="1469778871" />
           <title v="Value Color Sampler &amp; Float Input Viewer" />
           <frameColor v="0.875 0 0.58153826 0.250980407" />
-          <isTitleVisible v="1" />
-          <isFrameVisible v="1" />
-        </GUIObject>
-        <GUIObject>
-          <type v="COMMENT" />
-          <GUILayout>
-            <gpos v="-885.333313 -490.666656 -100" />
-            <size v="650.666687 437.333344" />
-          </GUILayout>
-          <GUIName v="" />
-          <uid v="1469778925" />
-          <title v="Value Greyscale Sampler" />
-          <frameColor v="0.376470596 0.270588249 0.4627451 1" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
         </GUIObject>
@@ -3506,6 +3478,31 @@
           />
           <uid v="1469279702" />
           <frameColor v="0 0 0 1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-885.333313 -512 -100" />
+            <size v="612 500" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1473211630" />
+          <title v="Value Greyscale Sampler" />
+          <frameColor v="0 0 0 0.250003815" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="-934.867249 170.666687 0" />
+            <size v="401 213.000015" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1473211964" />
+          <frameColor v="0 0.699992359 0 0.300007641" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
         </GUIObject>
       </GUIObjects>
       <options>
