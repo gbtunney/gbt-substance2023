@@ -1,11 +1,11 @@
 //load input files
-import { ElementCompact, js2xml, xml2js } from 'xml-js'
+import { js2xml, xml2js } from 'xml-js'
 import fs from 'fs'
 import { z } from 'zod'
 import RA from 'ramda-adjunct'
 import { deepmerge } from 'deepmerge-ts'
 import { Json, zod } from '@snailicide/g-library'
-import { getExt, getFilename } from './helpers.js'
+import { deepmergeReplaceArrays, getExt, getFilename } from './helpers.js'
 import type { ResolvedSBS_UpdaterOptions } from './schemas/optionsSchema.js'
 import {
     graphDictByIDSchema,
@@ -269,9 +269,10 @@ export const getData = async (
             }
         }
         let clearFile = rawSBSData
-        clearFile.package.content.graph = []
-        const tempFILE = deepmerge(clearFile, { package: FINALPACKAGE })
-        debugger
+        // clearFile.package.content.graph = []
+        const tempFILE = deepmergeReplaceArrays(clearFile, {
+            package: FINALPACKAGE,
+        })
         if (sbs_schema.safeParse(tempFILE).success) {
             return sbs_schema.parse(tempFILE)
         }
@@ -317,7 +318,6 @@ export const loadAllInventory = (
     const dataToMerge = options.inputSBS.map((_inputSBS) => {
         return getInventoryData(_inputSBS)
     })
-    console.log(dataToMerge)
     const outDir = zod.filePath.parse(options.outDir)
     //todo: replace this with name flag??
     const outputJSONFilePath = zod.filePath.parse(`${outDir}/${filename}.json`)

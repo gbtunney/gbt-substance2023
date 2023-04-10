@@ -22,7 +22,7 @@
         "removeComments": false,
         "types": ["@types/jest", "jest", "node"]
     },
-    "files": ["package.json"],
+    "files": ["package.json", "icon/icon_inventory.json"],
     "exclude": ["**/*.test.ts"],
     "include": ["**/*.ts"]
 }

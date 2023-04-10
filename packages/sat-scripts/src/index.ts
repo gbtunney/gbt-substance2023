@@ -7,8 +7,11 @@ import { sbs_updater_options } from './schemas/optionsSchema.js'
 import { resolveOptions } from './options.js'
 import { loadAllFiles, loadAllInventory } from './loaders.js'
 import { writeAllRawFile } from './raw.js'
+import { z } from 'zod'
+
 //todo: bug SO ANNOYING !!!!!!!  i had to symlink :(will not let me load a json it is so annoying.
 import pkg from './package.json' assert { type: 'json' }
+
 const hex = '#15034f'
 clear()
 /* * PRINT TITLE * */
@@ -26,12 +29,19 @@ program
             : 'error: no title'
     )
 
-Object.entries(sbs_updater_options.shape).forEach(([key, _schema]) => {
-    program.option(
-        `--${key}`,
-        _schema.description ? _schema.description : 'sdffdfdf'
-    )
-})
+const getTypedSchema = <T extends z.ZodTypeAny>(schema: T): T => schema
+
+const option_schema =
+    getTypedSchema<typeof sbs_updater_options>(sbs_updater_options)
+
+Object.entries(option_schema._def.schema._def.shape()).forEach(
+    ([key, _schema]) => {
+        program.option(
+            `--${key}`,
+            _schema.description ? _schema.description : 'sdffdfdf'
+        )
+    }
+)
 
 program.parse(process.argv)
 const options = program.opts()

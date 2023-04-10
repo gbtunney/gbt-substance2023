@@ -1,19 +1,25 @@
 import path from 'path'
-import { deepmergeCustom } from 'deepmerge-ts'
-import { zod, Json } from '@snailicide/g-library'
+import { zod } from '@snailicide/g-library'
 import fs from 'fs'
-const customDeepmerge = deepmergeCustom({
+import type { DeepMergeLeafURI } from 'deepmerge-ts'
+import { deepmergeCustom } from 'deepmerge-ts'
+
+export const deepmergeReplaceArrays = deepmergeCustom<{
+    DeepMergeArraysURI: DeepMergeLeafURI // <-- Needed for correct output type.
+}>({
     mergeArrays: false,
 })
+
 export const getFilename = (_fullPath: string) =>
     path.basename(_fullPath, path.extname(_fullPath))
 export const getExt = (_fullPath: string) =>
     path.extname(_fullPath).replace('.', '')
-
+export const getFullPath = (_value: string, _root: string | undefined) => {
+    return _root !== undefined ? `${_root}/${_value}` : _value
+}
 const convertImage = (imgPath: string) => {
     if (zod.filePathExists.safeParse(imgPath).success) {
         const resolvedPath = zod.filePathExists.parse(imgPath)
-
         // read image file
         fs.readFile(resolvedPath, (err, data) => {
             // error handle

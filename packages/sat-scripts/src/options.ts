@@ -1,5 +1,6 @@
 ///resolve ARGS!! like in vite plugins/
 import { node, zod } from '@snailicide/g-library'
+import { z } from 'zod'
 import isGlob from 'is-glob'
 import shell from 'shelljs'
 import {
@@ -7,11 +8,13 @@ import {
     resolved_sbs_updater_options,
     ResolvedSBS_UpdaterOptions,
 } from './schemas/optionsSchema.js'
+import { getFullPath } from './helpers.js'
 export const resolveOptions = (
     options: any //SBS_UpdaterOptions
 ): ResolvedSBS_UpdaterOptions | undefined => {
     if (sbs_updater_options.safeParse(options).success) {
-        const parsedData = sbs_updater_options.parse(options)
+        const parsedData: z.infer<typeof sbs_updater_options> =
+            sbs_updater_options.parse(options)
         const concatFilePaths = {
             inputSBS:
                 parsedData.inputSBS !== undefined
@@ -61,10 +64,24 @@ export const resolveOptions = (
         if (!zod.filePathExists.safeParse(mergedData.outDir).success) {
             shell.mkdir('-p', zod.filePath.parse(mergedData.outDir))
         }
+        /* * copy resaource path if valid.  * */
+        if (
+            mergedData.resourceDir !== undefined &&
+            zod.filePathExists.safeParse(mergedData.resourceDir).success
+        ) {
+            const outDir = zod.filePath.parse(mergedData.outDir)
+            console.error(
+                'RESOURCES COPIED FROM :: \n',
+                mergedData.resourceDir,
+                'to',
+                outDir
+            )
+            shell.cp('-R', mergedData.resourceDir, zod.filePath.parse(outDir))
+        }
+        resolved_sbs_updater_options.parse(mergedData)
         if (
             resolved_sbs_updater_options.safeParse(mergedData).success === false
         ) {
-            console.error('OPTION PARSING ERROR:: \n', mergedData)
         }
         return resolved_sbs_updater_options.safeParse(mergedData).success
             ? resolved_sbs_updater_options.parse(mergedData)
@@ -74,7 +91,5 @@ export const resolveOptions = (
     }
     return undefined
 }
-const getFullPath = (_value: string, _root: string | undefined) => {
-    return _root !== undefined ? `${_root}/${_value}` : _value
-}
+
 export default resolveOptions

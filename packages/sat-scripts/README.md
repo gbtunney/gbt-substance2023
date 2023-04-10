@@ -12,6 +12,12 @@ trying to make a cli thing to:I am trying to populate graph & package values aut
 pnpm exec ts-to-zod src/data.ts src/schemas/replaceFileSchema.ts
 ```
 
+## Known issues
+
+-   merge flag will not work if the packages reference each other
+-   files and resources cannot be in folders within substance package.
+-   duplicates metadata , ugh.
+
 ### Unzip sbsar
 
 ```shell
