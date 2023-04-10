@@ -18,6 +18,7 @@ module.exports = {
                 'value-processor-utilities',
                 'sd-utilities',
                 'functions',
+                'autotransform',
                 'palatte',
                 'blend-tools',
                 'shelf',
