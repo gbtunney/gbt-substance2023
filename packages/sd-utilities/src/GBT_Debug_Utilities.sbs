@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{f512e3b3-c86a-486e-8a1a-01454c01e858}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="sbs://blend_switch.sbs" />
+      <uid v="1299239600" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://rgba_merge.sbs" />
+      <uid v="1147283951" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1473220381" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://pattern_shape.sbs" />
+      <uid v="1311189026" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="GBT_Debug_Map" />
+      <uid v="1413524390" />
+      <attributes>
+        <category v="Color" />
+        <author v="Gillian Tunney" />
+        <tags v="color, float4" />
+        <icon>
+          <datalength v="7084" />
+          <format v="png" />
+          <strdata
+            v="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"
+          />
+        </icon>
+      </attributes>
+      <paraminputs>
+        <paraminput>
+          <identifier v="toggle_x_input" />
+          <uid v="1413525078" />
+          <attributes>
+            <label v="X Input (Red)" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_y_input" />
+          <uid v="1413525080" />
+          <attributes>
+            <label v="Y Input (Green)" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_z_input" />
+          <uid v="1413525082" />
+          <attributes>
+            <label v="Z Input (Blue)" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_w_input" />
+          <uid v="1413525084" />
+          <attributes>
+            <label v="W Input (Alpha)" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_x" />
+          <uid v="1413525224" />
+          <attributes>
+            <label v="X" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="2" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_x_input&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="input_y" />
+          <uid v="1413525226" />
+          <attributes>
+            <label v="Y" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="2" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_y_input&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="input_z" />
+          <uid v="1413525228" />
+          <attributes>
+            <label v="Z" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="2" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_z_input&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="input_w" />
+          <uid v="1413525230" />
+          <attributes>
+            <label v="W" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="2" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_w_input&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="input_overlay" />
+          <uid v="1413525366" />
+          <isConnectable v="1" />
+          <type v="2" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+          <visibleIf v="input[&quot;toggle_overlay&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_overlay" />
+          <uid v="1413720670" />
+          <attributes>
+            <label v="Overlay Input" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Overlay" />
+        </paraminput>
+        <paraminput>
+          <identifier v="opacitymult" />
+          <uid v="1413534142" />
+          <attributes>
+            <label v="Opacity" />
+            <description
+              v="The &lt;b&gt;Opacity&lt;/b&gt; parameter sets the transparency of the blend"
+            />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Overlay" />
+          <visibleIf v="input[&quot;toggle_overlay&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="toggle_text" />
+          <uid v="1414037789" />
+          <attributes>
+            <label v="Show Captions" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="X_Red_Notes_" />
+          <uid v="1414036109" />
+          <attributes>
+            <label v="(Red) X Input String " />
+            <description v="R: this is a test&#10;" />
+          </attributes>
+          <type v="16384" />
+          <defaultValue>
+            <constantValueString v="" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="text" />
+            <options>
+              <option>
+                <name v="default" />
+                <value v="" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Text" />
+          <visibleIf v="input[&quot;toggle_text&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="y_green_Notes" />
+          <uid v="1414037152" />
+          <attributes>
+            <label v="(Green) Y Input String " />
+            <description v="G: this is a test&#10;" />
+          </attributes>
+          <type v="16384" />
+          <defaultValue>
+            <constantValueString v="" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="text" />
+            <options>
+              <option>
+                <name v="default" />
+                <value v="" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Text" />
+          <visibleIf v="input[&quot;toggle_text&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="z_blue_Notes" />
+          <uid v="1414037178" />
+          <attributes>
+            <label v="(Blue) Z Input String " />
+            <description v="B: this is a test&#10;" />
+          </attributes>
+          <type v="16384" />
+          <defaultValue>
+            <constantValueString v="" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="text" />
+            <options>
+              <option>
+                <name v="default" />
+                <value v="" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Text" />
+          <visibleIf v="input[&quot;toggle_text&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="w_alpha_Notes" />
+          <uid v="1414037231" />
+          <attributes>
+            <label v="(Alpha) W Input String " />
+            <description v="A: this is a test&#10;" />
+          </attributes>
+          <type v="16384" />
+          <defaultValue>
+            <constantValueString v="" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="text" />
+            <options>
+              <option>
+                <name v="default" />
+                <value v="" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Text" />
+          <visibleIf v="input[&quot;toggle_text&quot;]" />
+        </paraminput>
+        <paraminput>
+          <identifier v="overlay_Notes_1" />
+          <uid v="1414037270" />
+          <attributes>
+            <label v="Overlay Input String " />
+            <description v="A: this is a test&#10;" />
+          </attributes>
+          <type v="16384" />
+          <defaultValue>
+            <constantValueString v="" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="text" />
+            <options>
+              <option>
+                <name v="default" />
+                <value v="" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Text" />
+          <visibleIf
+            v="input[&quot;toggle_overlay&quot;] &amp;&amp; input[&quot;toggle_text&quot;]"
+          />
+        </paraminput>
+      </paraminputs>
+      <primaryInput v="1413525224" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output_debug_map" />
+          <uid v="1413411356" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1413411355" />
+          <GUILayout>
+            <gpos v="1712 208 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1414037956" />
+              <connRefOutput v="1414037957" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1413411356" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413525223" />
+          <GUILayout>
+            <gpos v="511.407013 304 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1405988099" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1413525224" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413525225" />
+          <GUILayout>
+            <gpos v="505.5 475.411896 1" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1405988099" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1413525226" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413525227" />
+          <GUILayout>
+            <gpos v="505.5 635.411865 1" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1405988099" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1413525228" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413525229" />
+          <GUILayout>
+            <gpos v="505.5 795.411865 1" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1405988099" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1413525230" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413525367" />
+          <GUILayout>
+            <gpos v="528 144 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1413525368" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1413525366" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413534098" />
+          <GUILayout>
+            <gpos v="1040 193.910782 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1413534099" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1413534110" />
+              <connRefOutput v="1413534111" />
+            </connection>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1413525367" />
+              <connRefOutput v="1413525368" />
+            </connection>
+            <connection>
+              <identifier v="destination" />
+              <connRef v="1472486538" />
+              <connRefOutput v="1472486539" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters>
+                <parameter>
+                  <name v="opacitymult" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1413534143" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1413534143" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="opacitymult" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413534110" />
+          <GUILayout>
+            <gpos v="848 80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1413534111" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1413525367" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="gradient" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1413723669" />
+          <GUILayout>
+            <gpos v="1279.71753 208 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1413723670" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_1" />
+              <connRef v="1413534098" />
+            </connection>
+            <connection>
+              <identifier v="input_2" />
+              <connRef v="1472486538" />
+              <connRefOutput v="1472486539" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///switch?dependency=1299239600" />
+              <parameters>
+                <parameter>
+                  <name v="switch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1413723717" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1413723717" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="toggle_overlay" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1413723670" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414036773" />
+          <GUILayout>
+            <gpos v="1040 752 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414036774" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1413723669" />
+              <connRefOutput v="1413723670" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1414036950" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1414036950" />
+                          <function v="get_string" />
+                          <type v="16384" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_string" />
+                              <constantValue>
+                                <constantValueString v="X_Red_Notes_" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Avenir Next|Regular" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.109999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.459999979 -0.429999977" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="alignment" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414037124" />
+          <GUILayout>
+            <gpos v="1168 752 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414036774" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414036773" />
+              <connRefOutput v="1414036774" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1414037320" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1414037320" />
+                          <function v="get_string" />
+                          <type v="16384" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_string" />
+                              <constantValue>
+                                <constantValueString v="y_green_Notes" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Avenir Next|Regular" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.109999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.460000008 -0.349999994" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="alignment" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414037129" />
+          <GUILayout>
+            <gpos v="1296 752 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414036774" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414037124" />
+              <connRefOutput v="1414036774" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1414037400" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1414037400" />
+                          <function v="get_string" />
+                          <type v="16384" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_string" />
+                              <constantValue>
+                                <constantValueString v="z_blue_Notes" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Avenir Next|Regular" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.109999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="alignment" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.460000008 -0.25999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414037694" />
+          <GUILayout>
+            <gpos v="1424 752 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414036774" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414037129" />
+              <connRefOutput v="1414036774" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1414037733" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1414037733" />
+                          <function v="get_string" />
+                          <type v="16384" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_string" />
+                              <constantValue>
+                                <constantValueString v="w_alpha_Notes" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Avenir Next|Regular" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.109999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="alignment" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.460000008 -0.179999992" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414037858" />
+          <GUILayout>
+            <gpos v="1552 752 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414036774" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="background" />
+              <connRef v="1414037694" />
+              <connRefOutput v="1414036774" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="text" />
+              <parameters>
+                <parameter>
+                  <name v="text" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1414037934" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1414037934" />
+                          <function v="get_string" />
+                          <type v="16384" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_string" />
+                              <constantValue>
+                                <constantValueString v="overlay_Notes_1" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontdata" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString v="Avenir Next|Regular" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="fontsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.109999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="alignment" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.409999996 -0.429999977" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1414037956" />
+          <GUILayout>
+            <gpos v="1600.50464 400 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1414037957" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_2" />
+              <connRef v="1413723669" />
+              <connRefOutput v="1413723670" />
+            </connection>
+            <connection>
+              <identifier v="input_1" />
+              <connRef v="1414037858" />
+              <connRefOutput v="1414036774" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///switch?dependency=1299239600" />
+              <parameters>
+                <parameter>
+                  <name v="switch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1414038026" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1414038026" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="toggle_text" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1414037957" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1472486538" />
+          <GUILayout>
+            <gpos v="816 506.666656 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1472486539" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="R" />
+              <connRef v="1413525223" />
+              <connRefOutput v="1405988099" />
+            </connection>
+            <connection>
+              <identifier v="G" />
+              <connRef v="1413525225" />
+              <connRefOutput v="1405988099" />
+            </connection>
+            <connection>
+              <identifier v="B" />
+              <connRef v="1413525227" />
+              <connRefOutput v="1405988099" />
+            </connection>
+            <connection>
+              <identifier v="A" />
+              <connRef v="1413525229" />
+              <connRefOutput v="1405988099" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///rgba_merge?dependency=1147283951" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1472486539" />
+                  <identifier v="RGBA_Merge" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <GUIObjects>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="425.5 61.5881042 1" />
+            <size v="160 832" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1413525222" />
+          <title v="Input" />
+          <frameColor v="1 0 0 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1194.66663 117.333336 -100" />
+            <size v="160 170.666656" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1413723692" />
+          <title v="overlay toggle" />
+          <frameColor v="0.101960786 0.552941203 1 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+      </GUIObjects>
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1413411356" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <graph>
+      <identifier v="draft" />
+      <uid v="1473220433" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+      <graphOutputs />
+      <compNodes>
+        <compNode>
+          <uid v="1473220474" />
+          <GUILayout>
+            <gpos v="272 154.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473220475" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_x" />
+              <connRef v="1473223282" />
+              <connRefOutput v="1473223217" />
+            </connection>
+            <connection>
+              <identifier v="input_w" />
+              <connRef v="1473223216" />
+              <connRefOutput v="1473223217" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Debug_Map?dependency=1473220381" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473220475" />
+                  <identifier v="output_debug_map" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473223216" />
+          <GUILayout>
+            <gpos v="80 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473223217" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size_xy" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.75 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473223217" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473223282" />
+          <GUILayout>
+            <gpos v="80 272 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473223217" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.5" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size_xy" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.75 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Pattern" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473223217" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <disabled v="1" />
+      </root>
+    </graph>
+  </content>
+</package>

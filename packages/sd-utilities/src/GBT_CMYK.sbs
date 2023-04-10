@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{0de72035-1e83-4a67-9d70-12f05751dd60}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1473223794" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://pattern_shape.sbs" />
+      <uid v="1311189026" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://rgba_merge.sbs" />
+      <uid v="1147283951" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://invert.sbs" />
+      <uid v="1473254406" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="GBT_CMYK" />
+      <uid v="1473223812" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="RGBA_Merge" />
+          <uid v="1473234370" />
+          <attributes>
+            <label v="Output" />
+          </attributes>
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1473234249" />
+          <GUILayout>
+            <gpos v="144 16 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473234250" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///cmyk-rgb__?dependency=1473223794"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="10 9" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473234371" />
+          <GUILayout>
+            <gpos v="368 240 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1473257283" />
+              <connRefOutput v="1473257284" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1473234370" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473257259" />
+          <GUILayout>
+            <gpos v="-29.7835045 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473257260" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_RGBA?dependency=1473223794" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473257260" />
+                  <identifier v="RGBA_Merge" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473257283" />
+          <GUILayout>
+            <gpos v="160.35051 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473257284" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="Source" />
+              <connRef v="1473257259" />
+              <connRefOutput v="1473257260" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///invert?dependency=1473254406" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473257284" />
+                  <identifier v="Invert_Color" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1473234370" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <graph>
+      <identifier v="GBT_RGBA" />
+      <uid v="1473225141" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="RGBA_Merge" />
+          <uid v="1473234338" />
+          <attributes>
+            <label v="Output" />
+          </attributes>
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1473224012" />
+          <GUILayout>
+            <gpos v="-304 208 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473224013" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Pattern" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.5" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473224013" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473224431" />
+          <GUILayout>
+            <gpos v="272 218.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473224432" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="G" />
+              <connRef v="1473224743" />
+              <connRefOutput v="1473224471" />
+            </connection>
+            <connection>
+              <identifier v="R" />
+              <connRef v="1473224790" />
+              <connRefOutput v="1473224791" />
+            </connection>
+            <connection>
+              <identifier v="B" />
+              <connRef v="1473225007" />
+              <connRefOutput v="1473224471" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///rgba_merge?dependency=1147283951" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1473224432" />
+                  <identifier v="RGBA_Merge" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473224743" />
+          <GUILayout>
+            <gpos v="-16 208 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473224471" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1473224012" />
+              <connRefOutput v="1473224013" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters>
+                <parameter>
+                  <name v="offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.194800004 0.166700006" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="matrix22" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="-1 0 0 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473224790" />
+          <GUILayout>
+            <gpos v="-16 48 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473224791" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1473224012" />
+              <connRefOutput v="1473224013" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters>
+                <parameter>
+                  <name v="offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0 -0.166666001" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473225007" />
+          <GUILayout>
+            <gpos v="-16 400 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473224471" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1473224012" />
+              <connRefOutput v="1473224013" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters>
+                <parameter>
+                  <name v="offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.194800004 0.166700006" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473234285" />
+          <GUILayout>
+            <gpos v="-288.582642 48 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1473234286" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///cmyk-rgb__?dependency=1473223794"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="10 9" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1473234339" />
+          <GUILayout>
+            <gpos v="560 218.666672 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1473224431" />
+              <connRefOutput v="1473224432" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1473234338" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1473234338" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <resource>
+      <identifier v="cmyk-rgb__" />
+      <uid v="1473240049" />
+      <type v="bitmap" />
+      <colorSpace v="[use_embedded_profile]" />
+      <format v="jpg" />
+      <filepath v="resources/cmyk-rgb...jpg" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
+    </resource>
+  </content>
+</package>
