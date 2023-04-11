@@ -64,6 +64,7 @@
         "email": "gbtunney@mac.com"
     },
     "devDependencies": {
+        "@gbt/functions": "workspace:^0.0.0",
         "@gbt/sat-scripts": "workspace:^0.0.0",
         "@gbt/sd-utilities": "workspace:^0.0.0",
         "@gbt/value-processor-utilities": "workspace:^0.0.2",
