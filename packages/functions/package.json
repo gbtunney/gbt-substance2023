@@ -19,7 +19,7 @@
         "\n========== BUILD >> ==========": "",
         "build": "pnpm clean && mkdir -p dist && pnpm copy:sbs && pnpm build:readonly",
         "copy:sbs": "cp ./src/*.sbs ./dist",
-        "build:readonly": "chmod 0444 ./dist/*",
+        "build:readonly": "chmod -R 464  ./dist/*",
         "\n========== TEST >> ==========": "",
         "test": "pnpm clean:test && mkdir -p tests/_output && pnpm test:build",
         "test:build": "/Users/gilliantunney/Substance\\ 12/Adobe\\ Substance\\ 3D\\ Designer.app/Contents/MacOS/sbscooker   --inputs ./tests/*.sbs  --verbose --size-limit 13 --output-path ./tests/_output",
