@@ -22,7 +22,7 @@
     </dependency>
     <dependency>
       <filename v="?himself" />
-      <uid v="1473220381" />
+      <uid v="1481481935" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -240,7 +240,7 @@
           <isConnectable v="1" />
           <type v="2" />
           <defaultValue>
-            <constantValueFloat1 v="0" />
+            <constantValueFloat1 v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="" />
@@ -701,7 +701,7 @@
         <compNode>
           <uid v="1413525229" />
           <GUILayout>
-            <gpos v="505.5 795.411865 1" />
+            <gpos v="512.155701 799.844299 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1448,7 +1448,7 @@
         <compNode>
           <uid v="1472486538" />
           <GUILayout>
-            <gpos v="816 506.666656 0" />
+            <gpos v="816 538.666687 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1548,7 +1548,7 @@
         <compNode>
           <uid v="1473220474" />
           <GUILayout>
-            <gpos v="272 154.666672 0" />
+            <gpos v="317.392853 90.6666641 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1570,7 +1570,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Debug_Map?dependency=1473220381" />
+              <path v="pkg:///GBT_Debug_Map?dependency=1481481935" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -1661,6 +1661,37 @@
                 <outputBridging>
                   <uid v="1473223217" />
                   <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1481510621" />
+          <GUILayout>
+            <gpos v="208 250.666672 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1481510622" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input_x" />
+              <connRef v="1473223216" />
+              <connRefOutput v="1473223217" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Debug_Map?dependency=1481481935" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1481510622" />
+                  <identifier v="output_debug_map" />
                 </outputBridging>
               </outputBridgings>
             </compInstance>
