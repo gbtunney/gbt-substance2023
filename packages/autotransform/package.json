@@ -22,8 +22,8 @@
     ],
     "scripts": {
         "\n========== BUILD >> ==========": "",
-        "build": "pnpm run build:dir && pnpm build:ts && pnpm build:sbs && pnpm build:sbsar",
-        "build:sbsar": "pnpm sbs:cooker -- --inputs ./_temp/*.sbs --output-path $PWD/dist",
+        "build": "pnpm run build:dir && pnpm build:ts && pnpm build:sbsar",
+        "build:sbsar": "pnpm sbs:cooker -- --inputs ./src/*.sbs --output-path $PWD/dist",
         "build:sbs": "pnpm run sd:builder -- --outDir ./_temp --inputSBS 'src/*.sbs'   --inputData 'meta/fileReplaceSpecScript.js'",
         "build:ls": "ls -l src/*.sbs",
         "build:dir": "mkdir -p _temp  && mkdir -p dist",
