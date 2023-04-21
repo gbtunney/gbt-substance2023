@@ -131,6 +131,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Output" />
           <visibleIf v="input[&quot;toggle_output_format&quot;]" />
         </paraminput>
         <paraminput>
@@ -164,6 +165,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Output Size" />
         </paraminput>
         <paraminput>
           <identifier v="output_palette_size" />
@@ -200,6 +202,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Output Size" />
         </paraminput>
         <paraminput>
           <identifier v="input" />
@@ -225,7 +228,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -236,7 +239,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -335,7 +338,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -346,7 +349,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -445,7 +448,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -456,7 +459,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -555,7 +558,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -566,7 +569,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -665,7 +668,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -676,7 +679,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -775,7 +778,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -786,7 +789,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -885,7 +888,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -896,7 +899,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -995,7 +998,7 @@
           </attributes>
           <type v="4" />
           <defaultValue>
-            <constantValueBool v="0" />
+            <constantValueBool v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="buttons" />
@@ -1006,7 +1009,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="0" />
+                <value v="1" />
               </option>
               <option>
                 <name v="label0" />
@@ -1096,6 +1099,918 @@
           <visibleIf
             v="!input[&quot;color_8_toggle_position_color&quot;]&amp;&amp;input[&quot;number_of_points&quot;] &gt;= 8"
           />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_1hsl_adust_hue" />
+          <uid v="1474135557" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 1/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 1" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_1hsl_adust_saturation" />
+          <uid v="1474135559" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 1/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 1" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_1hsl_adust_luminosity" />
+          <uid v="1474135561" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 1/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 1" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_2hsl_adust_hue" />
+          <uid v="1474135956" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 2/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 2" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_2hsl_adust_saturation" />
+          <uid v="1474135958" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 2/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 2" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_2hsl_adust_luminosity" />
+          <uid v="1474135960" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 2/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 2" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_3hsl_adust_hue" />
+          <uid v="1474136101" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 3/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 3" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_3hsl_adust_saturation" />
+          <uid v="1474136103" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 3/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 3" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_3hsl_adust_luminosity" />
+          <uid v="1474136105" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 3/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 3" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_4hsl_adust_hue" />
+          <uid v="1474136147" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 4/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 4" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_4hsl_adust_saturation" />
+          <uid v="1474136149" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 4/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 4" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_4hsl_adust_luminosity" />
+          <uid v="1474136151" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 4/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 4" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_5hsl_adust_hue" />
+          <uid v="1474136182" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 5/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 5" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_5hsl_adust_saturation" />
+          <uid v="1474136184" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 5/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 5" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_5hsl_adust_luminosity" />
+          <uid v="1474136186" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 5/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 5" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_6hsl_adust_hue" />
+          <uid v="1474136244" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 6/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 6" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_6hsl_adust_saturation" />
+          <uid v="1474136246" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 6/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 6" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_6hsl_adust_luminosity" />
+          <uid v="1474136248" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 6/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 6" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_7hsl_adust_hue" />
+          <uid v="1474136278" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 7/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 7" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_7hsl_adust_saturation" />
+          <uid v="1474136280" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 7/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 7" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_7hsl_adust_luminosity" />
+          <uid v="1474136282" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 7/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 7" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_8hsl_adust_hue" />
+          <uid v="1474136309" />
+          <attributes>
+            <label v="Hue" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 8/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 8" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_8hsl_adust_saturation" />
+          <uid v="1474136311" />
+          <attributes>
+            <label v="Saturation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 8/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 8" />
+        </paraminput>
+        <paraminput>
+          <identifier v="color_8hsl_adust_luminosity" />
+          <uid v="1474136313" />
+          <attributes>
+            <label v="Luminosity" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Color 8/HSL" />
+          <visibleIf v="input[&quot;number_of_points&quot;] &gt;= 8" />
         </paraminput>
       </paraminputs>
       <primaryInput v="1405750553" />
@@ -1495,10 +2410,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414822255" />
+                      <rootnode v="1474135663" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414822255" />
+                          <uid v="1474135663" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -1521,10 +2436,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414822257" />
+                      <rootnode v="1474135670" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414822257" />
+                          <uid v="1474135670" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -1547,10 +2462,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414822259" />
+                      <rootnode v="1474135674" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414822259" />
+                          <uid v="1474135674" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -1560,6 +2475,106 @@
                                 <constantValueString
                                   v="color_1_input_color_value"
                                 />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135558" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135558" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_1hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135560" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135560" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_1hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135562" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135562" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_1hsl_adust_luminosity"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_swatch_size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135649" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135649" />
+                          <function v="get_integer2" />
+                          <type v="32" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer2" />
+                              <constantValue>
+                                <constantValueString v="output_swatch_size" />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -1613,10 +2628,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823277" />
+                      <rootnode v="1474135997" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823277" />
+                          <uid v="1474135997" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -1639,10 +2654,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823279" />
+                      <rootnode v="1474136016" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823279" />
+                          <uid v="1474136016" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -1665,10 +2680,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823281" />
+                      <rootnode v="1474136034" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823281" />
+                          <uid v="1474136034" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -1691,10 +2706,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823484" />
+                      <rootnode v="1474135979" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823484" />
+                          <uid v="1474135979" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -1702,6 +2717,82 @@
                               <name v="get_integer2" />
                               <constantValue>
                                 <constantValueString v="output_swatch_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135957" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135957" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_2hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135959" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135959" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_2hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474135961" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474135961" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_2hsl_adust_luminosity"
+                                />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -1755,10 +2846,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823861" />
+                      <rootnode v="1474136109" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823861" />
+                          <uid v="1474136109" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -1779,10 +2870,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823680" />
+                      <rootnode v="1474136118" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823680" />
+                          <uid v="1474136118" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -1805,10 +2896,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823682" />
+                      <rootnode v="1474136121" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823682" />
+                          <uid v="1474136121" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -1831,10 +2922,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414823684" />
+                      <rootnode v="1474136125" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414823684" />
+                          <uid v="1474136125" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -1843,6 +2934,82 @@
                               <constantValue>
                                 <constantValueString
                                   v="color_3_input_color_value"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136703" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136703" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_3hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136104" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136104" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_3hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136106" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136106" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_3hsl_adust_luminosity"
                                 />
                               </constantValue>
                             </funcData>
@@ -1897,10 +3064,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824233" />
+                      <rootnode v="1474136194" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824233" />
+                          <uid v="1474136194" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -1923,10 +3090,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824235" />
+                      <rootnode v="1474136197" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824235" />
+                          <uid v="1474136197" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -1949,10 +3116,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824237" />
+                      <rootnode v="1474136201" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824237" />
+                          <uid v="1474136201" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -1975,10 +3142,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824241" />
+                      <rootnode v="1474136190" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824241" />
+                          <uid v="1474136190" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -1986,6 +3153,82 @@
                               <name v="get_integer2" />
                               <constantValue>
                                 <constantValueString v="output_swatch_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136183" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136183" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_5hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136185" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136185" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_5hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136187" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136187" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_5hsl_adust_luminosity"
+                                />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2039,10 +3282,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824271" />
+                      <rootnode v="1474136256" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824271" />
+                          <uid v="1474136256" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -2065,10 +3308,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824273" />
+                      <rootnode v="1474136258" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824273" />
+                          <uid v="1474136258" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -2091,10 +3334,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824275" />
+                      <rootnode v="1474136261" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824275" />
+                          <uid v="1474136261" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -2117,10 +3360,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824280" />
+                      <rootnode v="1474136252" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824280" />
+                          <uid v="1474136252" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -2128,6 +3371,82 @@
                               <name v="get_integer2" />
                               <constantValue>
                                 <constantValueString v="output_swatch_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136245" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136245" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_6hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136247" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136247" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_6hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136249" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136249" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_6hsl_adust_luminosity"
+                                />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -2181,10 +3500,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824120" />
+                      <rootnode v="1474136159" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824120" />
+                          <uid v="1474136159" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -2207,10 +3526,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824122" />
+                      <rootnode v="1474136163" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824122" />
+                          <uid v="1474136163" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -2233,10 +3552,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824124" />
+                      <rootnode v="1474136166" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824124" />
+                          <uid v="1474136166" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -2259,10 +3578,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824191" />
+                      <rootnode v="1474136155" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824191" />
+                          <uid v="1474136155" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -2270,6 +3589,82 @@
                               <name v="get_integer2" />
                               <constantValue>
                                 <constantValueString v="output_swatch_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136148" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136148" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_4hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136150" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136150" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_4hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136152" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136152" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_4hsl_adust_luminosity"
+                                />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3354,10 +4749,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824342" />
+                      <rootnode v="1474136289" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824342" />
+                          <uid v="1474136289" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -3380,10 +4775,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824344" />
+                      <rootnode v="1474136292" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824344" />
+                          <uid v="1474136292" />
                           <function v="get_float2" />
                           <type v="512" />
                           <funcDatas>
@@ -3406,10 +4801,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824346" />
+                      <rootnode v="1474136295" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824346" />
+                          <uid v="1474136295" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -3432,10 +4827,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824350" />
+                      <rootnode v="1474136286" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824350" />
+                          <uid v="1474136286" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -3443,6 +4838,82 @@
                               <name v="get_integer2" />
                               <constantValue>
                                 <constantValueString v="output_swatch_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136279" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136279" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_7hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136281" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136281" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_7hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136283" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136283" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_7hsl_adust_luminosity"
+                                />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -3496,10 +4967,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824381" />
+                      <rootnode v="1474136324" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824381" />
+                          <uid v="1474136324" />
                           <function v="get_bool" />
                           <type v="4" />
                           <funcDatas>
@@ -3518,40 +4989,14 @@
                   </paramValue>
                 </parameter>
                 <parameter>
-                  <name v="input_sampler_position" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1414824383" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1414824383" />
-                          <function v="get_float2" />
-                          <type v="512" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_float2" />
-                              <constantValue>
-                                <constantValueString
-                                  v="Color_8_input_sampler_position"
-                                />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-                <parameter>
                   <name v="input_color_value" />
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824385" />
+                      <rootnode v="1474136336" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824385" />
+                          <uid v="1474136336" />
                           <function v="get_float4" />
                           <type v="2048" />
                           <funcDatas>
@@ -3574,10 +5019,10 @@
                   <relativeTo v="0" />
                   <paramValue>
                     <dynamicValue>
-                      <rootnode v="1414824394" />
+                      <rootnode v="1474136321" />
                       <paramNodes>
                         <paramNode>
-                          <uid v="1414824394" />
+                          <uid v="1474136321" />
                           <function v="get_integer2" />
                           <type v="32" />
                           <funcDatas>
@@ -3585,6 +5030,108 @@
                               <name v="get_integer2" />
                               <constantValue>
                                 <constantValueString v="output_swatch_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_hue" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136310" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136310" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="color_8hsl_adust_hue" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_saturation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136312" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136312" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_8hsl_adust_saturation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hsl_adust_luminosity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136314" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136314" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString
+                                  v="color_8hsl_adust_luminosity"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_sampler_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474136332" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474136332" />
+                          <function v="get_float2" />
+                          <type v="512" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float2" />
+                              <constantValue>
+                                <constantValueString
+                                  v="Color_8_input_sampler_position"
+                                />
                               </constantValue>
                             </funcData>
                           </funcDatas>
@@ -7167,6 +8714,597 @@
           </rootOutput>
           <rootOutput>
             <output v="1469286362" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <graph>
+      <identifier v="draft" />
+      <uid v="1474136741" />
+      <graphtype v="material" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="basecolor" />
+          <uid v="1213284336" />
+          <attributes>
+            <label v="Base Color" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="baseColor" />
+            </usage>
+          </usages>
+          <group v="Material" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="normal" />
+          <uid v="1213284338" />
+          <attributes>
+            <label v="Normal" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="normal" />
+            </usage>
+          </usages>
+          <group v="Material" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="roughness" />
+          <uid v="1213284340" />
+          <attributes>
+            <label v="Roughness" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="roughness" />
+            </usage>
+          </usages>
+          <channels v="2" />
+          <group v="Material" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="metallic" />
+          <uid v="1213284342" />
+          <attributes>
+            <label v="Metallic" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="metallic" />
+            </usage>
+          </usages>
+          <channels v="2" />
+          <group v="Material" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="height" />
+          <uid v="1279137031" />
+          <attributes>
+            <label v="Height" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="height" />
+            </usage>
+          </usages>
+          <channels v="2" />
+          <group v="Material" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="ambientocclusion" />
+          <uid v="1359211721" />
+          <attributes>
+            <label v="Ambient Occlusion" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="ambientOcclusion" />
+            </usage>
+          </usages>
+          <channels v="2" />
+          <group v="Material" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1213284337" />
+          <GUILayout>
+            <gpos v="-48 -240 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1359211355" />
+              <connRefOutput v="1359211356" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1213284336" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1213284339" />
+          <GUILayout>
+            <gpos v="-48 -80 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1359211383" />
+              <connRefOutput v="1359211384" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1213284338" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1213284341" />
+          <GUILayout>
+            <gpos v="-48 80 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1359211391" />
+              <connRefOutput v="1359211392" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1213284340" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1213284343" />
+          <GUILayout>
+            <gpos v="-48 240 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1359211407" />
+              <connRefOutput v="1359211408" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1213284342" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1279137030" />
+          <GUILayout>
+            <gpos v="-48 560 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1359211415" />
+              <connRefOutput v="1359211408" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1279137031" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211355" />
+          <GUILayout>
+            <gpos v="-208 -240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1359211356" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0.5 0.5 0.5 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211383" />
+          <GUILayout>
+            <gpos v="-208 -80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1359211384" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="normal" />
+              <parameters>
+                <parameter>
+                  <name v="input2alpha" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211391" />
+          <GUILayout>
+            <gpos v="-208 80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1359211392" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0.25 0.25 0.25 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211407" />
+          <GUILayout>
+            <gpos v="-208 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1359211408" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211415" />
+          <GUILayout>
+            <gpos v="-208 560 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1359211408" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0.5 0.5 0.5 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211719" />
+          <GUILayout>
+            <gpos v="-208 400 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1359211408" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1 1 1 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1359211720" />
+          <GUILayout>
+            <gpos v="-48 400 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1359211719" />
+              <connRefOutput v="1359211408" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1359211721" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474136752" />
+          <GUILayout>
+            <gpos v="-1008 -80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474136753" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136754" />
+              <comptype v="16" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136755" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136756" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136757" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136758" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136759" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136760" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136761" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136762" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136763" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136764" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136765" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136766" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136767" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136768" />
+              <comptype v="2048" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136769" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474136770" />
+              <comptype v="2048" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Palatte?dependency=1405736594" />
+              <parameters>
+                <parameter>
+                  <name v="number_of_points" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="7" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474136753" />
+                  <identifier v="output_Palette" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136754" />
+                  <identifier v="output_count" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136755" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136756" />
+                  <identifier v="output_value" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136757" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136758" />
+                  <identifier v="output_value_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136759" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136760" />
+                  <identifier v="output_value_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136761" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136762" />
+                  <identifier v="output_value_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136763" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136764" />
+                  <identifier v="output_value_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136765" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136766" />
+                  <identifier v="output_value_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136767" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136768" />
+                  <identifier v="output_value_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136769" />
+                  <identifier v="output_7" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474136770" />
+                  <identifier v="output_8" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1213284336" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1213284338" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1213284340" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1213284342" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1279137031" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1359211721" />
             <format v="0" />
             <usertag v="" />
           </rootOutput>
