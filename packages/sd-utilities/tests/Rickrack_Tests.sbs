@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{de5cd979-2a2d-473d-be2f-8b2a0c439bdd}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="../src/GBT_Rickrack.sbs" />
+      <uid v="1476196865" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://blur_hq.sbs" />
+      <uid v="1476207720" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://histogram_scan.sbs" />
+      <uid v="1476218228" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://histogram_select.sbs" />
+      <uid v="1476206924" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="Rickrack_Tests" />
+      <uid v="1476196830" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1476200699" />
+          <attributes>
+            <label v="Output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_1" />
+          <uid v="1476201872" />
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_2" />
+          <uid v="1476204584" />
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_3" />
+          <uid v="1476213593" />
+          <attributes>
+            <label v="Output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_4" />
+          <uid v="1476219733" />
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_5" />
+          <uid v="1476219742" />
+          <channels v="2" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1476200672" />
+          <GUILayout>
+            <gpos v="176 98 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476200673" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_RickRack?dependency=1476196865" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476200673" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476200700" />
+          <GUILayout>
+            <gpos v="432 98 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476200672" />
+              <connRefOutput v="1476200673" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476200699" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476200710" />
+          <GUILayout>
+            <gpos v="176 226 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476200711" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_RickRack?dependency=1476196865" />
+              <parameters>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.199583337" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Tiling" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_quantize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="quantize_steps" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="8" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476200711" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476201873" />
+          <GUILayout>
+            <gpos v="432 226 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476200710" />
+              <connRefOutput v="1476200711" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476201872" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476201886" />
+          <GUILayout>
+            <gpos v="176 354 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476201887" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_RickRack?dependency=1476196865" />
+              <parameters>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.441583335" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Repetition" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tile_final_pattern" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="4" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Tiling" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="quantize_steps" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476201887" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476204585" />
+          <GUILayout>
+            <gpos v="432 354 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476201886" />
+              <connRefOutput v="1476201887" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476204584" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476204597" />
+          <GUILayout>
+            <gpos v="16 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476204598" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_RickRack?dependency=1476196865" />
+              <parameters>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.125" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="quantize_steps" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="8" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_quantize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476204598" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476208671" />
+          <GUILayout>
+            <gpos v="336 624 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476208672" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1476210693" />
+              <connRefOutput v="1476210694" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="levels" />
+              <parameters>
+                <parameter>
+                  <name v="levelinmid" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4
+                      v="0.234870315 0.234870315 0.234870315 0.5"
+                    />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="levelinlow" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4
+                      v="0.932276666 0.932276666 0.932276666 0"
+                    />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476210693" />
+          <GUILayout>
+            <gpos v="144 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476210694" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="Source" />
+              <connRef v="1476204597" />
+              <connRefOutput v="1476204598" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///blur_hq_grayscale?dependency=1476207720" />
+              <parameters>
+                <parameter>
+                  <name v="Intensity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.269999981" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Quality" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476210694" />
+                  <identifier v="Blur_HQ" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476213594" />
+          <GUILayout>
+            <gpos v="464 624 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476208671" />
+              <connRefOutput v="1476208672" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476213593" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476218279" />
+          <GUILayout>
+            <gpos v="336 1008 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476218280" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="Input_1" />
+              <connRef v="1476210693" />
+              <connRefOutput v="1476210694" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///histogram_scan?dependency=1476218228" />
+              <parameters>
+                <parameter>
+                  <name v="Invert_Position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Contrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476218280" />
+                  <identifier v="Output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476218376" />
+          <GUILayout>
+            <gpos v="336 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476218377" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476210693" />
+              <connRefOutput v="1476210694" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///histogram_select?dependency=1476206924" />
+              <parameters>
+                <parameter>
+                  <name v="range" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.109999999" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.909999967" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.550000012" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476218377" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476219734" />
+          <GUILayout>
+            <gpos v="464 816 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476218376" />
+              <connRefOutput v="1476218377" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476219733" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476219743" />
+          <GUILayout>
+            <gpos v="464 1008 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476218279" />
+              <connRefOutput v="1476218280" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476219742" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <GUIObjects>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="256 736 0" />
+            <size v="277.333344 160" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1476219825" />
+          <title v="BAD!!!!!" />
+          <frameColor v="1 0.0389610529 0 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+      </GUIObjects>
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1476200699" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476201872" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476204584" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476213593" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476219733" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476219742" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+  </content>
+</package>

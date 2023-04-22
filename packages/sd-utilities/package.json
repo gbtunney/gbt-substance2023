@@ -31,9 +31,11 @@
         "\n========== DEV >> ==========": "",
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
-        "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render",
+        "test:todo": "TODO: please fix render script for sbsar glob",
+        "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render && pnpm test:repeater",
         "test:build": "pnpm sbs:cooker -- --inputs ./tests/*.sbs  --output-path ./tests/_output",
-        "test:render": "pnpm sbs:render --  --inputs ./tests/_output/*.sbsar  --output-path ./tests/_output",
+        "test:render": "pnpm sbs:render --  --input ./tests/_output/*.sbsar  --output-path ./tests/_output --verbose",
+        "test:repeater": "pnpm sbs:render --  --input ./tests/_output/GBT_Repeater_Tests.sbsar  --output-path ./tests/_output --verbose",
         "test:pwd": "echo $PWD;",
         "test:cli": "pnpm exec sdbuilder --help",
         "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
@@ -64,6 +66,7 @@
         "email": "gbtunney@mac.com"
     },
     "devDependencies": {
+        "@gbt/functions": "workspace:^0.0.0",
         "@gbt/sat-scripts": "workspace:^0.0.0",
         "@gbt/value-processor-utilities": "workspace:^0.0.2",
         "@prettier/plugin-xml": "^2.2.0",

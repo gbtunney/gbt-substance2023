@@ -1,0 +1,2507 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{2acc11f7-6802-48ec-a72e-ded9827850bb}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="sbs://pattern_shape.sbs" />
+      <uid v="1311189026" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://histogram_select.sbs" />
+      <uid v="1406775102" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="../src/GBT_Repeater.sbs" />
+      <uid v="1474172226" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://safe_transform.sbs" />
+      <uid v="1395441886" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://shape_mapper.sbs" />
+      <uid v="1280489006" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://blur_hq.sbs" />
+      <uid v="1299236171" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://pattern_polygon_2.sbs" />
+      <uid v="1357227353" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="Repeater_Grayscale" />
+      <uid v="1474857082" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1475008224" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_1" />
+          <uid v="1475157942" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_2" />
+          <uid v="1475586475" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_3" />
+          <uid v="1475586483" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_4" />
+          <uid v="1475586491" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_5" />
+          <uid v="1475586501" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_6" />
+          <uid v="1475586517" />
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_7" />
+          <uid v="1475586529" />
+          <attributes>
+            <label v="Output" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1474857930" />
+          <GUILayout>
+            <gpos v="-176 80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474172566" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Pattern" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.879999995" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size_xy" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.359999985 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474172566" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474857931" />
+          <GUILayout>
+            <gpos v="-48 80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474172646" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474857930" />
+              <connRefOutput v="1474172566" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///histogram_select?dependency=1406775102" />
+              <parameters>
+                <parameter>
+                  <name v="constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.959999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.429999977" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="range" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.179999992" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474172646" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474857935" />
+          <GUILayout>
+            <gpos v="272 208 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474177763" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1474857931" />
+              <connRefOutput v="1474172646" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters>
+                <parameter>
+                  <name v="opacitymult" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.669999957" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474857982" />
+          <GUILayout>
+            <gpos v="464 80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474857983" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474857931" />
+              <connRefOutput v="1474172646" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="9" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="1.43999994" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474857983" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475008225" />
+          <GUILayout>
+            <gpos v="720 80 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1474857982" />
+              <connRefOutput v="1474857983" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475008224" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475157940" />
+          <GUILayout>
+            <gpos v="464 208 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474857983" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474857935" />
+              <connRefOutput v="1474177763" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="9" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="1.43999994" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474857983" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475157941" />
+          <GUILayout>
+            <gpos v="720 208 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475157940" />
+              <connRefOutput v="1474857983" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475157942" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475159698" />
+          <GUILayout>
+            <gpos v="464 336 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475159699" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475389858" />
+              <connRefOutput v="1475389859" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="24" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="end_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.319999993 -0.310000002" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.119999997" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475159699" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475350145" />
+          <GUILayout>
+            <gpos v="464 464 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475350146" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475389858" />
+              <connRefOutput v="1475389859" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="13" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="end_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0 0.649999976" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475350146" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475389858" />
+          <GUILayout>
+            <gpos v="80 464 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475389859" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474857931" />
+              <connRefOutput v="1474172646" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475390210" />
+          <GUILayout>
+            <gpos v="464 592 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475350146" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475389858" />
+              <connRefOutput v="1475389859" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="end_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0 0.0399999991" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="2 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="21" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475350146" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475465546" />
+          <GUILayout>
+            <gpos v="464 720 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475350146" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475488297" />
+              <connRefOutput v="1475488298" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="5.61999989" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="23" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475350146" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475488297" />
+          <GUILayout>
+            <gpos v="272 848 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475488298" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1475389858" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters>
+                <parameter>
+                  <name v="matrix22" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1.53349996 0 0 1.53349996" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475568176" />
+          <GUILayout>
+            <gpos v="464 848 502" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475350146" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475488297" />
+              <connRefOutput v="1475488298" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Grayscale?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="2.22000003" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="28" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation_pivot" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.5 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475350146" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475585863" />
+          <GUILayout>
+            <gpos v="592 976 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475585864" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475568176" />
+              <connRefOutput v="1475350146" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform_grayscale?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.147111118" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475585864" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475586476" />
+          <GUILayout>
+            <gpos v="720 336 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475159698" />
+              <connRefOutput v="1475159699" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475586475" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475586484" />
+          <GUILayout>
+            <gpos v="720 464 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475350145" />
+              <connRefOutput v="1475350146" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475586483" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475586492" />
+          <GUILayout>
+            <gpos v="720 592 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475390210" />
+              <connRefOutput v="1475350146" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475586491" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475586502" />
+          <GUILayout>
+            <gpos v="720 720 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475465546" />
+              <connRefOutput v="1475350146" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475586501" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475586518" />
+          <GUILayout>
+            <gpos v="720 848 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475568176" />
+              <connRefOutput v="1475350146" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475586517" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475586530" />
+          <GUILayout>
+            <gpos v="720 976 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475585863" />
+              <connRefOutput v="1475585864" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475586529" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1475008224" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475157942" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475586475" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475586483" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475586491" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475586501" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475586517" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475586529" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <graph>
+      <identifier v="Repeater_Color" />
+      <uid v="1475156183" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output_1" />
+          <uid v="1475156168" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_2" />
+          <uid v="1475598907" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1475838239" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_3" />
+          <uid v="1475915791" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_4" />
+          <uid v="1475927720" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_5" />
+          <uid v="1476054579" />
+          <attributes>
+            <label v="output" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_6" />
+          <uid v="1476177104" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_7" />
+          <uid v="1476177113" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1474857930" />
+          <GUILayout>
+            <gpos v="-592 368 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474172566" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape?dependency=1311189026" />
+              <parameters>
+                <parameter>
+                  <name v="Pattern" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.879999995" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Size_xy" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.359999985 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474172566" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474857931" />
+          <GUILayout>
+            <gpos v="-464 368 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474172646" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474857930" />
+              <connRefOutput v="1474172566" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///histogram_select?dependency=1406775102" />
+              <parameters>
+                <parameter>
+                  <name v="constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.959999979" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.429999977" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="range" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.179999992" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474172646" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474857932" />
+          <GUILayout>
+            <gpos v="-384.730072 514.333862 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474245059" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4
+                      v="0.570386946 0.699999988 0.126000002 1"
+                    />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474857933" />
+          <GUILayout>
+            <gpos v="-592 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474294394" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0.272108734 0 0.666666687 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475054689" />
+          <GUILayout>
+            <gpos v="224.048981 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475054690" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475111545" />
+              <connRefOutput v="1475111546" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="15" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="end_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-1 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475054690" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475111545" />
+          <GUILayout>
+            <gpos v="96.0489807 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475111546" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1475598486" />
+              <connRefOutput v="1475598487" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters>
+                <parameter>
+                  <name v="offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.262899995 0.00939999986" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475156169" />
+          <GUILayout>
+            <gpos v="352.048981 240 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475054689" />
+              <connRefOutput v="1475054690" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475156168" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475598486" />
+          <GUILayout>
+            <gpos v="-31.9510193 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475598487" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1474857933" />
+              <connRefOutput v="1474294394" />
+            </connection>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1474857931" />
+              <connRefOutput v="1474172646" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475598903" />
+          <GUILayout>
+            <gpos v="112 560 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475111546" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1475598905" />
+              <connRefOutput v="1475598487" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="transformation" />
+              <parameters>
+                <parameter>
+                  <name v="matrix22" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1.71659994 0 0 1.71659994" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475598904" />
+          <GUILayout>
+            <gpos v="240 560 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475054690" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475598903" />
+              <connRefOutput v="1475111546" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="end_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 -1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="70" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 2" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.769999981" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475054690" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475598905" />
+          <GUILayout>
+            <gpos v="-16 560 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475598487" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1474857932" />
+              <connRefOutput v="1474245059" />
+            </connection>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1475837758" />
+              <connRefOutput v="1475837759" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475598906" />
+          <GUILayout>
+            <gpos v="368 560 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475598904" />
+              <connRefOutput v="1475054690" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475598907" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475663284" />
+          <GUILayout>
+            <gpos v="161.784561 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475663285" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475718116" />
+              <connRefOutput v="1475598487" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="63" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation_pivot" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-1 0.799999952" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="opacity_min" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.429999977" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475663285" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475717459" />
+          <GUILayout>
+            <gpos v="-304 656 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475717460" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474857930" />
+              <connRefOutput v="1474172566" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///histogram_select?dependency=1406775102" />
+              <parameters>
+                <parameter>
+                  <name v="constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.969999969" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="range" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.099999994" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.439999998" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475717460" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475718116" />
+          <GUILayout>
+            <gpos v="33.7845612 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475598487" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1475742778" />
+            </connection>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1475837758" />
+              <connRefOutput v="1475837759" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475742720" />
+          <GUILayout>
+            <gpos v="417.784546 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475742721" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475742729" />
+              <connRefOutput v="1475742730" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///shape_mapper?dependency=1280489006" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475742721" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475742729" />
+          <GUILayout>
+            <gpos v="289.784546 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475742730" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input1" />
+              <connRef v="1475663284" />
+              <connRefOutput v="1475663285" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="grayscaleconversion" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475742778" />
+          <GUILayout>
+            <gpos v="-304 784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475742779" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1 1 1 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475762823" />
+          <GUILayout>
+            <gpos v="545.784546 816 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475762824" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1475742720" />
+              <connRefOutput v="1475742721" />
+            </connection>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1474857932" />
+              <connRefOutput v="1474245059" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475763237" />
+          <GUILayout>
+            <gpos v="240 1072 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475663285" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475598905" />
+              <connRefOutput v="1475598487" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="45" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation_pivot" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-1 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.429999977 1.17999995" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="1.17999995" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="end_position" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="-0.219999999 -0.0399999991" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="opacity_min" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.0199999996" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475663285" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475837758" />
+          <GUILayout>
+            <gpos v="-176 656 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475837759" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="Source" />
+              <connRef v="1475717459" />
+              <connRefOutput v="1475717460" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///blur_hq_grayscale?dependency=1299236171" />
+              <parameters>
+                <parameter>
+                  <name v="Intensity" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.349999994" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Quality" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475837759" />
+                  <identifier v="Blur_HQ" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475838240" />
+          <GUILayout>
+            <gpos v="673.784546 816 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475762823" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475838239" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475840186" />
+          <GUILayout>
+            <gpos v="368 1072 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475840187" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475763237" />
+              <connRefOutput v="1475663285" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="3" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="-0.480083346" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475840187" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475915792" />
+          <GUILayout>
+            <gpos v="496 1072 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475840186" />
+              <connRefOutput v="1475840187" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475915791" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475915819" />
+          <GUILayout>
+            <gpos v="-304 912 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475915820" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///polygon_2?dependency=1357227353" />
+              <parameters>
+                <parameter>
+                  <name v="Curve" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="-1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Gradient" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.560000002" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475915820" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475915967" />
+          <GUILayout>
+            <gpos v="-176 912 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475915968" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475915819" />
+              <connRefOutput v="1475915820" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///histogram_select?dependency=1406775102" />
+              <parameters>
+                <parameter>
+                  <name v="range" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.099999994" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="constrast" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.75" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475915968" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475916095" />
+          <GUILayout>
+            <gpos v="-304 1040 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475916096" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="0.708333313 0 0.361394703 1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475916171" />
+          <GUILayout>
+            <gpos v="-16 1136 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475916172" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1475916095" />
+              <connRefOutput v="1475916096" />
+            </connection>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1475915967" />
+              <connRefOutput v="1475915968" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475916194" />
+          <GUILayout>
+            <gpos v="368 1200 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475916195" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475916171" />
+              <connRefOutput v="1475916172" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="7" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475916195" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475927721" />
+          <GUILayout>
+            <gpos v="496 1200 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475916194" />
+              <connRefOutput v="1475916195" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1475927720" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475927728" />
+          <GUILayout>
+            <gpos v="368 1328 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475916195" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475916171" />
+              <connRefOutput v="1475916172" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="input_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="2 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0.819999993" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="11" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475916195" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476054580" />
+          <GUILayout>
+            <gpos v="496 1328 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927728" />
+              <connRefOutput v="1475916195" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476054579" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476054586" />
+          <GUILayout>
+            <gpos v="368 1584 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476054587" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475916171" />
+              <connRefOutput v="1475916172" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="33" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.829999983 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476054587" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476087762" />
+          <GUILayout>
+            <gpos v="368 1456 49" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476054587" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475916171" />
+              <connRefOutput v="1475916172" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Repeater_Color?dependency=1474172226" />
+              <parameters>
+                <parameter>
+                  <name v="toggle_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_uniform_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_repeat_count" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="47" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="input_scale" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.829999983 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="toggle_opacity_fade" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation_pivot" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0.50999999 0.560000002" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476054587" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476177105" />
+          <GUILayout>
+            <gpos v="496 1456 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476087762" />
+              <connRefOutput v="1476054587" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476177104" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476177114" />
+          <GUILayout>
+            <gpos v="496 1584 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476054586" />
+              <connRefOutput v="1476054587" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476177113" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1475156168" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475598907" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475838239" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475915791" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1475927720" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476054579" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476177104" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476177113" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+  </content>
+</package>
