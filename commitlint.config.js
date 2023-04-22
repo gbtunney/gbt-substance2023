@@ -19,6 +19,7 @@ module.exports = {
                 'sd-utilities',
                 'functions',
                 'autotransform',
+                'wallpaper-groups',
                 'palatte',
                 'blend-tools',
                 'shelf',
