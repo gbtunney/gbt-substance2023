@@ -1,0 +1,2901 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{1866d3dd-1920-4433-a300-31dde919b3cd}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1395922516" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://rgb-a_merge.sbs" />
+      <uid v="1278679669" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="Wallpaper_Groups.sbsar" />
+      <uid v="1474354614" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="../../sd-utilities/dist/GBT_Hex_Tile_Generator.sbsar" />
+      <uid v="1474423223" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://pattern_polygon_1.sbs" />
+      <uid v="1475995765" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <group>
+      <uid v="1395922861" />
+      <identifier v="Resources" />
+      <content>
+        <resource>
+          <identifier v="uvchecker" />
+          <uid v="1395922864" />
+          <type v="bitmap" />
+          <colorSpace v="[use_embedded_profile]" />
+          <format v="png" />
+          <filepath
+            v="../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-XXXXXX-XXXXXX-306ec2bb921d870015800f9ee0360890.png"
+          />
+          <source>
+            <externalcopy>
+              <filename
+                v="Wallpaper_Groupsv2.resources/1-XXXXXX-XXXXXX-XXXXXX-306ec2bb921d870015800f9ee0360890.png"
+              />
+            </externalcopy>
+          </source>
+        </resource>
+        <resource>
+          <identifier v="greyscale_uv_checker" />
+          <uid v="1395922862" />
+          <type v="bitmap" />
+          <colorSpace v="[use_embedded_profile]" />
+          <format v="png" />
+          <filepath
+            v="../../../../../../private/var/folders/98/kt7ysrj14xnf5g30y63z8hr40000gn/T/Allegorithmic/Substance Designer/resources/XXXXXX-greyscale uv checker.png"
+          />
+          <source>
+            <externalcopy>
+              <filename
+                v="Wallpaper_Groupsv2.resources/XXXXXX-greyscale uv checker.png"
+              />
+            </externalcopy>
+          </source>
+        </resource>
+      </content>
+    </group>
+    <group>
+      <uid v="1396161029" />
+      <identifier v="Wallpaper_Groups" />
+      <content>
+        <graph>
+          <identifier v="13_p3" />
+          <uid v="1396231580" />
+          <attributes>
+            <author v="Gillian Tunney" />
+            <description v="name is ##number##_##group##&#10;&#10;&#10;9_cmm" />
+          </attributes>
+          <paraminputs>
+            <paraminput>
+              <identifier v="color_input" />
+              <uid v="1396236831" />
+              <isConnectable v="1" />
+              <type v="1" />
+              <defaultValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="" />
+                <options />
+              </defaultWidget>
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_tileable_result" />
+              <uid v="1475280261" />
+              <attributes>
+                <label v="hex_tileable_result" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Large Hexagon" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="Tileable" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_toggleDistortionCorrection" />
+              <uid v="1475280263" />
+              <attributes>
+                <label v="DistortionCorrection/ Zoom" />
+                <description
+                  v="wont be a seamless tiling but wont look wonky either  maybe?"
+                />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Off ( no correction)" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="On ( correction / zoom)" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+          </paraminputs>
+          <primaryInput v="1396236831" />
+          <graphOutputs>
+            <graphoutput>
+              <identifier v="output" />
+              <uid v="1475279835" />
+              <attributes>
+                <label v="Output" />
+              </attributes>
+            </graphoutput>
+          </graphOutputs>
+          <compNodes>
+            <compNode>
+              <uid v="1396236830" />
+              <GUILayout>
+                <gpos v="-2160 -528 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1390379652" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <compImplementation>
+                <compInputBridge>
+                  <entry v="1396236831" />
+                  <parameters>
+                    <parameter>
+                      <name v="bitmapresourcepath" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueString
+                          v="pkg:///Resources/uvchecker?dependency=1395922516"
+                        />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="outputsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt2 v="0 0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="format" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueFloat2 v="1 1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelratio" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="tiling" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="randomseed" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                </compInputBridge>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475279792" />
+              <GUILayout>
+                <gpos v="-1872 -528 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1475279793" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1396236830" />
+                  <connRefOutput v="1390379652" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path
+                    v="pkg:///Wallpaper_Groups_Hexagons?dependency=1474354614"
+                  />
+                  <parameters>
+                    <parameter>
+                      <name v="hex_tileable_result" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475280262" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475280262" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_tileable_result"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_toggleDistortionCorrection" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475280264" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475280264" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_toggleDistortionCorrection"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1475279793" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475279836" />
+              <GUILayout>
+                <gpos v="-1584 -528 0" />
+              </GUILayout>
+              <connections>
+                <connection>
+                  <identifier v="inputNodeOutput" />
+                  <connRef v="1475279792" />
+                  <connRefOutput v="1475279793" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compOutputBridge>
+                  <output v="1475279835" />
+                </compOutputBridge>
+              </compImplementation>
+            </compNode>
+          </compNodes>
+          <baseParameters>
+            <parameter>
+              <name v="tiling" />
+              <relativeTo v="0" />
+              <paramValue>
+                <constantValueInt32 v="3" />
+              </paramValue>
+            </parameter>
+          </baseParameters>
+          <GUIObjects>
+            <GUIObject>
+              <type v="COMMENT" />
+              <GUILayout>
+                <gpos v="-1952 -608 0" />
+                <size v="160 192" />
+              </GUILayout>
+              <GUIName v="" />
+              <uid v="1475279844" />
+              <title v="TODO: NO SOURCE FILE" />
+              <frameColor v="0.101960786 0.552941203 1 0.250980407" />
+              <isTitleVisible v="1" />
+              <isFrameVisible v="1" />
+            </GUIObject>
+          </GUIObjects>
+          <options>
+            <option>
+              <name v="defaultParentSize" />
+              <value v="11x11" />
+            </option>
+          </options>
+          <root>
+            <rootOutputs>
+              <rootOutput>
+                <output v="1475279835" />
+                <format v="0" />
+                <usertag v="" />
+              </rootOutput>
+            </rootOutputs>
+          </root>
+        </graph>
+        <graph>
+          <identifier v="14_p3m" />
+          <uid v="1396283149" />
+          <paraminputs>
+            <paraminput>
+              <identifier v="input" />
+              <uid v="1396283425" />
+              <isConnectable v="1" />
+              <type v="1" />
+              <defaultValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="" />
+                <options />
+              </defaultWidget>
+            </paraminput>
+            <paraminput>
+              <identifier v="input_1" />
+              <uid v="1396272956" />
+              <isConnectable v="1" />
+              <type v="2" />
+              <defaultValue>
+                <constantValueFloat1 v="0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="" />
+                <options />
+              </defaultWidget>
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_tileable_result" />
+              <uid v="1475280185" />
+              <attributes>
+                <label v="hex_tileable_result" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Large Hexagon" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="Tileable" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_toggleDistortionCorrection" />
+              <uid v="1475280187" />
+              <attributes>
+                <label v="DistortionCorrection/ Zoom" />
+                <description
+                  v="wont be a seamless tiling but wont look wonky either  maybe?"
+                />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Off ( no correction)" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="On ( correction / zoom)" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+          </paraminputs>
+          <primaryInput v="1396283425" />
+          <graphOutputs>
+            <graphoutput>
+              <identifier v="output" />
+              <uid v="1475280141" />
+              <attributes>
+                <label v="Output" />
+              </attributes>
+            </graphoutput>
+          </graphOutputs>
+          <compNodes>
+            <compNode>
+              <uid v="1396283426" />
+              <GUILayout>
+                <gpos v="-1008 304 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1396283427" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <compImplementation>
+                <compInputBridge>
+                  <entry v="1396283425" />
+                  <parameters>
+                    <parameter>
+                      <name v="bitmapresourcepath" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueString
+                          v="pkg:///Resources/uvchecker?dependency=1395922516"
+                        />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="outputsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt2 v="0 0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="format" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueFloat2 v="1 1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelratio" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="tiling" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="randomseed" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                </compInputBridge>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1396272957" />
+              <GUILayout>
+                <gpos v="-1008 464 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1396272958" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <compImplementation>
+                <compInputBridge>
+                  <entry v="1396272956" />
+                  <parameters>
+                    <parameter>
+                      <name v="bitmapresourcepath" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueString
+                          v="pkg:///Resources/greyscale_uv_checker?dependency=1395922516"
+                        />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="outputsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt2 v="0 0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="format" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueFloat2 v="1 1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelratio" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="tiling" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="randomseed" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                </compInputBridge>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475280090" />
+              <GUILayout>
+                <gpos v="-784 304 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1475280091" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1396283426" />
+                  <connRefOutput v="1396283427" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path
+                    v="pkg:///Wallpaper_Groups_Hexagons?dependency=1474354614"
+                  />
+                  <parameters>
+                    <parameter>
+                      <name v="hex_group_picker" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueInt32 v="2" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_tileable_result" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475280186" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475280186" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_tileable_result"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_toggleDistortionCorrection" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475280188" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475280188" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_toggleDistortionCorrection"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1475280091" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475280142" />
+              <GUILayout>
+                <gpos v="-496 304 0" />
+              </GUILayout>
+              <connections>
+                <connection>
+                  <identifier v="inputNodeOutput" />
+                  <connRef v="1475280090" />
+                  <connRefOutput v="1475280091" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compOutputBridge>
+                  <output v="1475280141" />
+                </compOutputBridge>
+              </compImplementation>
+            </compNode>
+          </compNodes>
+          <baseParameters />
+          <GUIObjects>
+            <GUIObject>
+              <type v="COMMENT" />
+              <GUILayout>
+                <gpos v="-864 224 0" />
+                <size v="160 192" />
+              </GUILayout>
+              <GUIName v="" />
+              <uid v="1475280194" />
+              <title v="TODO: NO SOURCE FILE" />
+              <frameColor v="0.101960786 0.552941203 1 0.250980407" />
+              <isTitleVisible v="1" />
+              <isFrameVisible v="1" />
+            </GUIObject>
+          </GUIObjects>
+          <options>
+            <option>
+              <name v="defaultParentSize" />
+              <value v="11x11" />
+            </option>
+          </options>
+          <root>
+            <rootOutputs>
+              <rootOutput>
+                <output v="1475280141" />
+                <format v="0" />
+                <usertag v="" />
+              </rootOutput>
+            </rootOutputs>
+          </root>
+        </graph>
+        <graph>
+          <identifier v="15_p3m1" />
+          <uid v="1396231582" />
+          <attributes>
+            <author v="Gillian Tunney" />
+            <description v="name is ##number##_##group##&#10;&#10;&#10;9_cmm" />
+          </attributes>
+          <paraminputs>
+            <paraminput>
+              <identifier v="color_input" />
+              <uid v="1389963102" />
+              <isConnectable v="1" />
+              <type v="1" />
+              <defaultValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="" />
+                <options />
+              </defaultWidget>
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_tileable_result" />
+              <uid v="1475284066" />
+              <attributes>
+                <label v="hex_tileable_result" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Large Hexagon" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="Tileable" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_toggleDistortionCorrection" />
+              <uid v="1475284068" />
+              <attributes>
+                <label v="DistortionCorrection/ Zoom" />
+                <description
+                  v="wont be a seamless tiling but wont look wonky either  maybe?"
+                />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Off ( no correction)" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="On ( correction / zoom)" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+          </paraminputs>
+          <primaryInput v="1389963102" />
+          <graphOutputs>
+            <graphoutput>
+              <identifier v="output" />
+              <uid v="1475280346" />
+              <attributes>
+                <label v="Output" />
+              </attributes>
+            </graphoutput>
+          </graphOutputs>
+          <compNodes>
+            <compNode>
+              <uid v="1389963103" />
+              <GUILayout>
+                <gpos v="-2498.40601 -240 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1389963104" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <compImplementation>
+                <compInputBridge>
+                  <entry v="1389963102" />
+                  <parameters>
+                    <parameter>
+                      <name v="bitmapresourcepath" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueString
+                          v="pkg:///Resources/uvchecker?dependency=1395922516"
+                        />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="tiling" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="outputsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt2 v="0 0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="format" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueFloat2 v="1 1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelratio" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="randomseed" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                </compInputBridge>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475280281" />
+              <GUILayout>
+                <gpos v="-2288 -240 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1475280282" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1389963103" />
+                  <connRefOutput v="1389963104" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path
+                    v="pkg:///Wallpaper_Groups_Hexagons?dependency=1474354614"
+                  />
+                  <parameters>
+                    <parameter>
+                      <name v="hex_group_picker" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_tileable_result" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475284067" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475284067" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_tileable_result"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_toggleDistortionCorrection" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475284069" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475284069" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_toggleDistortionCorrection"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1475280282" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475280347" />
+              <GUILayout>
+                <gpos v="-2000 -240 0" />
+              </GUILayout>
+              <connections>
+                <connection>
+                  <identifier v="inputNodeOutput" />
+                  <connRef v="1475280281" />
+                  <connRefOutput v="1475280282" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compOutputBridge>
+                  <output v="1475280346" />
+                </compOutputBridge>
+              </compImplementation>
+            </compNode>
+          </compNodes>
+          <baseParameters>
+            <parameter>
+              <name v="tiling" />
+              <relativeTo v="0" />
+              <paramValue>
+                <constantValueInt32 v="3" />
+              </paramValue>
+            </parameter>
+          </baseParameters>
+          <GUIObjects>
+            <GUIObject>
+              <type v="COMMENT" />
+              <GUILayout>
+                <gpos v="-608 -640 -100" />
+                <size v="117 40" />
+              </GUILayout>
+              <GUIName
+                v="scale:  1.33&#10;interstice x: 0.135&#10;tile: 2 2&#10;&#10;OR:&#10;scale up  x1 .8660  y1 1&#10;interterstice x : 0.248&#10;tile scale 1.329&#10;&#10;"
+              />
+              <uid v="1390005545" />
+              <frameColor v="0 0 0 1" />
+            </GUIObject>
+          </GUIObjects>
+          <options>
+            <option>
+              <name v="defaultParentSize" />
+              <value v="11x11" />
+            </option>
+          </options>
+          <root>
+            <rootOutputs>
+              <rootOutput>
+                <output v="1475280346" />
+                <format v="0" />
+                <usertag v="" />
+              </rootOutput>
+            </rootOutputs>
+          </root>
+        </graph>
+        <graph>
+          <identifier v="16_p6" />
+          <uid v="1396171332" />
+          <attributes>
+            <author v="Gillian Tunney" />
+            <description v="name is ##number##_##group##&#10;&#10;&#10;9_cmm" />
+          </attributes>
+          <paraminputs>
+            <paraminput>
+              <identifier v="input" />
+              <uid v="1396180727" />
+              <isConnectable v="1" />
+              <type v="1" />
+              <defaultValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="" />
+                <options />
+              </defaultWidget>
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_tileable_result" />
+              <uid v="1475284037" />
+              <attributes>
+                <label v="hex_tileable_result" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Large Hexagon" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="Tileable" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_toggleDistortionCorrection" />
+              <uid v="1475284039" />
+              <attributes>
+                <label v="DistortionCorrection/ Zoom" />
+                <description
+                  v="wont be a seamless tiling but wont look wonky either  maybe?"
+                />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Off ( no correction)" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="On ( correction / zoom)" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+          </paraminputs>
+          <primaryInput v="1396180727" />
+          <graphOutputs>
+            <graphoutput>
+              <identifier v="output" />
+              <uid v="1475280406" />
+              <attributes>
+                <label v="Output" />
+              </attributes>
+            </graphoutput>
+          </graphOutputs>
+          <compNodes>
+            <compNode>
+              <uid v="1396180726" />
+              <GUILayout>
+                <gpos v="-3152 336 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1396283427" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <compImplementation>
+                <compInputBridge>
+                  <entry v="1396180727" />
+                  <parameters>
+                    <parameter>
+                      <name v="bitmapresourcepath" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueString
+                          v="pkg:///Resources/uvchecker?dependency=1395922516"
+                        />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="outputsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt2 v="0 0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="format" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueFloat2 v="1 1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelratio" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="tiling" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="randomseed" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                </compInputBridge>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475280377" />
+              <GUILayout>
+                <gpos v="-2960 336 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1475280378" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1396180726" />
+                  <connRefOutput v="1396283427" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path
+                    v="pkg:///Wallpaper_Groups_Hexagons?dependency=1474354614"
+                  />
+                  <parameters>
+                    <parameter>
+                      <name v="hex_group_picker" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueInt32 v="4" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_tileable_result" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475284038" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475284038" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_tileable_result"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_toggleDistortionCorrection" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475284040" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475284040" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_toggleDistortionCorrection"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1475280378" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475280407" />
+              <GUILayout>
+                <gpos v="-2672 336 0" />
+              </GUILayout>
+              <connections>
+                <connection>
+                  <identifier v="inputNodeOutput" />
+                  <connRef v="1475280377" />
+                  <connRefOutput v="1475280378" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compOutputBridge>
+                  <output v="1475280406" />
+                </compOutputBridge>
+              </compImplementation>
+            </compNode>
+          </compNodes>
+          <baseParameters>
+            <parameter>
+              <name v="format" />
+              <relativeTo v="0" />
+              <paramValue>
+                <constantValueInt32 v="0" />
+              </paramValue>
+            </parameter>
+          </baseParameters>
+          <options>
+            <option>
+              <name v="defaultParentSize" />
+              <value v="11x11" />
+            </option>
+          </options>
+          <root>
+            <rootOutputs>
+              <rootOutput>
+                <output v="1475280406" />
+                <format v="0" />
+                <usertag v="" />
+              </rootOutput>
+            </rootOutputs>
+          </root>
+        </graph>
+        <graph>
+          <identifier v="17_p6m" />
+          <uid v="1396171426" />
+          <attributes>
+            <author v="Gillian Tunney" />
+            <description v="name is ##number##_##group##&#10;&#10;&#10;9_cmm" />
+          </attributes>
+          <paraminputs>
+            <paraminput>
+              <identifier v="color_input" />
+              <uid v="1389963102" />
+              <isConnectable v="1" />
+              <type v="1" />
+              <defaultValue>
+                <constantValueFloat4 v="0 0 0 0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="" />
+                <options />
+              </defaultWidget>
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_tileable_result" />
+              <uid v="1475284015" />
+              <attributes>
+                <label v="hex_tileable_result" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Large Hexagon" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="Tileable" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+            <paraminput>
+              <identifier v="hex_toggleDistortionCorrection" />
+              <uid v="1475284017" />
+              <attributes>
+                <label v="DistortionCorrection/ Zoom" />
+                <description
+                  v="wont be a seamless tiling but wont look wonky either  maybe?"
+                />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="0" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="label0" />
+                    <value v="Off ( no correction)" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="On ( correction / zoom)" />
+                  </option>
+                </options>
+              </defaultWidget>
+              <group v="Hexagon Tile Options" />
+            </paraminput>
+          </paraminputs>
+          <primaryInput v="1389963102" />
+          <graphOutputs>
+            <graphoutput>
+              <identifier v="output" />
+              <uid v="1475283937" />
+              <attributes>
+                <label v="Output" />
+              </attributes>
+            </graphoutput>
+          </graphOutputs>
+          <compNodes>
+            <compNode>
+              <uid v="1389963103" />
+              <GUILayout>
+                <gpos v="-3997.10107 -80 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1389963104" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <compImplementation>
+                <compInputBridge>
+                  <entry v="1389963102" />
+                  <parameters>
+                    <parameter>
+                      <name v="bitmapresourcepath" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueString
+                          v="pkg:///Resources/uvchecker?dependency=1395922516"
+                        />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="outputsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt2 v="0 0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="format" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelsize" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueFloat2 v="1 1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="pixelratio" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="1" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="tiling" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="3" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="randomseed" />
+                      <relativeTo v="1" />
+                      <paramValue>
+                        <constantValueInt32 v="0" />
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                </compInputBridge>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475283885" />
+              <GUILayout>
+                <gpos v="-3856 -80 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1475283886" />
+                  <comptype v="1" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1389963103" />
+                  <connRefOutput v="1389963104" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path
+                    v="pkg:///Wallpaper_Groups_Hexagons?dependency=1474354614"
+                  />
+                  <parameters>
+                    <parameter>
+                      <name v="hex_group_picker" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <constantValueInt32 v="5" />
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_tileable_result" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475284016" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475284016" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_tileable_result"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                    <parameter>
+                      <name v="hex_toggleDistortionCorrection" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1475284018" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1475284018" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="hex_toggleDistortionCorrection"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1475283886" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1475283938" />
+              <GUILayout>
+                <gpos v="-3664 -80 0" />
+              </GUILayout>
+              <connections>
+                <connection>
+                  <identifier v="inputNodeOutput" />
+                  <connRef v="1475283885" />
+                  <connRefOutput v="1475283886" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compOutputBridge>
+                  <output v="1475283937" />
+                </compOutputBridge>
+              </compImplementation>
+            </compNode>
+          </compNodes>
+          <baseParameters>
+            <parameter>
+              <name v="pixelsize" />
+              <relativeTo v="1" />
+              <paramValue>
+                <constantValueFloat2 v="1 0.469999999" />
+              </paramValue>
+            </parameter>
+          </baseParameters>
+          <GUIObjects>
+            <GUIObject>
+              <type v="COMMENT" />
+              <GUILayout>
+                <gpos v="-608 -640 -100" />
+                <size v="117 40" />
+              </GUILayout>
+              <GUIName
+                v="scale:  1.33&#10;interstice x: 0.135&#10;tile: 2 2&#10;&#10;OR:&#10;scale up  x1 .8660  y1 1&#10;interterstice x : 0.248&#10;tile scale 1.329&#10;&#10;"
+              />
+              <uid v="1390005545" />
+              <frameColor v="0 0 0 1" />
+            </GUIObject>
+          </GUIObjects>
+          <options>
+            <option>
+              <name v="defaultParentSize" />
+              <value v="11x11" />
+            </option>
+          </options>
+          <root>
+            <rootOutputs>
+              <rootOutput>
+                <output v="1475283937" />
+                <format v="0" />
+                <usertag v="" />
+              </rootOutput>
+            </rootOutputs>
+          </root>
+        </graph>
+      </content>
+    </group>
+    <graph>
+      <identifier v="Wallpaper_Groups_Hexagon_Switcher" />
+      <uid v="1475285909" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input" />
+          <uid v="1474420725" />
+          <attributes>
+            <label v="input" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="1" />
+          <defaultValue>
+            <constantValueFloat4 v="0 0 0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="hex_group_picker" />
+          <uid v="1474423529" />
+          <attributes>
+            <label v="Hexagon Groups Switcher" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;1;13 p3;2;14 p3m;3;15 p3m1;4;16 p6;5;17 p6m" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="x_amount" />
+          <uid v="1474478849" />
+          <attributes>
+            <label v="Tile Amount" />
+            <description v="Amount of patterns on the X axis." />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="7" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="7" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="64" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="image_in_tile" />
+          <uid v="1474423531" />
+          <attributes>
+            <label v="Tile" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="max" />
+                <value v="16" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image In" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_in_offset_mode" />
+          <uid v="1474423533" />
+          <attributes>
+            <label v="Offset Mode" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;0;Manual;1;Random" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image In" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_in_offset" />
+          <uid v="1474423535" />
+          <attributes>
+            <label v="Offset" />
+          </attributes>
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0;0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image In" />
+          <visibleIf v="input[&quot;image_in_offset_mode&quot;]==0" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_in_rotation" />
+          <uid v="1474423537" />
+          <attributes>
+            <label v="Rotation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="angle" />
+            <options>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image In" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_in_tile_safe_rotation" />
+          <uid v="1474423539" />
+          <attributes>
+            <label v="Tile Safe Rotation" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options />
+          </defaultWidget>
+          <group v="Image In" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_in_symmetry" />
+          <uid v="1474423541" />
+          <attributes>
+            <label v="Symmetry" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;0;none;1;X;2;Y;3;X+Y" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image In" />
+        </paraminput>
+        <paraminput>
+          <identifier v="hex_tileable_result" />
+          <uid v="1474423543" />
+          <attributes>
+            <label v="hex_tileable_result" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="label0" />
+                <value v="Large Hexagon" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Tileable" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Hexagon Tile Options" />
+        </paraminput>
+        <paraminput>
+          <identifier v="hex_toggleDistortionCorrection" />
+          <uid v="1474423545" />
+          <attributes>
+            <label v="DistortionCorrection/ Zoom" />
+            <description
+              v="wont be a seamless tiling but wont look wonky either  maybe?"
+            />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="label0" />
+                <value v="Off ( no correction)" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="On ( correction / zoom)" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Hexagon Tile Options" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_outtile" />
+          <uid v="1474423547" />
+          <attributes>
+            <label v="Tile" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="max" />
+                <value v="16" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image Out" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_outoffset_mode" />
+          <uid v="1474423549" />
+          <attributes>
+            <label v="Offset Mode" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;0;Manual;1;Random" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image Out" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_outoffset" />
+          <uid v="1474423551" />
+          <attributes>
+            <label v="Offset" />
+          </attributes>
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0;0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image Out" />
+          <visibleIf v="input[&quot;image_outoffset_mode&quot;]==0" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_outrotation" />
+          <uid v="1474423553" />
+          <attributes>
+            <label v="Rotation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="angle" />
+            <options>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image Out" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_outtile_safe_rotation" />
+          <uid v="1474423555" />
+          <attributes>
+            <label v="Tile Safe Rotation" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options />
+          </defaultWidget>
+          <group v="Image Out" />
+        </paraminput>
+        <paraminput>
+          <identifier v="image_outsymmetry" />
+          <uid v="1474423557" />
+          <attributes>
+            <label v="Symmetry" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;0;none;1;X;2;Y;3;X+Y" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Image Out" />
+        </paraminput>
+      </paraminputs>
+      <primaryInput v="1474420725" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1474423493" />
+          <attributes>
+            <label v="Output" />
+          </attributes>
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1474420675" />
+          <GUILayout>
+            <gpos v="410.666656 -16 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474420676" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474420726" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path
+                v="pkg:///Wallpaper_Groups_Hexagons?dependency=1474354614"
+              />
+              <parameters>
+                <parameter>
+                  <name v="hex_tileable_result" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423544" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423544" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="hex_tileable_result" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hex_toggleDistortionCorrection" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423546" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423546" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString
+                                  v="hex_toggleDistortionCorrection"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="hex_group_picker" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423530" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423530" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="hex_group_picker" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_in_tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423532" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423532" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="image_in_tile" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_in_offset_mode" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423534" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423534" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="image_in_offset_mode" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_in_offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423536" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423536" />
+                          <function v="get_float2" />
+                          <type v="512" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float2" />
+                              <constantValue>
+                                <constantValueString v="image_in_offset" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_in_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423538" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423538" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="image_in_rotation" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_in_tile_safe_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423540" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423540" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString
+                                  v="image_in_tile_safe_rotation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_in_symmetry" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423542" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423542" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="image_in_symmetry" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_outtile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423548" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423548" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="image_outtile" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_outoffset_mode" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423550" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423550" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="image_outoffset_mode" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_outoffset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423552" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423552" />
+                          <function v="get_float2" />
+                          <type v="512" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float2" />
+                              <constantValue>
+                                <constantValueString v="image_outoffset" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_outrotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423554" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423554" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="image_outrotation" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_outtile_safe_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423556" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423556" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString
+                                  v="image_outtile_safe_rotation"
+                                />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="image_outsymmetry" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474423558" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474423558" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="image_outsymmetry" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474420676" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474420726" />
+          <GUILayout>
+            <gpos v="240 -16 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474420727" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1474420725" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///Resources/uvchecker?dependency=1395922516"
+                    />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474423231" />
+          <GUILayout>
+            <gpos v="816 -16 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474423232" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474423401" />
+              <connRefOutput v="1474423402" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///GBT_Hex_Tile_Generator?dependency=1474423223" />
+              <parameters>
+                <parameter>
+                  <name v="x_amount" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474478850" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474478850" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_amount" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474423232" />
+                  <identifier v="TileGenerator_Color" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474423327" />
+          <GUILayout>
+            <gpos v="560 -16 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474423328" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="RGB" />
+              <connRef v="1474420675" />
+              <connRefOutput v="1474420676" />
+            </connection>
+            <connection>
+              <identifier v="A" />
+              <connRef v="1478684189" />
+              <connRefOutput v="1478684190" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///rgb-a_merge?dependency=1278679669" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474423328" />
+                  <identifier v="RGB-A_Merge" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474423338" />
+          <GUILayout>
+            <gpos v="240 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474423339" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="uniform" />
+              <parameters>
+                <parameter>
+                  <name v="colorswitch" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputcolor" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat4 v="1 1 1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt2 v="4 4" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474423386" />
+          <GUILayout>
+            <gpos v="240 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474423387" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///polygon_1?dependency=1475995765" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474423387" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474423401" />
+          <GUILayout>
+            <gpos v="688 -16 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474423402" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="source" />
+              <connRef v="1474423327" />
+              <connRefOutput v="1474423328" />
+            </connection>
+            <connection>
+              <identifier v="opacity" />
+              <connRef v="1478684169" />
+              <connRefOutput v="1478684170" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="blend" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474423494" />
+          <GUILayout>
+            <gpos v="944 -16 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1474423231" />
+              <connRefOutput v="1474423232" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1474423493" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1478684169" />
+          <GUILayout>
+            <gpos v="592 240 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1478684170" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474423386" />
+              <connRefOutput v="1474423387" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1478684189" />
+          <GUILayout>
+            <gpos v="506.666656 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1478684190" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474423338" />
+              <connRefOutput v="1474423339" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <GUIObjects>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="330.666656 -128 -100" />
+            <size v="160 192" />
+          </GUILayout>
+          <GUIName v="Its missing :(" />
+          <uid v="1474420687" />
+          <title v="A wrapper for old file" />
+          <frameColor v="1 0 0 0.250980407" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+      </GUIObjects>
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1474423493" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+  </content>
+</package>

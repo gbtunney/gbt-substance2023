@@ -33,7 +33,7 @@
         "\n========== TEST >> ==========": "",
         "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render",
         "test:build": "pnpm sbs:cooker -- --inputs ./tests/*.sbs  --output-path ./tests/_output",
-        "test:render": "pnpm sbs:render --  --inputs ./tests/_output/*.sbsar  --output-path ./tests/_output",
+        "test:render": "pnpm sbs:render --  --inputs ./tests/_output/*.sbsar --output-path ./tests/_output",
         "test:pwd": "echo $PWD;",
         "test:cli": "pnpm exec sdbuilder --help",
         "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
