@@ -14,7 +14,7 @@
   <dependencies>
     <dependency>
       <filename v="?himself" />
-      <uid v="1477136762" />
+      <uid v="1474192806" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -109,7 +109,7 @@
                   <name v="instance" />
                   <constantValue>
                     <constantValueString
-                      v="pkg:///isModulo?dependency=1477136762"
+                      v="pkg:///isModulo?dependency=1474192806"
                     />
                   </constantValue>
                 </funcData>
@@ -1629,6 +1629,302 @@
               </connections>
               <GUILayout>
                 <gpos v="944 48 0" />
+              </GUILayout>
+            </paramNode>
+          </paramNodes>
+        </dynamicValue>
+      </paramValue>
+    </function>
+    <function>
+      <identifier v="func_clamp_float2" />
+      <uid v="1474192889" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input_value" />
+          <uid v="1474192963" />
+          <attributes>
+            <label v="Value" />
+          </attributes>
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_min" />
+          <uid v="1474192981" />
+          <attributes>
+            <label v="Min" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="input_max" />
+          <uid v="1474193008" />
+          <attributes>
+            <label v="Max" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <type v="512" />
+      <paramValue>
+        <dynamicValue>
+          <rootnode v="1474193048" />
+          <paramNodes>
+            <paramNode>
+              <uid v="1474193048" />
+              <function v="vector2" />
+              <type v="512" />
+              <connections>
+                <connection>
+                  <identifier v="componentsin" />
+                  <connRef v="1474193055" />
+                </connection>
+                <connection>
+                  <identifier v="componentslast" />
+                  <connRef v="1474193050" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="1968 575.603149 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193049" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1474193171" />
+                </connection>
+              </connections>
+              <GUILayout>
+                <gpos v="1456 272 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193050" />
+              <function v="instance" />
+              <type v="118772" />
+              <connections>
+                <connection>
+                  <identifier v="min" />
+                  <connRef v="1474193112" />
+                </connection>
+                <connection>
+                  <identifier v="max" />
+                  <connRef v="1474193146" />
+                </connection>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1474193053" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="instance" />
+                  <constantValue>
+                    <constantValueString
+                      v="pkg:///Functions/Math/clamp?dependency=1290776887"
+                    />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="1808 642.625854 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193053" />
+              <function v="swizzle1" />
+              <type v="256" />
+              <connections>
+                <connection>
+                  <identifier v="vector" />
+                  <connRef v="1474193171" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="swizzle1" />
+                  <constantValue>
+                    <constantValueInt1 v="1" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="1456 400 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193055" />
+              <function v="instance" />
+              <type v="118772" />
+              <connections>
+                <connection>
+                  <identifier v="min" />
+                  <connRef v="1474193112" />
+                </connection>
+                <connection>
+                  <identifier v="max" />
+                  <connRef v="1474193146" />
+                </connection>
+                <connection>
+                  <identifier v="input" />
+                  <connRef v="1474193049" />
+                </connection>
+              </connections>
+              <funcDatas>
+                <funcData>
+                  <name v="instance" />
+                  <constantValue>
+                    <constantValueString
+                      v="pkg:///Functions/Math/clamp?dependency=1290776887"
+                    />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="1808 514.625854 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193112" />
+              <function v="get_float1" />
+              <type v="256" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float1" />
+                  <constantValue>
+                    <constantValueString v="input_min" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="1328 528 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193146" />
+              <function v="get_float1" />
+              <type v="256" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float1" />
+                  <constantValue>
+                    <constantValueString v="input_max" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="1328 656 0" />
+              </GUILayout>
+            </paramNode>
+            <paramNode>
+              <uid v="1474193171" />
+              <function v="get_float2" />
+              <type v="512" />
+              <funcDatas>
+                <funcData>
+                  <name v="get_float2" />
+                  <constantValue>
+                    <constantValueString v="input_value" />
+                  </constantValue>
+                </funcData>
+              </funcDatas>
+              <GUILayout>
+                <gpos v="1328 272 0" />
               </GUILayout>
             </paramNode>
           </paramNodes>
