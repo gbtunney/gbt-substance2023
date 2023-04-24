@@ -97,7 +97,14 @@
 		</mdl>
 		<library>
 			<watchedPaths>
-				<size>2</size>
+				<size>3</size>
+				<_3 prefix="_">
+					<url>$(PROJECT_DIR)://bundles/shelf/dist</url>
+					<isRecursive>false</isRecursive>
+					<isEnabled>true</isEnabled>
+					<excludePattern></excludePattern>
+					<excludeFilter></excludeFilter>
+				</_3>
 				<_2 prefix="_">
 					<url>file:///Users/gilliantunney/snailicide_helix/substance/Substance_Automation_Toolkit/resources/packages</url>
 					<isRecursive>true</isRecursive>
@@ -108,7 +115,7 @@
 				<_1 prefix="_">
 					<url>file:///Users/gilliantunney/snailicide_helix/substance/nodes/sbsar</url>
 					<isRecursive>false</isRecursive>
-					<isEnabled>false</isEnabled>
+					<isEnabled>true</isEnabled>
 					<excludePattern></excludePattern>
 					<excludeFilter></excludeFilter>
 				</_1>
