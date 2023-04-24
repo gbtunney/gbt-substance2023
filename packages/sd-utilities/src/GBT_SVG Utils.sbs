@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{d2fb647e-4b64-4bed-9bcf-f506dca648af}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="sbs://rgb-a_split.sbs" />
+      <uid v="1474347983" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://invert.sbs" />
+      <uid v="1474348117" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="GBT_SVG_Convert_Grayscale" />
+      <uid v="1474347860" />
+      <attributes>
+        <description v="Just a dumb node to convert a svg to an ALPHA" />
+      </attributes>
+      <paraminputs>
+        <paraminput>
+          <identifier v="input" />
+          <uid v="1474347971" />
+          <attributes>
+            <label v="SVG" />
+          </attributes>
+          <isConnectable v="1" />
+          <type v="1" />
+          <defaultValue>
+            <constantValueFloat4 v="0 0 0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="invert" />
+          <uid v="1474348148" />
+          <attributes>
+            <label v="Invert" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="booleditortype" />
+                <value v="pushbuttons" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="False" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="True" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <primaryInput v="1474347971" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1474348001" />
+          <attributes>
+            <label v="Mask" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1474347972" />
+          <GUILayout>
+            <gpos v="112 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474347973" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1474347971" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474347989" />
+          <GUILayout>
+            <gpos v="240 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474347990" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1474347991" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="RGBA" />
+              <connRef v="1474347972" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///rgb-a_split?dependency=1474347983" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474347990" />
+                  <identifier v="RGB" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1474347991" />
+                  <identifier v="A" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474348002" />
+          <GUILayout>
+            <gpos v="496 112 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1474348126" />
+              <connRefOutput v="1474348127" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1474348001" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474348126" />
+          <GUILayout>
+            <gpos v="368 112 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474348127" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="Source" />
+              <connRef v="1474347989" />
+              <connRefOutput v="1474347991" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///invert_grayscale?dependency=1474348117" />
+              <parameters>
+                <parameter>
+                  <name v="invert" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1474348149" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1474348149" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="invert" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474348127" />
+                  <identifier v="Invert_Grayscale" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1474348001" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+  </content>
+</package>

@@ -8,13 +8,6 @@
   <versionUID v="0" />
   <dependencies>
     <dependency>
-      <filename v="sbs://pattern_polygon_1.sbs" />
-      <uid v="1475995765" />
-      <type v="package" />
-      <fileUID v="0" />
-      <versionUID v="0" />
-    </dependency>
-    <dependency>
       <filename
         v="../../value-processor-utilities/dist/GBT_Value_Processor_Utilities.sbsar"
       />
@@ -24,15 +17,8 @@
       <versionUID v="0" />
     </dependency>
     <dependency>
-      <filename v="tile_generator_color_LEGACY.sbsar" />
-      <uid v="1474336000" />
-      <type v="package" />
-      <fileUID v="0" />
-      <versionUID v="0" />
-    </dependency>
-    <dependency>
-      <filename v="sbs://rgb-a_merge.sbs" />
-      <uid v="1474357812" />
+      <filename v="tile_generator_color LEGACY.sbs" />
+      <uid v="1474421481" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -589,28 +575,6 @@
           </defaultWidget>
         </paraminput>
         <paraminput>
-          <identifier v="Pattern_Type" />
-          <uid v="1474373775" />
-          <attributes>
-            <label v="Pattern Type" />
-          </attributes>
-          <type v="16" />
-          <defaultValue>
-            <constantValueInt1 v="1" />
-          </defaultValue>
-          <defaultWidget>
-            <name v="dropdownlist" />
-            <options>
-              <option>
-                <name v="parameters" />
-                <value
-                  v="8;1;Image Input;2;Square;3;Disc;4;Paraboloid;5;Bell;6;Gaussian;7;Thorn;8;Pyramid;9;Brick;10;Gradation;11;Waves;12;Half_Bell;13;Ridged_Bell;14;Crescent;15;Capsule;16;Cone"
-                />
-              </option>
-            </options>
-          </defaultWidget>
-        </paraminput>
-        <paraminput>
           <identifier v="Pattern_Specific" />
           <uid v="1474373777" />
           <attributes>
@@ -653,9 +617,6 @@
               </option>
             </options>
           </defaultWidget>
-          <visibleIf
-            v="input[&quot;Pattern_Type&quot;]&gt;= 9 &amp;&amp; input[&quot;Pattern_Type&quot;]&lt;= 12 || input[&quot;Pattern_Type&quot;]== 14 || input[&quot;Pattern_Type&quot;]== 15"
-          />
         </paraminput>
         <paraminput>
           <identifier v="image_input_filtering" />
@@ -672,11 +633,10 @@
             <options>
               <option>
                 <name v="parameters" />
-                <value v="0;0;Bilinear + Mipmaps;1;Bilinear;2;Nearest" />
+                <value v="1;0;Bilinear + Mipmaps;1;Bilinear;2;Nearest" />
               </option>
             </options>
           </defaultWidget>
-          <visibleIf v="input[&quot;Pattern_Type&quot;] == 1" />
         </paraminput>
         <paraminput>
           <identifier v="Free_Rotation" />
@@ -1148,30 +1108,6 @@
       </graphOutputs>
       <compNodes>
         <compNode>
-          <uid v="1475997668" />
-          <GUILayout>
-            <gpos v="480.45166 -122.833328 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1475996407" />
-              <comptype v="2" />
-            </compOutput>
-          </compOutputs>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///polygon_1?dependency=1475995765" />
-              <parameters />
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1475996407" />
-                  <identifier v="output" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1475997669" />
           <GUILayout>
             <gpos v="608.45166 240.166672 0" />
@@ -1463,36 +1399,6 @@
           </compImplementation>
         </compNode>
         <compNode>
-          <uid v="1475998248" />
-          <GUILayout>
-            <gpos v="608.45166 -186.833328 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1475998249" />
-              <comptype v="1" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="opacity" />
-              <connRef v="1475997668" />
-              <connRefOutput v="1475996407" />
-            </connection>
-            <connection>
-              <identifier v="source" />
-              <connRef v="1474357816" />
-              <connRefOutput v="1474357817" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compFilter>
-              <filter v="blend" />
-              <parameters />
-            </compFilter>
-          </compImplementation>
-        </compNode>
-        <compNode>
           <uid v="1474344403" />
           <GUILayout>
             <gpos v="736.45166 58.6666679 0" />
@@ -1505,11 +1411,6 @@
           </compOutputs>
           <connections>
             <connection>
-              <identifier v="Source" />
-              <connRef v="1475998248" />
-              <connRefOutput v="1475998249" />
-            </connection>
-            <connection>
               <identifier v="#y" />
               <connRef v="1475997669" />
               <connRefOutput v="1475997164" />
@@ -1518,35 +1419,16 @@
               <identifier v="#x" />
               <connRef v="1474377831" />
             </connection>
+            <connection>
+              <identifier v="Source" />
+              <connRef v="1474374202" />
+              <connRefOutput v="1474374203" />
+            </connection>
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///tile_generator_color?dependency=1474336000" />
+              <path v="pkg:///tile_generator_color?dependency=1474421481" />
               <parameters>
-                <parameter>
-                  <name v="Pattern_Type" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1474373776" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1474373776" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="Pattern_Type" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
                 <parameter>
                   <name v="Nb_X" />
                   <relativeTo v="0" />
@@ -2373,6 +2255,13 @@
                     </dynamicValue>
                   </paramValue>
                 </parameter>
+                <parameter>
+                  <name v="Pattern_Type" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
               </parameters>
               <outputBridgings>
                 <outputBridging>
@@ -2392,87 +2281,6 @@
               <type v="16" />
             </compInputValue>
           </inputValues>
-        </compNode>
-        <compNode>
-          <uid v="1474357816" />
-          <GUILayout>
-            <gpos v="480.45166 -250.833328 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1474357817" />
-              <comptype v="1" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="A" />
-              <connRef v="1474357829" />
-            </connection>
-            <connection>
-              <identifier v="RGB" />
-              <connRef v="1474374202" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compInstance>
-              <path v="pkg:///rgb-a_merge?dependency=1474357812" />
-              <parameters>
-                <parameter>
-                  <name v="outputsize" />
-                  <relativeTo v="1" />
-                  <paramValue>
-                    <constantValueInt2 v="0 0" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-              <outputBridgings>
-                <outputBridging>
-                  <uid v="1474357817" />
-                  <identifier v="RGB-A_Merge" />
-                </outputBridging>
-              </outputBridgings>
-            </compInstance>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1474357829" />
-          <GUILayout>
-            <gpos v="352.45166 -186.833328 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1474357830" />
-              <comptype v="2" />
-            </compOutput>
-          </compOutputs>
-          <compImplementation>
-            <compFilter>
-              <filter v="uniform" />
-              <parameters>
-                <parameter>
-                  <name v="colorswitch" />
-                  <paramValue>
-                    <constantValueBool v="0" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="outputcolor" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueFloat4 v="1 1 1 1" />
-                  </paramValue>
-                </parameter>
-                <parameter>
-                  <name v="outputsize" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <constantValueInt2 v="4 4" />
-                  </paramValue>
-                </parameter>
-              </parameters>
-            </compFilter>
-          </compImplementation>
         </compNode>
         <compNode>
           <uid v="1474373952" />
@@ -2495,7 +2303,7 @@
         <compNode>
           <uid v="1474374202" />
           <GUILayout>
-            <gpos v="352.45166 -314.833344 0" />
+            <gpos v="126.140556 -64.7276535 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2556,7 +2364,7 @@
         <compNode>
           <uid v="1474377831" />
           <GUILayout>
-            <gpos v="412.45166 -15.9883318 0" />
+            <gpos v="421.333344 69.3333359 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
