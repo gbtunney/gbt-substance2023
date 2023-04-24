@@ -71,6 +71,13 @@
       <fileUID v="0" />
       <versionUID v="0" />
     </dependency>
+    <dependency>
+      <filename v="sbs://blend_switch.sbs" />
+      <uid v="1299239600" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
   </dependencies>
   <content>
     <graph>
@@ -1145,6 +1152,9 @@
             <paraminput>
               <identifier v="input_rotation" />
               <uid v="1473667274" />
+              <attributes>
+                <label v="Rotation" />
+              </attributes>
               <type v="256" />
               <defaultValue>
                 <constantValueFloat1 v="0" />
@@ -1292,6 +1302,38 @@
               <visibleIf
                 v="input[&quot;pivot_input_selection_menu_y&quot;] == 4"
               />
+            </paraminput>
+            <paraminput>
+              <identifier v="toggle_mask_output" />
+              <uid v="1474083948" />
+              <attributes>
+                <label v="Mask Output" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="booleditortype" />
+                    <value v="pushbuttons" />
+                  </option>
+                  <option>
+                    <name v="default" />
+                    <value v="1" />
+                  </option>
+                  <option>
+                    <name v="label0" />
+                    <value v="False" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="True" />
+                  </option>
+                </options>
+              </defaultWidget>
             </paraminput>
           </paraminputs>
           <primaryInput v="1473611628" />
@@ -1464,8 +1506,8 @@
               <connections>
                 <connection>
                   <identifier v="inputNodeOutput" />
-                  <connRef v="1474602408" />
-                  <connRefOutput v="1474602409" />
+                  <connRef v="1474103797" />
+                  <connRefOutput v="1474004085" />
                 </connection>
               </connections>
               <compImplementation>
@@ -2713,6 +2755,98 @@
                     </outputBridging>
                   </outputBridgings>
                 </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1474103797" />
+              <GUILayout>
+                <gpos v="962.164612 65.6788712 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1474004085" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input_1" />
+                  <connRef v="1474103798" />
+                </connection>
+                <connection>
+                  <identifier v="input_2" />
+                  <connRef v="1474602408" />
+                  <connRefOutput v="1474602409" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path v="pkg:///switch_grayscale?dependency=1299239600" />
+                  <parameters>
+                    <parameter>
+                      <name v="switch" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1474013840" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1474013840" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="toggle_mask_output"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1474004085" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1474103798" />
+              <GUILayout>
+                <gpos v="802.164612 63.2479591 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1473984556" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="opacity" />
+                  <connRef v="1474598169" />
+                  <connRefOutput v="1474598170" />
+                </connection>
+                <connection>
+                  <identifier v="source" />
+                  <connRef v="1474602408" />
+                  <connRefOutput v="1474602409" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compFilter>
+                  <filter v="blend" />
+                  <parameters />
+                </compFilter>
               </compImplementation>
             </compNode>
           </compNodes>
@@ -6983,6 +7117,38 @@
               </defaultWidget>
               <visibleIf v="input[&quot;select_mode&quot;] ==2" />
             </paraminput>
+            <paraminput>
+              <identifier v="toggle_mask_output" />
+              <uid v="1473974687" />
+              <attributes>
+                <label v="Mask Output" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="booleditortype" />
+                    <value v="pushbuttons" />
+                  </option>
+                  <option>
+                    <name v="default" />
+                    <value v="1" />
+                  </option>
+                  <option>
+                    <name v="label0" />
+                    <value v="False" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="True" />
+                  </option>
+                </options>
+              </defaultWidget>
+            </paraminput>
           </paraminputs>
           <primaryInput v="1473611628" />
           <graphOutputs>
@@ -7142,13 +7308,13 @@
             <compNode>
               <uid v="1473651579" />
               <GUILayout>
-                <gpos v="1328 -90.6666641 0" />
+                <gpos v="1552 -193.130081 0" />
               </GUILayout>
               <connections>
                 <connection>
                   <identifier v="inputNodeOutput" />
-                  <connRef v="1486814566" />
-                  <connRefOutput v="1486814567" />
+                  <connRef v="1474004084" />
+                  <connRefOutput v="1474004085" />
                 </connection>
               </connections>
               <compImplementation>
@@ -7160,7 +7326,7 @@
             <compNode>
               <uid v="1473656091" />
               <GUILayout>
-                <gpos v="1328 293.333344 0" />
+                <gpos v="1424 272 0" />
               </GUILayout>
               <connections>
                 <connection>
@@ -7178,7 +7344,7 @@
             <compNode>
               <uid v="1473656954" />
               <GUILayout>
-                <gpos v="1328 106.666687 0" />
+                <gpos v="1424 85.3333435 0" />
               </GUILayout>
               <connections>
                 <connection>
@@ -7994,6 +8160,98 @@
                 </compInputValue>
               </inputValues>
             </compNode>
+            <compNode>
+              <uid v="1473984555" />
+              <GUILayout>
+                <gpos v="1232 -193.186996 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1473984556" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="source" />
+                  <connRef v="1486814566" />
+                  <connRefOutput v="1486814567" />
+                </connection>
+                <connection>
+                  <identifier v="opacity" />
+                  <connRef v="1486814566" />
+                  <connRefOutput v="1486814568" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compFilter>
+                  <filter v="blend" />
+                  <parameters />
+                </compFilter>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1474004084" />
+              <GUILayout>
+                <gpos v="1392 -190.756104 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1474004085" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input_1" />
+                  <connRef v="1473984555" />
+                </connection>
+                <connection>
+                  <identifier v="input_2" />
+                  <connRef v="1486814566" />
+                  <connRefOutput v="1486814567" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path v="pkg:///switch_grayscale?dependency=1299239600" />
+                  <parameters>
+                    <parameter>
+                      <name v="switch" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1474013840" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1474013840" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="toggle_mask_output"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1474004085" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
           </compNodes>
           <baseParameters />
           <GUIObjects>
@@ -8449,6 +8707,38 @@
               </defaultWidget>
               <visibleIf v="input[&quot;select_mode&quot;]==2" />
             </paraminput>
+            <paraminput>
+              <identifier v="toggle_mask_output" />
+              <uid v="1474029750" />
+              <attributes>
+                <label v="Mask Output" />
+              </attributes>
+              <type v="4" />
+              <defaultValue>
+                <constantValueBool v="1" />
+              </defaultValue>
+              <defaultWidget>
+                <name v="buttons" />
+                <options>
+                  <option>
+                    <name v="booleditortype" />
+                    <value v="pushbuttons" />
+                  </option>
+                  <option>
+                    <name v="default" />
+                    <value v="1" />
+                  </option>
+                  <option>
+                    <name v="label0" />
+                    <value v="False" />
+                  </option>
+                  <option>
+                    <name v="label1" />
+                    <value v="True" />
+                  </option>
+                </options>
+              </defaultWidget>
+            </paraminput>
           </paraminputs>
           <primaryInput v="1473611628" />
           <graphOutputs>
@@ -8608,13 +8898,13 @@
             <compNode>
               <uid v="1473651579" />
               <GUILayout>
-                <gpos v="767.375 80 0" />
+                <gpos v="1040 112 0" />
               </GUILayout>
               <connections>
                 <connection>
                   <identifier v="inputNodeOutput" />
-                  <connRef v="1474953296" />
-                  <connRefOutput v="1474953297" />
+                  <connRef v="1474045635" />
+                  <connRefOutput v="1474004085" />
                 </connection>
               </connections>
               <compImplementation>
@@ -9055,6 +9345,98 @@
                     </outputBridging>
                   </outputBridgings>
                 </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1474045635" />
+              <GUILayout>
+                <gpos v="912 112 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1474004085" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="input_1" />
+                  <connRef v="1474045636" />
+                </connection>
+                <connection>
+                  <identifier v="input_2" />
+                  <connRef v="1474953296" />
+                  <connRefOutput v="1474953297" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compInstance>
+                  <path v="pkg:///switch_grayscale?dependency=1299239600" />
+                  <parameters>
+                    <parameter>
+                      <name v="switch" />
+                      <relativeTo v="0" />
+                      <paramValue>
+                        <dynamicValue>
+                          <rootnode v="1474057924" />
+                          <paramNodes>
+                            <paramNode>
+                              <uid v="1474057924" />
+                              <function v="get_bool" />
+                              <type v="4" />
+                              <funcDatas>
+                                <funcData>
+                                  <name v="get_bool" />
+                                  <constantValue>
+                                    <constantValueString
+                                      v="toggle_mask_output"
+                                    />
+                                  </constantValue>
+                                </funcData>
+                              </funcDatas>
+                            </paramNode>
+                          </paramNodes>
+                        </dynamicValue>
+                      </paramValue>
+                    </parameter>
+                  </parameters>
+                  <outputBridgings>
+                    <outputBridging>
+                      <uid v="1474004085" />
+                      <identifier v="output" />
+                    </outputBridging>
+                  </outputBridgings>
+                </compInstance>
+              </compImplementation>
+            </compNode>
+            <compNode>
+              <uid v="1474045636" />
+              <GUILayout>
+                <gpos v="784 62.4420738 0" />
+              </GUILayout>
+              <compOutputs>
+                <compOutput>
+                  <uid v="1473984556" />
+                  <comptype v="2" />
+                </compOutput>
+              </compOutputs>
+              <connections>
+                <connection>
+                  <identifier v="source" />
+                  <connRef v="1474953296" />
+                  <connRefOutput v="1474953297" />
+                </connection>
+                <connection>
+                  <identifier v="opacity" />
+                  <connRef v="1474953296" />
+                  <connRefOutput v="1474953298" />
+                </connection>
+              </connections>
+              <compImplementation>
+                <compFilter>
+                  <filter v="blend" />
+                  <parameters />
+                </compFilter>
               </compImplementation>
             </compNode>
           </compNodes>
