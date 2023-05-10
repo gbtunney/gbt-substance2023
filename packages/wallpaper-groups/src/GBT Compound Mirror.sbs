@@ -3515,15 +3515,7 @@
               </compImplementation>
             </compNode>
           </compNodes>
-          <baseParameters>
-            <parameter>
-              <name v="outputsize" />
-              <relativeTo v="0" />
-              <paramValue>
-                <constantValueInt2 v="10 10" />
-              </paramValue>
-            </parameter>
-          </baseParameters>
+          <baseParameters />
           <options>
             <option>
               <name v="defaultParentSize" />
@@ -5729,15 +5721,7 @@
               </compImplementation>
             </compNode>
           </compNodes>
-          <baseParameters>
-            <parameter>
-              <name v="outputsize" />
-              <relativeTo v="0" />
-              <paramValue>
-                <constantValueInt2 v="10 10" />
-              </paramValue>
-            </parameter>
-          </baseParameters>
+          <baseParameters />
           <options>
             <option>
               <name v="defaultParentSize" />

@@ -1,0 +1,1650 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{0b077b1a-4daa-4cd2-a953-c044cedb85f7}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="?himself" />
+      <uid v="1474423881" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://safe_transform.sbs" />
+      <uid v="1395441886" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="../src/Variant_Catalog.sbs" />
+      <uid v="1474253958" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="proof_sheet_wp" />
+      <uid v="1474423882" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output_w2_p2" />
+          <uid v="1476078635" />
+          <attributes>
+            <label v="output_w2_p2" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w3_pm" />
+          <uid v="1476078638" />
+          <attributes>
+            <label v="output_w3_pm" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w4_pg" />
+          <uid v="1476078641" />
+          <attributes>
+            <label v="output_w4_pg" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w5_cm" />
+          <uid v="1476078644" />
+          <attributes>
+            <label v="output_w5_cm" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w6_pmm" />
+          <uid v="1476078647" />
+          <attributes>
+            <label v="output_w6_pmm" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w7_pmg" />
+          <uid v="1476078650" />
+          <attributes>
+            <label v="output_w7_pmg" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w8_pgg" />
+          <uid v="1476078653" />
+          <attributes>
+            <label v="output_w8_pgg" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w9_cmm" />
+          <uid v="1476078656" />
+          <attributes>
+            <label v="output_w9_cmm" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w10_p4" />
+          <uid v="1476078659" />
+          <attributes>
+            <label v="output_w10_p4" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w11_p4m" />
+          <uid v="1476078662" />
+          <attributes>
+            <label v="output_w11_p4m" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w12_p4g" />
+          <uid v="1476078665" />
+          <attributes>
+            <label v="output_w12_p4g" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w13_p3" />
+          <uid v="1476078668" />
+          <attributes>
+            <label v="output_w13_p3" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w14_p3m" />
+          <uid v="1476078671" />
+          <attributes>
+            <label v="output_w14_p3m" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w15_p3m1" />
+          <uid v="1476078674" />
+          <attributes>
+            <label v="output_w15_p3m1" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w16_p6" />
+          <uid v="1476078677" />
+          <attributes>
+            <label v="output_w16_p6" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_w17_p6m" />
+          <uid v="1476078680" />
+          <attributes>
+            <label v="output_w17_p6m" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_4" />
+          <uid v="1476440880" />
+          <attributes>
+            <label v="output_4" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_5" />
+          <uid v="1476440883" />
+          <attributes>
+            <label v="output_5" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_6" />
+          <uid v="1476440886" />
+          <attributes>
+            <label v="output_6" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_7" />
+          <uid v="1476440889" />
+          <attributes>
+            <label v="output_7" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_8" />
+          <uid v="1476440892" />
+          <attributes>
+            <label v="output_8" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_9" />
+          <uid v="1476440895" />
+          <attributes>
+            <label v="output_9" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_10" />
+          <uid v="1476440898" />
+          <attributes>
+            <label v="output_10" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_11" />
+          <uid v="1476440901" />
+          <attributes>
+            <label v="output_11" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_12" />
+          <uid v="1476440904" />
+          <attributes>
+            <label v="output_12" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_13" />
+          <uid v="1476440907" />
+          <attributes>
+            <label v="output_13" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_14" />
+          <uid v="1476440910" />
+          <attributes>
+            <label v="output_14" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_15" />
+          <uid v="1476440913" />
+          <attributes>
+            <label v="output_15" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_16" />
+          <uid v="1476440916" />
+          <attributes>
+            <label v="output_16" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_17" />
+          <uid v="1476440919" />
+          <attributes>
+            <label v="output_17" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_18" />
+          <uid v="1476440922" />
+          <attributes>
+            <label v="output_18" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="output_19" />
+          <uid v="1476440925" />
+          <attributes>
+            <label v="output_19" />
+          </attributes>
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1474427614" />
+          <GUILayout>
+            <gpos v="48 -784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474427615" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="bitmap" />
+              <parameters>
+                <parameter>
+                  <name v="bitmapresourcepath" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueString
+                      v="pkg:///Resources/steam?dependency=1474423881"
+                    />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1474511063" />
+          <GUILayout>
+            <gpos v="176 -784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1474511064" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474427614" />
+              <connRefOutput v="1474427615" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="symmetry" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueInt32 v="1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat1 v="2.02777767" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tile_safe_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueBool v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <constantValueFloat2 v="0 0.589999974" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1474511064" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475613149" />
+          <GUILayout>
+            <gpos v="304 -784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475613150" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1474511063" />
+              <connRefOutput v="1474511064" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476917765" />
+          <GUILayout>
+            <gpos v="432 -784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476917766" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475613149" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt2 v="0 0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476917766" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476913243" />
+          <GUILayout>
+            <gpos v="816 -784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476913244" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476917765" />
+              <connRefOutput v="1476917766" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476964970" />
+          <GUILayout>
+            <gpos v="1232 677.333313 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476964971" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476917765" />
+              <connRefOutput v="1476917766" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1475927066" />
+          <GUILayout>
+            <gpos v="1360 -1985.55542 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475927067" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927068" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927069" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927070" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927071" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927072" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927073" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927074" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927075" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927076" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927077" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927078" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927079" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927080" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927081" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927082" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927083" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927084" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927085" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1475927086" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476440761" />
+              <connRefOutput v="1476440762" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Wallpaper_Group_Variants?dependency=1474253958" />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475927067" />
+                  <identifier v="output_w2_p2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927068" />
+                  <identifier v="output_w3_pm" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927069" />
+                  <identifier v="output_w4_pg" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927070" />
+                  <identifier v="output_w5_cm" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927071" />
+                  <identifier v="output_w6_pmm" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927072" />
+                  <identifier v="output_w7_pmg" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927073" />
+                  <identifier v="output_w8_pgg" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927074" />
+                  <identifier v="output_w9_cmm" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927075" />
+                  <identifier v="output_w10_p4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927076" />
+                  <identifier v="output_w11_p4m" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927077" />
+                  <identifier v="output_w12_p4g" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927078" />
+                  <identifier v="output_w13_p3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927079" />
+                  <identifier v="output_w14_p3m" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927080" />
+                  <identifier v="output_w15_p3m1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927081" />
+                  <identifier v="output_w16_p6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927082" />
+                  <identifier v="output_w17_p6m" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927083" />
+                  <identifier v="output_preview_2-5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927084" />
+                  <identifier v="output_preview_6-9" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927085" />
+                  <identifier v="output_preview_10-13" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1475927086" />
+                  <identifier v="output_preview_14-17" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476012054" />
+          <GUILayout>
+            <gpos v="1424 677.333313 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476012055" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012056" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012057" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012058" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012059" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012060" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012061" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012062" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012063" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012064" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012065" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012066" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012067" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012068" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012069" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012070" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012071" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012072" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012073" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1476012074" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476964970" />
+              <connRefOutput v="1476964971" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path
+                v="pkg:///Secondary_Mirror_Variants?dependency=1474253958"
+              />
+              <parameters />
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476012055" />
+                  <identifier v="output" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012056" />
+                  <identifier v="output_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012057" />
+                  <identifier v="output_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012058" />
+                  <identifier v="output_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012059" />
+                  <identifier v="output_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012060" />
+                  <identifier v="output_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012061" />
+                  <identifier v="output_6" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012062" />
+                  <identifier v="output_7" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012063" />
+                  <identifier v="output_8" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012064" />
+                  <identifier v="output_9" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012065" />
+                  <identifier v="output_10" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012066" />
+                  <identifier v="output_11" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012067" />
+                  <identifier v="output_12" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012068" />
+                  <identifier v="output_13" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012069" />
+                  <identifier v="output_14" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012070" />
+                  <identifier v="output_15" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012071" />
+                  <identifier v="output_16" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012072" />
+                  <identifier v="output_17" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012073" />
+                  <identifier v="output_18" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1476012074" />
+                  <identifier v="output_19" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078636" />
+          <GUILayout>
+            <gpos v="1744 -3161.99976 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927067" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078635" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078639" />
+          <GUILayout>
+            <gpos v="1744 -3005.99976 501" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927068" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078638" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078642" />
+          <GUILayout>
+            <gpos v="1744 -2849.99976 502" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927069" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078641" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078645" />
+          <GUILayout>
+            <gpos v="1744 -2693.99976 503" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927070" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078644" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078648" />
+          <GUILayout>
+            <gpos v="1744 -2537.99976 504" />
+          </GUILayout>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078647" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078651" />
+          <GUILayout>
+            <gpos v="1744 -2381.99976 505" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927072" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078650" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078654" />
+          <GUILayout>
+            <gpos v="1744 -2225.99976 506" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927073" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078653" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078657" />
+          <GUILayout>
+            <gpos v="1744 -2069.99976 507" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927074" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078656" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078660" />
+          <GUILayout>
+            <gpos v="1744 -1913.99976 508" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927075" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078659" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078663" />
+          <GUILayout>
+            <gpos v="1744 -1757.99976 509" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927076" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078662" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078666" />
+          <GUILayout>
+            <gpos v="1744 -1602 510" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927077" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078665" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078669" />
+          <GUILayout>
+            <gpos v="1744 -1445.99976 511" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927078" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078668" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078672" />
+          <GUILayout>
+            <gpos v="1744 -1289.99976 512" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927079" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078671" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078675" />
+          <GUILayout>
+            <gpos v="1744 -1133.99976 513" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927080" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078674" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078678" />
+          <GUILayout>
+            <gpos v="1744 -977.999756 514" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927081" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078677" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476078681" />
+          <GUILayout>
+            <gpos v="1744 -821.999756 515" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1475927066" />
+              <connRefOutput v="1475927082" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476078680" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440761" />
+          <GUILayout>
+            <gpos v="1264 -1978.66675 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476440762" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476913243" />
+              <connRefOutput v="1476913244" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440881" />
+          <GUILayout>
+            <gpos v="1744 -436.666687 504" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012059" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440880" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440884" />
+          <GUILayout>
+            <gpos v="1744 -280.666687 505" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012060" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440883" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440887" />
+          <GUILayout>
+            <gpos v="1744 -124.666687 506" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012061" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440886" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440890" />
+          <GUILayout>
+            <gpos v="1744 31.333313 507" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012062" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440889" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440893" />
+          <GUILayout>
+            <gpos v="1744 187.333313 508" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012063" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440892" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440896" />
+          <GUILayout>
+            <gpos v="1744 343.333313 509" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012064" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440895" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440899" />
+          <GUILayout>
+            <gpos v="1744 499.333252 510" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012065" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440898" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440902" />
+          <GUILayout>
+            <gpos v="1744 655.333252 511" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012066" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440901" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440905" />
+          <GUILayout>
+            <gpos v="1744 811.333252 512" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012067" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440904" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440908" />
+          <GUILayout>
+            <gpos v="1744 967.333252 513" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012068" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440907" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440911" />
+          <GUILayout>
+            <gpos v="1744 1123.33325 514" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012069" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440910" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440914" />
+          <GUILayout>
+            <gpos v="1744 1279.33325 515" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012070" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440913" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440917" />
+          <GUILayout>
+            <gpos v="1744 1435.33325 516" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012071" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440916" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440920" />
+          <GUILayout>
+            <gpos v="1744 1591.33325 517" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012072" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440919" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440923" />
+          <GUILayout>
+            <gpos v="1744 1747.33325 518" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012073" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440922" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476440926" />
+          <GUILayout>
+            <gpos v="1744 1903.33325 519" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1476012054" />
+              <connRefOutput v="1476012074" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1476440925" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters>
+        <parameter>
+          <name v="outputsize" />
+          <relativeTo v="0" />
+          <paramValue>
+            <constantValueInt2 v="10 10" />
+          </paramValue>
+        </parameter>
+      </baseParameters>
+      <GUIObjects>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1184 -3253.33325 -100" />
+            <size v="640 2511.3335" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1476440803" />
+          <frameColor v="0 0 0 0.250003815" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+        <GUIObject>
+          <type v="COMMENT" />
+          <GUILayout>
+            <gpos v="1184 -548.666687 0" />
+            <size v="640 2532" />
+          </GUILayout>
+          <GUIName v="" />
+          <uid v="1476625646" />
+          <frameColor v="0 0 0 0.250003815" />
+          <isTitleVisible v="1" />
+          <isFrameVisible v="1" />
+        </GUIObject>
+      </GUIObjects>
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1476078635" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078638" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078641" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078644" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078647" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078650" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078653" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078656" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078659" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078662" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078665" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078668" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078671" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078674" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078677" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476078680" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440880" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440883" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440886" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440889" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440892" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440895" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440898" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440901" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440904" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440907" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440910" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440913" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440916" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440919" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440922" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1476440925" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <group>
+      <uid v="1474427582" />
+      <identifier v="Resources" />
+      <content>
+        <resource>
+          <identifier v="steam" />
+          <uid v="1474427583" />
+          <type v="bitmap" />
+          <colorSpace v="[use_embedded_profile]" />
+          <format v="psd" />
+          <filepath v="../examples/steam.psd" />
+          <attributes>
+            <hideInLibrary v="1" />
+          </attributes>
+        </resource>
+      </content>
+    </group>
+  </content>
+</package>
