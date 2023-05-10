@@ -15,7 +15,7 @@
         "allowSyntheticDefaultImports": true,
         // Type declaration settings.
         "removeComments": false,
-        "types": ["@types/jest", "jest", "node"]
+        "types": ["node"]
     },
     "exclude": ["**/*.test.ts"],
     "include": ["**/*.ts", "**/*.json"]
