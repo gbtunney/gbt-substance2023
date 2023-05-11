@@ -32,8 +32,8 @@
         "dev": "tsc --build --watch",
         "\n========== TEST >> ==========": "",
         "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render",
-        "test:build": "pnpm sbs:cooker -- --inputs ./tests/*.sbs  --output-path ./tests/_output",
-        "test:render": "pnpm sbs:render --  --inputs ./tests/_output/*.sbsar  --output-path ./tests/_output",
+        "test:build": "pnpm sbs:cooker --inputs ./tests/*.sbs  --output-path ./tests/_output",
+        "test:render": "pnpm sbs:render --rootDir '.'  --inputs 'tests/_output/*.sbsar'  --outDir  tests/_output",
         "test:pwd": "echo $PWD;",
         "test:cli": "pnpm exec sdbuilder --help",
         "copy:deps": "mkdir -p examples/dependencies && cp node_modules/@gbt/value-processor-utilities/dist/* examples/dependencies",
@@ -72,7 +72,7 @@
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.2.0",
-        "@types/node": "^18.16.2",
+        "@types/node": "^20.1.2",
         "nodemon": "^2.0.22",
         "prettier": "^2.8.8",
         "python-shell": "^5.0.0",
@@ -92,7 +92,7 @@
                 "path": "/Users/gilliantunney/snailicide_helix/substance/Contents/MacOS/sbscooker"
             },
             "sbsrender": {
-                "path": "/Users/gilliantunney/snailicide_helix/substance/Contents/MacOS/sbsrender render"
+                "path": "sdrender"
             }
         },
         "eslint": {

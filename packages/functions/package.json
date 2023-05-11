@@ -45,6 +45,7 @@
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.2.0",
+        "@types/node": "^20.1.2",
         "nodemon": "^2.0.22",
         "prettier": "^2.8.8",
         "python-shell": "^5.0.0",
