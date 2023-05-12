@@ -15,6 +15,7 @@ module.exports = {
                 'root',
                 'release',
                 'sat-scripts',
+                'svg-swatch',
                 'value-processor-utilities',
                 'sd-utilities',
                 'functions',
