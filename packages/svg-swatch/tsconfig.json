@@ -1,25 +1,15 @@
 {
     "extends": "@snailicide/build-config/tsconfig-base",
     "compilerOptions": {
-        /* Visit https://aka.ms/tsconfig to read more about this file */
-        /*Language and Environment */
-        "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-        /* Modules */
-        "module": "ESNext" /* Specify what module code is generated. */,
+        "target": "ESNext",
         "lib": ["ESNext", "DOM"],
-        //   "outDir": "./../dist" /* Specify an output folder for all emitted files. */,
-        // Output settings.
-        "sourceMap": true,
         "composite": true,
-        "rootDir": ".",
         "noEmit": true,
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true,
-        // Type declaration settings.
-        "removeComments": false,
+        "module": "ESNext",
+        "rootDir": ".",
         "types": ["node"]
     },
-    "exclude": ["**/*.test.ts", "./src/main.ts"],
-    "include": ["**/*.ts", "**/package.json"],
+    "exclude": ["./node_modules"],
+    "include": ["./**/*.test.ts"],
     "references": [{ "path": "./src" }]
 }

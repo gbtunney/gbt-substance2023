@@ -15,6 +15,7 @@
         "rootDir": ".",
         "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true,
+        "isolatedModules": true,
         // Type declaration settings.
         "declaration": true,
         "declarationDir": "./../types",
@@ -22,6 +23,6 @@
         "removeComments": false,
         "types": ["node"]
     },
-    "exclude": ["**/*.test.ts", "./main.ts"],
+    "exclude": ["**/*.test.ts", "main.ts"],
     "include": ["**/*.ts"]
 }
