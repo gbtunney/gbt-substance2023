@@ -115,7 +115,7 @@
           <uid v="1474373747" />
           <type v="256" />
           <defaultValue>
-            <constantValueFloat1 v="1.5" />
+            <constantValueFloat1 v="1.48000002" />
           </defaultValue>
           <defaultWidget>
             <name v="slider" />
@@ -240,7 +240,7 @@
           <uid v="1474373755" />
           <type v="2048" />
           <defaultValue>
-            <constantValueFloat4 v="0.230000004 0 0.109999999 0" />
+            <constantValueFloat4 v="0.209999993 0 0.101999998 0" />
           </defaultValue>
           <defaultWidget>
             <name v="slider" />
@@ -1110,7 +1110,7 @@
         <compNode>
           <uid v="1475997669" />
           <GUILayout>
-            <gpos v="608.45166 240.166672 0" />
+            <gpos v="560 176 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1296,7 +1296,7 @@
         <compNode>
           <uid v="1475997671" />
           <GUILayout>
-            <gpos v="128.45166 58.6666679 0" />
+            <gpos v="304 69.3333359 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -1401,7 +1401,7 @@
         <compNode>
           <uid v="1474344403" />
           <GUILayout>
-            <gpos v="736.45166 58.6666679 0" />
+            <gpos v="736.45166 69.3333359 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -2285,7 +2285,7 @@
         <compNode>
           <uid v="1474373952" />
           <GUILayout>
-            <gpos v="864.45166 58.6666679 0" />
+            <gpos v="864.45166 69.3333359 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -2303,7 +2303,7 @@
         <compNode>
           <uid v="1474374202" />
           <GUILayout>
-            <gpos v="126.140556 -64.7276535 0" />
+            <gpos v="304 -64.7276535 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
