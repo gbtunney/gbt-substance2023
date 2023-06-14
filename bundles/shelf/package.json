@@ -37,16 +37,16 @@
         "email": "gbtunney@mac.com"
     },
     "devDependencies": {
-        "@gbt/blend-colorize": "workspace:^0.0.0",
-        "@gbt/functions": "workspace:^0.0.0",
-        "@gbt/value-processor-utilities": "workspace:^0.0.2",
+        "@gbt/blend-colorize": "workspace:^",
+        "@gbt/functions": "workspace:^",
+        "@gbt/value-processor-utilities": "workspace:^",
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
-        "@snailicide/g-library": "^0.2.0",
-        "@types/node": "^20.1.2",
+        "@snailicide/g-library": "^0.2.1",
+        "@types/node": "^20.3.1",
         "prettier": "^2.8.8",
         "ts-node": "^10.9.1",
-        "typescript": "^5.0.4"
+        "typescript": "^5.1.3"
     },
     "config": {
         "substance": {
