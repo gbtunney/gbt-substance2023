@@ -2943,6 +2943,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Pre" />
         </paraminput>
         <paraminput>
           <identifier v="x_tile_hexagons" />
@@ -2953,7 +2954,7 @@
           </attributes>
           <type v="16" />
           <defaultValue>
-            <constantValueInt1 v="5" />
+            <constantValueInt1 v="1" />
           </defaultValue>
           <defaultWidget>
             <name v="slider" />
@@ -2964,11 +2965,11 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="5" />
+                <value v="1" />
               </option>
               <option>
                 <name v="max" />
-                <value v="64" />
+                <value v="10" />
               </option>
               <option>
                 <name v="min" />
@@ -2980,6 +2981,7 @@
               </option>
             </options>
           </defaultWidget>
+          <group v="Pre" />
         </paraminput>
         <paraminput>
           <identifier v="input" />
@@ -2993,6 +2995,81 @@
             <name v="" />
             <options />
           </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="x_tile_groups_post" />
+          <uid v="1476825720" />
+          <attributes>
+            <label v="Tile Groups 2-12" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="16" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Post" />
+        </paraminput>
+        <paraminput>
+          <identifier v="x_tile_hexagons_post" />
+          <uid v="1476825732" />
+          <attributes>
+            <label v="Hexagon Tile Amount" />
+            <description v="Amount of patterns on the X axis." />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="10" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Post" />
         </paraminput>
       </paraminputs>
       <primaryInput v="1475331158" />
@@ -3094,7 +3171,7 @@
         <compNode>
           <uid v="1475045492" />
           <GUILayout>
-            <gpos v="877.752014 -573.276184 0" />
+            <gpos v="877.752014 -592 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3133,7 +3210,7 @@
         <compNode>
           <uid v="1475045495" />
           <GUILayout>
-            <gpos v="877.752014 -445.276184 0" />
+            <gpos v="877.752014 -464 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3172,7 +3249,7 @@
         <compNode>
           <uid v="1475045498" />
           <GUILayout>
-            <gpos v="877.752014 -317.276184 0" />
+            <gpos v="877.752014 -336 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3211,7 +3288,7 @@
         <compNode>
           <uid v="1475045501" />
           <GUILayout>
-            <gpos v="877.752014 -189.276184 0" />
+            <gpos v="877.752014 -208 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3250,7 +3327,7 @@
         <compNode>
           <uid v="1475045504" />
           <GUILayout>
-            <gpos v="877.752014 -61.2761841 0" />
+            <gpos v="877.752014 -80 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3289,7 +3366,7 @@
         <compNode>
           <uid v="1475045507" />
           <GUILayout>
-            <gpos v="877.752014 66.7238159 0" />
+            <gpos v="877.752014 48 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3328,7 +3405,7 @@
         <compNode>
           <uid v="1475045510" />
           <GUILayout>
-            <gpos v="877.752014 194.723816 0" />
+            <gpos v="877.752014 176 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3367,7 +3444,7 @@
         <compNode>
           <uid v="1475045513" />
           <GUILayout>
-            <gpos v="877.752014 322.723816 0" />
+            <gpos v="877.752014 304 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3406,7 +3483,7 @@
         <compNode>
           <uid v="1475045591" />
           <GUILayout>
-            <gpos v="877.752014 578.723816 0" />
+            <gpos v="877.752014 560 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3445,7 +3522,7 @@
         <compNode>
           <uid v="1475045594" />
           <GUILayout>
-            <gpos v="877.752014 706.723816 0" />
+            <gpos v="877.752014 688 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3508,13 +3585,13 @@
         <compNode>
           <uid v="1475045752" />
           <GUILayout>
-            <gpos v="1005.75201 -573.276184 0" />
+            <gpos v="1261.75195 -592 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045492" />
-              <connRefOutput v="1475045493" />
+              <connRef v="1476825933" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3526,13 +3603,13 @@
         <compNode>
           <uid v="1475045783" />
           <GUILayout>
-            <gpos v="1005.75201 -445.276184 0" />
+            <gpos v="1261.75195 -464 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045495" />
-              <connRefOutput v="1475045496" />
+              <connRef v="1476826185" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3544,13 +3621,13 @@
         <compNode>
           <uid v="1475045836" />
           <GUILayout>
-            <gpos v="1005.75201 -317.276184 0" />
+            <gpos v="1261.75195 -336 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045498" />
-              <connRefOutput v="1475045499" />
+              <connRef v="1476826204" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3562,13 +3639,13 @@
         <compNode>
           <uid v="1475045860" />
           <GUILayout>
-            <gpos v="1005.75201 -189.276184 0" />
+            <gpos v="1261.75195 -208 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045501" />
-              <connRefOutput v="1475045502" />
+              <connRef v="1476826205" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3580,13 +3657,13 @@
         <compNode>
           <uid v="1475045885" />
           <GUILayout>
-            <gpos v="1005.75201 -61.2761841 0" />
+            <gpos v="1264 -80 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045504" />
-              <connRefOutput v="1475045505" />
+              <connRef v="1476826268" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3598,13 +3675,13 @@
         <compNode>
           <uid v="1475045908" />
           <GUILayout>
-            <gpos v="1005.75201 66.7238159 0" />
+            <gpos v="1261.75195 48 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045507" />
-              <connRefOutput v="1475045508" />
+              <connRef v="1476826269" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3616,13 +3693,13 @@
         <compNode>
           <uid v="1475045929" />
           <GUILayout>
-            <gpos v="1005.75201 194.723816 0" />
+            <gpos v="1261.75195 176 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045510" />
-              <connRefOutput v="1475045511" />
+              <connRef v="1476826270" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3634,13 +3711,13 @@
         <compNode>
           <uid v="1475045958" />
           <GUILayout>
-            <gpos v="1005.75201 322.723816 0" />
+            <gpos v="1261.75195 304 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045513" />
-              <connRefOutput v="1475045514" />
+              <connRef v="1476826267" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3652,13 +3729,13 @@
         <compNode>
           <uid v="1475045982" />
           <GUILayout>
-            <gpos v="1005.75201 578.723816 0" />
+            <gpos v="1261.75195 560 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045591" />
-              <connRefOutput v="1475045592" />
+              <connRef v="1476826291" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3670,13 +3747,13 @@
         <compNode>
           <uid v="1475046001" />
           <GUILayout>
-            <gpos v="1005.75201 706.723816 0" />
+            <gpos v="1261.75195 688 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475045594" />
-              <connRefOutput v="1475045595" />
+              <connRef v="1476826288" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -3688,7 +3765,7 @@
         <compNode>
           <uid v="1475046097" />
           <GUILayout>
-            <gpos v="866.249878 965.333313 0" />
+            <gpos v="866.249878 912 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3713,24 +3790,7 @@
                   <name v="x_amount" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1475125651" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1475125651" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="x_tile_hexagons" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
+                    <constantValueInt32 v="7" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -3757,8 +3817,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1475126302" />
-              <connRefOutput v="1475126303" />
+              <connRef v="1478512549" />
+              <connRefOutput v="1478512550" />
             </connection>
           </connections>
           <compImplementation>
@@ -3771,7 +3831,7 @@
         <compNode>
           <uid v="1475125666" />
           <GUILayout>
-            <gpos v="866.249878 1093.33325 0" />
+            <gpos v="866.249878 1040 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3792,30 +3852,6 @@
                 v="pkg:///Wallpaper_Groups_Hexagon_Switcher?dependency=1395922516"
               />
               <parameters>
-                <parameter>
-                  <name v="x_amount" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1475125651" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1475125651" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="x_tile_hexagons" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
                 <parameter>
                   <name v="hex_group_picker" />
                   <relativeTo v="0" />
@@ -3836,7 +3872,7 @@
         <compNode>
           <uid v="1475125695" />
           <GUILayout>
-            <gpos v="866.249878 1221.33325 0" />
+            <gpos v="866.249878 1168 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3857,30 +3893,6 @@
                 v="pkg:///Wallpaper_Groups_Hexagon_Switcher?dependency=1395922516"
               />
               <parameters>
-                <parameter>
-                  <name v="x_amount" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1475125651" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1475125651" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="x_tile_hexagons" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
                 <parameter>
                   <name v="hex_group_picker" />
                   <relativeTo v="0" />
@@ -3901,7 +3913,7 @@
         <compNode>
           <uid v="1475125726" />
           <GUILayout>
-            <gpos v="866.249878 1349.33325 0" />
+            <gpos v="866.249878 1296 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3922,30 +3934,6 @@
                 v="pkg:///Wallpaper_Groups_Hexagon_Switcher?dependency=1395922516"
               />
               <parameters>
-                <parameter>
-                  <name v="x_amount" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1475125651" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1475125651" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="x_tile_hexagons" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
                 <parameter>
                   <name v="hex_group_picker" />
                   <relativeTo v="0" />
@@ -3966,7 +3954,7 @@
         <compNode>
           <uid v="1475125772" />
           <GUILayout>
-            <gpos v="866.249878 1477.33325 0" />
+            <gpos v="866.249878 1424 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3988,30 +3976,6 @@
               />
               <parameters>
                 <parameter>
-                  <name v="x_amount" />
-                  <relativeTo v="0" />
-                  <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1475125651" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1475125651" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="x_tile_hexagons" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
-                  </paramValue>
-                </parameter>
-                <parameter>
                   <name v="hex_group_picker" />
                   <relativeTo v="0" />
                   <paramValue>
@@ -4031,13 +3995,13 @@
         <compNode>
           <uid v="1475125832" />
           <GUILayout>
-            <gpos v="994.249878 965.333313 0" />
+            <gpos v="1264 912 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475046097" />
-              <connRefOutput v="1475046098" />
+              <connRef v="1476826029" />
+              <connRefOutput v="1476826030" />
             </connection>
           </connections>
           <compImplementation>
@@ -4049,13 +4013,13 @@
         <compNode>
           <uid v="1475125872" />
           <GUILayout>
-            <gpos v="994.249878 1093.33325 0" />
+            <gpos v="1257.125 1040 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475125666" />
-              <connRefOutput v="1475046098" />
+              <connRef v="1476826421" />
+              <connRefOutput v="1476826030" />
             </connection>
           </connections>
           <compImplementation>
@@ -4067,13 +4031,13 @@
         <compNode>
           <uid v="1475125902" />
           <GUILayout>
-            <gpos v="994.249878 1221.33325 0" />
+            <gpos v="1257.125 1168 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475125695" />
-              <connRefOutput v="1475046098" />
+              <connRef v="1476826439" />
+              <connRefOutput v="1476826030" />
             </connection>
           </connections>
           <compImplementation>
@@ -4085,13 +4049,13 @@
         <compNode>
           <uid v="1475125931" />
           <GUILayout>
-            <gpos v="994.249878 1349.33325 0" />
+            <gpos v="1264 1296 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475125726" />
-              <connRefOutput v="1475046098" />
+              <connRef v="1476826440" />
+              <connRefOutput v="1476826030" />
             </connection>
           </connections>
           <compImplementation>
@@ -4103,13 +4067,13 @@
         <compNode>
           <uid v="1475125963" />
           <GUILayout>
-            <gpos v="994.249878 1477.33325 0" />
+            <gpos v="1257.125 1424 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1475125772" />
-              <connRefOutput v="1475046098" />
+              <connRef v="1476826461" />
+              <connRefOutput v="1476826030" />
             </connection>
           </connections>
           <compImplementation>
@@ -4121,7 +4085,7 @@
         <compNode>
           <uid v="1475126083" />
           <GUILayout>
-            <gpos v="613.333374 -17.5476398 0" />
+            <gpos v="304 -16 501" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4177,7 +4141,7 @@
         <compNode>
           <uid v="1475126105" />
           <GUILayout>
-            <gpos v="485.333374 -17.5476398 0" />
+            <gpos v="197.333374 -17.5476398 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4190,31 +4154,6 @@
               <identifier v="input" />
               <connRef v="1475045654" />
               <connRefOutput v="1475045655" />
-            </connection>
-          </connections>
-          <compImplementation>
-            <compFilter>
-              <filter v="passthrough" />
-              <parameters />
-            </compFilter>
-          </compImplementation>
-        </compNode>
-        <compNode>
-          <uid v="1475126302" />
-          <GUILayout>
-            <gpos v="634.666687 1200 0" />
-          </GUILayout>
-          <compOutputs>
-            <compOutput>
-              <uid v="1475126303" />
-              <comptype v="1" />
-            </compOutput>
-          </compOutputs>
-          <connections>
-            <connection>
-              <identifier v="input" />
-              <connRef v="1475126350" />
-              <connRefOutput v="1475126351" />
             </connection>
           </connections>
           <compImplementation>
@@ -4322,7 +4261,7 @@
         <compNode>
           <uid v="1476053501" />
           <GUILayout>
-            <gpos v="877.752014 450.723816 0" />
+            <gpos v="877.752014 432 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -4361,13 +4300,13 @@
         <compNode>
           <uid v="1476053531" />
           <GUILayout>
-            <gpos v="1005.75201 450.723816 0" />
+            <gpos v="1261.75195 432 0" />
           </GUILayout>
           <connections>
             <connection>
               <identifier v="inputNodeOutput" />
-              <connRef v="1476053501" />
-              <connRefOutput v="1476053502" />
+              <connRef v="1476826289" />
+              <connRefOutput v="1476825934" />
             </connection>
           </connections>
           <compImplementation>
@@ -4376,18 +4315,1225 @@
             </compOutputBridge>
           </compImplementation>
         </compNode>
+        <compNode>
+          <uid v="1476825933" />
+          <GUILayout>
+            <gpos v="1005.75201 -592 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045492" />
+              <connRefOutput v="1475045493" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826029" />
+          <GUILayout>
+            <gpos v="994.249878 912 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476826030" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475046097" />
+              <connRefOutput v="1475046098" />
+            </connection>
+            <connection>
+              <identifier v="#tile" />
+              <connRef v="1480321344" />
+              <connRefOutput v="1480321345" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1481053876" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1481053876" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476826030" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#tile" />
+              <type v="16" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1476826185" />
+          <GUILayout>
+            <gpos v="1005.75201 -464 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045495" />
+              <connRefOutput v="1475045496" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826204" />
+          <GUILayout>
+            <gpos v="1005.75201 -336 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045498" />
+              <connRefOutput v="1475045499" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826205" />
+          <GUILayout>
+            <gpos v="1005.75201 -208 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045501" />
+              <connRefOutput v="1475045502" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826267" />
+          <GUILayout>
+            <gpos v="1005.75201 304 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045513" />
+              <connRefOutput v="1475045514" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826268" />
+          <GUILayout>
+            <gpos v="1005.75201 -80 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045504" />
+              <connRefOutput v="1475045505" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826269" />
+          <GUILayout>
+            <gpos v="1005.75201 48 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045507" />
+              <connRefOutput v="1475045508" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826270" />
+          <GUILayout>
+            <gpos v="1005.75201 176 502" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045510" />
+              <connRefOutput v="1475045511" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826288" />
+          <GUILayout>
+            <gpos v="1005.75201 688 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045594" />
+              <connRefOutput v="1475045595" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826289" />
+          <GUILayout>
+            <gpos v="1005.75201 432 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1476053501" />
+              <connRefOutput v="1476053502" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826291" />
+          <GUILayout>
+            <gpos v="1005.75201 560 502" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476825934" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475045591" />
+              <connRefOutput v="1475045592" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826000" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826000" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_groups_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476825934" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826421" />
+          <GUILayout>
+            <gpos v="994.249878 1040 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476826030" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475125666" />
+              <connRefOutput v="1475046098" />
+            </connection>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1480321317" />
+              <connRefOutput v="1480321318" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1481053900" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1481053900" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476826030" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="16" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1476826439" />
+          <GUILayout>
+            <gpos v="994.249878 1168 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476826030" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475125695" />
+              <connRefOutput v="1475046098" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826062" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826062" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476826030" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1476826440" />
+          <GUILayout>
+            <gpos v="994.249878 1296 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476826030" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475125726" />
+              <connRefOutput v="1475046098" />
+            </connection>
+            <connection>
+              <identifier v="#input" />
+              <connRef v="1480321163" />
+              <connRefOutput v="1480321164" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1481053907" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1481053907" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476826030" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+          <inputValues>
+            <compInputValue>
+              <identifier v="#input" />
+              <type v="16" />
+            </compInputValue>
+          </inputValues>
+        </compNode>
+        <compNode>
+          <uid v="1476826461" />
+          <GUILayout>
+            <gpos v="994.249878 1424 501" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1476826030" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475125772" />
+              <connRefOutput v="1475046098" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1476826062" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1476826062" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1476826030" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1478512339" />
+          <GUILayout>
+            <gpos v="16 1189.33337 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1475126084" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1475126350" />
+              <connRefOutput v="1475126351" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///safe_transform?dependency=1395441886" />
+              <parameters>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1478512456" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1478512456" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1475126084" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1478512549" />
+          <GUILayout>
+            <gpos v="144 1189.33337 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1478512550" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1478512339" />
+              <connRefOutput v="1475126084" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480320620" />
+          <GUILayout>
+            <gpos v="432 976 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1480320621" />
+              <comptype v="16" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compFilter>
+              <filter v="valueprocessor" />
+              <parameters>
+                <parameter>
+                  <name v="function" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1480321050" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1480320642" />
+                          <function v="const_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="const_float1" />
+                              <constantValue>
+                                <constantValueFloat1 v="1.29999995" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="125.5 246.5 1" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1480320643" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="x_tile_hexagons_post" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                          <GUILayout>
+                            <gpos v="125.5 54.5 1" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1480320644" />
+                          <function v="mul" />
+                          <type v="256" />
+                          <connections>
+                            <connection>
+                              <identifier v="a" />
+                              <connRef v="1480320647" />
+                            </connection>
+                            <connection>
+                              <identifier v="b" />
+                              <connRef v="1480320909" />
+                            </connection>
+                          </connections>
+                          <GUILayout>
+                            <gpos v="573.5 176 0" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1480320647" />
+                          <function v="tofloat" />
+                          <type v="256" />
+                          <connections>
+                            <connection>
+                              <identifier v="value" />
+                              <connRef v="1480320643" />
+                            </connection>
+                          </connections>
+                          <GUILayout>
+                            <gpos v="290.177643 48 0" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1480320909" />
+                          <function v="ceil" />
+                          <type v="256" />
+                          <connections>
+                            <connection>
+                              <identifier v="a" />
+                              <connRef v="1480320642" />
+                            </connection>
+                          </connections>
+                          <GUILayout>
+                            <gpos v="304 240 0" />
+                          </GUILayout>
+                        </paramNode>
+                        <paramNode>
+                          <uid v="1480321050" />
+                          <function v="toint1" />
+                          <type v="16" />
+                          <connections>
+                            <connection>
+                              <identifier v="value" />
+                              <connRef v="1480320644" />
+                            </connection>
+                          </connections>
+                          <GUILayout>
+                            <gpos v="816 144 0" />
+                          </GUILayout>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480321163" />
+          <GUILayout>
+            <gpos v="666.666687 1104 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1480321164" />
+              <comptype v="16" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1480320620" />
+              <connRefOutput v="1480320621" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480321317" />
+          <GUILayout>
+            <gpos v="933.333313 1104 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1480321318" />
+              <comptype v="16" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1480321163" />
+              <connRefOutput v="1480321164" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480321344" />
+          <GUILayout>
+            <gpos v="890.666687 976 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1480321345" />
+              <comptype v="16" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1480321163" />
+              <connRefOutput v="1480321164" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compFilter>
+              <filter v="passthrough" />
+              <parameters />
+            </compFilter>
+          </compImplementation>
+        </compNode>
       </compNodes>
       <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="405.333374 -685.276184 0" />
-            <size v="680 1472" />
+            <gpos v="586.666687 800 0" />
+            <size v="757 704" />
           </GUILayout>
           <GUIName v="" />
-          <uid v="1475126002" />
-          <title v="Groups 2-12" />
+          <uid v="1475126323" />
+          <title v="Hexagon Groups 13-17" />
           <frameColor v="0 0 0 0.250003815" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
@@ -4395,12 +5541,11 @@
         <GUIObject>
           <type v="COMMENT" />
           <GUILayout>
-            <gpos v="554.666687 853.333313 -100" />
-            <size v="519 704" />
+            <gpos v="597.333374 -704 0" />
+            <size v="744 1472" />
           </GUILayout>
           <GUIName v="" />
-          <uid v="1475126323" />
-          <title v="Hexagon Groups 13-17" />
+          <uid v="1476826697" />
           <frameColor v="0 0 0 0.250003815" />
           <isTitleVisible v="1" />
           <isFrameVisible v="1" />
