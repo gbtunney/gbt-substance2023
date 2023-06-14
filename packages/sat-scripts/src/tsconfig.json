@@ -23,6 +23,6 @@
         "types": ["@types/jest", "jest", "node"]
     },
     "files": ["package.json", "icon/icon_inventory.json"],
-    "exclude": ["**/*.test.ts"],
+    "exclude": ["**/*.test.ts", "./options.ts"],
     "include": ["**/*.ts"]
 }

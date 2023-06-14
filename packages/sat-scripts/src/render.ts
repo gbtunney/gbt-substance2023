@@ -36,6 +36,10 @@ export const sbsrender_options = schema.base_schema
                 .describe(
                     '<glob> Glob with sbsar (Relative to rootDir) \nNOTE: If using glob USE QUOTES OR WILL ONLY GET 1 file'
                 ),
+            setValue: z
+                .array(z.string())
+                .default([])
+                .describe('<paramid>@<value>set a value for the renderer '),
         })
     )
     .describe(
@@ -46,17 +50,25 @@ export const sbsrender_options = schema.base_schema
             value.inputs !== undefined
                 ? zod.fsPathArray(value.rootDir).parse(value.inputs)
                 : value.inputs
-        const outDir = zod.filePath.parse(
-            node.getFullPath(value.outDir, value.rootDir)
-        )
+
+        const outDir = zod
+            .fsPathTypeExists('directory', value.rootDir)
+            .parse(value.outDir)
         return { ...value, inputs, outDir }
     })
 export type SBSRender_Options = z.infer<typeof sbsrender_options>
 
 export const renderAllSBSAR = (options: SBSRender_Options) => {
+    const set_value_str: string = options.setValue.reduce(
+        (accum: string, value: string) => {
+            return `${accum} --set-value ${value}`
+        },
+        ''
+    )
+    console.log('SET VAL ', set_value_str)
     const result = options.inputs.forEach((_file) => {
         shell.exec(
-            `${options.sbsRender} render --inputs ${_file.absolute} --output-path ${options.outDir}`
+            `${options.sbsRender} render --inputs ${_file.absolute} --output-path ${options.outDir} ${set_value_str} `
         )
     })
     return result

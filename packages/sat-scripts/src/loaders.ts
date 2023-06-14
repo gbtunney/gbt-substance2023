@@ -76,12 +76,12 @@ export const loadAllFiles = async (options: ResolvedSBS_UpdaterOptions) => {
                             : 'merged_something_is_wrong'
 
                     //todo: replace this with name flag??
-                    const outputJSONFilePath = zod.filePath.parse(
-                        `${outDir}/${fileName}.json`
-                    )
-                    const outputFilePath = zod.filePath.parse(
-                        `${outDir}/${fileName}.sbs`
-                    )
+                    const outputJSONFilePath = zod
+                        .fsPath(outDir)
+                        .parse(`${fileName}.json`)
+                    const outputFilePath = zod
+                        .fsPath(outDir)
+                        .parse(`${fileName}.sbs`)
                     writeFile(_flattened, outputJSONFilePath, options.debug)
                     writeXMLFile(_flattened, outputFilePath, options.overwrite)
                 }
