@@ -1,18 +1,64 @@
-# Vue 3 + TypeScript + Vite
+# <h1 align="center">Welcome to @gbt/svg-swatch👋</h1>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+-   Turns a directory of images into a swatch legend
 
-## Recommended IDE Setup
+![image description](./illustrator_swatch_legend.png)
 
--   [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+-   Use the patterns in the swatch panel on illustrator ![image description](./illustrator_swatch_panel.png)
 
-## Type Support For `.vue` Imports in TS
+#### Repository
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+[snailicide-monorepo](https://github.com/gbtunney/snailicide-monorepo.git)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+#### Author
 
-1. Disable the built-in TypeScript Extension
-    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+👤 **Gillian Tunney**
+
+-   [github](https://github.com/gbtunney)
+-   [email](mailto:gbtunney@mac.com)
+
+> Important! Suggested package manager is [pnpm](https://pnpm.io)
+
+## @gbt/svg-swatch
+
+---
+
+### Installation
+
+This library is published in the NPM registry and can be installed using any compatible package manager as a development dependency.
+
+```sh
+pnpm add @gbt/svg-swatch -D
+
+## For pnpm workspace, use the command below.
+pnpm add @gbt/svg-swatch@workspace:* -D
+```
+
+### Commands
+
+```sh
+
+SVG Swatch : Creates an svg out of the images
+$ svg-swatch [args]
+
+Options:
+  -h, --help           Show help                                       [boolean]
+  -v, --version        Show version number                             [boolean]
+  -r, --rootDir        <dir> Set Root Directory                         [string]
+  -f, --outFile        Output file name with no extension               [string]
+  -o, --outDir         <dir> Output directory                           [string]
+  -d, --debug          Debug output                                    [boolean]
+      --verbose        Verbose Logging                                 [boolean]
+  -i, --inputImages    <glob> Directory containing sbs (Relative to rootDir)
+                       NO
+                       TE: If using glob USE QUOTES OR WILL ONLY GET 1 file
+                                                                        [string]
+  -c, --columns        Swatch grid columns                              [number]
+  -t, --patternTiling  <int>Swatch pattern scale (controls swatch tiling)
+                                                                        [number]
+  -w, --svgWidth       Viewbox width in pixels (integer)                [number]
+  -g, --gutter         gutter size in pixels (integer)                  [number]
+      --delimiter      <string> Filename delimiter                      [string]
+```
+
+> Note: The value of the viewBox attribute is a list of four numbers: min-x, min-y, width and height

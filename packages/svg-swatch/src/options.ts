@@ -12,7 +12,7 @@ export const svg_legend_options = zod
     .object({
         inputImages: zod
             .string()
-            .default('./tests/sample_image/*.jpeg')
+            // .default('./tests/sample_image/*.{jpg,jpeg,png,gif,svg}')
             .describe(
                 '<glob> Directory containing sbs (Relative to rootDir) \nNOTE: If using glob USE QUOTES OR WILL ONLY GET 1 file'
             ),
@@ -21,6 +21,12 @@ export const svg_legend_options = zod
             .default('svg-swatch')
             .describe('Output file name with no extension'),
         columns: zod.number().int().default(4).describe('Swatch grid columns'),
+        patternTiling: z
+            .number()
+            .int()
+            .min(1)
+            .default(1)
+            .describe('<int>Swatch pattern scale (controls swatch tiling)'),
         svgWidth: zod
             .number()
             .int()
@@ -31,6 +37,10 @@ export const svg_legend_options = zod
             .int()
             .default(30)
             .describe('gutter size in pixels (integer)'),
+        delimiter: z
+            .string()
+            .default('_')
+            .describe('<string> Filename delimiter'),
     })
     .describe('An example CLI for making svgs')
 export type SVG_Legend_Options = z.infer<typeof svg_legend_options>
