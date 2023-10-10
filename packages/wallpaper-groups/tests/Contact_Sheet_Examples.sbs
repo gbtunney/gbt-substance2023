@@ -335,7 +335,7 @@
         <compNode>
           <uid v="1474427614" />
           <GUILayout>
-            <gpos v="48 -784 0" />
+            <gpos v="-48 -752 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -374,8 +374,8 @@
           <connections>
             <connection>
               <identifier v="input" />
-              <connRef v="1478280722" />
-              <connRefOutput v="1478280723" />
+              <connRef v="1474427614" />
+              <connRefOutput v="1474427615" />
             </connection>
           </connections>
           <compImplementation>
@@ -2094,7 +2094,7 @@
           <uid v="1477356619" />
           <type v="32" />
           <defaultValue>
-            <constantValueInt2 v="7 7" />
+            <constantValueInt2 v="10 10" />
           </defaultValue>
           <defaultWidget>
             <name v="slider" />
@@ -2105,7 +2105,7 @@
               </option>
               <option>
                 <name v="default" />
-                <value v="7;7" />
+                <value v="10;10" />
               </option>
               <option>
                 <name v="label0" />
@@ -2575,24 +2575,7 @@
                   <name v="input_test" />
                   <relativeTo v="0" />
                   <paramValue>
-                    <dynamicValue>
-                      <rootnode v="1477612664" />
-                      <paramNodes>
-                        <paramNode>
-                          <uid v="1477612664" />
-                          <function v="get_integer1" />
-                          <type v="16" />
-                          <funcDatas>
-                            <funcData>
-                              <name v="get_integer1" />
-                              <constantValue>
-                                <constantValueString v="input_test" />
-                              </constantValue>
-                            </funcData>
-                          </funcDatas>
-                        </paramNode>
-                      </paramNodes>
-                    </dynamicValue>
+                    <constantValueInt32 v="9" />
                   </paramValue>
                 </parameter>
               </parameters>
@@ -3042,7 +3025,7 @@
         <compNode>
           <uid v="1477957919" />
           <GUILayout>
-            <gpos v="1008 428 0" />
+            <gpos v="1008 432 0" />
           </GUILayout>
           <connections>
             <connection>
@@ -3328,7 +3311,32 @@
           </compImplementation>
         </compNode>
       </compNodes>
-      <baseParameters />
+      <baseParameters>
+        <parameter>
+          <name v="outputsize" />
+          <relativeTo v="1" />
+          <paramValue>
+            <dynamicValue>
+              <rootnode v="1479662263" />
+              <paramNodes>
+                <paramNode>
+                  <uid v="1479662263" />
+                  <function v="get_integer2" />
+                  <type v="32" />
+                  <funcDatas>
+                    <funcData>
+                      <name v="get_integer2" />
+                      <constantValue>
+                        <constantValueString v="input_size" />
+                      </constantValue>
+                    </funcData>
+                  </funcDatas>
+                </paramNode>
+              </paramNodes>
+            </dynamicValue>
+          </paramValue>
+        </parameter>
+      </baseParameters>
       <options>
         <option>
           <name v="defaultParentSize" />
@@ -3504,6 +3512,29 @@
           </rootOutput>
         </rootOutputs>
       </root>
+      <sbspresets>
+        <sbspreset>
+          <label v="New Preset" />
+          <presetinputs>
+            <presetinput>
+              <uid v="1477356619" />
+              <identifier v="input_size" />
+              <paramValue>
+                <constantValueInt2 v="9 9" />
+              </paramValue>
+              <type v="32" />
+            </presetinput>
+            <presetinput>
+              <uid v="1477612663" />
+              <identifier v="input_test" />
+              <paramValue>
+                <constantValueInt1 v="5" />
+              </paramValue>
+              <type v="16" />
+            </presetinput>
+          </presetinputs>
+        </sbspreset>
+      </sbspresets>
       <metadata>
         <treeurl>
           <name v="metadata_1" />
