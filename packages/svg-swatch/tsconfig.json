@@ -7,7 +7,9 @@
         "noEmit": true,
         "module": "ESNext",
         "rootDir": ".",
-        "types": ["node"]
+        "types": ["node"],
+        "esModuleInterop": true,
+        "moduleResolution": "bundler"
     },
     "exclude": ["./node_modules"],
     "include": ["./**/*.test.ts"],

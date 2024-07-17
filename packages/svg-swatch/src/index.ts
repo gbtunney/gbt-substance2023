@@ -9,7 +9,7 @@ import {
 } from '@snailicide/cli-app'
 import {
     ImageData,
-    loadAllImageFiles,
+    loadAllFiles,
     writeReadme,
     writeTemplate,
 } from './loaders.js'
@@ -46,19 +46,19 @@ const initFunc = (args: z.output<typeof svg_legend_schema>, help?: string) => {
         const app = createSSRApp({
             setup: (context) => {
                 const count = ref(1)
-                const imageDataArr = loadAllImageFiles(options) // Ref<ImageData[]> = ref( node.getFilePathArr(options.inputImages))
+                const imageDataArr = loadAllFiles(options) // Ref<ImageData[]> = ref( node.getFilePathArr(options.inputImages))
                 const Grid: ComputedRef<ImageData[][]> = computed(() => {
                     return splitEvery(<number>options.columns, imageDataArr) //  JSON.stringify(imageDataArr.value)
                 })
 
                 const DocWidth: ComputedRef<number> = computed(() => {
                     return Math.floor(
-                        options.svgWidth - options.columns * options.gutter
+                        options.svgWidth - options.columns * options.gutter,
                     )
                 })
                 const SwatchSize: ComputedRef<number> = computed(() => {
                     return Math.floor(
-                        (DocWidth.value - options.gutter) / options.columns
+                        (DocWidth.value - options.gutter) / options.columns,
                     )
                 })
 

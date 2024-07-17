@@ -1,4 +1,4 @@
-import { node, zod } from '@snailicide/g-library'
+import { node, zod } from '@snailicide/g-library/node'
 import { z } from 'zod'
 import { fileURLToPath } from 'url'
 import path from 'path'
@@ -14,7 +14,7 @@ export const svg_legend_options = zod
             .string()
             // .default('./tests/sample_image/*.{jpg,jpeg,png,gif,svg}')
             .describe(
-                '<glob> Directory containing sbs (Relative to rootDir) \nNOTE: If using glob USE QUOTES OR WILL ONLY GET 1 file'
+                '<glob> Directory containing sbs (Relative to rootDir) \nNOTE: If using glob USE QUOTES OR WILL ONLY GET 1 file',
             ),
         outFile: zod
             .string()
@@ -55,7 +55,7 @@ export const svg_legend_schema = schema.base_schema
         const outDir =
             value.outDir !== undefined
                 ? zod.filePath.parse(
-                      node.getFullPath(value.outDir, value.rootDir)
+                      node.getFullPath(value.outDir, value.rootDir),
                   )
                 : value.inputImages
 

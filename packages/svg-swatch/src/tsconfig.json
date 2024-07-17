@@ -21,6 +21,11 @@
         "declarationDir": "./../types",
         "declarationMap": true,
         "removeComments": false,
+        "moduleResolution": "bundler",
+        "noImplicitAny": false,
+        "esModuleInterop": true,
+
+        "module": "ESNext",
         "types": ["node"]
     },
     "exclude": ["**/*.test.ts", "main.ts"],
