@@ -1,9 +1,0 @@
-*.js
-*.d.ts
-*.js.map
-__pycache__
-types
-output_test
-src_archived
-**/package.json
-!./package.json

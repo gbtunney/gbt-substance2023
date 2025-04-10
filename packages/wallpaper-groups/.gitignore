@@ -5,3 +5,6 @@ node_modules
 *.js.map
 /tests/_output
 _temp
+
+files       
+examples

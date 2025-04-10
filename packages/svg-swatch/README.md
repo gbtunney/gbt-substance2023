@@ -1,10 +1,11 @@
 # <h1 align="center">Welcome to @gbt/svg-swatch👋</h1>
 
--   Turns a directory of images into a swatch legend
+- Turns a directory of images into a swatch legend
 
 ![image description](./illustrator_swatch_legend.png)
 
--   Use the patterns in the swatch panel on illustrator ![image description](./illustrator_swatch_panel.png)
+- Use the patterns in the swatch panel on illustrator
+  ![image description](./illustrator_swatch_panel.png)
 
 #### Repository
 
@@ -14,8 +15,8 @@
 
 👤 **Gillian Tunney**
 
--   [github](https://github.com/gbtunney)
--   [email](mailto:gbtunney@mac.com)
+- [github](https://github.com/gbtunney)
+- [email](mailto:gbtunney@mac.com)
 
 > Important! Suggested package manager is [pnpm](https://pnpm.io)
 
@@ -25,7 +26,8 @@
 
 ### Installation
 
-This library is published in the NPM registry and can be installed using any compatible package manager as a development dependency.
+This library is published in the NPM registry and can be installed using any
+compatible package manager as a development dependency.
 
 ```sh
 pnpm add @gbt/svg-swatch -D
@@ -61,4 +63,5 @@ Options:
       --delimiter      <string> Filename delimiter                      [string]
 ```
 
-> Note: The value of the viewBox attribute is a list of four numbers: min-x, min-y, width and height
+> Note: The value of the viewBox attribute is a list of four numbers: min-x,
+> min-y, width and height
