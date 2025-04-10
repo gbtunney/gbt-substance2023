@@ -1,8 +1,8 @@
 import { node, zod } from '@snailicide/g-library/node'
-import { z } from 'zod'
+import { z, ZodEffects, ZodSchema } from 'zod'
 import { fileURLToPath } from 'url'
 import path from 'path'
-import { schema } from '@snailicide/cli-app'
+import { commonFlagsSchema } from '@snailicide/cli-app'
 
 export const getWorkingDirectory = (url: string) => {
     return path.dirname(fileURLToPath(url))
@@ -45,22 +45,27 @@ export const svg_legend_options = zod
     .describe('An example CLI for making svgs')
 export type SVG_Legend_Options = z.infer<typeof svg_legend_options>
 
-export const svg_legend_schema = schema.base_schema
+export const svg_legend_schema = commonFlagsSchema
     .merge(svg_legend_options)
     .transform((value) => {
         const inputImages =
             value.inputImages !== undefined
                 ? zod.fsPathArray(value.rootDir).parse(value.inputImages)
                 : value.inputImages
-        const outDir =
+        const outDir: string | undefined =
             value.outDir !== undefined
-                ? zod.filePath.parse(
-                      node.getFullPath(value.outDir, value.rootDir),
-                  )
+                ? zod
+                      .fsPathExists(true, value.rootDir, 'directory')
+                      .parse(value.outDir)
                 : value.inputImages
 
         return { ...value, inputImages, outDir }
     })
 
+export const getSchema = <T extends ZodSchema>(_schema: T) => {
+    const result: ZodSchema = _schema
+
+    return result
+}
 export type ResolvedOptions = z.output<typeof svg_legend_schema>
 export type unResolvedOptions = z.input<typeof svg_legend_schema>

@@ -1,10 +1,11 @@
 import { z } from 'zod'
 import fs from 'fs'
-import sizeOf from 'image-size'
+import imageSize from 'image-size'
 import { stringUtils } from '@snailicide/g-library'
 import { node } from '@snailicide/g-library/node'
 import { ResolvedOptions } from './options.js'
 import { removeAnsi } from './helpers.js'
+import * as Buffer from 'buffer'
 export type FilePathData = Exclude<
     ReturnType<typeof node.getFilePathObj>,
     undefined
@@ -65,12 +66,16 @@ export const loadAllFiles = (options: ResolvedOptions): ImageData[] => {
     const imgArr = options.inputImages
     const result = imgArr
         .map((_img_file_data) => {
-            if (_img_file_data.excists === true) {
+            if (_img_file_data.exists === true) {
+                const _myfile: Buffer<ArrayBufferLike> = fs.readFileSync(
+                    _img_file_data.absolute,
+                )
+                //  Buffer.from
                 const data = node.getImageBase64(
                     _img_file_data.absolute,
                     getImageExtensionLiteral(_img_file_data.extname),
                 )
-                const { width, height } = sizeOf(_img_file_data.absolute)
+                const { width, height } = imageSize(_myfile)
                 //  console.log('WIDTH ', width, 'height', height)
                 const imgResult = {
                     data,
