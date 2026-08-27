@@ -10,7 +10,7 @@
       <filename
         v="../../value-processor-utilities/dist/GBT_Value_Processor_Utilities.sbsar"
       />
-      <uid v="1486449232" />
+      <uid v="1473215854" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -31,7 +31,7 @@
     </dependency>
     <dependency>
       <filename v="../../sd-utilities/dist/GBT_Debug_Utilities.sbsar" />
-      <uid v="1473220381" />
+      <uid v="1480354057" />
       <type v="package" />
       <fileUID v="0" />
       <versionUID v="0" />
@@ -91,7 +91,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1486449232" />
+              <path v="pkg:///Float_Value_Graph?dependency=1473215854" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -238,7 +238,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1486449232" />
+              <path v="pkg:///Float_Value_Graph?dependency=1473215854" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -303,7 +303,7 @@
           </compOutputs>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///Float_Value_Graph?dependency=1486449232" />
+              <path v="pkg:///Float_Value_Graph?dependency=1473215854" />
               <parameters>
                 <parameter>
                   <name v="input_value_type" />
@@ -439,15 +439,7 @@
           </compImplementation>
         </compNode>
       </compNodes>
-      <baseParameters>
-        <parameter>
-          <name v="outputsize" />
-          <relativeTo v="0" />
-          <paramValue>
-            <constantValueInt2 v="9 9" />
-          </paramValue>
-        </parameter>
-      </baseParameters>
+      <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
@@ -479,6 +471,7 @@
         </option>
       </options>
       <root>
+        <disabled v="1" />
         <rootOutputs>
           <rootOutput>
             <output v="1481391133" />
@@ -2664,15 +2657,7 @@
           </compImplementation>
         </compNode>
       </compNodes>
-      <baseParameters>
-        <parameter>
-          <name v="outputsize" />
-          <relativeTo v="0" />
-          <paramValue>
-            <constantValueInt2 v="9 9" />
-          </paramValue>
-        </parameter>
-      </baseParameters>
+      <baseParameters />
       <GUIObjects>
         <GUIObject>
           <type v="COMMENT" />
@@ -2921,6 +2906,7 @@
         </option>
       </options>
       <root>
+        <disabled v="1" />
         <rootOutputs>
           <rootOutput>
             <output v="1481389688" />
@@ -2958,6 +2944,9 @@
     <graph>
       <identifier v="Debug_Map_w_no_alpha" />
       <uid v="1481593790" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
       <paraminputs>
         <paraminput>
           <identifier v="input_x" />
@@ -3050,7 +3039,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Debug_Map?dependency=1473220381" />
+              <path v="pkg:///GBT_Debug_Map?dependency=1480354057" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -3064,7 +3053,7 @@
         <compNode>
           <uid v="1481593803" />
           <GUILayout>
-            <gpos v="48 287.432526 0" />
+            <gpos v="16 336 0" />
           </GUILayout>
           <compOutputs>
             <compOutput>
@@ -3303,6 +3292,7 @@
         </option>
       </options>
       <root>
+        <disabled v="1" />
         <rootOutputs>
           <rootOutput>
             <output v="1481593862" />
@@ -3315,6 +3305,9 @@
     <graph>
       <identifier v="Move_To" />
       <uid v="1473704150" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
       <graphOutputs>
         <graphoutput>
           <identifier v="move_to_2" />
@@ -4610,6 +4603,7 @@
         </option>
       </options>
       <root>
+        <disabled v="1" />
         <rootOutputs>
           <rootOutput>
             <output v="1473749172" />
@@ -4647,6 +4641,9 @@
     <graph>
       <identifier v="Rotate" />
       <uid v="1474117643" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
       <graphOutputs />
       <compNodes />
       <baseParameters />
@@ -4656,11 +4653,16 @@
           <value v="10x10" />
         </option>
       </options>
-      <root />
+      <root>
+        <disabled v="1" />
+      </root>
     </graph>
     <graph>
       <identifier v="Scale" />
       <uid v="1484502568" />
+      <attributes>
+        <hideInLibrary v="1" />
+      </attributes>
       <graphOutputs>
         <graphoutput>
           <identifier v="scale_to_1" />
@@ -5025,7 +5027,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Debug_Map?dependency=1473220381" />
+              <path v="pkg:///GBT_Debug_Map?dependency=1480354057" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -5412,7 +5414,7 @@
           </connections>
           <compImplementation>
             <compInstance>
-              <path v="pkg:///GBT_Debug_Map?dependency=1473220381" />
+              <path v="pkg:///GBT_Debug_Map?dependency=1480354057" />
               <parameters />
               <outputBridgings>
                 <outputBridging>
@@ -5657,6 +5659,7 @@
         </option>
       </options>
       <root>
+        <disabled v="1" />
         <rootOutputs>
           <rootOutput>
             <output v="1484742030" />
@@ -5670,6 +5673,939 @@
           </rootOutput>
           <rootOutput>
             <output v="1474517558" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+    <graph>
+      <identifier v="Autotransform_Test_Wrapper" />
+      <uid v="1479410704" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input_size" />
+          <uid v="1479410711" />
+          <type v="32" />
+          <defaultValue>
+            <constantValueInt2 v="7 7" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="7;7" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="14" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="6" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+        </paraminput>
+      </paraminputs>
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="rect_to_gs_1" />
+          <uid v="1479412777" />
+          <attributes>
+            <label v="rect_to_gs_1" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="rect_to_gs_2" />
+          <uid v="1479412780" />
+          <attributes>
+            <label v="rect_to_gs_2" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="rect_to_gs_3" />
+          <uid v="1479412783" />
+          <attributes>
+            <label v="rect_to_gs_3" />
+          </attributes>
+          <channels v="2" />
+        </graphoutput>
+        <graphoutput>
+          <identifier v="shape_to_rect_1" />
+          <uid v="1479860167" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="baseColor" />
+            </usage>
+          </usages>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="shape_to_rect_2" />
+          <uid v="1479860170" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="shape_to_rect_3" />
+          <uid v="1479860173" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="shape_to_rect_4" />
+          <uid v="1479860176" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+          <usages>
+            <usage>
+              <components v="RGBA" />
+              <name v="baseColor" />
+            </usage>
+          </usages>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="shape_to_rect_5" />
+          <uid v="1479860179" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="shape_to_rect_6" />
+          <uid v="1479860182" />
+          <attributes>
+            <label v="Debug Map" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="move_to_2" />
+          <uid v="1479979044" />
+          <attributes>
+            <label v="move_to_2" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="move_to_1" />
+          <uid v="1479979047" />
+          <attributes>
+            <label v="move_to_1" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="move_to_3" />
+          <uid v="1479979050" />
+          <attributes>
+            <label v="move_to_3" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="move_to_4" />
+          <uid v="1479979053" />
+          <attributes>
+            <label v="move_to_4" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="move_to_5" />
+          <uid v="1479979056" />
+          <attributes>
+            <label v="move_to_5" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="move_to_6" />
+          <uid v="1479979059" />
+          <attributes>
+            <label v="move_to_6" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="scale_to_1" />
+          <uid v="1480126915" />
+          <attributes>
+            <label v="scale_to_1" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="scale_to_2" />
+          <uid v="1480126918" />
+          <attributes>
+            <label v="scale_to_2" />
+          </attributes>
+        </graphoutput>
+        <graphoutput>
+          <identifier v="scale_to_3" />
+          <uid v="1480126921" />
+          <attributes>
+            <label v="scale_to_3" />
+          </attributes>
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1479410726" />
+          <GUILayout>
+            <gpos v="208 64 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1479410727" />
+              <comptype v="2" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479410728" />
+              <comptype v="2" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479410729" />
+              <comptype v="2" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Rectdata_to_Grayscale?dependency=1481482203" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1479411755" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1479411755" />
+                          <function v="get_integer2" />
+                          <type v="32" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer2" />
+                              <constantValue>
+                                <constantValueString v="input_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1479410727" />
+                  <identifier v="rect_to_gs_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479410728" />
+                  <identifier v="rect_to_gs_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479410729" />
+                  <identifier v="rect_to_gs_3" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479412778" />
+          <GUILayout>
+            <gpos v="496 -92 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479410726" />
+              <connRefOutput v="1479410727" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479412777" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479412781" />
+          <GUILayout>
+            <gpos v="496 64 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479410726" />
+              <connRefOutput v="1479410728" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479412780" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479412784" />
+          <GUILayout>
+            <gpos v="496 220 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479410726" />
+              <connRefOutput v="1479410729" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479412783" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479723979" />
+          <GUILayout>
+            <gpos v="272 784 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1479723980" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479723981" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479723982" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479723983" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479723984" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479723985" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Shape_to_RectData?dependency=1481482203" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1479833147" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1479833147" />
+                          <function v="get_integer2" />
+                          <type v="32" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer2" />
+                              <constantValue>
+                                <constantValueString v="input_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1479723980" />
+                  <identifier v="shape_to_rect_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479723981" />
+                  <identifier v="shape_to_rect_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479723982" />
+                  <identifier v="shape_to_rect_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479723983" />
+                  <identifier v="shape_to_rect_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479723984" />
+                  <identifier v="shape_to_rect_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479723985" />
+                  <identifier v="shape_to_rect_6" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479860168" />
+          <GUILayout>
+            <gpos v="560 394 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479723979" />
+              <connRefOutput v="1479723980" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479860167" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479860171" />
+          <GUILayout>
+            <gpos v="560 550 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479723979" />
+              <connRefOutput v="1479723981" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479860170" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479860174" />
+          <GUILayout>
+            <gpos v="560 706 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479723979" />
+              <connRefOutput v="1479723982" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479860173" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479860177" />
+          <GUILayout>
+            <gpos v="560 862 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479723979" />
+              <connRefOutput v="1479723983" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479860176" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479860180" />
+          <GUILayout>
+            <gpos v="560 1018 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479723979" />
+              <connRefOutput v="1479723984" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479860179" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479860183" />
+          <GUILayout>
+            <gpos v="560 1174 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479723979" />
+              <connRefOutput v="1479723985" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479860182" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479918605" />
+          <GUILayout>
+            <gpos v="272 1770 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1479918606" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479918607" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479918608" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479918609" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479918610" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1479918611" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Move_To?dependency=1481482203" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1479948827" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1479948827" />
+                          <function v="get_integer2" />
+                          <type v="32" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer2" />
+                              <constantValue>
+                                <constantValueString v="input_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1479918606" />
+                  <identifier v="move_to_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479918607" />
+                  <identifier v="move_to_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479918608" />
+                  <identifier v="move_to_3" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479918609" />
+                  <identifier v="move_to_4" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479918610" />
+                  <identifier v="move_to_5" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1479918611" />
+                  <identifier v="move_to_6" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479979045" />
+          <GUILayout>
+            <gpos v="560 1380 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479918605" />
+              <connRefOutput v="1479918606" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479979044" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479979048" />
+          <GUILayout>
+            <gpos v="560 1536 501" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479918605" />
+              <connRefOutput v="1479918607" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479979047" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479979051" />
+          <GUILayout>
+            <gpos v="560 1692 502" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479918605" />
+              <connRefOutput v="1479918608" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479979050" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479979054" />
+          <GUILayout>
+            <gpos v="560 1848 503" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479918605" />
+              <connRefOutput v="1479918609" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479979053" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479979057" />
+          <GUILayout>
+            <gpos v="560 2004 504" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479918605" />
+              <connRefOutput v="1479918610" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479979056" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1479979060" />
+          <GUILayout>
+            <gpos v="560 2160 505" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1479918605" />
+              <connRefOutput v="1479918611" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1479979059" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480067393" />
+          <GUILayout>
+            <gpos v="272 2548 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1480067394" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1480067395" />
+              <comptype v="1" />
+            </compOutput>
+            <compOutput>
+              <uid v="1480067396" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///Scale?dependency=1481482203" />
+              <parameters>
+                <parameter>
+                  <name v="outputsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1480097150" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1480097150" />
+                          <function v="get_integer2" />
+                          <type v="32" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer2" />
+                              <constantValue>
+                                <constantValueString v="input_size" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1480067394" />
+                  <identifier v="scale_to_1" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1480067395" />
+                  <identifier v="scale_to_2" />
+                </outputBridging>
+                <outputBridging>
+                  <uid v="1480067396" />
+                  <identifier v="scale_to_3" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480126916" />
+          <GUILayout>
+            <gpos v="560 2392 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1480067393" />
+              <connRefOutput v="1480067394" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1480126915" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480126919" />
+          <GUILayout>
+            <gpos v="560 2548 501" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1480067393" />
+              <connRefOutput v="1480067395" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1480126918" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1480126922" />
+          <GUILayout>
+            <gpos v="560 2704 502" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1480067393" />
+              <connRefOutput v="1480067396" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1480126921" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters>
+        <parameter>
+          <name v="outputsize" />
+          <relativeTo v="0" />
+          <paramValue>
+            <constantValueInt2 v="8 8" />
+          </paramValue>
+        </parameter>
+      </baseParameters>
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="9x9" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1479412777" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479412780" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479412783" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479860167" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479860170" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479860173" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479860176" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479860179" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479860182" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479979044" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479979047" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479979050" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479979053" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479979056" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1479979059" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1480126915" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1480126918" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+          <rootOutput>
+            <output v="1480126921" />
             <format v="0" />
             <usertag v="" />
           </rootOutput>

@@ -2,21 +2,17 @@ import { z } from 'zod'
 import { computed, ComputedRef, createSSRApp, ref } from 'vue'
 import { splitEvery } from 'ramda'
 import { renderToString } from 'vue/server-renderer'
-import {
-    AppAliasOption,
-    initApp,
-    unResolvedAppOptions,
-} from '@snailicide/cli-app'
+import { AppFlagAliases, initApp, commonFlagsSchema } from '@snailicide/cli-app'
 import {
     ImageData,
-    loadAllImageFiles,
+    loadAllFiles,
     writeReadme,
     writeTemplate,
 } from './loaders.js'
 import { ResolvedOptions, svg_legend_schema } from './options.js'
-const alias: AppAliasOption<typeof svg_legend_schema> = {
+const alias: AppFlagAliases<typeof svg_legend_schema> = {
     help: 'h',
-    version: 'v',
+    //  version: 'v',
     rootDir: 'r',
     outDir: 'o',
     inputImages: 'i',
@@ -27,14 +23,14 @@ const alias: AppAliasOption<typeof svg_legend_schema> = {
     outFile: 'f',
     debug: 'd',
 }
-const OPTIONS: unResolvedAppOptions = {
+const OPTIONS = {
     name: 'svg-swatch',
     description: 'SVG Swatch : Creates an svg out of the images',
     version: '0.0.1',
     alias,
 }
 const initialize = () => {
-    initApp(svg_legend_schema, initFunc, OPTIONS)
+    initApp(svg_legend_schema, OPTIONS, initFunc)
 }
 
 const initFunc = (args: z.output<typeof svg_legend_schema>, help?: string) => {
@@ -46,19 +42,19 @@ const initFunc = (args: z.output<typeof svg_legend_schema>, help?: string) => {
         const app = createSSRApp({
             setup: (context) => {
                 const count = ref(1)
-                const imageDataArr = loadAllImageFiles(options) // Ref<ImageData[]> = ref( node.getFilePathArr(options.inputImages))
+                const imageDataArr = loadAllFiles(options) // Ref<ImageData[]> = ref( node.getFilePathArr(options.inputImages))
                 const Grid: ComputedRef<ImageData[][]> = computed(() => {
                     return splitEvery(<number>options.columns, imageDataArr) //  JSON.stringify(imageDataArr.value)
                 })
 
                 const DocWidth: ComputedRef<number> = computed(() => {
                     return Math.floor(
-                        options.svgWidth - options.columns * options.gutter
+                        options.svgWidth - options.columns * options.gutter,
                     )
                 })
                 const SwatchSize: ComputedRef<number> = computed(() => {
                     return Math.floor(
-                        (DocWidth.value - options.gutter) / options.columns
+                        (DocWidth.value - options.gutter) / options.columns,
                     )
                 })
 

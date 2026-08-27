@@ -34,7 +34,7 @@
         "test": "mkdir -p tests/_output && pnpm test:build && pnpm test:render && pnpm test:svg",
         "test:build": "pnpm sbs:cooker --inputs ./tests/*.sbs  --output-path ./tests/_output",
         "test:svg": "pnpm exec svgswatch  --rootDir '.' --inputImages 'tests/_output/*.png'   --outDir tests/_output",
-        "test:render": "pnpm sbs:render --rootDir '.'  --inputs 'tests/_output/*.sbsar'  --outDir  tests/_output --setValue 'X_Red_Notes@\"gillian tunney\"' --setValue input_size@10,10  --setValue input_test@6",
+        "test:render": "pnpm sbs:render --rootDir '.'  --inputs 'tests/_output/*.sbsar'  --outDir  tests/_output --setValue 'X_Red_Notes@\"gillian tunney\"' --setValue 'input_size@8,8'  --setValue input_test@40",
         "test:cli:render": "pnpm run sbs:render --help",
         "test:compress": "pnpm exec imageoptim  './tests/_output/*.png' && pnpm run test:svg",
         "\n========== PUBLISH >> ==========": "",
@@ -69,7 +69,7 @@
         "@prettier/plugin-xml": "^2.2.0",
         "@snailicide/build-config": "^0.2.5",
         "@snailicide/g-library": "^0.2.1",
-        "@types/node": "^20.3.1",
+        "@types/node": "^22.14.0",
         "imageoptim-cli": "^3.0.7",
         "prettier": "^2.8.8",
         "ts-node": "^10.9.1",
@@ -81,7 +81,7 @@
                 "path": "/Users/gilliantunney/snailicide_helix/substance/packages"
             },
             "sdbuilder": {
-                "args": "--rootDir $PWD --debug --overwrite"
+                "args": "--rootDir $PWD  --overwrite"
             },
             "sbscooker": {
                 "args": "--enable-icons --verbose --includes $npm_package_config_substance_dependencies_path ",

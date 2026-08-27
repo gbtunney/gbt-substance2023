@@ -1,9 +1,11 @@
 import { z } from 'zod'
 import fs from 'fs'
-import sizeOf from 'image-size'
-import { node, stringUtils } from '@snailicide/g-library'
+import imageSize from 'image-size'
+import { stringUtils } from '@snailicide/g-library'
+import { node } from '@snailicide/g-library/node'
 import { ResolvedOptions } from './options.js'
 import { removeAnsi } from './helpers.js'
+import * as Buffer from 'buffer'
 export type FilePathData = Exclude<
     ReturnType<typeof node.getFilePathObj>,
     undefined
@@ -25,7 +27,7 @@ export const writeReadme = (help: string, options: ResolvedOptions) => {
         .replace(divider, '')
     fs.writeFileSync(
         node.getFullPath(`REAMETEST.md`, options.rootDir),
-        removeAnsi(`\`\`\`sh ${help_str}\n\`\`\``) // stringUtils.unescapeHtml(help)
+        removeAnsi(`\`\`\`sh ${help_str}\n\`\`\``), // stringUtils.unescapeHtml(help)
     )
 }
 export const writeTemplate = (file: string, options: ResolvedOptions) => {
@@ -39,15 +41,15 @@ export const writeTemplate = (file: string, options: ResolvedOptions) => {
             ? options.inputImages.map((item) => {
                   return item.absolute
               })
-            : ''
+            : '',
     )
     fs.writeFileSync(
         node.getFullPath(`${<string>options.outFile}.svg`, options.outDir),
-        stringUtils.unescapeHtml(file)
+        stringUtils.unescapeHtml(file),
     )
 }
 export const getImageExtensionLiteral = (
-    value: string
+    value: string,
 ): 'jpeg' | 'png' | 'gif' | 'svg' | 'bmp' => {
     if (value === 'jpeg') return 'jpeg'
     else if (value === 'gif') return 'gif'
@@ -55,22 +57,26 @@ export const getImageExtensionLiteral = (
     else if (value === 'bmp') return 'bmp'
     else return 'png'
 }
-export const loadAllImageFiles = (options: ResolvedOptions): ImageData[] => {
+export const loadAllFiles = (options: ResolvedOptions): ImageData[] => {
     const tg_ImgArray = (
-        arr: (ImageData | undefined)[]
+        arr: (ImageData | undefined)[],
     ): arr is ImageData[] => {
         return !arr.some((_entry) => _entry === undefined)
     }
     const imgArr = options.inputImages
     const result = imgArr
         .map((_img_file_data) => {
-            if (_img_file_data.excists === true) {
+            if (_img_file_data.exists === true) {
+                const _myfile: Buffer<ArrayBufferLike> = fs.readFileSync(
+                    _img_file_data.absolute,
+                )
+                //  Buffer.from
                 const data = node.getImageBase64(
                     _img_file_data.absolute,
-                    getImageExtensionLiteral(_img_file_data.extname)
+                    getImageExtensionLiteral(_img_file_data.extname),
                 )
-                const { width, height } = sizeOf(_img_file_data.absolute)
-                console.log('WIDTH ', width, 'height', height)
+                const { width, height } = imageSize(_myfile)
+                //  console.log('WIDTH ', width, 'height', height)
                 const imgResult = {
                     data,
                     width,

@@ -1,11 +1,6 @@
 {
     "extends": "@snailicide/build-config/tsconfig-base",
     "compilerOptions": {
-        "target": "ESNext",
-        "lib": ["ESNext", "DOM"],
-        "composite": true,
-        "noEmit": true,
-        "module": "ESNext",
         "rootDir": ".",
         "types": ["node"]
     },

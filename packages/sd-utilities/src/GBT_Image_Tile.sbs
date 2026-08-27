@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package>
+  <identifier v="Unsaved Package" />
+  <formatVersion v="1.1.0.202202" />
+  <updaterVersion v="1.1.0.202202" />
+  <fileUID v="{a9f19731-e6e3-4c2b-a2cf-ce33b2e270a8}" />
+  <versionUID v="0" />
+  <dependencies>
+    <dependency>
+      <filename v="sbs://make_it_tile_photo.sbs" />
+      <uid v="1494569521" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+    <dependency>
+      <filename v="sbs://non_square_transform.sbs" />
+      <uid v="1494573719" />
+      <type v="package" />
+      <fileUID v="0" />
+      <versionUID v="0" />
+    </dependency>
+  </dependencies>
+  <content>
+    <graph>
+      <identifier v="GBT_Tiler" />
+      <uid v="1494569496" />
+      <paraminputs>
+        <paraminput>
+          <identifier v="input" />
+          <uid v="1494572657" />
+          <isConnectable v="1" />
+          <type v="1" />
+          <defaultValue>
+            <constantValueFloat4 v="0 0 0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="" />
+            <options />
+          </defaultWidget>
+        </paraminput>
+        <paraminput>
+          <identifier v="Mask_Warping_H" />
+          <uid v="1494573919" />
+          <attributes>
+            <label v="Mask Warping H" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="100" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="-100" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Make It Tile" />
+        </paraminput>
+        <paraminput>
+          <identifier v="Mask_Warping_V" />
+          <uid v="1494573921" />
+          <attributes>
+            <label v="Mask Warping V" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="100" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="-100" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Make It Tile" />
+        </paraminput>
+        <paraminput>
+          <identifier v="Mask_Size_H" />
+          <uid v="1494573923" />
+          <attributes>
+            <label v="Mask Size H" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.100000001" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Make It Tile" />
+        </paraminput>
+        <paraminput>
+          <identifier v="Mask_Size_V" />
+          <uid v="1494573925" />
+          <attributes>
+            <label v="Mask Size V" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.100000001" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.1" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Make It Tile" />
+        </paraminput>
+        <paraminput>
+          <identifier v="Mask_Precision_H" />
+          <uid v="1494573927" />
+          <attributes>
+            <label v="Mask Precision H" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Make It Tile" />
+        </paraminput>
+        <paraminput>
+          <identifier v="Mask_Precision_V" />
+          <uid v="1494573929" />
+          <attributes>
+            <label v="Mask Precision V" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0.5" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0.5" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Make It Tile" />
+        </paraminput>
+        <paraminput>
+          <identifier v="tile_mode" />
+          <uid v="1494574033" />
+          <attributes>
+            <label v="Tile Mode" />
+          </attributes>
+          <type v="16" />
+          <defaultValue>
+            <constantValueInt1 v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="dropdownlist" />
+            <options>
+              <option>
+                <name v="parameters" />
+                <value v="0;0;Automatic;1;Manual" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Tiling" />
+        </paraminput>
+        <paraminput>
+          <identifier v="tile" />
+          <uid v="1494574035" />
+          <attributes>
+            <label v="Tile" />
+          </attributes>
+          <type v="32" />
+          <defaultValue>
+            <constantValueInt2 v="1 1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="1;1" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="16" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Tiling" />
+          <visibleIf v="input[&quot;tile_mode&quot;]==1" />
+        </paraminput>
+        <paraminput>
+          <identifier v="offset" />
+          <uid v="1494574037" />
+          <attributes>
+            <label v="Offset" />
+          </attributes>
+          <type v="512" />
+          <defaultValue>
+            <constantValueFloat2 v="0 0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="slider" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0;0" />
+              </option>
+              <option>
+                <name v="label0" />
+                <value v="X" />
+              </option>
+              <option>
+                <name v="label1" />
+                <value v="Y" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="step" />
+                <value v="0.01" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Tiling" />
+        </paraminput>
+        <paraminput>
+          <identifier v="rotation" />
+          <uid v="1494574039" />
+          <attributes>
+            <label v="Rotation" />
+          </attributes>
+          <type v="256" />
+          <defaultValue>
+            <constantValueFloat1 v="0" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="angle" />
+            <options>
+              <option>
+                <name v="clamp" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="default" />
+                <value v="0" />
+              </option>
+              <option>
+                <name v="max" />
+                <value v="1" />
+              </option>
+              <option>
+                <name v="min" />
+                <value v="0" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Tiling" />
+        </paraminput>
+        <paraminput>
+          <identifier v="tile_safe_rotation" />
+          <uid v="1494574041" />
+          <attributes>
+            <label v="Safe Rotation (Square Only)" />
+          </attributes>
+          <type v="4" />
+          <defaultValue>
+            <constantValueBool v="1" />
+          </defaultValue>
+          <defaultWidget>
+            <name v="buttons" />
+            <options>
+              <option>
+                <name v="default" />
+                <value v="1" />
+              </option>
+            </options>
+          </defaultWidget>
+          <group v="Tiling" />
+        </paraminput>
+      </paraminputs>
+      <primaryInput v="1494572657" />
+      <graphOutputs>
+        <graphoutput>
+          <identifier v="output" />
+          <uid v="1494573148" />
+        </graphoutput>
+      </graphOutputs>
+      <compNodes>
+        <compNode>
+          <uid v="1494572372" />
+          <GUILayout>
+            <gpos v="304 102.821228 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1494572373" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="Source" />
+              <connRef v="1494572658" />
+              <connRefOutput v="1494572659" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///make_it_tile_photo?dependency=1494569521" />
+              <parameters>
+                <parameter>
+                  <name v="Mask_Warping_H" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494573920" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494573920" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Mask_Warping_H" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Mask_Warping_V" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494573922" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494573922" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Mask_Warping_V" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Mask_Size_H" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494573924" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494573924" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Mask_Size_H" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Mask_Size_V" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494573926" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494573926" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Mask_Size_V" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Mask_Precision_H" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494573928" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494573928" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Mask_Precision_H" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="Mask_Precision_V" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494573930" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494573930" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="Mask_Precision_V" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1494572373" />
+                  <identifier v="Make_It_Tile_Photo" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1494572658" />
+          <GUILayout>
+            <gpos v="126.720001 102.821228 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1494572659" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <compImplementation>
+            <compInputBridge>
+              <entry v="1494572657" />
+              <parameters>
+                <parameter>
+                  <name v="format" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelsize" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueFloat2 v="1 1" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="pixelratio" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tiling" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="randomseed" />
+                  <relativeTo v="1" />
+                  <paramValue>
+                    <constantValueInt1 v="0" />
+                  </paramValue>
+                </parameter>
+              </parameters>
+            </compInputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1494573149" />
+          <GUILayout>
+            <gpos v="624 102.821228 0" />
+          </GUILayout>
+          <connections>
+            <connection>
+              <identifier v="inputNodeOutput" />
+              <connRef v="1494573819" />
+              <connRefOutput v="1494573820" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compOutputBridge>
+              <output v="1494573148" />
+            </compOutputBridge>
+          </compImplementation>
+        </compNode>
+        <compNode>
+          <uid v="1494573819" />
+          <GUILayout>
+            <gpos v="450.357544 102.821228 0" />
+          </GUILayout>
+          <compOutputs>
+            <compOutput>
+              <uid v="1494573820" />
+              <comptype v="1" />
+            </compOutput>
+          </compOutputs>
+          <connections>
+            <connection>
+              <identifier v="input" />
+              <connRef v="1494572372" />
+              <connRefOutput v="1494572373" />
+            </connection>
+          </connections>
+          <compImplementation>
+            <compInstance>
+              <path v="pkg:///non_square_transform?dependency=1494573719" />
+              <parameters>
+                <parameter>
+                  <name v="tile_mode" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494574034" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494574034" />
+                          <function v="get_integer1" />
+                          <type v="16" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer1" />
+                              <constantValue>
+                                <constantValueString v="tile_mode" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tile" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494574036" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494574036" />
+                          <function v="get_integer2" />
+                          <type v="32" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_integer2" />
+                              <constantValue>
+                                <constantValueString v="tile" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="offset" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494574038" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494574038" />
+                          <function v="get_float2" />
+                          <type v="512" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float2" />
+                              <constantValue>
+                                <constantValueString v="offset" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494574040" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494574040" />
+                          <function v="get_float1" />
+                          <type v="256" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_float1" />
+                              <constantValue>
+                                <constantValueString v="rotation" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+                <parameter>
+                  <name v="tile_safe_rotation" />
+                  <relativeTo v="0" />
+                  <paramValue>
+                    <dynamicValue>
+                      <rootnode v="1494574042" />
+                      <paramNodes>
+                        <paramNode>
+                          <uid v="1494574042" />
+                          <function v="get_bool" />
+                          <type v="4" />
+                          <funcDatas>
+                            <funcData>
+                              <name v="get_bool" />
+                              <constantValue>
+                                <constantValueString v="tile_safe_rotation" />
+                              </constantValue>
+                            </funcData>
+                          </funcDatas>
+                        </paramNode>
+                      </paramNodes>
+                    </dynamicValue>
+                  </paramValue>
+                </parameter>
+              </parameters>
+              <outputBridgings>
+                <outputBridging>
+                  <uid v="1494573820" />
+                  <identifier v="output" />
+                </outputBridging>
+              </outputBridgings>
+            </compInstance>
+          </compImplementation>
+        </compNode>
+      </compNodes>
+      <baseParameters />
+      <options>
+        <option>
+          <name v="defaultParentSize" />
+          <value v="10x10" />
+        </option>
+      </options>
+      <root>
+        <rootOutputs>
+          <rootOutput>
+            <output v="1494573148" />
+            <format v="0" />
+            <usertag v="" />
+          </rootOutput>
+        </rootOutputs>
+      </root>
+    </graph>
+  </content>
+</package>
